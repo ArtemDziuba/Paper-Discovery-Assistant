@@ -1,0 +1,1 @@
+"""Local academic paper discovery."""

@@ -1,0 +1,1467 @@
+{
+  "original": {
+    "query": "all:\"am\" OR all:\"looking\" OR all:\"information\" OR all:\"transformer\" OR all:\"architecture\"",
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792929147.7037663,
+      "skipped_records": 0
+    },
+    "target_position": null,
+    "papers": [
+      {
+        "id": "2201.00978v1",
+        "title": "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture"
+      },
+      {
+        "id": "2009.00804v2",
+        "title": "Architectural Implications of Graph Neural Networks"
+      },
+      {
+        "id": "2207.13219v4",
+        "title": "Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications"
+      },
+      {
+        "id": "2402.19171v1",
+        "title": "Towards Assessing Spread in Sets of Software Architecture Designs"
+      },
+      {
+        "id": "2412.20486v2",
+        "title": "LSQCA: Resource-Efficient Load/Store Architecture for Limited-Scale Fault-Tolerant Quantum Computing"
+      },
+      {
+        "id": "2301.07516v1",
+        "title": "Quality Attributes Optimization of Software Architecture: Research Challenges and Directions"
+      },
+      {
+        "id": "1306.0089v1",
+        "title": "A Novel Reconfigurable Architecture of a DSP Processor for Efficient Mapping of DSP Functions using Field Programmable DSP Arrays"
+      },
+      {
+        "id": "1812.04514v3",
+        "title": "R3-DLA (Reduce, Reuse, Recycle): A More Efficient Approach to Decoupled Look-Ahead Architectures"
+      },
+      {
+        "id": "2505.09343v2",
+        "title": "Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures"
+      },
+      {
+        "id": "1802.05100v1",
+        "title": "SAPA: Self-Aware Polymorphic Architecture"
+      },
+      {
+        "id": "2104.11502v1",
+        "title": "Learning to Cluster Faces via Transformer"
+      },
+      {
+        "id": "2112.08534v3",
+        "title": "Trading with the Momentum Transformer: An Intelligent and Interpretable Architecture"
+      },
+      {
+        "id": "2301.07500v1",
+        "title": "Multi-objective Software Architecture Refactoring driven by Quality Attributes"
+      },
+      {
+        "id": "2302.14017v1",
+        "title": "Full Stack Optimization of Transformer Inference: a Survey"
+      },
+      {
+        "id": "2404.03663v1",
+        "title": "Spike-driven Transformer V2: Meta Spiking Neural Network Architecture Inspiring the Design of Next-generation Neuromorphic Chips"
+      },
+      {
+        "id": "1802.04259v1",
+        "title": "Sphinx: A Secure Architecture Based on Binary Code Diversification and Execution Obfuscation"
+      },
+      {
+        "id": "1706.09953v1",
+        "title": "Fast Processing of Large Graph Applications Using Asynchronous Architecture"
+      },
+      {
+        "id": "2112.02083v2",
+        "title": "Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design"
+      },
+      {
+        "id": "1902.02292v3",
+        "title": "Information Flow in Computational Systems"
+      },
+      {
+        "id": "1108.5136v1",
+        "title": "Scalable Architecture for Quantum Information Processing with Atoms in Optical Micro-Structures"
+      },
+      {
+        "id": "2112.10920v1",
+        "title": "How Do Developers Search for Architectural Information? An Industrial Survey"
+      },
+      {
+        "id": "1604.01433v4",
+        "title": "Collaborative Information Bottleneck"
+      },
+      {
+        "id": "1809.04281v3",
+        "title": "Music Transformer"
+      },
+      {
+        "id": "2106.08527v2",
+        "title": "FAIR: Fairness-Aware Information Retrieval Evaluation"
+      },
+      {
+        "id": "1207.5742v4",
+        "title": "Conditional Information Inequalities for Entropic and Almost Entropic Points"
+      },
+      {
+        "id": "2408.12999v2",
+        "title": "General-Purpose Multicore Architectures"
+      },
+      {
+        "id": "1502.07055v1",
+        "title": "A Novel Architecture of Area Efficient FFT Algorithm for FPGA Implementation"
+      },
+      {
+        "id": "2404.05657v1",
+        "title": "MLP Can Be A Good Transformer Learner"
+      },
+      {
+        "id": "2306.08888v1",
+        "title": "ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design"
+      },
+      {
+        "id": "astro-ph/0703578v2",
+        "title": "Faint Thermonuclear Supernovae from AM Canum Venaticorum Binaries"
+      },
+      {
+        "id": "2607.25798v1",
+        "title": "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-design"
+      },
+      {
+        "id": "1907.05068v3",
+        "title": "Fast Modeling L2 Cache Reuse Distance Histograms Using Combined Locality Information from Software Traces"
+      },
+      {
+        "id": "1510.08510v1",
+        "title": "Architectural Consistency Checking in Plugin-Based Software Systems"
+      },
+      {
+        "id": "2402.05964v2",
+        "title": "A Survey on Transformer Compression"
+      },
+      {
+        "id": "2606.02672v1",
+        "title": "Heterogeneous Mapping for Analog In-Memory Computing Accelerators: A Unified Workflow"
+      },
+      {
+        "id": "1202.3653v3",
+        "title": "Information Transmission using the Nonlinear Fourier Transform, Part I: Mathematical Tools"
+      },
+      {
+        "id": "1712.07863v1",
+        "title": "On the Information Dimension of Multivariate Gaussian Processes"
+      },
+      {
+        "id": "1912.10795v1",
+        "title": "(Mis)Information Operations: An Integrated Perspective"
+      },
+      {
+        "id": "2211.05552v1",
+        "title": "Information-Theoretic Foundations of DNA Data Storage"
+      },
+      {
+        "id": "2607.01617v1",
+        "title": "3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving"
+      },
+      {
+        "id": "1302.2875v2",
+        "title": "Information Transmission using the Nonlinear Fourier Transform, Part III: Spectrum Modulation"
+      },
+      {
+        "id": "2505.24717v1",
+        "title": "PDE-Transformer: Efficient and Versatile Transformers for Physics Simulations"
+      },
+      {
+        "id": "1609.02342v1",
+        "title": "IT formulae for gamma target: mutual information and relative entropy"
+      },
+      {
+        "id": "1707.04873v2",
+        "title": "Efficient Architecture Search by Network Transformation"
+      },
+      {
+        "id": "2411.16170v2",
+        "title": "CARE Transformer: Mobile-Friendly Linear Visual Transformer via Decoupled Dual Interaction"
+      },
+      {
+        "id": "2205.04387v3",
+        "title": "Co-Designed Architectures for Modular Superconducting Quantum Computers"
+      },
+      {
+        "id": "1104.0446v3",
+        "title": "Reconstruction of Binary Functions and Shapes from Incomplete Frequency Information"
+      },
+      {
+        "id": "2303.00957v1",
+        "title": "Preference Transformer: Modeling Human Preferences using Transformers for RL"
+      },
+      {
+        "id": "2105.07857v1",
+        "title": "An Enterprise Architecture Framework for E-learning"
+      },
+      {
+        "id": "2408.03397v1",
+        "title": "HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration"
+      }
+    ]
+  },
+  "focused_or": {
+    "query": "all:\"transformer\" OR all:\"architecture\"",
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792929607.3749323,
+      "skipped_records": 0
+    },
+    "target_position": null,
+    "papers": [
+      {
+        "id": "2201.00978v1",
+        "title": "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture"
+      },
+      {
+        "id": "2009.00804v2",
+        "title": "Architectural Implications of Graph Neural Networks"
+      },
+      {
+        "id": "2207.13219v4",
+        "title": "Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications"
+      },
+      {
+        "id": "2412.20486v2",
+        "title": "LSQCA: Resource-Efficient Load/Store Architecture for Limited-Scale Fault-Tolerant Quantum Computing"
+      },
+      {
+        "id": "2402.19171v1",
+        "title": "Towards Assessing Spread in Sets of Software Architecture Designs"
+      },
+      {
+        "id": "1306.0089v1",
+        "title": "A Novel Reconfigurable Architecture of a DSP Processor for Efficient Mapping of DSP Functions using Field Programmable DSP Arrays"
+      },
+      {
+        "id": "2505.09343v2",
+        "title": "Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures"
+      },
+      {
+        "id": "2301.07516v1",
+        "title": "Quality Attributes Optimization of Software Architecture: Research Challenges and Directions"
+      },
+      {
+        "id": "2112.08534v3",
+        "title": "Trading with the Momentum Transformer: An Intelligent and Interpretable Architecture"
+      },
+      {
+        "id": "2301.07500v1",
+        "title": "Multi-objective Software Architecture Refactoring driven by Quality Attributes"
+      },
+      {
+        "id": "1802.05100v1",
+        "title": "SAPA: Self-Aware Polymorphic Architecture"
+      },
+      {
+        "id": "2302.14017v1",
+        "title": "Full Stack Optimization of Transformer Inference: a Survey"
+      },
+      {
+        "id": "2404.03663v1",
+        "title": "Spike-driven Transformer V2: Meta Spiking Neural Network Architecture Inspiring the Design of Next-generation Neuromorphic Chips"
+      },
+      {
+        "id": "2104.11502v1",
+        "title": "Learning to Cluster Faces via Transformer"
+      },
+      {
+        "id": "1706.09953v1",
+        "title": "Fast Processing of Large Graph Applications Using Asynchronous Architecture"
+      },
+      {
+        "id": "2112.02083v2",
+        "title": "Energy-Proportional Data Center Network Architecture Through OS, Switch and Laser Co-design"
+      },
+      {
+        "id": "1802.04259v1",
+        "title": "Sphinx: A Secure Architecture Based on Binary Code Diversification and Execution Obfuscation"
+      },
+      {
+        "id": "2408.12999v2",
+        "title": "General-Purpose Multicore Architectures"
+      },
+      {
+        "id": "1502.07055v1",
+        "title": "A Novel Architecture of Area Efficient FFT Algorithm for FPGA Implementation"
+      },
+      {
+        "id": "2404.05657v1",
+        "title": "MLP Can Be A Good Transformer Learner"
+      },
+      {
+        "id": "2306.08888v1",
+        "title": "ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design"
+      },
+      {
+        "id": "2607.25798v1",
+        "title": "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-design"
+      },
+      {
+        "id": "2402.05964v2",
+        "title": "A Survey on Transformer Compression"
+      },
+      {
+        "id": "2606.02672v1",
+        "title": "Heterogeneous Mapping for Analog In-Memory Computing Accelerators: A Unified Workflow"
+      },
+      {
+        "id": "1809.04281v3",
+        "title": "Music Transformer"
+      },
+      {
+        "id": "2607.01617v1",
+        "title": "3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving"
+      },
+      {
+        "id": "1510.08510v1",
+        "title": "Architectural Consistency Checking in Plugin-Based Software Systems"
+      },
+      {
+        "id": "1707.04873v2",
+        "title": "Efficient Architecture Search by Network Transformation"
+      },
+      {
+        "id": "2205.04387v3",
+        "title": "Co-Designed Architectures for Modular Superconducting Quantum Computers"
+      },
+      {
+        "id": "2303.00957v1",
+        "title": "Preference Transformer: Modeling Human Preferences using Transformers for RL"
+      },
+      {
+        "id": "2408.03397v1",
+        "title": "HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration"
+      },
+      {
+        "id": "2410.07407v1",
+        "title": "Optimized Spatial Architecture Mapping Flow for Transformer Accelerators"
+      },
+      {
+        "id": "2305.19533v3",
+        "title": "Lightening-Transformer: A Dynamically-operated Optically-interconnected Photonic Transformer Accelerator"
+      },
+      {
+        "id": "2603.22488v1",
+        "title": "Architectural Enhancements for Efficient Sensing Data Utilization in 6G ISAC"
+      },
+      {
+        "id": "2312.11750v2",
+        "title": "A Heterogeneous Chiplet Architecture for Accelerating End-to-End Transformer Models"
+      },
+      {
+        "id": "1206.6209v1",
+        "title": "MOMCC: Market-Oriented Architecture for Mobile Cloud Computing Based on Service Oriented Architecture"
+      },
+      {
+        "id": "2212.14538v2",
+        "title": "Transformer in Transformer as Backbone for Deep Reinforcement Learning"
+      },
+      {
+        "id": "2505.24717v1",
+        "title": "PDE-Transformer: Efficient and Versatile Transformers for Physics Simulations"
+      },
+      {
+        "id": "2111.01949v1",
+        "title": "A RISC-V Simulator and Benchmark Suite for Designing and Evaluating Vector Architectures"
+      },
+      {
+        "id": "2607.19881v1",
+        "title": "Revisiting Hardware Priority Queue Architectures"
+      },
+      {
+        "id": "2305.11403v5",
+        "title": "Efficient Mixed Transformer for Single Image Super-Resolution"
+      },
+      {
+        "id": "2312.16436v1",
+        "title": "Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators"
+      },
+      {
+        "id": "2601.03290v1",
+        "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications"
+      },
+      {
+        "id": "2507.17501v1",
+        "title": "DNT: a Deeply Normalized Transformer that can be trained by Momentum SGD"
+      },
+      {
+        "id": "2305.18415v3",
+        "title": "Geometric Algebra Transformer"
+      },
+      {
+        "id": "2308.00846v3",
+        "title": "Pathfinding Future PIM Architectures by Demystifying a Commercial PIM Technology"
+      },
+      {
+        "id": "2107.12922v3",
+        "title": "Griffin: Rethinking Sparse Optimization for Deep Learning Architectures"
+      },
+      {
+        "id": "2411.16170v2",
+        "title": "CARE Transformer: Mobile-Friendly Linear Visual Transformer via Decoupled Dual Interaction"
+      },
+      {
+        "id": "2407.04182v1",
+        "title": "Towards Generalized On-Chip Communication for Programmable Accelerators in Heterogeneous Architectures"
+      },
+      {
+        "id": "2505.11918v2",
+        "title": "Transformers as Unsupervised Learning Algorithms: A study on Gaussian Mixtures"
+      }
+    ]
+  },
+  "focused_and": {
+    "query": "all:\"transformer\" AND all:\"architecture\"",
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792929611.6836424,
+      "skipped_records": 0
+    },
+    "target_position": null,
+    "papers": [
+      {
+        "id": "2201.00978v1",
+        "title": "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture"
+      },
+      {
+        "id": "2112.08534v3",
+        "title": "Trading with the Momentum Transformer: An Intelligent and Interpretable Architecture"
+      },
+      {
+        "id": "2302.14017v1",
+        "title": "Full Stack Optimization of Transformer Inference: a Survey"
+      },
+      {
+        "id": "2404.03663v1",
+        "title": "Spike-driven Transformer V2: Meta Spiking Neural Network Architecture Inspiring the Design of Next-generation Neuromorphic Chips"
+      },
+      {
+        "id": "1502.07055v1",
+        "title": "A Novel Architecture of Area Efficient FFT Algorithm for FPGA Implementation"
+      },
+      {
+        "id": "2607.25798v1",
+        "title": "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-design"
+      },
+      {
+        "id": "2402.05964v2",
+        "title": "A Survey on Transformer Compression"
+      },
+      {
+        "id": "2606.02672v1",
+        "title": "Heterogeneous Mapping for Analog In-Memory Computing Accelerators: A Unified Workflow"
+      },
+      {
+        "id": "1707.04873v2",
+        "title": "Efficient Architecture Search by Network Transformation"
+      },
+      {
+        "id": "2303.00957v1",
+        "title": "Preference Transformer: Modeling Human Preferences using Transformers for RL"
+      },
+      {
+        "id": "2408.03397v1",
+        "title": "HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration"
+      },
+      {
+        "id": "2410.07407v1",
+        "title": "Optimized Spatial Architecture Mapping Flow for Transformer Accelerators"
+      },
+      {
+        "id": "2305.19533v3",
+        "title": "Lightening-Transformer: A Dynamically-operated Optically-interconnected Photonic Transformer Accelerator"
+      },
+      {
+        "id": "2312.11750v2",
+        "title": "A Heterogeneous Chiplet Architecture for Accelerating End-to-End Transformer Models"
+      },
+      {
+        "id": "1206.6209v1",
+        "title": "MOMCC: Market-Oriented Architecture for Mobile Cloud Computing Based on Service Oriented Architecture"
+      },
+      {
+        "id": "2505.24717v1",
+        "title": "PDE-Transformer: Efficient and Versatile Transformers for Physics Simulations"
+      },
+      {
+        "id": "2601.03290v1",
+        "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications"
+      },
+      {
+        "id": "2507.17501v1",
+        "title": "DNT: a Deeply Normalized Transformer that can be trained by Momentum SGD"
+      },
+      {
+        "id": "2305.18415v3",
+        "title": "Geometric Algebra Transformer"
+      },
+      {
+        "id": "2505.11918v2",
+        "title": "Transformers as Unsupervised Learning Algorithms: A study on Gaussian Mixtures"
+      },
+      {
+        "id": "2504.14092v1",
+        "title": "Retinex-guided Histogram Transformer for Mask-free Shadow Removal"
+      },
+      {
+        "id": "1803.01837v1",
+        "title": "ST-GAN: Spatial Transformer Generative Adversarial Networks for Image Compositing"
+      },
+      {
+        "id": "2504.14075v1",
+        "title": "Towards Scale-Aware Low-Light Enhancement via Structure-Guided Transformer Design"
+      },
+      {
+        "id": "2405.15405v1",
+        "title": "Transformer-based Federated Learning for Multi-Label Remote Sensing Image Classification"
+      },
+      {
+        "id": "2601.12039v1",
+        "title": "Nonlinear Dynamic Factor Analysis With a Transformer Network"
+      },
+      {
+        "id": "2312.02746v1",
+        "title": "Empowering the 6G Cellular Architecture with Open RAN"
+      },
+      {
+        "id": "2210.01765v4",
+        "title": "One Transformer Can Understand Both 2D & 3D Molecular Data"
+      },
+      {
+        "id": "2109.05566v2",
+        "title": "PQ-Transformer: Jointly Parsing 3D Objects and Layouts from Point Clouds"
+      },
+      {
+        "id": "2411.03697v1",
+        "title": "TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture"
+      },
+      {
+        "id": "2305.14858v2",
+        "title": "Pre-RMSNorm and Pre-CRMSNorm Transformers: Equivalent and Efficient Pre-LN Transformers"
+      },
+      {
+        "id": "2402.13572v2",
+        "title": "AlgoFormer: An Efficient Transformer Framework with Algorithmic Structures"
+      },
+      {
+        "id": "2011.08067v3",
+        "title": "Hierarchical Transformer for Task Oriented Dialog Systems"
+      },
+      {
+        "id": "2501.09588v1",
+        "title": "Atleus: Accelerating Transformers on the Edge Enabled by 3D Heterogeneous Manycore Architectures"
+      },
+      {
+        "id": "2410.01912v1",
+        "title": "A Spark of Vision-Language Intelligence: 2-Dimensional Autoregressive Transformer for Efficient Finegrained Image Generation"
+      },
+      {
+        "id": "2604.07628v1",
+        "title": "Trilinear Compute-in-Memory Architecture for Energy-Efficient Transformer Acceleration"
+      },
+      {
+        "id": "2502.13721v1",
+        "title": "Learning Novel Transformer Architecture for Time-series Forecasting"
+      },
+      {
+        "id": "2408.04619v2",
+        "title": "Transformer Explainer: Learning LLM Transformers with Interactive Visual Explanation and Experimentation"
+      },
+      {
+        "id": "2606.16440v1",
+        "title": "NeuronFabric: A Software Reference Architecture for On-Chip Transformer Training with Local Adam"
+      },
+      {
+        "id": "2502.09084v1",
+        "title": "Application of Tabular Transformer Architectures for Operating System Fingerprinting"
+      },
+      {
+        "id": "2610.22796v1",
+        "title": "Causal Latent Workspaces for Looped Transformers"
+      },
+      {
+        "id": "2507.13354v2",
+        "title": "Physical models realizing the transformer architecture of large language models"
+      },
+      {
+        "id": "2204.07962v1",
+        "title": "An Extendable, Efficient and Effective Transformer-based Object Detector"
+      },
+      {
+        "id": "2412.07783v3",
+        "title": "Swin fMRI Transformer Predicts Early Neurodevelopmental Outcomes from Neonatal fMRI"
+      },
+      {
+        "id": "2504.16269v2",
+        "title": "COBRA: Algorithm-Architecture Co-optimized Binary Transformer Accelerator for Edge Inference"
+      },
+      {
+        "id": "2407.16269v1",
+        "title": "HyTAS: A Hyperspectral Image Transformer Architecture Search Benchmark and Analysis"
+      },
+      {
+        "id": "2507.13079v1",
+        "title": "DASViT: Differentiable Architecture Search for Vision Transformer"
+      },
+      {
+        "id": "1910.13634v1",
+        "title": "An Augmented Transformer Architecture for Natural Language Generation Tasks"
+      },
+      {
+        "id": "2209.15001v3",
+        "title": "Dilated Neighborhood Attention Transformer"
+      },
+      {
+        "id": "2411.10293v3",
+        "title": "RETR: Multi-View Radar Detection Transformer for Indoor Perception"
+      },
+      {
+        "id": "2411.07602v2",
+        "title": "Circuit Complexity Bounds for RoPE-based Transformer Architecture"
+      }
+    ]
+  },
+  "phrase": {
+    "query": "all:\"transformer architecture\"",
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792929618.3933542,
+      "skipped_records": 0
+    },
+    "target_position": null,
+    "papers": [
+      {
+        "id": "2507.13354v2",
+        "title": "Physical models realizing the transformer architecture of large language models"
+      },
+      {
+        "id": "2310.20476v1",
+        "title": "Global Transformer Architecture for Indoor Room Temperature Forecasting"
+      },
+      {
+        "id": "2407.16269v1",
+        "title": "HyTAS: A Hyperspectral Image Transformer Architecture Search Benchmark and Analysis"
+      },
+      {
+        "id": "2306.09827v1",
+        "title": "Building Blocks for a Complex-Valued Transformer Architecture"
+      },
+      {
+        "id": "2107.00781v2",
+        "title": "UTNet: A Hybrid Transformer Architecture for Medical Image Segmentation"
+      },
+      {
+        "id": "2411.07602v2",
+        "title": "Circuit Complexity Bounds for RoPE-based Transformer Architecture"
+      },
+      {
+        "id": "2502.13721v1",
+        "title": "Learning Novel Transformer Architecture for Time-series Forecasting"
+      },
+      {
+        "id": "2405.12573v1",
+        "title": "EchoPT: A Pretrained Transformer Architecture that Predicts 2D In-Air Sonar Images for Mobile Robotics"
+      },
+      {
+        "id": "2603.21376v2",
+        "title": "A transformer architecture alteration to incentivise externalised reasoning"
+      },
+      {
+        "id": "2003.02958v1",
+        "title": "EmpTransfo: A Multi-head Transformer Architecture for Creating Empathetic Dialog Systems"
+      },
+      {
+        "id": "2111.00830v2",
+        "title": "Deep Learning Transformer Architecture for Named Entity Recognition on Low Resourced Languages: State of the art results"
+      },
+      {
+        "id": "2105.08647v1",
+        "title": "IntFormer: Predicting pedestrian intention with the aid of the Transformer architecture"
+      },
+      {
+        "id": "2305.18475v4",
+        "title": "Approximation Rate of the Transformer Architecture for Sequence Modeling"
+      },
+      {
+        "id": "2208.01753v1",
+        "title": "Two-Stream Transformer Architecture for Long Video Understanding"
+      },
+      {
+        "id": "2103.04037v2",
+        "title": "Perspectives and Prospects on Transformer Architecture for Cross-Modal Tasks with Language and Vision"
+      },
+      {
+        "id": "2404.14462v4",
+        "title": "Towards smaller, faster decoder-only transformers: Architectural variants and their implications"
+      },
+      {
+        "id": "1910.13634v1",
+        "title": "An Augmented Transformer Architecture for Natural Language Generation Tasks"
+      },
+      {
+        "id": "2408.05508v2",
+        "title": "PointMT: Efficient Point Cloud Analysis with Hybrid MLP-Transformer Architecture"
+      },
+      {
+        "id": "2205.02841v1",
+        "title": "Understanding Transfer Learning for Chest Radiograph Clinical Report Generation with Modified Transformer Architectures"
+      },
+      {
+        "id": "2203.12217v1",
+        "title": "Training-free Transformer Architecture Search"
+      },
+      {
+        "id": "2605.07256v1",
+        "title": "TAS-LoRA: Transformer Architecture Search with Mixture-of-LoRA Experts"
+      },
+      {
+        "id": "2409.09244v1",
+        "title": "Investigation of Hierarchical Spectral Vision Transformer Architecture for Classification of Hyperspectral Imagery"
+      },
+      {
+        "id": "2005.03454v2",
+        "title": "Successfully Applying the Stabilized Lottery Ticket Hypothesis to the Transformer Architecture"
+      },
+      {
+        "id": "2408.01147v2",
+        "title": "Astra: Efficient Transformer Architecture and Contrastive Dynamics Learning for Embodied Instruction Following"
+      },
+      {
+        "id": "2502.06243v1",
+        "title": "Multi-Scale Transformer Architecture for Accurate Medical Image Classification"
+      },
+      {
+        "id": "2211.02643v1",
+        "title": "A Transformer Architecture for Online Gesture Recognition of Mathematical Expressions"
+      },
+      {
+        "id": "2102.11402v1",
+        "title": "MixUp Training Leads to Reduced Overfitting and Improved Calibration for the Transformer Architecture"
+      },
+      {
+        "id": "2512.17098v2",
+        "title": "Predictive Modeling of Maritime Radar Data Using Transformer Architecture"
+      },
+      {
+        "id": "2005.04876v1",
+        "title": "Hierarchical Attention Transformer Architecture For Syntactic Spell Correction"
+      },
+      {
+        "id": "2609.18565v1",
+        "title": "Variational Quantum Transformer Architecture for Synthetic Language Generation"
+      },
+      {
+        "id": "2004.00998v1",
+        "title": "DeepSumm -- Deep Code Summaries using Neural Transformer Architecture"
+      },
+      {
+        "id": "2412.17247v1",
+        "title": "STeInFormer: Spatial-Temporal Interaction Transformer Architecture for Remote Sensing Change Detection"
+      },
+      {
+        "id": "2112.09239v1",
+        "title": "EEG-Transformer: Self-attention from Transformer Architecture for Decoding EEG of Imagined Speech"
+      },
+      {
+        "id": "2512.11350v1",
+        "title": "Surveillance Video-Based Traffic Accident Detection Using Transformer Architecture"
+      },
+      {
+        "id": "2507.06411v2",
+        "title": "Hierarchical Multi-Stage Transformer Architecture for Context-Aware Temporal Action Localization"
+      },
+      {
+        "id": "2603.24207v1",
+        "title": "IPatch: A Multi-Resolution Transformer Architecture for Robust Time-Series Forecasting"
+      },
+      {
+        "id": "2506.04243v1",
+        "title": "Triple Attention Transformer Architecture for Time-Dependent Concrete Creep Prediction"
+      },
+      {
+        "id": "2410.03805v3",
+        "title": "Local Attention Mechanism: Boosting the Transformer Architecture for Long-Sequence Time Series Forecasting"
+      },
+      {
+        "id": "2402.08923v2",
+        "title": "IMUOptimize: A Data-Driven Approach to Optimal IMU Placement for Human Pose Estimation with Transformer Architecture"
+      },
+      {
+        "id": "2509.18424v2",
+        "title": "Scattering Transformer: A Training-Free Transformer Architecture for Heart Murmur Detection"
+      },
+      {
+        "id": "2408.09523v2",
+        "title": "Understanding Transformer Architecture through Continuous Dynamics: A Partial Differential Equation Perspective"
+      },
+      {
+        "id": "2410.08971v1",
+        "title": "Extra Global Attention Designation Using Keyword Detection in Sparse Transformer Architectures"
+      },
+      {
+        "id": "2405.01586v1",
+        "title": "Transfer Learning and Transformer Architecture for Financial Sentiment Analysis"
+      },
+      {
+        "id": "2403.08368v1",
+        "title": "METER: a mobile vision transformer architecture for monocular depth estimation"
+      },
+      {
+        "id": "2411.10156v5",
+        "title": "Mitigating Sycophancy in Decoder-Only Transformer Architectures: Synthetic Data Intervention"
+      },
+      {
+        "id": "2311.00241v2",
+        "title": "1DFormer: a Transformer Architecture Learning 1D Landmark Representations for Facial Landmark Tracking"
+      },
+      {
+        "id": "2207.08319v1",
+        "title": "Defect Transformer: An Efficient Hybrid Transformer Architecture for Surface Defect Detection"
+      },
+      {
+        "id": "2508.04461v1",
+        "title": "Small transformer architectures for task switching"
+      },
+      {
+        "id": "2311.12351v2",
+        "title": "Advancing Transformer Architecture in Long-Context Large Language Models: A Comprehensive Survey"
+      },
+      {
+        "id": "2212.02789v1",
+        "title": "A K-variate Time Series Is Worth K Words: Evolution of the Vanilla Transformer Architecture for Long-term Multivariate Time Series Forecasting"
+      }
+    ]
+  },
+  "quoted_title": {
+    "query": "all:\"Attention Is All You Need\"",
+    "metadata": {
+      "cache_hit": false,
+      "retrieved_at": 1792929794.0672116,
+      "skipped_records": 0
+    },
+    "target_position": 2,
+    "papers": [
+      {
+        "id": "2604.21816v1",
+        "title": "Tool Attention Is All You Need: Dynamic Tool Gating and Lazy Schema Loading for Eliminating the MCP/Tools Tax in Scalable Agentic Workflows"
+      },
+      {
+        "id": "1706.03762v7",
+        "title": "Attention Is All You Need"
+      },
+      {
+        "id": "2104.04692v3",
+        "title": "Not All Attention Is All You Need"
+      },
+      {
+        "id": "2501.05730v1",
+        "title": "Element-wise Attention Is All You Need"
+      },
+      {
+        "id": "2510.19861v1",
+        "title": "Some Attention is All You Need for Retrieval"
+      },
+      {
+        "id": "2501.06425v7",
+        "title": "Tensor Product Attention Is All You Need"
+      },
+      {
+        "id": "2010.13154v2",
+        "title": "Attention is All You Need in Speech Separation"
+      },
+      {
+        "id": "2502.07864v5",
+        "title": "TransMLA: Multi-Head Latent Attention Is All You Need"
+      },
+      {
+        "id": "2509.03683v2",
+        "title": "Attention is all you need to solve chiral superconductivity"
+      },
+      {
+        "id": "1910.14537v3",
+        "title": "Attention Is All You Need for Chinese Word Segmentation"
+      },
+      {
+        "id": "2606.02332v2",
+        "title": "Forget Attention: Importance-Aware Attention Is All You Need"
+      },
+      {
+        "id": "2412.20875v1",
+        "title": "Attention Is All You Need For Mixture-of-Depths Routing"
+      },
+      {
+        "id": "2501.09166v2",
+        "title": "Attention is All You Need Until You Need Retention"
+      },
+      {
+        "id": "2609.13531v2",
+        "title": "Attention Is All You Need (to Avoid Spurious Oscillations)"
+      },
+      {
+        "id": "2306.01926v1",
+        "title": "RITA: Group Attention is All You Need for Timeseries Analytics"
+      },
+      {
+        "id": "2403.15419v1",
+        "title": "Attention is all you need for boosting graph convolutional neural network"
+      },
+      {
+        "id": "2512.11254v2",
+        "title": "FAIR: Focused Attention Is All You Need for Generative Recommendation"
+      },
+      {
+        "id": "2309.13504v3",
+        "title": "Attention Is All You Need For Blind Room Volume Estimation"
+      },
+      {
+        "id": "2307.16662v1",
+        "title": "Graph Structure from Point Clouds: Geometric Attention is All You Need"
+      },
+      {
+        "id": "2407.01375v2",
+        "title": "Transferable-guided Attention Is All You Need for Video Domain Adaptation"
+      },
+      {
+        "id": "2510.14973v2",
+        "title": "Attention Is All You Need for KV Cache in Diffusion LLMs"
+      },
+      {
+        "id": "2410.24052v1",
+        "title": "Attention is All You Need to Optimize Wind Farm Operations and Maintenance"
+      },
+      {
+        "id": "2302.14574v1",
+        "title": "A Little Bit Attention Is All You Need for Person Re-Identification"
+      },
+      {
+        "id": "2512.08417v3",
+        "title": "Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs"
+      },
+      {
+        "id": "2410.18368v2",
+        "title": "Multi-objective Optimization in CPU Design Space Exploration: Attention is All You Need"
+      },
+      {
+        "id": "1906.02792v1",
+        "title": "Attention is all you need for Videos: Self-attention based Video Summarization using Universal Transformers"
+      },
+      {
+        "id": "2601.22161v2",
+        "title": "Attention Isn't All You Need for Emotion Recognition:Domain Features Outperform Transformers on the EAV Dataset"
+      },
+      {
+        "id": "2509.03895v1",
+        "title": "Attn-Adapter: Attention Is All You Need for Online Few-shot Learner of Vision-Language Model"
+      },
+      {
+        "id": "2410.21802v2",
+        "title": "Text-Guided Attention is All You Need for Zero-Shot Robustness in Vision-Language Models"
+      },
+      {
+        "id": "2407.15516v1",
+        "title": "Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models"
+      },
+      {
+        "id": "2408.02692v1",
+        "title": "Attention is all you need for an improved CNN-based flash flood susceptibility modeling. The case of the ungauged Rheraya watershed, Morocco"
+      },
+      {
+        "id": "2011.00740v3",
+        "title": "Influence Patterns for Explaining Information Flow in BERT"
+      },
+      {
+        "id": "2104.08771v2",
+        "title": "Cross-Attention is All You Need: Adapting Pretrained Transformers for Machine Translation"
+      },
+      {
+        "id": "2305.04701v2",
+        "title": "Differentially Private Attention Computation"
+      },
+      {
+        "id": "2211.04346v1",
+        "title": "Cross-Attention is all you need: Real-Time Streaming Transformers for Personalised Speech Enhancement"
+      },
+      {
+        "id": "2401.11143v4",
+        "title": "Density Adaptive Attention is All You Need: Robust Parameter-Efficient Fine-Tuning Across Multiple Modalities"
+      },
+      {
+        "id": "2309.14174v1",
+        "title": "Only 5\\% Attention Is All You Need: Efficient Long-range Document-level Neural Machine Translation"
+      },
+      {
+        "id": "2105.14995v4",
+        "title": "Choose a Transformer: Fourier or Galerkin"
+      },
+      {
+        "id": "2504.09596v2",
+        "title": "Revisiting Self-Attentive Sequential Recommendation Beyond the LLM Paradigm"
+      },
+      {
+        "id": "2110.03183v5",
+        "title": "Attention is All You Need? Good Embeddings with Statistics are enough:Large Scale Audio Understanding without Transformers/ Convolutions/ BERTs/ Mixers/ Attention/ RNNs or ...."
+      },
+      {
+        "id": "2512.19700v1",
+        "title": "\"All You Need\" is Not All You Need for a Paper Title: On the Origins of a Scientific Meme"
+      },
+      {
+        "id": "2608.15061v1",
+        "title": "Do Visual Grounding Decoders Need Feed-Forward Networks? A Controlled Study over Frozen Vision-Language Features"
+      },
+      {
+        "id": "2205.08377v1",
+        "title": "Should attention be all we need? The epistemic and ethical implications of unification in machine learning"
+      },
+      {
+        "id": "2510.06828v1",
+        "title": "Recurrence-Complete Frame-based Action Models"
+      },
+      {
+        "id": "2006.12469v3",
+        "title": "Attention-based Quantum Tomography"
+      },
+      {
+        "id": "2501.06929v1",
+        "title": "Why are we living the age of AI applications right now? The long innovation path from AI's birth to a child's bedtime magic"
+      },
+      {
+        "id": "2308.16898v3",
+        "title": "Transformers as Support Vector Machines"
+      }
+    ]
+  },
+  "earliest_and": {
+    "query": "all:\"transformer\" AND all:\"architecture\"",
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792929664.3436034,
+      "skipped_records": 0
+    },
+    "target_position": null,
+    "papers": [
+      {
+        "id": "cmp-lg/9604002v1",
+        "title": "A Constraint-based Case Frame Lexicon"
+      },
+      {
+        "id": "quant-ph/9807064v1",
+        "title": "Fast Quantum Fourier Transforms for a Class of Non-abelian Groups"
+      },
+      {
+        "id": "cs/9809030v1",
+        "title": "Fast, Approximate Synthesis of Fractional Gaussian Noise for Generating Self-Similar Network Traffic"
+      },
+      {
+        "id": "cs/9809045v1",
+        "title": "Performance of TCP over ABR with Long-Range Dependent VBR Background Traffic over Terrestrial and Satellite ATM networks"
+      },
+      {
+        "id": "physics/9906056v1",
+        "title": "Practical Guide to Monte Carlo"
+      },
+      {
+        "id": "cs/9908009v1",
+        "title": "Secure Execution of Java Applets using a Remote Playground"
+      },
+      {
+        "id": "hep-lat/9908024v1",
+        "title": "Message passing on the QCDSP supercomputer"
+      },
+      {
+        "id": "astro-ph/9908245v1",
+        "title": "Critical Comparison of 3-d Imaging Approaches for NGST"
+      },
+      {
+        "id": "cs/0006017v1",
+        "title": "Turning Speech Into Scripts"
+      },
+      {
+        "id": "cs/0006019v1",
+        "title": "A Compact Architecture for Dialogue Management Based on Scripts and Meta-Outputs"
+      },
+      {
+        "id": "cs/0007026v1",
+        "title": "Integrating E-Commerce and Data Mining: Architecture and Challenges"
+      },
+      {
+        "id": "astro-ph/0101420v2",
+        "title": "The SDSS Imaging Pipelines"
+      },
+      {
+        "id": "cs/0106028v1",
+        "title": "Pricing Virtual Paths with Quality-of-Service Guarantees as Bundle Derivatives"
+      },
+      {
+        "id": "quant-ph/0204016v1",
+        "title": "Encoded Universality for Generalized Anisotropic Exchange Hamiltonians"
+      },
+      {
+        "id": "cs/0205080v2",
+        "title": "Transforming the World Wide Web into a Complexity-Based Semantic Network"
+      },
+      {
+        "id": "math/0206029v1",
+        "title": "Analysis of Zeta Functions, Multiple Zeta Values, and Related Integrals"
+      },
+      {
+        "id": "cond-mat/0212224v2",
+        "title": "Real-Time Wavelet-transform spectrum analyzer for the investigation of 1/f^\u03b1noise"
+      },
+      {
+        "id": "cond-mat/0303458v1",
+        "title": "Quantum toys for quantum computing: persistent currents controled by spin chirality"
+      },
+      {
+        "id": "quant-ph/0304085v2",
+        "title": "The Semi-Quantum Computer"
+      },
+      {
+        "id": "cs/0305010v2",
+        "title": "The NPC Framework for Building Information Dissemination Networks"
+      },
+      {
+        "id": "cond-mat/0307296v1",
+        "title": "From Finite to Infinite Range Order via Annealing: The Causal Architecture of Deformation Faulting in Annealed Close-Packed Crystals"
+      },
+      {
+        "id": "cs/0310058v1",
+        "title": "Application Architecture for Spoken Language Resources in Organisational Settings"
+      },
+      {
+        "id": "cs/0311029v1",
+        "title": "Staging Transformations for Multimodal Web Interaction Management"
+      },
+      {
+        "id": "cs/0412037v2",
+        "title": "A Statistical Framework for Efficient Monitoring of End-to-End Network Properties"
+      },
+      {
+        "id": "cs/0412059v1",
+        "title": "Vector Symbolic Architectures answer Jackendoff's challenges for cognitive neuroscience"
+      },
+      {
+        "id": "cs/0501093v1",
+        "title": "Transforming Business Rules Into Natural Language Text"
+      },
+      {
+        "id": "cs/0502028v1",
+        "title": "aDORe: a modular, standards-based Digital Object Repository"
+      },
+      {
+        "id": "quant-ph/0508165v2",
+        "title": "A Processor Core Model for Quantum Computing"
+      },
+      {
+        "id": "cs/0509066v2",
+        "title": "A Model-driven Approach for Grid Services Engineering"
+      },
+      {
+        "id": "astro-ph/0509671v1",
+        "title": "A broadband FFT spectrometer for radio and millimeter astronomy"
+      },
+      {
+        "id": "q-bio/0510036v1",
+        "title": "When Response Variability Increases Neural Network Robustness to Synaptic Noise"
+      },
+      {
+        "id": "q-bio/0511022v1",
+        "title": "The promoters of human cell cycle genes integrate signals from two tumor suppressive pathways during cellular transformation"
+      },
+      {
+        "id": "cs/0601118v1",
+        "title": "A Formal Architecture-Centric Model-Driven Approach for the Automatic Generation of Grid Applications"
+      },
+      {
+        "id": "cs/0602082v1",
+        "title": "Digital Libraries: From Process Modelling to Grid-based Service Oriented Architecture"
+      },
+      {
+        "id": "math/0602573v2",
+        "title": "The Forest Metrics for Graph Vertices"
+      },
+      {
+        "id": "cs/0603042v1",
+        "title": "The NoN Approach to Autonomic Face Recognition"
+      },
+      {
+        "id": "quant-ph/0604048v1",
+        "title": "Interconnection Networks for Scalable Quantum Computers"
+      },
+      {
+        "id": "math/0606584v2",
+        "title": "Functionals of Brownian bridges arising in the current mismatch in D/A-converters"
+      },
+      {
+        "id": "cs/0610040v1",
+        "title": "Crosstalk-free Conjugate Networks for Optical Multicast Switching"
+      },
+      {
+        "id": "q-bio/0611003v2",
+        "title": "Feature detection using spikes: the greedy approach"
+      },
+      {
+        "id": "cs/0612137v1",
+        "title": "Turning Cluster Management into Data Management: A System Overview"
+      },
+      {
+        "id": "cond-mat/0703342v4",
+        "title": "Creation of Entanglement between Two Electron Spins Induced by Many Spin Ensemble Excitations"
+      },
+      {
+        "id": "quant-ph/0703211v2",
+        "title": "Linear Depth Stabilizer and Quantum Fourier Transformation Circuits with no Auxiliary Qubits in Finite Neighbor Quantum Architectures"
+      },
+      {
+        "id": "0704.0967v1",
+        "title": "Cross-Layer Optimization of MIMO-Based Mesh Networks with Gaussian Vector Broadcast Channels"
+      },
+      {
+        "id": "0704.3228v2",
+        "title": "Characterization of P2P IPTV Traffic: Scaling Analysis"
+      },
+      {
+        "id": "0705.4320v1",
+        "title": "Defect-Tolerant CMOL Cell Assignment via Satisfiability"
+      },
+      {
+        "id": "0706.2824v1",
+        "title": "M\u00e9thodologie de mod\u00e9lisation et d'impl\u00e9mentation d'adaptateurs spatio-temporels"
+      },
+      {
+        "id": "0707.0761v1",
+        "title": "Managing Separation of Concerns in Grid Applications Through Architectural Model Transformations"
+      },
+      {
+        "id": "0710.4747v1",
+        "title": "An Efficient Transparent Test Scheme for Embedded Word-Oriented Memories"
+      },
+      {
+        "id": "0710.4760v1",
+        "title": "Low Power Oriented CMOS Circuit Optimization Protocol"
+      }
+    ]
+  },
+  "earliest_abstract": {
+    "query": "abs:\"transformer\" AND abs:\"architecture\"",
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792929666.6820416,
+      "skipped_records": 0
+    },
+    "target_position": null,
+    "papers": [
+      {
+        "id": "cmp-lg/9604002v1",
+        "title": "A Constraint-based Case Frame Lexicon"
+      },
+      {
+        "id": "quant-ph/9807064v1",
+        "title": "Fast Quantum Fourier Transforms for a Class of Non-abelian Groups"
+      },
+      {
+        "id": "physics/9906056v1",
+        "title": "Practical Guide to Monte Carlo"
+      },
+      {
+        "id": "hep-lat/9908024v1",
+        "title": "Message passing on the QCDSP supercomputer"
+      },
+      {
+        "id": "astro-ph/9908245v1",
+        "title": "Critical Comparison of 3-d Imaging Approaches for NGST"
+      },
+      {
+        "id": "cs/0006017v1",
+        "title": "Turning Speech Into Scripts"
+      },
+      {
+        "id": "cs/0006019v1",
+        "title": "A Compact Architecture for Dialogue Management Based on Scripts and Meta-Outputs"
+      },
+      {
+        "id": "cs/0007026v1",
+        "title": "Integrating E-Commerce and Data Mining: Architecture and Challenges"
+      },
+      {
+        "id": "astro-ph/0101420v2",
+        "title": "The SDSS Imaging Pipelines"
+      },
+      {
+        "id": "quant-ph/0204016v1",
+        "title": "Encoded Universality for Generalized Anisotropic Exchange Hamiltonians"
+      },
+      {
+        "id": "math/0206029v1",
+        "title": "Analysis of Zeta Functions, Multiple Zeta Values, and Related Integrals"
+      },
+      {
+        "id": "cond-mat/0212224v2",
+        "title": "Real-Time Wavelet-transform spectrum analyzer for the investigation of 1/f^\u03b1noise"
+      },
+      {
+        "id": "cond-mat/0303458v1",
+        "title": "Quantum toys for quantum computing: persistent currents controled by spin chirality"
+      },
+      {
+        "id": "quant-ph/0304085v2",
+        "title": "The Semi-Quantum Computer"
+      },
+      {
+        "id": "cs/0310058v1",
+        "title": "Application Architecture for Spoken Language Resources in Organisational Settings"
+      },
+      {
+        "id": "cs/0412059v1",
+        "title": "Vector Symbolic Architectures answer Jackendoff's challenges for cognitive neuroscience"
+      },
+      {
+        "id": "cs/0502028v1",
+        "title": "aDORe: a modular, standards-based Digital Object Repository"
+      },
+      {
+        "id": "quant-ph/0508165v2",
+        "title": "A Processor Core Model for Quantum Computing"
+      },
+      {
+        "id": "cs/0509066v2",
+        "title": "A Model-driven Approach for Grid Services Engineering"
+      },
+      {
+        "id": "astro-ph/0509671v1",
+        "title": "A broadband FFT spectrometer for radio and millimeter astronomy"
+      },
+      {
+        "id": "q-bio/0510036v1",
+        "title": "When Response Variability Increases Neural Network Robustness to Synaptic Noise"
+      },
+      {
+        "id": "q-bio/0511022v1",
+        "title": "The promoters of human cell cycle genes integrate signals from two tumor suppressive pathways during cellular transformation"
+      },
+      {
+        "id": "cs/0601118v1",
+        "title": "A Formal Architecture-Centric Model-Driven Approach for the Automatic Generation of Grid Applications"
+      },
+      {
+        "id": "cs/0602082v1",
+        "title": "Digital Libraries: From Process Modelling to Grid-based Service Oriented Architecture"
+      },
+      {
+        "id": "cs/0603042v1",
+        "title": "The NoN Approach to Autonomic Face Recognition"
+      },
+      {
+        "id": "quant-ph/0604048v1",
+        "title": "Interconnection Networks for Scalable Quantum Computers"
+      },
+      {
+        "id": "math/0606584v2",
+        "title": "Functionals of Brownian bridges arising in the current mismatch in D/A-converters"
+      },
+      {
+        "id": "q-bio/0611003v2",
+        "title": "Feature detection using spikes: the greedy approach"
+      },
+      {
+        "id": "cs/0612137v1",
+        "title": "Turning Cluster Management into Data Management: A System Overview"
+      },
+      {
+        "id": "cond-mat/0703342v4",
+        "title": "Creation of Entanglement between Two Electron Spins Induced by Many Spin Ensemble Excitations"
+      },
+      {
+        "id": "quant-ph/0703211v2",
+        "title": "Linear Depth Stabilizer and Quantum Fourier Transformation Circuits with no Auxiliary Qubits in Finite Neighbor Quantum Architectures"
+      },
+      {
+        "id": "0705.4320v1",
+        "title": "Defect-Tolerant CMOL Cell Assignment via Satisfiability"
+      },
+      {
+        "id": "0706.2824v1",
+        "title": "M\u00e9thodologie de mod\u00e9lisation et d'impl\u00e9mentation d'adaptateurs spatio-temporels"
+      },
+      {
+        "id": "0710.4812v1",
+        "title": "Area and Throughput Trade-Offs in the Design of Pipelined Discrete Wavelet Transform Architectures"
+      },
+      {
+        "id": "0711.0838v2",
+        "title": "On the operating unit size of load/store architectures"
+      },
+      {
+        "id": "0711.2811v1",
+        "title": "Une approche par les mod\u00e8les pour le suivi de l'activit\u00e9 de construction d'un b\u00e2timent. Bat'iViews : une interface multi-vues orient\u00e9e gestion de chantier"
+      },
+      {
+        "id": "0712.2522v3",
+        "title": "Two-resonator circuit QED: A superconducting quantum switch"
+      },
+      {
+        "id": "0804.2761v1",
+        "title": "The FFX Correlator"
+      },
+      {
+        "id": "0804.4830v2",
+        "title": "Sparse Spike Coding : applications of Neuroscience to the processing of natural images"
+      },
+      {
+        "id": "0805.3897v1",
+        "title": "SPARK00: A Benchmark Package for the Compiler Evaluation of Irregular/Sparse Codes"
+      },
+      {
+        "id": "0806.1806v1",
+        "title": "Perfect Derived Propagators"
+      },
+      {
+        "id": "0810.1858v1",
+        "title": "SOSEMANUK: a fast software-oriented stream cipher"
+      },
+      {
+        "id": "0810.3783v5",
+        "title": "Directed Transmission Method, A Fully Asynchronous approach to Solve Sparse Linear Systems in Parallel"
+      },
+      {
+        "id": "0811.2535v1",
+        "title": "A Transformation--Based Approach for the Design of Parallel/Distributed Scientific Software: the FFT"
+      },
+      {
+        "id": "0903.3886v1",
+        "title": "A Canonical Measure of Allelic Association"
+      },
+      {
+        "id": "0905.2203v1",
+        "title": "Accelerator-Oriented Algorithm Transformation for Temporal Data Mining"
+      },
+      {
+        "id": "0908.0863v1",
+        "title": "Opendda: a Novel High-Performance Computational Framework for the Discrete Dipole Approximation"
+      },
+      {
+        "id": "0908.2050v1",
+        "title": "View-based Propagator Derivation"
+      },
+      {
+        "id": "0908.2248v1",
+        "title": "Mapping from Architecture to Dynamics: A Unified View of Dynamical Processes on Networks"
+      },
+      {
+        "id": "0910.0493v1",
+        "title": "From Requirements to code: an Architecture-centric Approach for producing Quality Systems"
+      }
+    ]
+  }
+}

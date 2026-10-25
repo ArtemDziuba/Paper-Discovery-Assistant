@@ -1,0 +1,48 @@
+{
+  "lexical": {
+    "ok": true,
+    "papers": 3,
+    "ids": [
+      "2211.12792v2",
+      "2306.14753v1",
+      "2205.13273v1"
+    ],
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792928257.9127853,
+      "skipped_records": 0,
+      "candidate_count": 10,
+      "encoder": "tf-idf-baseline",
+      "model_revision": null,
+      "retrieval_seconds": 0.0007210000185295939,
+      "total_seconds": 1.4486395000712946,
+      "score_transform": "100 * max(0, cosine); not a probability"
+    }
+  },
+  "semantic": {
+    "ok": true,
+    "papers": 3,
+    "ids": [
+      "2211.12792v2",
+      "2306.14753v1",
+      "1905.05918v1"
+    ],
+    "metadata": {
+      "cache_hit": true,
+      "retrieved_at": 1792928257.9127853,
+      "skipped_records": 0,
+      "candidate_count": 10,
+      "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+      "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+      "retrieval_seconds": 0.0005651999963447452,
+      "total_seconds": 0.17763770010787994,
+      "score_transform": "100 * max(0, cosine); not a probability"
+    }
+  },
+  "resources": {
+    "peak_process_working_set_bytes": 654749696,
+    "scope": "Smoke process only, 10 candidates, CPU inference; excludes UI and VRAM.",
+    "python": "3.13.16",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

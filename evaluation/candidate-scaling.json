@@ -1,0 +1,350 @@
+{
+  "query": "i am looking for information about transformer architecture",
+  "search_query": "all:\"transformer\" AND all:\"architecture\"",
+  "requested_candidates": 10000,
+  "retrieval_seconds": 110.50297710008454,
+  "retrieval_metadata": {
+    "cache_hit": false,
+    "retrieved_at": 1792930718.882476,
+    "skipped_records": 0,
+    "requested_candidates": 10000,
+    "scanned_entries": 10000,
+    "total_results": 24494,
+    "pages": [
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930718.882476,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 0,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930725.5284612,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 1000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930747.7817585,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 2000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930755.3199406,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 3000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930767.880865,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 4000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930776.1004233,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 5000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930788.8058286,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 6000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930796.518811,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 7000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930804.837571,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 8000,
+        "total_results": 24494
+      },
+      {
+        "cache_hit": false,
+        "retrieved_at": 1792930811.934833,
+        "skipped_records": 0,
+        "received_entries": 1000,
+        "requested_entries": 1000,
+        "start": 9000,
+        "total_results": 24494
+      }
+    ],
+    "partial_failure": null
+  },
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+  "torch": "2.9.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "peak_process_working_set_bytes": 1488252928,
+  "peak_cuda_allocated_bytes": 177196544,
+  "peak_cuda_reserved_bytes": 234881024,
+  "scope": "Single diagnostic process, excludes Streamlit and other processes. Prefix comparisons use one snapshot; no independent relevance judgments.",
+  "runs": {
+    "50": {
+      "usable_candidates": 50,
+      "ranking_seconds": 0.3714346999768168,
+      "target_in_candidates": false,
+      "target_rank_in_top100": null,
+      "top10": [
+        {
+          "id": "2502.13721v1",
+          "title": "Learning Novel Transformer Architecture for Time-series Forecasting",
+          "raw_similarity": 0.4438637396117048
+        },
+        {
+          "id": "2402.13572v2",
+          "title": "AlgoFormer: An Efficient Transformer Framework with Algorithmic Structures",
+          "raw_similarity": 0.4399347304598455
+        },
+        {
+          "id": "2201.00978v1",
+          "title": "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture",
+          "raw_similarity": 0.42912576699793087
+        },
+        {
+          "id": "2410.07407v1",
+          "title": "Optimized Spatial Architecture Mapping Flow for Transformer Accelerators",
+          "raw_similarity": 0.41539184329652473
+        },
+        {
+          "id": "2402.05964v2",
+          "title": "A Survey on Transformer Compression",
+          "raw_similarity": 0.4097825035631559
+        },
+        {
+          "id": "2411.07602v2",
+          "title": "Circuit Complexity Bounds for RoPE-based Transformer Architecture",
+          "raw_similarity": 0.4042271817437991
+        },
+        {
+          "id": "2408.03397v1",
+          "title": "HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration",
+          "raw_similarity": 0.40111061307829365
+        },
+        {
+          "id": "2507.13079v1",
+          "title": "DASViT: Differentiable Architecture Search for Vision Transformer",
+          "raw_similarity": 0.3870378847470175
+        },
+        {
+          "id": "2302.14017v1",
+          "title": "Full Stack Optimization of Transformer Inference: a Survey",
+          "raw_similarity": 0.3758948167267509
+        },
+        {
+          "id": "2407.16269v1",
+          "title": "HyTAS: A Hyperspectral Image Transformer Architecture Search Benchmark and Analysis",
+          "raw_similarity": 0.37438456715447677
+        }
+      ]
+    },
+    "100": {
+      "usable_candidates": 100,
+      "ranking_seconds": 0.20174529997166246,
+      "target_in_candidates": false,
+      "target_rank_in_top100": null,
+      "top10": [
+        {
+          "id": "2305.18475v4",
+          "title": "Approximation Rate of the Transformer Architecture for Sequence Modeling",
+          "raw_similarity": 0.4700324654387459
+        },
+        {
+          "id": "2310.20476v1",
+          "title": "Global Transformer Architecture for Indoor Room Temperature Forecasting",
+          "raw_similarity": 0.45362159662034746
+        },
+        {
+          "id": "2209.12127v3",
+          "title": "SpeedLimit: Neural Architecture Search for Quantized Transformer Models",
+          "raw_similarity": 0.44594857292457657
+        },
+        {
+          "id": "2502.13721v1",
+          "title": "Learning Novel Transformer Architecture for Time-series Forecasting",
+          "raw_similarity": 0.4438637396117048
+        },
+        {
+          "id": "2202.08455v1",
+          "title": "Transformer for Graphs: An Overview from Architecture Perspective",
+          "raw_similarity": 0.4411886327575399
+        },
+        {
+          "id": "2402.13572v2",
+          "title": "AlgoFormer: An Efficient Transformer Framework with Algorithmic Structures",
+          "raw_similarity": 0.4399347304598455
+        },
+        {
+          "id": "2009.02070v2",
+          "title": "AutoTrans: Automating Transformer Design via Reinforced Architecture Search",
+          "raw_similarity": 0.43609807130886025
+        },
+        {
+          "id": "2505.01314v1",
+          "title": "A Transformer-based Neural Architecture Search Method",
+          "raw_similarity": 0.4356711830337425
+        },
+        {
+          "id": "2201.00978v1",
+          "title": "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture",
+          "raw_similarity": 0.429125840002043
+        },
+        {
+          "id": "2207.13955v1",
+          "title": "Neural Architecture Search on Efficient Transformers and Beyond",
+          "raw_similarity": 0.4285700197246872
+        }
+      ]
+    },
+    "1000": {
+      "usable_candidates": 1000,
+      "ranking_seconds": 1.3877335999859497,
+      "target_in_candidates": false,
+      "target_rank_in_top100": null,
+      "top10": [
+        {
+          "id": "2510.00368v1",
+          "title": "The Transformer Cookbook",
+          "raw_similarity": 0.5773445197514037
+        },
+        {
+          "id": "2304.10557v6",
+          "title": "An Introduction to Transformers",
+          "raw_similarity": 0.5497648517838348
+        },
+        {
+          "id": "2504.16361v1",
+          "title": "Comparing Different Transformer Model Structures for Stock Prediction",
+          "raw_similarity": 0.5485750227577317
+        },
+        {
+          "id": "2512.18445v1",
+          "title": "On the Universality of Transformer Architectures; How Much Attention Is Enough?",
+          "raw_similarity": 0.5318363976868493
+        },
+        {
+          "id": "2502.19597v1",
+          "title": "Introduction to Sequence Modeling with Transformers",
+          "raw_similarity": 0.5287896788971952
+        },
+        {
+          "id": "2307.07982v1",
+          "title": "A Survey of Techniques for Optimizing Transformer Inference",
+          "raw_similarity": 0.5154579008463951
+        },
+        {
+          "id": "2106.04554v2",
+          "title": "A Survey of Transformers",
+          "raw_similarity": 0.5090964407442198
+        },
+        {
+          "id": "2305.03232v2",
+          "title": "Neuromodulation Gated Transformer",
+          "raw_similarity": 0.4940486093746193
+        },
+        {
+          "id": "2507.15347v2",
+          "title": "Probing Information Distribution in Transformer Architectures through Entropy Analysis",
+          "raw_similarity": 0.4887340693865542
+        },
+        {
+          "id": "2410.03758v3",
+          "title": "Towards a Deeper Understanding of Transformer for Residential Non-intrusive Load Monitoring",
+          "raw_similarity": 0.4821371782102813
+        }
+      ]
+    },
+    "10000": {
+      "usable_candidates": 9994,
+      "ranking_seconds": 13.677144000073895,
+      "target_in_candidates": true,
+      "target_rank_in_top100": null,
+      "top10": [
+        {
+          "id": "2207.09238v1",
+          "title": "Formal Algorithms for Transformers",
+          "raw_similarity": 0.6401921964073806
+        },
+        {
+          "id": "2510.00368v1",
+          "title": "The Transformer Cookbook",
+          "raw_similarity": 0.5773445197514037
+        },
+        {
+          "id": "2304.10557v6",
+          "title": "An Introduction to Transformers",
+          "raw_similarity": 0.5497648517838348
+        },
+        {
+          "id": "2504.16361v1",
+          "title": "Comparing Different Transformer Model Structures for Stock Prediction",
+          "raw_similarity": 0.5485750227577317
+        },
+        {
+          "id": "2512.18445v1",
+          "title": "On the Universality of Transformer Architectures; How Much Attention Is Enough?",
+          "raw_similarity": 0.5318363976868493
+        },
+        {
+          "id": "2412.14543v1",
+          "title": "Transformer models are gauge invariant: A mathematical connection between AI and particle physics",
+          "raw_similarity": 0.529767957874258
+        },
+        {
+          "id": "2502.19597v1",
+          "title": "Introduction to Sequence Modeling with Transformers",
+          "raw_similarity": 0.5287896788971952
+        },
+        {
+          "id": "2307.07982v1",
+          "title": "A Survey of Techniques for Optimizing Transformer Inference",
+          "raw_similarity": 0.5154579008463951
+        },
+        {
+          "id": "2106.04554v2",
+          "title": "A Survey of Transformers",
+          "raw_similarity": 0.5090963158008345
+        },
+        {
+          "id": "2504.18590v1",
+          "title": "A multilevel approach to accelerate the training of Transformers",
+          "raw_similarity": 0.501440606765376
+        }
+      ]
+    }
+  },
+  "max_chunked_legacy_score_difference_first100": 1.0842751174688914e-07
+}

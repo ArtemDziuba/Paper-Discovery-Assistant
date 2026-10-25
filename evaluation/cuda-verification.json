@@ -1,0 +1,39 @@
+{
+  "torch": "2.9.1+cu128",
+  "cuda_runtime": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+  "peak_cuda_allocated_bytes": 177196544,
+  "peak_cuda_reserved_bytes": 234881024,
+  "peak_process_working_set_bytes": 1548726272,
+  "scope": "Two encoders in one diagnostic process; excludes Streamlit and other apps.",
+  "cases": {
+    "i am looking for information about transformer architecture": {
+      "search_query": "all:\"transformer\" AND all:\"architecture\"",
+      "candidate_count": 50,
+      "target_rank": null,
+      "max_cpu_cuda_score_difference": 2.1768169058966613e-07,
+      "top_titles": [
+        "Learning Novel Transformer Architecture for Time-series Forecasting",
+        "AlgoFormer: An Efficient Transformer Framework with Algorithmic Structures",
+        "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture",
+        "Optimized Spatial Architecture Mapping Flow for Transformer Accelerators",
+        "A Survey on Transformer Compression"
+      ]
+    },
+    "\"Attention Is All You Need\"": {
+      "search_query": "all:\"Attention Is All You Need\"",
+      "candidate_count": 47,
+      "target_rank": 1,
+      "max_cpu_cuda_score_difference": 3.5723579583368803e-07,
+      "top_titles": [
+        "Attention Is All You Need",
+        "\"All You Need\" is Not All You Need for a Paper Title: On the Origins of a Scientific Meme",
+        "Density Adaptive Attention is All You Need: Robust Parameter-Efficient Fine-Tuning Across Multiple Modalities",
+        "Text-Guided Attention is All You Need for Zero-Shot Robustness in Vision-Language Models",
+        "A Little Bit Attention Is All You Need for Person Re-Identification"
+      ]
+    }
+  }
+}

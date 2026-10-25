@@ -1,0 +1,8 @@
+{
+  "kind": "structural checks, not NLP quality judgments",
+  "records": 10,
+  "required_field_completeness": 1.0,
+  "selected_excerpt_exact_source_membership": 1.0,
+  "source_link_id_agreement": 1.0,
+  "limitations": "Validated cache only; excludes rejected records. No independent human judgment of explanation relevance, intent, or overview coverage."
+}

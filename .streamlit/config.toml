@@ -1,0 +1,7 @@
+[server]
+# Avoid scanning lazy Transformers imports for unrelated optional image/audio packages.
+# Restart the server after source edits while this setting is active.
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
