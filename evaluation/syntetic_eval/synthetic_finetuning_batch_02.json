@@ -1,0 +1,258 @@
+[
+  {
+    "query_id": "self-supervised-medical-image-segmentation",
+    "query": "self-supervised learning for medical image segmentation",
+    "judgments": [
+      {
+        "arxiv_id": "2611.00238",
+        "title": "Directional Dual-Head Supervision for Real-Time Source-Free Polyp Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.00062",
+        "title": "CarDiff: Anatomically Aware Dental Caries Synthesis using Diffusion",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.41763",
+        "title": "Measuring What Matters: A Causal Reliance Score for Histopathology Image Segmentation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.40018",
+        "title": "DINOv2 for PET: A Pre-Training Domain Benchmark Across Classification, Segmentation, and Prognosis",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.17573",
+        "title": "Benchmarking Self-Supervised 3D Medical Vision Foundation Models and Transferability Estimation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2609.35273",
+        "title": "Physics-informed self-supervised generation of digital brain MRI phantoms from weighted images using differentiable MRI simulation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2609.32844",
+        "title": "Mask2Restore: Self-Supervised Ultrasound Despeckling via Inpainting",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2609.30708",
+        "title": "Combining General and Domain-Specific Pretext Tasks for Brain MR Image Segmentation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2609.12454",
+        "title": "Bridging Vision Foundation Model Priors with CLIP for Spatial-aware Few-shot Anomaly Detection in Medical Images",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2609.11463",
+        "title": "BruNet: A Cross-Domain Transfer Framework for Bruise Segmentation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2609.05937",
+        "title": "Beyond Classification: Structured Supervision Aligns Visual Evidence with Medical Semantics",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2609.01427",
+        "title": "Pix2Rep-v2: Data-Efficient Representation Learning for Dense Medical Imaging Applications",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2609.01308",
+        "title": "CMRVision: A Foundation Model for Cardiac MR Image Analysis",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2608.28787",
+        "title": "Beyond Representation Learning: A Systematic Study of Joint-Embedding Predictive Generation for 3D Brain MRI",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2608.24364",
+        "title": "B-MIM: Biased Masked Image Modeling for Generalizable Segmentation of Fine-Grained Anatomical Structures",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2608.16110",
+        "title": "SUGFW+: An Uncertainty-guided Feature Weighting Framework for Cold Start Active Adaptation of SAM in Medical Image Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2608.06613",
+        "title": "Do 3D Medical Foundation Models See Through MRI Artifacts? A Controlled Study of Representation Robustness",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.25164",
+        "title": "OrganLens: Organ-Specific Representation Learning for CT Foundation Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.25014",
+        "title": "Unifying Active Learning and Semi-Supervised Learning for Medical Image Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.17782",
+        "title": "BrainNext: A General-Purpose Self-Supervised Foundation Model for Brain MRI Analysis",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.11962",
+        "title": "Contrastive Joint-Embedding Prediction for Representation Learning in Structural MRI",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.00144",
+        "title": "A Mechanism-Driven Theory of Phase Transitions in Active Learning",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2606.22943",
+        "title": "Evaluating self-supervised echocardiographic representations across downstream extraction strategies for left-ventricular segmentation and ejection fraction estimation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.20765",
+        "title": "Dataset-Aware Cold-Start Active Learning for Annotation-Efficient 3D Medical Image Segmentation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.17972",
+        "title": "SegDINO: Introducing Multi-Scale Structure into DINO for Efficient Medical Image Segmentation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.08749",
+        "title": "Active Source-free Domain Adaptation in Open-set Medical Image Segmentation via Decomposed Uncertainty and Prototype Discrepancy",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2606.04301",
+        "title": "XSSR: Cross-Domain Self-Supervised Representative Selection for Efficient Annotation in Medical Image Segmentation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.03180",
+        "title": "GLINT: Sparsely Gated Vision-Language Alignment for Fine-Grained Radiology Representations",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.01753",
+        "title": "Quality-Guided Semi-Supervised Learning for Medical Image Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2605.29122",
+        "title": "Robust Cross-Domain Generalization Using Unlabeled Target Data with Source-Domain Supervision",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2605.26277",
+        "title": "VesselSim: learning 3D blood vessel segmentation without expert annotations",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2605.23995",
+        "title": "Task-Aligned Self-Supervised Learning for Medical Image Analysis: A Task-Oriented Review with Practical Design Guidelines",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2605.16775",
+        "title": "VolTA-3D: Self-Supervised Learning for Brain MRI using 3D Volumetric Token Alignment",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2605.14654",
+        "title": "Beyond Instance-Level Self-Supervision in 3D Multi-Modal Medical Imaging",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2605.14566",
+        "title": "SpectraFlow: Unifying Structural Pretraining and Frequency Adaptation for Medical Image Segmentation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2605.11265",
+        "title": "DenseTRF: Texture-Aware Unsupervised Representation Adaptation for Surgical Scene Dense Prediction",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2604.22854",
+        "title": "MAE-Based Self-Supervised Pretraining for Data-Efficient Medical Image Segmentation Using nnFormer",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2604.22825",
+        "title": "SGP-SAM: Self-Gated Prompting for Transferring 3D Segment Anything Models to Lesion Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2604.14506",
+        "title": "Co-distilled attention guided masked image modeling with noisy teacher for self-supervised learning on medical images",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2604.10754",
+        "title": "Human Gaze-based Dual Teacher Guidance Learning for Semi-Supervised Medical Image Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2604.08045",
+        "title": "Adapting Foundation Models for Annotation-Efficient Adnexal Mass Segmentation in Cine Images",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2603.23199",
+        "title": "FDIF: Formula-Driven supervised Learning with Implicit Functions for 3D Medical Image Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2603.17110",
+        "title": "Pixel-level Counterfactual Contrastive Learning for Medical Image Segmentation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2603.15269",
+        "title": "Self-Supervised ImageNet Representations for In Vivo Confocal Microscopy: Tortuosity Grading without Segmentation Maps",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2603.13660",
+        "title": "Learning Generalizable 3D Medical Image Representations from Mask-Guided Self-Supervision",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2603.03961",
+        "title": "ProFound: A moderate-sized vision foundation model for multi-task prostate imaging",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2602.04547",
+        "title": "OmniRad: A Radiological Foundation Model for Multi-Task Medical Image Analysis",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2602.03292",
+        "title": "A3-TTA: Adaptive Anchor Alignment Test-Time Adaptation for Image Segmentation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2601.12747",
+        "title": "SSPFormer: Self-Supervised Pretrained Transformer for MRI Images",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2601.08078",
+        "title": "Exploiting DINOv3-Based Self-Supervised Features for Robust Few-Shot Medical Image Segmentation",
+        "relevance": 3
+      }
+    ]
+  }
+]

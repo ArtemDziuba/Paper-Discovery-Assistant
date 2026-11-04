@@ -1,0 +1,256 @@
+{
+  "query_id": "image-segmentation",
+  "query": "image segmentation",
+  "judgments": [
+    {
+      "arxiv_id": "2611.02603",
+      "title": "BGD-SF PolySegNet: boundary-guided dynamic selective fusion network for robust polyp segmentation in colonoscopy images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02305",
+      "title": "Peripheral prototypical contrastive loss for supervised medical image segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.41763",
+      "title": "Measuring What Matters: A Causal Reliance Score for Histopathology Image Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.41362",
+      "title": "Task-Performance Routing for Multi-Teacher Distillation in CT Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.40085",
+      "title": "Morphology-Aware Channel-Decoupled Mamba Network for Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.40029",
+      "title": "Segment Anything Model Based Context Guided Mamba Unet for Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.37860",
+      "title": "Effects of Deep Learning Architecture and Pretraining on Automated Vocal Fold Segmentation in Ex Vivo High-Speed Phonation Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36506",
+      "title": "GarmentSegAgent: Autonomous Garment Segmentation for Web Fashion Images via Textual Self-Refinement",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35220",
+      "title": "O2D-MedNet: An Optimization-Aware Dual-Domain Framework for Robust Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32609",
+      "title": "Hair Segmentation and Skin Characterization on Macroscopic Dermatological Images for Laser Treatment Parameterization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.32377",
+      "title": "Sam-Correction: Fully Adaptive Label Noise Reduction for Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32266",
+      "title": "Hyperparameter-Free Boundary-Interior t-vMF Dice Loss for Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31902",
+      "title": "Automated Nucleus Segmentation in Histology Images: An Attention U-Net Approach with Comprehensive Preprocessing and Inference Pipelines",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31065",
+      "title": "A General-Purpose Dual-Path Interaction Framework for Multi-View Medical Image Segmentation: Alleviating Data Volume Dependency in Small-Sample Regimes",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.30672",
+      "title": "CVP-BAA: Efficiently Adapting Segment Anything Model for Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29474",
+      "title": "Extending Affordance Segmentation for Wearable Robots to Multi-Object Images",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.29409",
+      "title": "LLMSeg: Training-Free Text-Prompted Image Segmentation with B-Splines",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28118",
+      "title": "Reliability-Guided Vision-Language Decoding with Text-Aware Skip Refinement for Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28091",
+      "title": "LatticeRank: Spacing-Ranked Consistency for Native-Grid 3D Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27958",
+      "title": "From Proper Scoring Rules and Edge Biases to Mumford-Shah Models: Robust Unsupervised Hyperspectral Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26954",
+      "title": "Deep Auxiliary Learning via Bilevel Feature Optimization for Label-Efficient Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25488",
+      "title": "SlimFormer++: Token Mixing Where It Matters for Efficient 3D Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25460",
+      "title": "Reliability-Preserving Compression for Deployable Medical Image Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.24757",
+      "title": "CorrCLIPv2: Harnessing Unlabeled Images for Open-Vocabulary Semantic Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24037",
+      "title": "Benchmarking and Improvement of Artifact Segmentation Methods in H&E-Stained Whole Slide Imaging",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23911",
+      "title": "Pseudo-Label Foreground Quality Weighting for Domain-Generalized Fundus Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23440",
+      "title": "ShadowCast: On-the-Fly Context-Aware Shadow Augmentation for Remote Sensing Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21990",
+      "title": "VesperMUSE: Multi-Modal Fusion Vision Transformer for Image Semantic Segmentation Under Diverse Light Conditions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21616",
+      "title": "A Decision-Aware Evaluation Protocol for Uncertainty in Medical Image Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.21238",
+      "title": "A large-scale climate-aware satellite image dataset for domain adaptive land-cover semantic segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.18133",
+      "title": "Human-Inspired Asymmetric Collaboration for Dual-Student Semi-Supervised Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.17354",
+      "title": "MID: Mask-Image Distributional Divergence for Evaluating Medical Image Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15286",
+      "title": "Protein Crystallization Segmentation and Classification Using Subordinate Color Channel in Fluorescence Microscopy Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15079",
+      "title": "Region Aware Squeeze-and-Excitation Networks for Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14944",
+      "title": "Text-Guided Medical Image Segmentation via Residual Aggregation and Dense Alignment Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14651",
+      "title": "TAG: Calibrating SAM3 for Universal Image Segmentation without Dense Supervision",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13604",
+      "title": "Thyroid Nodule Segmentation in Ultrasound Images with Conformal Uncertainty Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12786",
+      "title": "Domain Adaptation of SAM 2.1 for Building-Component Segmentation in Image-Based 3D Reconstruction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.10306",
+      "title": "One-Shot Adaptive Segmentation For Scientific Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.09392",
+      "title": "Quantifying Volumetric Risk: Class-Aware Asymmetric Weighted Conformal Prediction for 3D Medical Image Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.08574",
+      "title": "FedDermaSeg: Federated Learning for Dermatological Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06938",
+      "title": "UniPro: Unified Multi-Mode Medical Image Segmentation from 2D Images to 3D Volumes via Propagation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06602",
+      "title": "Multitask Conditional Generative Adversarial Network Enables Automatic Whole Knee Cartilage and Menisci Segmentation and Reliable $T_{1ρ}$ and $T_2$ Quantification Without High-Resolution Morphological Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06575",
+      "title": "FrontVeg V2: A Training-Free Software Framework for Foreground-Aware Zero-Shot Plant Trait Segmentation in High-Resolution Images of Trellised Crops",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04553",
+      "title": "Cross-Modal Solar Image Synthesis: Adapting the Surya Foundation Model from He I 10830 Å to EUV Translation and Coronal Hole Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.04300",
+      "title": "A Geometric-Transformation Feature-Adaptive Manifold Restoration Method for Open-Vocabulary Semantic Segmentation of Remote Sensing Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03474",
+      "title": "Fed-ADApt: Federated Anytime Depth Adaptation for Resource-Aware Medical Image Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.00279",
+      "title": "Multi-Resolution Feature Fusion U-Net for Magnetic Resonance Imaging Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39997",
+      "title": "Global existence for Consensus-Based Kinetic Models for Image Segmentation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.38930",
+      "title": "On the Relaxation of Conditional Independence Assumption for Image Segmentation",
+      "relevance": 2
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+  "device": "cuda",
+  "cases": {
+    "attention is all you need": {
+      "first_id": "1706.03762v7",
+      "first_title": "Attention Is All You Need",
+      "raw_similarity": 0.4065048165505696,
+      "metadata": {
+        "cache_hit": false,
+        "retrieved_at": 1792931625.7780688,
+        "skipped_records": 0,
+        "requested_candidates": 100,
+        "scanned_entries": 100,
+        "total_results": 177,
+        "pages": [
+          {
+            "cache_hit": false,
+            "retrieved_at": 1792931625.7780688,
+            "skipped_records": 0,
+            "received_entries": 100,
+            "requested_entries": 100,
+            "start": 0,
+            "total_results": 177
+          }
+        ],
+        "partial_failure": null,
+        "candidate_count": 100,
+        "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+        "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+        "inference_device": "cuda",
+        "exact_title_priority": true,
+        "title_lookup": {
+          "cache_hit": false,
+          "retrieved_at": 1792931622.1856377,
+          "skipped_records": 0,
+          "requested_candidates": 50,
+          "scanned_entries": 36,
+          "total_results": 36,
+          "pages": [
+            {
+              "cache_hit": false,
+              "retrieved_at": 1792931622.1856377,
+              "skipped_records": 0,
+              "received_entries": 36,
+              "requested_entries": 50,
+              "start": 0,
+              "total_results": 36
+            }
+          ],
+          "partial_failure": null,
+          "search_query": "ti:\"attention is all you need\"",
+          "returned_candidates": 36,
+          "exact_matches": [
+            "1706.03762v7"
+          ]
+        },
+        "retrieval_seconds": 4.419757099938579,
+        "ranking_seconds": 0.6324068000540137,
+        "total_seconds": 5.0521640999941155,
+        "score_transform": "100 * max(0, cosine); not a probability"
+      },
+      "interpretation": {
+        "original": "attention is all you need",
+        "concepts": [
+          "attention",
+          "all",
+          "you",
+          "need"
+        ],
+        "search_query": "all:\"attention\" AND all:\"all\" AND all:\"you\" AND all:\"need\"",
+        "quoted_title": null,
+        "title_candidate": "attention is all you need",
+        "warnings": []
+      }
+    },
+    "\"attention is all you need\"": {
+      "first_id": "1706.03762v7",
+      "first_title": "Attention Is All You Need",
+      "raw_similarity": 0.2954844110404292,
+      "metadata": {
+        "cache_hit": false,
+        "retrieved_at": 1792931628.1475892,
+        "skipped_records": 0,
+        "requested_candidates": 100,
+        "scanned_entries": 47,
+        "total_results": 47,
+        "pages": [
+          {
+            "cache_hit": false,
+            "retrieved_at": 1792931628.1475892,
+            "skipped_records": 0,
+            "received_entries": 47,
+            "requested_entries": 100,
+            "start": 0,
+            "total_results": 47
+          }
+        ],
+        "partial_failure": null,
+        "candidate_count": 47,
+        "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+        "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+        "inference_device": "cuda",
+        "exact_title_priority": true,
+        "title_lookup": {
+          "cache_hit": true,
+          "retrieved_at": 1792931622.1856377,
+          "skipped_records": 0,
+          "requested_candidates": 50,
+          "scanned_entries": 36,
+          "total_results": 36,
+          "pages": [
+            {
+              "cache_hit": true,
+              "retrieved_at": 1792931622.1856377,
+              "skipped_records": 0,
+              "received_entries": 36,
+              "requested_entries": 50,
+              "start": 0,
+              "total_results": 36
+            }
+          ],
+          "partial_failure": null,
+          "search_query": "ti:\"attention is all you need\"",
+          "returned_candidates": 36,
+          "exact_matches": [
+            "1706.03762v7"
+          ]
+        },
+        "retrieval_seconds": 1.736568700056523,
+        "ranking_seconds": 0.17093229992315173,
+        "total_seconds": 1.9075011999811977,
+        "score_transform": "100 * max(0, cosine); not a probability"
+      },
+      "interpretation": {
+        "original": "\"attention is all you need\"",
+        "concepts": [
+          "attention",
+          "all",
+          "you",
+          "need"
+        ],
+        "search_query": "all:\"attention is all you need\"",
+        "quoted_title": "attention is all you need",
+        "title_candidate": "attention is all you need",
+        "warnings": []
+      }
+    },
+    "\u201cAttention Is All You Need\u201d": {
+      "first_id": "1706.03762v7",
+      "first_title": "Attention Is All You Need",
+      "raw_similarity": 0.297119281551569,
+      "metadata": {
+        "cache_hit": false,
+        "retrieved_at": 1792931634.521452,
+        "skipped_records": 0,
+        "requested_candidates": 100,
+        "scanned_entries": 47,
+        "total_results": 47,
+        "pages": [
+          {
+            "cache_hit": false,
+            "retrieved_at": 1792931634.521452,
+            "skipped_records": 0,
+            "received_entries": 47,
+            "requested_entries": 100,
+            "start": 0,
+            "total_results": 47
+          }
+        ],
+        "partial_failure": null,
+        "candidate_count": 47,
+        "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+        "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+        "inference_device": "cuda",
+        "exact_title_priority": true,
+        "title_lookup": {
+          "cache_hit": false,
+          "retrieved_at": 1792931631.052001,
+          "skipped_records": 0,
+          "requested_candidates": 50,
+          "scanned_entries": 36,
+          "total_results": 36,
+          "pages": [
+            {
+              "cache_hit": false,
+              "retrieved_at": 1792931631.052001,
+              "skipped_records": 0,
+              "received_entries": 36,
+              "requested_entries": 50,
+              "start": 0,
+              "total_results": 36
+            }
+          ],
+          "partial_failure": null,
+          "search_query": "ti:\"Attention Is All You Need\"",
+          "returned_candidates": 36,
+          "exact_matches": [
+            "1706.03762v7"
+          ]
+        },
+        "retrieval_seconds": 6.202960800030269,
+        "ranking_seconds": 0.3320634999545291,
+        "total_seconds": 6.535024499986321,
+        "score_transform": "100 * max(0, cosine); not a probability"
+      },
+      "interpretation": {
+        "original": "\u201cAttention Is All You Need\u201d",
+        "concepts": [
+          "attention",
+          "all",
+          "you",
+          "need"
+        ],
+        "search_query": "all:\"Attention Is All You Need\"",
+        "quoted_title": "Attention Is All You Need",
+        "title_candidate": "Attention Is All You Need",
+        "warnings": []
+      }
+    }
+  },
+  "scope": "One development known-item regression, not a held-out quality benchmark."
+}

@@ -1,0 +1,256 @@
+{
+  "query_id": "automatic-text-summarization",
+  "query": "automatic text summarization",
+  "judgments": [
+    {
+      "arxiv_id": "2610.26431",
+      "title": "Long-form Video-to-Text Summarization using Recursive Language Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.21690",
+      "title": "Abstracts or full text? Evaluating input scope and computational efficiency in biomedical lay summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.16748",
+      "title": "TIAO: Token Importance-Aware Policy Optimization for Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.13481",
+      "title": "A Hybrid Hierarchical 1D-CNN-BiLSTM Framework for Extractive Summarization of Biomedical and Clinical Text",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.00241",
+      "title": "LOOMSUM: Weaving Quantitative and Narrative Evidence for Faithful Long Text-Table Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.19200",
+      "title": "Transformer Models for Text Summarization: A Comparative Study of BART, BERT, and RoBERTa",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.10806",
+      "title": "Abstractiveness Metrics for Evaluating Text Summarization: A Refined Formulation with Empirical Validation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.26036",
+      "title": "Detect, Unlearn, Restore: Defending Text Summarization Models Against Data Poisoning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.08940",
+      "title": "Multilingual Sentiment Aware Text Summarization A Reinforcement Learning Approach for Consistency Maintenance",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.05494",
+      "title": "A Multi-Model Metric-based Selection Framework for Abstractive Text summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.17379",
+      "title": "Learning Faster with Better Tokens: Parameter-Efficient Vocabulary Adaptation for Specialized Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.03583",
+      "title": "Text Summarization With Graph Attention Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.21970",
+      "title": "Parameter-Efficient Fine-Tuning for Medical Text Summarization: A Comparative Study of Lora, Prompt Tuning, and Full Fine-Tuning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.22524",
+      "title": "Iterative Prompt Refinement for Dyslexia-Friendly Text Summarization Using GPT-4o",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.20040",
+      "title": "AgenticSum: An Agentic Inference-Time Framework for Faithful Clinical Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.09821",
+      "title": "Text summarization via global structure awareness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.01543",
+      "title": "Bridging the Data Gap: Creating a Hindi Text Summarization Dataset from the English XSUM",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.20404",
+      "title": "Sentiment-Aware Extractive and Abstractive Summarization for Unstructured Text Mining",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.19317",
+      "title": "MultiBanAbs: A Comprehensive Multi-Domain Bangla Abstractive Text Summarization Dataset",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.27516",
+      "title": "BiSparse-AAS: Bilinear Sparse Attention and Adaptive Spans Framework for Scalable and Efficient Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.19325",
+      "title": "Balancing Rewards in Text Summarization: Multi-Objective Reinforcement Learning via HyperVolume Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.13115",
+      "title": "Multi-Label Clinical Text Eligibility Classification and Summarization System",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.10082",
+      "title": "Diversity Augmentation of Dynamic User Preference Data for Boosting Personalized Text Summarizers",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.05769",
+      "title": "InforME: Improving Informativeness of Abstractive Text Summarization With Informative Attention Guided by Named Entity Salience",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.16539",
+      "title": "Long document summarization using page specific target text alignment and distilling page importance",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.15614",
+      "title": "Efficient Extractive Text Summarization for Online News Articles Using Machine Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.01314",
+      "title": "Can Smaller LLMs do better? Unlocking Cross-Domain Potential through Parameter-Efficient Fine-Tuning for Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.20559",
+      "title": "Leveraging Generative Models for Real-Time Query-Driven Text Summarization in Large-Scale Web Search",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.07017",
+      "title": "Vec2Summ: Text Summarization via Probabilistic Sentence Embeddings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.05123",
+      "title": "An Evaluation of Large Language Models on Text Summarization Tasks Using Prompt Engineering Techniques",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.23714",
+      "title": "Towards an Automated Multimodal Approach for Video Summarization: Building a Bridge Between Text, Audio and Facial Cue-Based Summarization",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2506.08649",
+      "title": "Enhancing Video Memorability Prediction with Text-Motion Cross-modal Contrastive Loss and Its Application in Video Summarization",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2506.06273",
+      "title": "AdvSumm: Adversarial Training for Bias Mitigation in Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.00448",
+      "title": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.21242",
+      "title": "Evaluation of LLMs in Medical Text Summarization: The Role of Vocabulary Adaptation in High OOV Settings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.18180",
+      "title": "Aligning Language Models for Icelandic Legal Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.16394",
+      "title": "ConTextual: Improving Clinical Text Summarization in LLMs with Context-preserving Token Filtering and Knowledge Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.14630",
+      "title": "Automatic Text Summarization (ATS) for Research Documents in Sorani Kurdish",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.09071",
+      "title": "Exploration of Plan-Guided Summarization for Narrative Texts: the Case of Small Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.06275",
+      "title": "A Cascaded Architecture for Extractive Summarization of Multimedia Content via Audio-to-Text Alignment",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.04534",
+      "title": "An Empirical Comparison of Text Summarization: A Multi-Dimensional Evaluation of Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.00265",
+      "title": "Multilingual Sentiment Analysis of Summarized Texts: A Cross-Language Study of Text Shortening Effects",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.21839",
+      "title": "M-DocSum: Do LVLMs Genuinely Comprehend Interleaved Image-Text in Document Summarization?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2503.20835",
+      "title": "Comprehensive Manuscript Assessment with Text Summarization Using 69707 articles",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2503.10658",
+      "title": "LimTopic: LLM-based Topic Modeling and Text Summarization for Analyzing Scientific Articles limitations",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2503.06888",
+      "title": "A LongFormer-Based Framework for Accurate and Efficient Medical Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.00867",
+      "title": "DUAL: Diversity and Uncertainty Active Learning for Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.19773",
+      "title": "Advancements in Natural Language Processing for Automatic Text Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.19723",
+      "title": "CNsum:Automatic Summarization for Chinese News Text",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.19339",
+      "title": "Evaluating LLMs and Pre-trained Models for Text Summarization Across Diverse Datasets",
+      "relevance": 3
+    }
+  ]
+}

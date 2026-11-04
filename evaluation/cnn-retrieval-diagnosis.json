@@ -1,0 +1,116 @@
+{
+  "cnn": {
+    "search_query": "all:\"cnn\"",
+    "metadata": {
+      "cache_hit": false,
+      "retrieved_at": 1793709869.9601736,
+      "skipped_records": 0,
+      "requested_candidates": 5,
+      "scanned_entries": 5,
+      "total_results": 25956,
+      "pages": [
+        {
+          "cache_hit": false,
+          "retrieved_at": 1793709869.9601736,
+          "skipped_records": 0,
+          "received_entries": 5,
+          "requested_entries": 5,
+          "start": 0,
+          "total_results": 25956
+        }
+      ],
+      "partial_failure": null
+    },
+    "sample": [
+      {
+        "id": "2411.11001v1",
+        "title": "Simultaneous Estimation of Elliptic Flow Coefficient and Impact Parameter in Heavy-Ion Collisions using CNN"
+      },
+      {
+        "id": "2004.15004v3",
+        "title": "CNN Explainer: Learning Convolutional Neural Networks with Interactive Visualization"
+      },
+      {
+        "id": "1708.06670v3",
+        "title": "CNN Fixations: An unraveling approach to visualize the discriminative image regions"
+      },
+      {
+        "id": "1811.12758v2",
+        "title": "Non-Local Video Denoising by CNN"
+      },
+      {
+        "id": "2304.03807v5",
+        "title": "Privacy-Preserving CNN Training with Transfer Learning: Multiclass Logistic Regression"
+      }
+    ]
+  },
+  "cnn image recognission": {
+    "search_query": "all:\"cnn\" AND all:\"image\" AND all:\"recognission\"",
+    "metadata": {
+      "cache_hit": false,
+      "retrieved_at": 1793709870.6023276,
+      "skipped_records": 0,
+      "requested_candidates": 5,
+      "scanned_entries": 0,
+      "total_results": 0,
+      "pages": [
+        {
+          "cache_hit": false,
+          "retrieved_at": 1793709870.6023276,
+          "skipped_records": 0,
+          "received_entries": 0,
+          "requested_entries": 5,
+          "start": 0,
+          "total_results": 0
+        }
+      ],
+      "partial_failure": null
+    },
+    "sample": []
+  },
+  "cnn image recognition": {
+    "search_query": "all:\"cnn\" AND all:\"image\" AND all:\"recognition\"",
+    "metadata": {
+      "cache_hit": false,
+      "retrieved_at": 1793709873.6816704,
+      "skipped_records": 0,
+      "requested_candidates": 5,
+      "scanned_entries": 5,
+      "total_results": 11666,
+      "pages": [
+        {
+          "cache_hit": false,
+          "retrieved_at": 1793709873.6816704,
+          "skipped_records": 0,
+          "received_entries": 5,
+          "requested_entries": 5,
+          "start": 0,
+          "total_results": 11666
+        }
+      ],
+      "partial_failure": null
+    },
+    "sample": [
+      {
+        "id": "1708.06670v3",
+        "title": "CNN Fixations: An unraveling approach to visualize the discriminative image regions"
+      },
+      {
+        "id": "1909.02410v3",
+        "title": "Semantic-Aware Scene Recognition"
+      },
+      {
+        "id": "1808.00262v3",
+        "title": "Saliency for Fine-grained Object Recognition in Domains with Scarce Training Data"
+      },
+      {
+        "id": "2110.12183v1",
+        "title": "Attend and Guide (AG-Net): A Keypoints-driven Attention-based Deep Network for Image Recognition"
+      },
+      {
+        "id": "1812.09648v1",
+        "title": "Chinese Herbal Recognition based on Competitive Attentional Fusion of Multi-hierarchies Pyramid Features"
+      }
+    ]
+  }
+}

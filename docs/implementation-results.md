@@ -7,7 +7,7 @@ links to the retrieved papers. All inference is local. README was left unchanged
 
 ## Verification performed
 
-- 38 pytest tests passed, including Streamlit initial rendering, invalid form submission,
+- 55 pytest tests passed, including Streamlit initial rendering, invalid form submission,
   mocked successful results, retrieval retries/cache behavior, metadata parsing, empty
   candidates, duplicate versions, score edge cases, source membership, and metric arithmetic.
   Retrieval diagnostics also distinguish connection failures, timeouts, and HTTP errors.
@@ -135,7 +135,40 @@ quality. Higher best cosine scores with larger pools alone do not validate ranki
 Full provenance and per-prefix top results are in evaluation/candidate-scaling.json;
 reproduce with `uv run --extra cuda python scripts/benchmark_candidates.py`.
 
+## Unquoted known-title correction
+
+The quoted-only title rule did not apply to a title entered without literal quotation marks.
+Topic stopword removal and abstract-based cosine ranking could therefore bury the original
+below title variants, or omit it from the retrieved pool. The current pipeline separately
+looks up the complete title candidate through arXiv's title field, filters complete returned
+title matches, merges and deduplicates them with topic candidates, and applies the title rule
+regardless of optional straight or smart quotes. Raw similarity scores are unchanged.
+
+The live CUDA regression in evaluation/title-lookup-regression.json returned the real original
+paper `1706.03762v7`, titled `Attention Is All You Need`, first for the lowercase unquoted
+title, ASCII-quoted lowercase title, and smart-quoted capitalized title. The check uses 100
+topic candidates and an auxiliary title lookup of up to 50 entries. Combined usable candidates
+remain capped at the requested limit. No paper identifier is hardcoded in application logic.
+
+Tests additionally cover a near-title variant being rejected, exact-title merging under a
+one-candidate limit, case/quote normalization, failed title lookup falling back to topic
+results, and topic failure retaining successfully retrieved exact titles. These checks are
+targeted development regressions, not held-out evidence of general NLP quality; earlier
+benchmark results still describe their original configurations.
+
 ## Agent development controls
+
+The user subsequently removed the abstract-based overview from scope. It is no longer built,
+displayed, or included in the results JSON. Ranked papers retain per-paper source excerpts,
+abstracts, scores, metadata and links. The display control now offers 5–50 papers in steps
+of 5, defaulting to 10. Interface tests exercise both limits and confirm the overview is absent.
+Earlier overview descriptions in this report refer to the original prototype.
+
+Fine-tuning is now implemented as a separate local ranking option. See finetuning.md for
+the complete executed split, data exclusions, training parameters and results. The selected
+checkpoint improved synthetic development nDCG but regressed on both human queries; Semantic
+remains the default. This result is recorded rather than interpreted as a successful quality
+improvement. Preparation, training, and all three ranking methods are reproducible locally.
 
 agents.md sets project scope, CRISP-DM, verification and citation rules, hardware constraints,
 and the README consultation requirement. The two reusable skills under .agents/skills/

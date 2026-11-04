@@ -2,6 +2,10 @@
 
 Requirements: Python 3.12 or later and uv. Run from the repository root:
 
+For the final human/synthetic ranking comparison and the commands to reproduce it, see
+ranking-evaluation.md. Run `uv run --extra cuda python scripts/evaluate_annotations.py`
+to evaluate all three methods on the human set and the two baselines on the synthetic set.
+
 ```powershell
 uv sync
 uv run streamlit run app.py
@@ -42,13 +46,32 @@ restore the default CPU dependency selection. The CUDA build also supports CPU i
 Selecting cuda in the interface cannot add CUDA support to a CPU-only PyTorch build.
 The app checks availability before model loading and reports an actionable error.
 
+The Ranking selector also offers Fine-tuned, using the saved local model under
+models/finetuned-minilm. It is an experimental alternative; the original Semantic option
+performed better on the two human evaluation queries and remains the default. See
+finetuning.md for the comparison and reproduction commands. If the weights are absent,
+prepare metadata with scripts/prepare_finetuning.py and train with scripts/train_ranker.py.
+Restart Streamlit after creating or replacing model artifacts.
+
 Topic interpretation removes common leading request phrases and joins remaining concepts
 with AND. This reduces broad filler matches but can lose relevant papers with missing terms.
-For a known title, enter it in double quotes, for example `"Attention Is All You Need"`.
-Quoted phrases retain stopwords during arXiv search. No paper IDs are inserted into results.
-For quoted queries, exact title matches are shown first, with unchanged cosine scores.
+For a known title, enter the complete name, for example `attention is all you need`.
+Straight or smart quotation marks are optional. An auxiliary title-field lookup preserves
+all words and merges only complete normalized title matches into the candidate set, so
+topic stopword removal does not prevent title matching. Exact titles are shown first,
+with unchanged cosine scores. No paper IDs are inserted into results.
+The lookup can request up to 50 additional entries; the combined usable candidate set
+remains within the requested limit. It uses the existing cache and rate limiter.
 Run `uv run --extra cuda python scripts/verify_cuda.py` to reproduce CPU/GPU agreement and
 the quoted-title regression. Its source candidates must be cached, or internet access is needed.
+The newer unquoted/quoted/smart-quoted regression is
+`uv run --extra cuda python scripts/verify_title_lookup.py`; results are saved in
+evaluation/title-lookup-regression.json.
+
+Displayed papers can be set to 5, 10, 15, …, 50, with 10 selected by default. Choose the count
+and submit the search to apply it. Fewer results appear if there are fewer usable candidates.
+The abstract-based overview has been removed; ranked papers retain their individual abstracts,
+match evidence, scores, and source links. JSON export contains ranked matches and provenance.
 
 The candidate control defaults to 1,000 and accepts up to 10,000. This is an upper bound on
 raw arXiv entries, not a promise of that many distinct valid papers. Retrieval pages contain
@@ -91,7 +114,7 @@ scores, excerpts, configuration, retrieval timestamps, and stage timings.
 
 Suggested demo: a specific topic, a broader topic with weak candidates, an exclusion query
 that triggers the baseline limitation warning, and an invalid empty query. Explain that
-overview sentences are extracted from abstracts and scores are not calibrated probabilities.
+match evidence is extracted from abstracts and scores are not calibrated probabilities.
 
 For a video under 10 minutes: requirements (1 minute), architecture and one query flow
 (2), live cases (3), evaluations and limitations (2), agent instructions and skills (1).

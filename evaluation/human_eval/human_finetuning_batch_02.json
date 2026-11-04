@@ -1,0 +1,171 @@
+{
+  "query_id": "cnn-image-recognition",
+  "query": "cnn image recognition",
+  "judgments": [
+    {
+      "arxiv_id": "2608.04379",
+      "title": "Image Classification Using CNN-QNN Hybrid Model with Optimized Correlated Features",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2302.05105",
+      "title": "Text recognition on images using pre-trained CNN",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1803.09218",
+      "title": "Image Recognition Using Scale Recurrent Neural Networks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2106.14350",
+      "title": "Deep Learning Image Recognition for Non-images",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1912.11035",
+      "title": "CNN-generated images are surprisingly easy to spot... for now",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1612.00983",
+      "title": "Food Image Recognition by Using Convolutional Neural Networks (CNNs)",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1604.04573",
+      "title": "CNN-RNN: A Unified Framework for Multi-label Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.05957",
+      "title": "Efficient Quantum Convolutional Neural Networks for Image Classification: Overcoming Hardware Constraints",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1409.1556",
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.00663",
+      "title": "Enhanced Convolutional Neural Networks for Improved Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.21156",
+      "title": "Comparative Analysis of Vision Transformers and Convolutional Neural Networks for Medical Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1905.11946",
+      "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1511.08458",
+      "title": "An Introduction to Convolutional Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1905.03288",
+      "title": "Advancements in Image Classification using Convolutional Neural Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1809.00216",
+      "title": "Evaluation of Neural Networks for Image Recognition Applications: Designing a 0-1 MILP Model of a CNN to create adversarials",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1806.03973",
+      "title": "State Classification with CNN",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2103.00302",
+      "title": "Automatic evaluation of human oocyte developmental potential from microscopy images",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1412.6806",
+      "title": "Striving for Simplicity: The All Convolutional Net",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1811.08278",
+      "title": "Assessing four Neural Networks on Handwritten Digit Recognition Dataset (MNIST)",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1708.07770",
+      "title": "Evaluation of Deep Learning on an Abstract Image Classification Dataset",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2006.01645",
+      "title": "Interpretation of ResNet by Visualization of Preferred Stimulus in Receptive Fields",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2406.14583",
+      "title": "Modeling & Evaluating the Performance of Convolutional Neural Networks for Classifying Steel Surface Defects",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.07973",
+      "title": "WILD ANIMAL CLASSIFIER USING CNN",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1809.06187",
+      "title": "Study and Observation of the Variations of Accuracies for Handwritten Digits Recognition with Various Hidden Layers and Epochs using Convolutional Neural Network",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2209.14454",
+      "title": "CompNet: A Designated Model to Handle Combinations of Images and Designed features",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1803.05963",
+      "title": "Studying Invariances of Trained Convolutional Neural Networks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1703.04101",
+      "title": "Evaluating Deep Convolutional Neural Networks for Material Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1902.02771",
+      "title": "Impact of Fully Connected Layers on Performance of Convolutional Neural Networks for Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2111.11260",
+      "title": "MiNet: A Convolutional Neural Network for Identifying and Categorising Minerals",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1804.11191",
+      "title": "How convolutional neural network see the world - A survey of convolutional neural network visualization methods",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2411.04707",
+      "title": "Adapting Visualization Techniques for Time-Series Anomaly Detection: From Convolutional Neural Networks to Convolutional–Recurrent Neural Networks",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1904.03380",
+      "title": "Visualization of Convolutional Neural Networks for Monocular Depth Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1311.2901",
+      "title": "Visualizing and Understanding Convolutional Networks",
+      "relevance": 2
+    }
+  ]
+}

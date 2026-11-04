@@ -6,23 +6,24 @@ No backend server, vector database, hosted inference, or generative model is req
 ```mermaid
 flowchart LR
     UI[Streamlit query] --> Q[Lexical concept extraction]
+    Q --> T[Title phrase lookup / complete-title filtering]
     Q --> R[arXiv API / paginated 24-hour page cache]
+    T --> P
     R --> P[Atom validation and deduplication]
     P --> E[Chunked local encoder or sparse TF-IDF]
     UI --> E
     E --> S[Cosine ranking]
     S --> X[Abstract evidence selection]
-    X --> O[Extractive overview with source IDs]
-    O --> UI
+    X --> UI
 ```
 
 | Component | Input | Output / purpose |
 | --- | --- | --- |
-| query.py | Original query | Conversational-prefix cleanup, unique concepts and AND search, or preserved quoted phrase; original intent retained for ranking |
+| query.py | Original query | Conversational-prefix cleanup, complete title candidate, unique concepts and AND search, or preserved quoted phrase; original intent retained for ranking |
 | retrieval.py | Search expression, limit | Validated Paper records, timestamp, cache status, skipped-record count |
 | models.py | Untrusted metadata | Typed records with required fields and source links |
-| ranking.py | Original query, titles and abstracts | Local dense embeddings or document-fitted TF-IDF vectors |
-| pipeline.py | Query, client, encoder | Ranked matches, evidence, cited excerpts, timings and provenance |
+| ranking.py | Original query, titles and abstracts | Base or locally fine-tuned dense embeddings, or document-fitted TF-IDF vectors |
+| pipeline.py | Query, client, encoder | Ranked matches, per-paper evidence, timings and provenance |
 | app.py | User settings and query | Results, warnings, links, JSON download |
 
 The external call is HTTPS GET to export.arxiv.org/api/query. Requests from the shared
@@ -43,21 +44,58 @@ CPU is default; CUDA is optional through `uv sync --extra cuda` and
 `uv run --extra cuda streamlit run app.py`. Availability is checked before loading the model.
 TF-IDF provides a no-download lexical comparison.
 
+Fine-tuned is a separate selector option loading models/finetuned-minilm and its training
+manifest. The shared encoder keeps the same model inputs, cosine scoring, and chunk limits.
+JSON exports identify pda/finetuned-minilm and the training run ID instead of claiming the
+base revision produced its embeddings. Missing local weights produce a clear error.
+
+The offline training flow is:
+
+```mermaid
+flowchart LR
+    A[Human and synthetic annotation JSON] --> B[Verify IDs and freeze arXiv abstracts]
+    B --> C[Split synthetic query groups / remove paper overlaps]
+    C --> D[Synthetic training preferences]
+    D --> E[Local encoder gradient updates]
+    C --> F[Synthetic development selection]
+    E --> F
+    F --> G[Local weights and training manifest]
+    G --> H[Fine-tuned ranking option]
+    G --> I[Human comparison against Semantic and TF-IDF]
+```
+
+Human labels are reserved from gradient updates and checkpoint selection. This is a modeling
+and evaluation workflow; live retrieval and per-paper explanations share the same pipeline.
+See finetuning.md for the executed protocol, limitations, and measured regression on human data.
+
 Cosine is retained raw; display score = 100 * max(0, cosine). This is an uncalibrated
 similarity index. Stable ties retain retrieval order. Deduplication collapses arXiv version
 suffixes while preserving the first retrieved version's original identifier.
 
-For an entirely quoted query, exact title matches (case insensitive) are placed before
-other candidates, which remain sorted by cosine. This known-item rule does not change raw
-or displayed similarity scores; the UI labels the priority and exports it in metadata.
-It matches titles returned by arXiv and never inserts a paper by identifier.
+Every valid query also performs an auxiliary `ti:"complete title candidate"` lookup for up
+to 50 entries. It preserves all words, independent of topic stopword removal, and filters
+returned papers by complete-title equality after Unicode NFKC, whitespace, and case
+normalization. ASCII and smart outer quotes are accepted but not required. No title-prefix
+or substring match receives exact-title priority. Quotes embedded inside title candidates
+are sanitized before constructing the API expression.
+
+Exact returned titles are merged with topic candidates and deduplicated by base arXiv ID,
+with the combined usable pool capped at the requested limit. The auxiliary lookup can scan
+up to 50 entries in addition to the topic entry budget; it uses the same rate limit/cache.
+Exact titles precede other candidates, which remain sorted by cosine. Raw and displayed
+cosine scores are unchanged. The UI labels title priority, and `title_lookup` records its
+query, timestamps, cache status, and matching IDs. No paper is inserted by identifier.
+Failed title lookup falls back to topic search with a visible warning; if only topic search
+fails, successfully retrieved exact titles remain available with a partial-results warning.
 
 For a query such as `graph learning`, concepts create an AND search, arXiv returns candidates,
 the parser validates records, vectors are compared against the unchanged query, and the
 highest-ranked papers receive the abstract sentence with greatest exact concept overlap.
-Up to five such sentences form an explicitly extractive overview, each tied to its paper.
-An exact-overlap explanation is incomplete evidence of semantic relevance, especially for
-synonyms. No cross-paper consensus, full-text findings, or causal conclusions are generated.
+Each ranked paper retains its abstract, selected evidence, similarity score, and source link.
+The user can request 5–50 displayed papers in increments of 5, with a default of 10.
+The abstract-based overview was removed from both results and JSON export at the user's
+request. An exact-overlap explanation remains incomplete evidence of semantic relevance,
+especially for synonyms. No cross-paper consensus or full-text conclusions are generated.
 
 Empty retrieval skips encoding. A failure before any page is retrieved appears as a UI error.
 A later page failure preserves earlier candidates and produces an explicit partial-results

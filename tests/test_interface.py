@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+import pytest
 from streamlit.testing.v1 import AppTest
 
 APP = Path(__file__).resolve().parents[1] / "app.py"
@@ -11,13 +12,14 @@ def test_initial_page_and_empty_input():
     app = AppTest.from_file(APP).run(timeout=30)
     assert not app.exception
     assert app.title[0].value == "Paper Discovery Assistant"
+    assert "Fine-tuned" in app.selectbox[0].options
     app.selectbox[0].select("TF-IDF baseline")
     app.button[0].click().run(timeout=30)
     assert not app.exception
     assert "research topic" in app.error[0].value
 
 
-def test_results_and_overview(monkeypatch):
+def test_ranked_results_without_overview(monkeypatch):
     from test_pipeline import paper
 
     from pda.retrieval import ArxivClient
@@ -31,7 +33,27 @@ def test_results_and_overview(monkeypatch):
     app.button[0].click().run(timeout=30)
     assert not app.exception
     assert not app.error
-    assert any(s.value == "Abstract-based overview" for s in app.subheader)
+    assert any(s.value == "Ranked papers" for s in app.subheader)
+    assert all(s.value != "Abstract-based overview" for s in app.subheader)
+
+
+@pytest.mark.parametrize("displayed", [5, 50])
+def test_displayed_paper_limits(monkeypatch, displayed):
+    from test_pipeline import paper
+
+    from pda.retrieval import ArxivClient
+
+    papers = [paper(f"1234.{index:04}v1", f"Graph paper {index}") for index in range(80)]
+    monkeypatch.setattr(ArxivClient, "search", lambda *args, **kwargs: (papers, {}))
+    app = AppTest.from_file(APP).run(timeout=30)
+    app.selectbox[0].select("TF-IDF baseline")
+    slider = app.slider[0]
+    assert (slider.min, slider.max, slider.step) == (5, 50, 5)
+    slider.set_value(displayed)
+    app.text_area[0].input("graph learning")
+    app.button[0].click().run(timeout=30)
+    assert not app.exception and not app.error
+    assert len([e for e in app.expander if "/100" in e.label]) == displayed
 
 
 def test_10000_limit_and_partial_warning(monkeypatch):
@@ -52,5 +74,36 @@ def test_10000_limit_and_partial_warning(monkeypatch):
     app.text_area[0].input("graph learning")
     app.button[0].click().run(timeout=30)
     assert not app.exception
-    assert limits == [10000]
+    assert limits == [50, 10000]  # Auxiliary title lookup, then requested topic retrieval.
     assert any("Only part" in warning.value for warning in app.warning)
+
+
+def test_finetuned_selection_loads_local_artifact(monkeypatch):
+    import numpy as np
+    from test_pipeline import paper
+
+    from pda import ranking
+    from pda.retrieval import ArxivClient
+
+    calls = []
+
+    class Encoder:
+        model = object()
+        model_name = "pda/finetuned-minilm"
+        model_revision = "test-run"
+
+        def score_documents(self, query, documents, progress=None):
+            return np.ones(len(documents))
+
+    def factory(device, *, model_path=None):
+        calls.append((device, model_path))
+        return Encoder()
+
+    monkeypatch.setattr(ranking, "SemanticEncoder", factory)
+    monkeypatch.setattr(ArxivClient, "search", lambda *args, **kwargs: ([paper()], {}))
+    app = AppTest.from_file(APP).run(timeout=30)
+    app.selectbox[0].select("Fine-tuned")
+    app.text_area[0].input("graph learning")
+    app.button[0].click().run(timeout=30)
+    assert not app.exception and not app.error
+    assert calls == [("cpu", ranking.FINETUNED_PATH)]

@@ -1,0 +1,258 @@
+[
+  {
+    "query_id": "diffusion-models-image-generation",
+    "query": "diffusion models for image generation",
+    "judgments": [
+      {
+        "arxiv_id": "2611.03597",
+        "title": "Structured Visual Landscape: Generating Preferred Representations in Biological and Artificial Neural Networks",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.03465",
+        "title": "HIVE-Diff: High Frame Rate HDR Video Reconstruction from a Single LDR Frame and Events",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.03172",
+        "title": "Statistical Modeling of Foreground Galactic Cirrus for Diffuse Halo Light Measurement",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2611.03140",
+        "title": "When Optimization Meets Human Intent: Human-Centered Diffusion Model Optimization",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2611.02964",
+        "title": "One Image Is Enough: Self-Generated Supervision for Personalizing Human Video Diffusion at Test Time",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.02955",
+        "title": "Generative diffusion in long-range correlated landscapes: Speciation cascade and the foam structure of the score",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.02952",
+        "title": "Balancing Representations by Identifying and Generating Under-represented Data",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.02941",
+        "title": "RouteREPA: Routed Representation Alignment for Just Image Transformers",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2611.02677",
+        "title": "Visuo-tactile Diffusion Policy for Robotic Manipulation with Auxiliary Tactile Dynamics Prediction",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2611.02631",
+        "title": "UniCross3D: Unified Cross-View and Cross-Domain Diffusion for Consistent Single-Image 3D Generation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.02625",
+        "title": "Latent Diffusion-GAN: Adversarial Learning in the Autoencoded Latent Space",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2611.02568",
+        "title": "SeMo3D: Unifying 3D Generation, Editing, and Completion via Selective Modeling",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.02551",
+        "title": "Flat Features, Detailed Images? Simple Detail Control for Diffusion Transformers",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2611.02437",
+        "title": "Evaluating Synthetic Skin Lesion Images for Classifier Training: A Safety-Aware Algorithm",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.01850",
+        "title": "Biological Congruence: Evaluating Microscopy Generation Across Representations",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2611.01846",
+        "title": "Z-Cache: Accelerating Diffusion Transformers via Self-Reflection",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2611.01823",
+        "title": "LUMEN: Geometry-Guided Diffusion Model for Spatially-Varying HDR Illumination Estimation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.01775",
+        "title": "Spectral Signatures of Memorization Basins in Diffusion Trajectories",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2611.01696",
+        "title": "Restoring Semantic Fidelity for Training-Free High-Resolution Image Generation in Diffusion Transformers",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2611.01605",
+        "title": "MedNet and U$^2$-ViT: A Nested Vision Transformer Diffusion Framework for Diverse Medical Images Generation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2611.01283",
+        "title": "DriftingPlanner: Drifting Generative Models for One-Step Trajectory Planning in End-to-End Autonomous Driving",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2611.01141",
+        "title": "GESTALT: Fast, Generalizable Histopathology Image Synthesis from Gene Expression with Pretrained Pathology Foundation Models",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2611.00810",
+        "title": "UniCaMo: Unified Camera and Motion Control for Video Diffusion Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2611.00804",
+        "title": "Training-free Conditional Object Composition for Multi-object Image Generation with Diffusion Models",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2611.00472",
+        "title": "FESTiVE: Self-calibrated Spatial-temporal Gradient Characterization for Non-cartesian Imaging on High Performance Systems",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.42036",
+        "title": "Learning Clean Generative Processes from Noisy Measurements",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.41992",
+        "title": "MoETok: Sparse Expert Routing for 1D Visual Tokenizers",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.41598",
+        "title": "Scout-Refine-Correct: Teaching Flow Models to Refine Their Own Samples",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.41520",
+        "title": "TACO: Trajectory-Aware Curvature Observation for Memorization Localization and Mitigation in Diffusion Models",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.41260",
+        "title": "SketchDirector: Complex Scene Sketching via Agentic Layout Reasoning and Detail Refinement",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.41170",
+        "title": "PP-Mark: Provable and Publicly Verifiable Watermarking for Generative AI",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.40717",
+        "title": "CS-LDM: Clinically Guided Structure-Aware Latent Diffusion for Knee Radiographic Forecasting",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.40705",
+        "title": "DiffUltra: Task-Guided Pathology Synthesis for Large-Scale Real-World Lung Ultrasound Data",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.40616",
+        "title": "Difficulty Calibration Across Time for Membership Inference in Diffusion Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.40495",
+        "title": "LucidLyra: Feed-Forward Generative 3D Scene Reconstruction and Joint Understanding via Multi-Task Distillation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.40119",
+        "title": "SynthFaces: Balanced Large Scale Human Dataset",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.40109",
+        "title": "Coupled Guidance for Flow Matching",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.40061",
+        "title": "Localizing Concepts in Visual Autoregressive Models",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.40046",
+        "title": "EPC-RawDC: Equivariant Physics Constrained 3D Diffusion with Raw Data Consistency for CBCT to CT Image Synthesis",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.39948",
+        "title": "UniRA: Unified Representation Alignment and Auto-Encoding for Efficient Diffusion Generation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.39889",
+        "title": "sDMD: Sinkhorn Distribution Matching Distillation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.39825",
+        "title": "AegisFlow: Training-Free Non-Myopic Path-Safe Guided Flow Matching",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.39609",
+        "title": "DiFuse: Fusing Native Diffusion Representations for Spatial Reasoning in Unified Multimodal Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.39539",
+        "title": "ROAD: Modern Adversarial Training for Simple One-Step Distillation at Scale",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.39293",
+        "title": "Unlocking Any-Order Generation in Pretrained Autoregressive Image Models",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.39277",
+        "title": "Efficient Covariance-Aware Vicinal Latent Diffusion for Continuous Conditional Image Generation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.39160",
+        "title": "CLaW: Codec-Guided Adaptive Latent Watermarking for Traceable Diffusion Image Generation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.39117",
+        "title": "Uncertainty-Guided Cross-Modal Alignment for Diffusion-Based IoT Intrusion Detection",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.39014",
+        "title": "The Search for Statistical Indistinguishability Between Real and Fake Images",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.38974",
+        "title": "Fully Quantum Latent Diffusion for Synthetic Malware Records: Effective Denoising, Limited Class Information, and Costly Post-Selection",
+        "relevance": 0
+      }
+    ]
+  }
+]

@@ -13,6 +13,7 @@ from pathlib import Path
 import httpx
 
 from pda.models import Paper
+from pda.query import normalize_title
 
 LOGGER = logging.getLogger(__name__)
 NS = {"a": "http://www.w3.org/2005/Atom"}
@@ -74,6 +75,38 @@ class ArxivClient:
         self.ttl = ttl
         self._lock = threading.Lock()
         self._last_request = 0.0
+
+    def fetch_ids(self, identifiers: list[str]) -> tuple[list[Paper], dict]:
+        """Fetch an explicit batch of up to 50 original arXiv identifiers."""
+        if not 1 <= len(identifiers) <= 50:
+            raise ValueError("Use between 1 and 50 identifiers per metadata batch.")
+        if not all(
+            re.fullmatch(r"(?:\d{4}\.\d{4,5}|[a-z-]+(?:\.[A-Z]{2})?/\d{7})(?:v\d+)?", i)
+            for i in identifiers
+        ):
+            raise ValueError("Invalid arXiv identifier in metadata batch.")
+        return self._fetch_page(
+            "",
+            len(identifiers),
+            start=0,
+            sort_by="relevance",
+            sort_order="descending",
+            id_list=",".join(identifiers),
+        )
+
+    def find_exact_titles(self, title: str) -> tuple[list[Paper], dict]:
+        """Retrieve title candidates and keep only complete, normalized title matches."""
+        # Do not let embedded quotes become arXiv search operators.
+        phrase = " ".join(title.replace('"', " ").split())
+        query = f'ti:"{phrase}"'
+        papers, metadata = self.search(query, 50)
+        matches = [p for p in papers if normalize_title(p.title) == normalize_title(title)]
+        return matches, {
+            **metadata,
+            "search_query": query,
+            "returned_candidates": len(papers),
+            "exact_matches": [p.arxiv_id for p in matches],
+        }
 
     def search(
         self,
@@ -137,12 +170,15 @@ class ArxivClient:
         start: int,
         sort_by: str,
         sort_order: str,
+        id_list: str | None = None,
     ) -> tuple[list[Paper], dict]:
         if sort_by not in {"relevance", "submittedDate", "lastUpdatedDate"}:
             raise ValueError("Unsupported arXiv sort field.")
         if sort_order not in {"ascending", "descending"}:
             raise ValueError("Unsupported arXiv sort order.")
         cache_key = f"pages-v1|{query}|{start}|{limit}"
+        if id_list is not None:
+            cache_key = f"ids-v1|{id_list}"
         if (sort_by, sort_order) != ("relevance", "descending"):
             cache_key += f"|{sort_by}|{sort_order}"
         key = hashlib.sha256(cache_key.encode()).hexdigest()
@@ -167,15 +203,14 @@ class ArxivClient:
                 time.sleep(max(0, 3.1 - (time.monotonic() - self._last_request)))
                 self._last_request = time.monotonic()
                 try:
+                    params = {"start": start, "max_results": limit}
+                    if id_list is None:
+                        params.update(search_query=query, sortBy=sort_by, sortOrder=sort_order)
+                    else:
+                        params["id_list"] = id_list
                     response = httpx.get(
                         "https://export.arxiv.org/api/query",
-                        params={
-                            "search_query": query,
-                            "start": start,
-                            "max_results": limit,
-                            "sortBy": sort_by,
-                            "sortOrder": sort_order,
-                        },
+                        params=params,
                         headers={
                             "User-Agent": "PaperDiscoveryAssistant/0.1 (local course prototype)"
                         },

@@ -1,0 +1,256 @@
+{
+  "query_id": "object-detection",
+  "query": "object detection",
+  "judgments": [
+    {
+      "arxiv_id": "2611.03229",
+      "title": "CL3DOD: Understanding the Stability-Plasticity Dilemma in Outdoor Class-Incremental 3D Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02995",
+      "title": "ILLRAW: Illumination-Aware RAW Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02419",
+      "title": "TERA: Task-Evidence Restoration for Underwater Object Detection under Bandwidth-Constrained Transmission",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.01573",
+      "title": "Spend the Bits Where the Tiny Objects Are: Rate-Utility Region Coding for Aerial Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.00738",
+      "title": "Cross-Evidence Authorization State Learning for Runtime Detection of Broken Object-Level Authorization in Black-Box Web Applications",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2611.00676",
+      "title": "Smooth bounding box for object detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.00112",
+      "title": "SpikeAD: Toward Multiplication-Free Spike-Controlled Neuromorphic Architecture for Energy-Efficient Small Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.00071",
+      "title": "How Reliable Are Object Detection Models Beyond Clear Weather? A Deployment-Oriented Robustness Study for Autonomous Driving",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.00035",
+      "title": "Selective Positional Allocation for Noise-Robust Query Retrieval in Small-Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.39946",
+      "title": "ElasticFormer: Detecting Objects in HRW Shots via Elastic Computing Vision Transformer",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.39937",
+      "title": "BiHashFormer: Hash-Driven Dual-Branch Transformer for Efficient Object Detection in HRW Shots",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.39408",
+      "title": "YOLOF-MLD: A Multi-Level Distillation Framework for Efficient Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38613",
+      "title": "TRIM: Temporal Run-Time Monitoring of 3D Object Detection via Activation Statistics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.37153",
+      "title": "FastBEVFusion: Simple Multi-Modal Fusion for 3D Object Detection at 50 FPS",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36844",
+      "title": "AxisQ: Depth-Adaptive Channel--Frequency Quantization for Camouflaged Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35374",
+      "title": "GIFT: Representation Geometry Matters for Single-Domain Generalized Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35092",
+      "title": "Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis for Determining the Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.34976",
+      "title": "Sparse Recovery Bird's-Eye View Model Soup for Robust Camera-Based 3D Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.34432",
+      "title": "On Detection Reliability for Small Object Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33430",
+      "title": "Dynamic Query as Budgeting for Tiny Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29788",
+      "title": "Open-Vocabulary Models and Label Propagation for Uncertainty-aware Pseudo-Labeling of Object Detection Datasets",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.29618",
+      "title": "FogTTA: Online Test-Time Adaptation for Robust Transformer-based Object Detection in Foggy Weather",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29159",
+      "title": "RiO-DETRv2: Geometry-Aware Uncertainty Modeling Meets Real-Time Oriented Object Detection Transformer",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27883",
+      "title": "SGLDet: Spectral-aware Global-Local Dynamic Modeling for Multispectral Aerial Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27882",
+      "title": "S$^3$E-Det: A Strict Spatial-Spectral Equivariant Detector for Multispectral Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27757",
+      "title": "Revealing Inter-Channel Modality Discriminability: Channel Selective Interaction Fusion Network for Optical-SAR Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27711",
+      "title": "How Fine-Tuning Objectives Shape Layer-Wise Information in LLM Hallucination Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.27479",
+      "title": "FocusOVD: Geometric and Contextual Feature Refinement for Open-Vocabulary Small-Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26922",
+      "title": "Controllable Multi-Object Insertion for Detection Data Augmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26170",
+      "title": "Data-Efficient Learning from Demonstration for Humanoid Robots via Feature-Level Perception and Prompt-Based Object Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.26090",
+      "title": "RGB--Event Object Detection Across Operating Frequencies via Reliability-Supervised Routing and Asymmetric-Resolution Fusion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25677",
+      "title": "Plate-YOLO: An End-to-End Object Detection Framework for Robust Astrometric Registration of Historical Plates",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.25535",
+      "title": "Residential Construction Image Dataset Using CSI Divisions for Deep Learning-based Object Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.24814",
+      "title": "SL-Ground: Sentence-Level Grounding for Fine-Grained Open-Vocabulary Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24532",
+      "title": "Contrastive Hypergraph Source-free Domain Adaptive Object Detection in Adverse Weather Conditions--Extended Version",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23610",
+      "title": "Not Every Mention Is a Claim: Rethinking Object Hallucination Detection in Vision-Language Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.19912",
+      "title": "Quantifying Annotation Agreement in Object Detection with Optimal Transport",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19071",
+      "title": "MonoMIP: Multi-Height Inverse Perspective Mapping for Monocular 3D Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.18741",
+      "title": "Context-aware Bayesian Fusion for Multimodal Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13891",
+      "title": "Beyond the Snowflakes: Disentangling Weather Effects from Confounding Meta-Factors in LiDAR Object Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.13537",
+      "title": "First Experimental Results of Space Object Detection Using the InteRFeX Array",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.13403",
+      "title": "Robot-WATCHDOG : failure detection through object-centric graph representation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.13381",
+      "title": "Bottom-Up Surface-Enhanced Raman Scattering for the Detection of Micro-Objects and Globular Analytes",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.12182",
+      "title": "AI-Based On-Board Maritime Object Detection for Earth Observation Payload Data Reduction on Versal Embedded Hardware",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12149",
+      "title": "Reliability Characterization for N-version Object Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.09807",
+      "title": "Concentration, Not Uncertainty: Why Targeted Synthetic Data Doesn't Help Camouflaged Object Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.09511",
+      "title": "LiG-DETR: Local-in-Global Reassembly in Latent Space for Aerial Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.08573",
+      "title": "Sparse2comm: Towards Robust Cooperative 3D Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06688",
+      "title": "GS-Pool: Object-Level Change Detection in 3D Gaussian Splatting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.06394",
+      "title": "Harnessing Multimodal Large Language Models for Training-Free Human-Object Interaction Detection",
+      "relevance": 2
+    }
+  ]
+}

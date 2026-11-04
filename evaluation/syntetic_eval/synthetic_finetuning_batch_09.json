@@ -1,0 +1,256 @@
+{
+  "query_id": "multivariate-time-series-anomaly-detection",
+  "query": "anomaly detection in multivariate time series",
+  "judgments": [
+    {
+      "arxiv_id": "2611.01661",
+      "title": "A Hybrid Anomaly Detection Method for Multivariate Time Series",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.37563",
+      "title": "Pneuma: A Large-Scale Real-World Time Series Benchmark for Commercial Aircraft Predictive Maintenance",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.35753",
+      "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35568",
+      "title": "ExCal: Optimization-Free Multivariate Time Series Anomaly Detection via Excess Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32337",
+      "title": "TENET: Time-point Encoding Network for Multivariate Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.30628",
+      "title": "Future of Time Series Anomaly Detection: From Historical Review to Unified Outlook",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25059",
+      "title": "HCFM: Helmholtz Component Flow Matching for Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.16219",
+      "title": "OneShot: Label-Efficient Detector Weighting for Time Series Anomaly Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15250",
+      "title": "Correlation-Aware Reconstruction for Multivariate Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12754",
+      "title": "NV-Tesseract-AD: Curriculum-Enhanced Conditional Diffusion for Multivariate Time-Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06980",
+      "title": "A Data-Driven Framework for Unsupervised Monitoring of Transmission Systems Using End-of-Line Testing Data: A Case Study at Ford Motor Company",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05726",
+      "title": "FreSia: Frequency-Semantic Instantiation and Alignment for Multivariate Time Series Analysis",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.01223",
+      "title": "Have an LLM Write Your Anomaly Detector: Autonomous Discovery of Compact, Interpretable Detectors for Time Series",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.38789",
+      "title": "LEARN-TS: LLM-Enhanced Alignment and Reconstruction with Normality Guidance for Multivariate Time-Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.38004",
+      "title": "No Scale Left Behind: Multi-Scale Autoencoder with Bi-directional Attention for Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.36765",
+      "title": "Graph-Spectral Flow Matching for Multivariate Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.34161",
+      "title": "GT-PSSM: Unified Probabilistic Framework for Stochastic Dynamics Modeling and Dependency Learning in Multivariate Time Series Anomaly Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31645",
+      "title": "STAR: Adaptive Spatial-Temporal Normalization for Unified Microservice Incident Management",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.03505",
+      "title": "An Adversarial Zero-Shot Learning Approach for Anomaly Detection in Multivariate IoT Traffic Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.15727",
+      "title": "FirstDiff: One-Step Diffusion-Based Anomaly Detection for Multivariate Time Series via Initial Noise Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.01631",
+      "title": "Graph Neural Team Recommendation: An Integrated Approach",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.01619",
+      "title": "MGDiff: Multi-Interest Sequence Recommendation with Masking GNN-Guided Diffusion",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.27413",
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.22920",
+      "title": "Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.21979",
+      "title": "Beyond Similarity: Heterogeneous Graph Learning for Multi-Objective Food Substitution in Charitable Food Agencies",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.20376",
+      "title": "TH-GNN: Heterogeneous Temporal Graph Neural Networks for LLM-Agent Shilling Attack Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.16704",
+      "title": "Unbiased Recommender Systems with Implicit Feedback",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.16407",
+      "title": "POI Recommendation with LLM-Augmented Multi-Graph Learning and Contrastive Alignment",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.25566",
+      "title": "Uncertainty Reasoning with Large Language Models for Explainable Disease Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.22547",
+      "title": "MKG-CARE: Case-Aware Reasoning with Multimodal Knowledge Graphs for Explainable Medical Image Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.06197",
+      "title": "Bridging visual saliency and large language models for explainable deep learning in medical imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.02903",
+      "title": "A User-Centric Analysis of Explainability in AI-Based Medical Image Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.01999",
+      "title": "TumorXAI: Self-Supervised Deep Learning Framework for Explainable Brain MRI Tumor Classification",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.16340",
+      "title": "How Can Explainable Artificial Intelligence Improve Trust and Transparency in Medical Diagnosis Systems?",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.02502",
+      "title": "An Explainable Vision-Language Model Framework with Adaptive PID-Tversky Loss for Lumbar Spinal Stenosis Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2603.11818",
+      "title": "Automated Detection of Malignant Lesions in the Ovary Using Deep Learning Models and XAI",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.27952",
+      "title": "Unsupervised Head Network Personalization for Split Computing via Federated Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.26953",
+      "title": "From Last-Layer to Cross-Layer: One-Shot Joint Classifier Reconstruction for Federated Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25810",
+      "title": "Communication-Efficient Federated Domain Generalization in Edge Networks via Dynamic Prototype Regulation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25714",
+      "title": "Peer-Relative Trust-Guided Update Screening for Robust Semi-Decentralized Federated Learning under Label-Flipping Attacks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25318",
+      "title": "AdaFedXplain: Adaptive Federated Learning with Explainable AI for Ransomware Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25264",
+      "title": "Federated Learning for Malware Image Classification under Data Heterogeneity",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.24036",
+      "title": "Client-Aware Security Adaptive Early Exit Vision Transformers for Heterogeneous Federated Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.07068",
+      "title": "An astrometric search for planets in debris disk systems",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.00993",
+      "title": "Focal plane wavefront control with model-based reinforcement learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2602.02701",
+      "title": "Visual inspection of potential exocomet transits identified through machine learning and statistical methods",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2601.20620",
+      "title": "Climates of Terrestrial Exoplanets and Biosignatures",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2601.02324",
+      "title": "Hunting for \"Oddballs\" with Machine Learning: Detecting Anomalous Exoplanets Using a Deep-Learned Low-Dimensional Representation of Transit Spectra with Autoencoders",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2512.15484",
+      "title": "A Machine-Learning Approach for Identifying CME-Associated Stellar Flares in TESS Observations",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2512.00967",
+      "title": "Machine Learning for Exoplanet Discovery: Validating TESS Candidates and Identifying Planets in the Habitable Zone",
+      "relevance": 0
+    }
+  ]
+}

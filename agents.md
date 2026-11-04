@@ -410,6 +410,7 @@ The final system must be understandable, demonstrable, and supported by evaluati
 
 - Build the first prototype within a two-week deadline. Deliver as quickly as dependencies and verification permit; suggested day ranges are not mandatory waiting periods. Preserve required testing, evaluation, and documentation.
 - Use Streamlit for the initial web interface; FastAPI is not required.
+- The abstract-based overview was removed from scope at the user's request. Prioritize the ranked list and per-paper evidence. Displayed-paper choices are 5 through 50 in steps of 5, default 10; earlier overview requirements are superseded by this scope change.
 - Support up to 10,000 arXiv candidate entries. Longer searches are acceptable; preserve API rate limits, paginate requests, report progress and partial failures, and keep ranking within the laptop memory budget.
 - Run all NLP inference locally; do not use hosted LLM inference APIs.
 - Available GPU: laptop NVIDIA RTX 4060 with 8 GB VRAM. Full GPU utilization is permitted.

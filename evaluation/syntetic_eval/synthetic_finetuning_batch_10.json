@@ -1,0 +1,256 @@
+{
+  "query_id": "machine-learning-exoplanet-detection",
+  "query": "machine learning for exoplanet detection",
+  "judgments": [
+    {
+      "arxiv_id": "2610.28482",
+      "title": "The \"Rubin 2036: Opportunities for Discovery\" Workshop: A Community Roadmap for the Future of the Vera C. Rubin Observatory After the LSST",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.37960",
+      "title": "Constraining exoplanet population parameters with Kepler and simulation-based inference",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.00737",
+      "title": "Addressing the low-wind effect with the Lyot-based low-order wavefront sensor on SCExAO",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.23425",
+      "title": "Exploring Long-period Architectures: Four New Planet Candidates from Kepler with Periods >342 days",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.19419",
+      "title": "Microlensify: a Transformer Based Machine Learning Classifier for Microlensing Events Trained on TESS Light Curves",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.18172",
+      "title": "Astro-Hunters: Machine Learning for Exoplanet Transit Detection in TESS Photometry",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.02135",
+      "title": "Quantum Convolutional Autoencoders for Reconstruction-Based Anomaly Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.23766",
+      "title": "Machine Learning and Deep Learning for Exoplanet Detection and Atmospheric Characterization with JWST and the Upcoming Ariel Mission",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.18464",
+      "title": "Modeling Doppler Shifts in Radial-Velocity Data with Deep Learning toward Earth-mass Exoplanet Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.22300",
+      "title": "Cross-domain benchmarks reveal when coordinated AI agents improve scientific inference from partial evidence",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.06913",
+      "title": "You Only Stack Once (YOSO): A Motion-Filtered, Deep-Learning Framework for Detecting Faint Moving Sources",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2604.18579",
+      "title": "The T16 Planet Hunt: 10,000 New Planet Candidates from TESS Cycle 1 and the Confirmation of a Hot Jupiter Around TIC 183374187",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.16073",
+      "title": "Machine learning isotope shifts in molecular energy levels",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2604.07068",
+      "title": "An astrometric search for planets in debris disk systems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.00993",
+      "title": "Focal plane wavefront control with model-based reinforcement learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2602.02701",
+      "title": "Visual inspection of potential exocomet transits identified through machine learning and statistical methods",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2601.20620",
+      "title": "Climates of Terrestrial Exoplanets and Biosignatures",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2601.02324",
+      "title": "Hunting for \"Oddballs\" with Machine Learning: Detecting Anomalous Exoplanets Using a Deep-Learned Low-Dimensional Representation of Transit Spectra with Autoencoders",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.15484",
+      "title": "A Machine-Learning Approach for Identifying CME-Associated Stellar Flares in TESS Observations",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2512.00967",
+      "title": "Machine Learning for Exoplanet Discovery: Validating TESS Candidates and Identifying Planets in the Habitable Zone",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.22920",
+      "title": "Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.21979",
+      "title": "Beyond Similarity: Heterogeneous Graph Learning for Multi-Objective Food Substitution in Charitable Food Agencies",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.20376",
+      "title": "TH-GNN: Heterogeneous Temporal Graph Neural Networks for LLM-Agent Shilling Attack Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.16704",
+      "title": "Unbiased Recommender Systems with Implicit Feedback",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.16407",
+      "title": "POI Recommendation with LLM-Augmented Multi-Graph Learning and Contrastive Alignment",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.07733",
+      "title": "LGNNIC: Acceleration of Large-Scale GNN Training using SmartNICs",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2607.26365",
+      "title": "Embedding Items at Scale: Comparing GNN-Based and ID-Based Item Embeddings in the Yandex Ecosystem",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2607.25471",
+      "title": "TRWH: A Text-Driven Random Walk Heterogeneous GNN for Semantic-Aware Sparse Recommendation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.02903",
+      "title": "A User-Centric Analysis of Explainability in AI-Based Medical Image Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.01999",
+      "title": "TumorXAI: Self-Supervised Deep Learning Framework for Explainable Brain MRI Tumor Classification",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.16340",
+      "title": "How Can Explainable Artificial Intelligence Improve Trust and Transparency in Medical Diagnosis Systems?",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.02502",
+      "title": "An Explainable Vision-Language Model Framework with Adaptive PID-Tversky Loss for Lumbar Spinal Stenosis Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2603.11818",
+      "title": "Automated Detection of Malignant Lesions in the Ovary Using Deep Learning Models and XAI",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2603.04449",
+      "title": "An Explainable Ensemble Framework for Alzheimer's Disease Prediction Using Structured Clinical and Cognitive Data",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2602.21178",
+      "title": "XMorph: Explainable Brain Tumor Analysis Via LLM-Assisted Hybrid Deep Intelligence",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2602.07017",
+      "title": "XAI-CLIP: ROI-Guided Perturbation Framework for Explainable Medical Image Segmentation in Multimodal Vision-Language Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25714",
+      "title": "Peer-Relative Trust-Guided Update Screening for Robust Semi-Decentralized Federated Learning under Label-Flipping Attacks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25318",
+      "title": "AdaFedXplain: Adaptive Federated Learning with Explainable AI for Ransomware Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25264",
+      "title": "Federated Learning for Malware Image Classification under Data Heterogeneity",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.24036",
+      "title": "Client-Aware Security Adaptive Early Exit Vision Transformers for Heterogeneous Federated Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.23705",
+      "title": "FedRAPP: Federated Test-Time Prompt Tuning for Vision-Language Models with Reliability-Aware Prompt Personalization",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.21547",
+      "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.41278",
+      "title": "AuditFL: A Contract-Backed Clearing Layer for Open Federated Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.34161",
+      "title": "GT-PSSM: Unified Probabilistic Framework for Stochastic Dynamics Modeling and Dependency Learning in Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.31645",
+      "title": "STAR: Adaptive Spatial-Temporal Normalization for Unified Microservice Incident Management",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.03505",
+      "title": "An Adversarial Zero-Shot Learning Approach for Anomaly Detection in Multivariate IoT Traffic Data",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.15727",
+      "title": "FirstDiff: One-Step Diffusion-Based Anomaly Detection for Multivariate Time Series via Initial Noise Prediction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2611.01661",
+      "title": "A Hybrid Anomaly Detection Method for Multivariate Time Series",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.37563",
+      "title": "Pneuma: A Large-Scale Real-World Time Series Benchmark for Commercial Aircraft Predictive Maintenance",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.35753",
+      "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    }
+  ]
+}

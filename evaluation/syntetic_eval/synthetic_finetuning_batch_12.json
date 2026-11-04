@@ -1,0 +1,256 @@
+{
+  "query_id": "machine-translation",
+  "query": "machine translation",
+  "judgments": [
+    {
+      "arxiv_id": "2611.02271",
+      "title": "Current state of LLMs for Arabic dialectal machine translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33749",
+      "title": "Refined Assessment for Translation Evaluation: Rethinking Machine Translation Evaluation in the Era of Human-Level Systems",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33741",
+      "title": "Beyond Prompts: A Systematic Study of LLM-Based Machine Translation Evaluators",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.32842",
+      "title": "Communicating with the Entire Population: Machine Translation of Emergency Alerts and Warnings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32679",
+      "title": "When is more search useful? An Empirical Study of Search Utility in Quality-Aware Decoding for Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32115",
+      "title": "EDWARD-NMT: Elastic Dimensions With Adaptive Routing and Dual-consistency for Neural Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29943",
+      "title": "Towards English - Mizo Legal Machine Translation: Corpus Creation, Analysis, and Benchmarks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25107",
+      "title": "Generation-Heavy Hybrid Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24730",
+      "title": "GLOSS-MT: Controllable Low-Resource Machine Translation with an Editable Dictionary",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23868",
+      "title": "Translating in style: An open-weight alternative to GPT-4 for culturally aligned machine translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19945",
+      "title": "Does Machine Translation Retain Media Bias?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19528",
+      "title": "Retrieve What Helps, Only When It Helps: Agentic Reinforcement Learning for Selective Retrieval-Augmented Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.18818",
+      "title": "Back-Translation Still Matters: Leveraging Monolingual Data for Low-Resource Machine Translation with LLMs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.16538",
+      "title": "PatTransBench: an ipc-stratified, multi-dimensional benchmark for patent machine translation evaluation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.14756",
+      "title": "Amharic-English Cross-Language Question Answering Using Statistical Machine Translation, Named Entity Recognition, and Semantic Indexing",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.11389",
+      "title": "Fact over Fiction: Detection of Pathological Hallucinations in Sinhala-to-English Neural Machine Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.10918",
+      "title": "Large Language Models for Machine Translation Quality Annotation: Humans and Models Are Both Challenged",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.07032",
+      "title": "Investigating Model Compression for Neural Machine Translation in the Biomedical Domain",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05084",
+      "title": "Towards cross-cultural study of folksong lyrics with machine translation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.00881",
+      "title": "Machine Translation for Sign Languages",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.35017",
+      "title": "TermJudge: A Document-Level Metric Judging, Not Counting, Terminology in Machine Translation Evaluation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.34770",
+      "title": "Reference-Grounded Data Curation for Instruction-Following Thai-English Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31727",
+      "title": "The Ongiini-Eval-OW Benchmark: A Concept Paper for the Planned Benchmarking of Machine Translation and Large Language Models on Oshindonga and Oshikwanyama",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.31169",
+      "title": "Improving Visual Sensitivity of LLMs on Multimodal Machine Translation with Metric-based Loss Weighting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29633",
+      "title": "TTLab at AlexandriaX-2026: A Fine-Tuned Surface Tagger for Arabic Machine-Translation Error-Span Detection and Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.29559",
+      "title": "Benchmarking Arabic--Russian Machine Translation: A Comparison of Fine-tuned NMT and Few-shot LLMs under Rich Morphology and Low Lexical Overlap",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29511",
+      "title": "EnSiTa - A Trilingual Multi-Domain Parallel Dataset and Benchmark for Domain-Specific Machine Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.28826",
+      "title": "COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.28117",
+      "title": "Scaling Attention Head Analysis via Gradient-Based Attribution in Context-Aware Machine Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.22796",
+      "title": "AlexandriaX 2026: The First Shared Task on Dialectal Arabic Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.22793",
+      "title": "Diagnose, Then Repair: A Two-Stage MQM-Guided Post-Editing Framework for Domain-Specific Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.21490",
+      "title": "Benchmarking Gender Bias in Machine Translation Evaluation Metrics across Occupations",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.21247",
+      "title": "When Does Reasoning Help in Machine Translation? A Hierarchical Analysis of LRM Reasoning Traces",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.19885",
+      "title": "Evaluating Communicative Success in Machine-Translated Conversation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.18529",
+      "title": "Machine Translation between English and Syriac (East Syriac Dialect) using Statistical Machine Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.17956",
+      "title": "TACTICS: Taxonomy-Aware Intelligent Corpus Sampling for Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.17539",
+      "title": "MudawanSn: A Gold-Standard Wolof-Arabic Parallel Corpus for Machine Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.16340",
+      "title": "StalePO: Anchored Token-Level Preference Optimization using Legacy Post-Edits in Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.14795",
+      "title": "Mind Which Bird You Favour: Parameterizing Adequacy-Fluency Balance in Meta-Evaluation of Machine Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.13615",
+      "title": "The University of Melbourne WMT 2026 CreoleMT Submission: A Domain-Balanced Approach to Low-Resource Pacific Creole Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.12674",
+      "title": "Doc2FRC: Length-Consistent Document-Level Machine Translation via Fixed-Range Chunking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.08779",
+      "title": "Improving Term Evaluation in Machine Translation: Variation Matters",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.06048",
+      "title": "Generating Adversarial Texts for Machine Translation via GRPO",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.00588",
+      "title": "Quit While You're Ahead: Quit for Efficient Candidate Generation in Machine Translation Reranking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.28496",
+      "title": "Ladders in Chaos: When, How, (and Perhaps Why) Does Test-Time Scaling Improve LLM Machine Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.27161",
+      "title": "STAR : Sentence Translation Alignment Rate for Document-to-Document Machine Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.27036",
+      "title": "Reasoning about In-Context Samples for Machine-Translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.23582",
+      "title": "Transformer Accelerator (TFA): A Macro-Op INT8 Hardware Chip for Transformer Inference and Machine Translation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.23120",
+      "title": "Statistical Machine Translation Systems of English-Pnar Language Pair : Some Insights of the Emperical Study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.22274",
+      "title": "Length-Adaptive Decoding for Masked Diffusion Machine Translation",
+      "relevance": 3
+    }
+  ]
+}

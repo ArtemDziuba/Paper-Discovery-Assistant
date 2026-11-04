@@ -1,0 +1,256 @@
+{
+  "query_id": "graph-neural-networks-recommendation",
+  "query": "graph neural networks for recommendation",
+  "judgments": [
+    {
+      "arxiv_id": "2611.03246",
+      "title": "A Common Language for Dynamic Graphs: Interaction Tokenization Enables Foundation Models",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.40192",
+      "title": "Bridging Semantics and Structure: A Theoretically Grounded Framework for Link Prediction on TAGs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19446",
+      "title": "xLightGCN: Explainable Graph Neural Network Based Recommendation Systems with Most Influential Peers",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.35917",
+      "title": "Replication Failure and Trivial Baselines in Road-Level Crash Prediction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.15692",
+      "title": "Complete Suffix Prediction for Recommendation via Latent Retrieval over Process Graphs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.05748",
+      "title": "A Multi-Source Ensemble Approach to Candidate Generation for Alternative Vacation Rental Property Recommendations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.04574",
+      "title": "MURAL: Multimodal Uncertainty-aware Recommendation via Adaptive edge Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.01631",
+      "title": "Graph Neural Team Recommendation: An Integrated Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.01619",
+      "title": "MGDiff: Multi-Interest Sequence Recommendation with Masking GNN-Guided Diffusion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.27413",
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.22920",
+      "title": "Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.21979",
+      "title": "Beyond Similarity: Heterogeneous Graph Learning for Multi-Objective Food Substitution in Charitable Food Agencies",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.20376",
+      "title": "TH-GNN: Heterogeneous Temporal Graph Neural Networks for LLM-Agent Shilling Attack Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.16704",
+      "title": "Unbiased Recommender Systems with Implicit Feedback",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.16407",
+      "title": "POI Recommendation with LLM-Augmented Multi-Graph Learning and Contrastive Alignment",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.07733",
+      "title": "LGNNIC: Acceleration of Large-Scale GNN Training using SmartNICs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.26365",
+      "title": "Embedding Items at Scale: Comparing GNN-Based and ID-Based Item Embeddings in the Yandex Ecosystem",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.25471",
+      "title": "TRWH: A Text-Driven Random Walk Heterogeneous GNN for Semantic-Aware Sparse Recommendation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.22287",
+      "title": "Efficient Recommendations via Graph Coarsening and Label Propagation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.20737",
+      "title": "Cardinality-Decomposed Loss: Matching Training Objectives to Relation Structure in Heterogeneous Recommendation Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.21178",
+      "title": "XMorph: Explainable Brain Tumor Analysis Via LLM-Assisted Hybrid Deep Intelligence",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2602.07017",
+      "title": "XAI-CLIP: ROI-Guided Perturbation Framework for Explainable Medical Image Segmentation in Multimodal Vision-Language Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.37026",
+      "title": "Interpretable Deep Learning Models for Breast Cancer Diagnosis Using Medical Imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.36325",
+      "title": "Ontology-guided multi-agent reasoning for explainable differential diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.26215",
+      "title": "Fairness or Fallacy? Mapping the Landscape of AI Bias in Disease Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.31692",
+      "title": "Architecture-aware Robustness Evaluation of Explainable Deep Learning for Breast Cancer Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.18212",
+      "title": "A Lightweight CNN Integrated Compact Convolutional Transformer for Multi-Scale Feature Learning and reducing computational complexity for breast cancer mammography image detection and classification",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.13523",
+      "title": "Positive Topology and Feasible Refinement: Forcing Matrices, Positivity, and Information",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.41278",
+      "title": "AuditFL: A Contract-Backed Clearing Layer for Open Federated Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.39791",
+      "title": "Device-Induced Mobility Heterogeneity and Its Impact on Federated Next-Location Prediction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.39483",
+      "title": "Does Federated Training Degrade Explainability? A Comparative Analysis of Grad-CAM Faithfulness in Centralized vs. Federated Deepfake Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.39008",
+      "title": "Fed-IGTD: A federated learning-based framework for tabular-to-image encoding",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38970",
+      "title": "Communication-Efficient Clustered Federated Learning in Non-IID Wireless Networks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38793",
+      "title": "Trustworthy Distributed Machine Learning in Cloud-Edge-IoT Systems: A Heterogeneity-Aware Survey of Security, Privacy, and Robustness",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38411",
+      "title": "Governance-Aware Federated Learning for Multi-Agent AI Systems: A Policy-Driven Framework for Trustworthy Collaborative AI",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.35640",
+      "title": "FedAvgIm: Federated Learning for Multi-Site Impedance Identification of Inverter-Based Resources",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.35753",
+      "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.35568",
+      "title": "ExCal: Optimization-Free Multivariate Time Series Anomaly Detection via Excess Calibration",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.32337",
+      "title": "TENET: Time-point Encoding Network for Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.30628",
+      "title": "Future of Time Series Anomaly Detection: From Historical Review to Unified Outlook",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25059",
+      "title": "HCFM: Helmholtz Component Flow Matching for Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.16219",
+      "title": "OneShot: Label-Efficient Detector Weighting for Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.15250",
+      "title": "Correlation-Aware Reconstruction for Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.19419",
+      "title": "Microlensify: a Transformer Based Machine Learning Classifier for Microlensing Events Trained on TESS Light Curves",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.18172",
+      "title": "Astro-Hunters: Machine Learning for Exoplanet Transit Detection in TESS Photometry",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2607.02135",
+      "title": "Quantum Convolutional Autoencoders for Reconstruction-Based Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2606.23766",
+      "title": "Machine Learning and Deep Learning for Exoplanet Detection and Atmospheric Characterization with JWST and the Upcoming Ariel Mission",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2606.18464",
+      "title": "Modeling Doppler Shifts in Radial-Velocity Data with Deep Learning toward Earth-mass Exoplanet Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.22300",
+      "title": "Cross-domain benchmarks reveal when coordinated AI agents improve scientific inference from partial evidence",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.06913",
+      "title": "You Only Stack Once (YOSO): A Motion-Filtered, Deep-Learning Framework for Detecting Faint Moving Sources",
+      "relevance": 0
+    }
+  ]
+}

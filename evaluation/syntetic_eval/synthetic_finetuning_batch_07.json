@@ -1,0 +1,256 @@
+{
+  "query_id": "explainable-ai-medical-diagnosis",
+  "query": "explainable artificial intelligence for medical diagnosis",
+  "judgments": [
+    {
+      "arxiv_id": "2610.37026",
+      "title": "Interpretable Deep Learning Models for Breast Cancer Diagnosis Using Medical Imaging",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36325",
+      "title": "Ontology-guided multi-agent reasoning for explainable differential diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26215",
+      "title": "Fairness or Fallacy? Mapping the Landscape of AI Bias in Disease Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.31692",
+      "title": "Architecture-aware Robustness Evaluation of Explainable Deep Learning for Breast Cancer Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.18212",
+      "title": "A Lightweight CNN Integrated Compact Convolutional Transformer for Multi-Scale Feature Learning and reducing computational complexity for breast cancer mammography image detection and classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.13523",
+      "title": "Positive Topology and Feasible Refinement: Forcing Matrices, Positivity, and Information",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.13340",
+      "title": "ProtoCAM: Interpretable Few-Shot Mask-Guided Prototypical Learning for Breast Lesion Classification in Ultrasound Imaging",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.28662",
+      "title": "FRAC-MAS: A Safe and Explainable Multi-Agent System for Fracture Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.09664",
+      "title": "From ML Predictions to Informed Diagnostic Assistance Using the Toulmin Model of Argumentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.25566",
+      "title": "Uncertainty Reasoning with Large Language Models for Explainable Disease Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.22547",
+      "title": "MKG-CARE: Case-Aware Reasoning with Multimodal Knowledge Graphs for Explainable Medical Image Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.06197",
+      "title": "Bridging visual saliency and large language models for explainable deep learning in medical imaging",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.02903",
+      "title": "A User-Centric Analysis of Explainability in AI-Based Medical Image Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.01999",
+      "title": "TumorXAI: Self-Supervised Deep Learning Framework for Explainable Brain MRI Tumor Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.16340",
+      "title": "How Can Explainable Artificial Intelligence Improve Trust and Transparency in Medical Diagnosis Systems?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.02502",
+      "title": "An Explainable Vision-Language Model Framework with Adaptive PID-Tversky Loss for Lumbar Spinal Stenosis Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.11818",
+      "title": "Automated Detection of Malignant Lesions in the Ovary Using Deep Learning Models and XAI",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.04449",
+      "title": "An Explainable Ensemble Framework for Alzheimer's Disease Prediction Using Structured Clinical and Cognitive Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.21178",
+      "title": "XMorph: Explainable Brain Tumor Analysis Via LLM-Assisted Hybrid Deep Intelligence",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.07017",
+      "title": "XAI-CLIP: ROI-Guided Perturbation Framework for Explainable Medical Image Segmentation in Multimodal Vision-Language Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.40192",
+      "title": "Bridging Semantics and Structure: A Theoretically Grounded Framework for Link Prediction on TAGs",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.19446",
+      "title": "xLightGCN: Explainable Graph Neural Network Based Recommendation Systems with Most Influential Peers",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.35917",
+      "title": "Replication Failure and Trivial Baselines in Road-Level Crash Prediction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.15692",
+      "title": "Complete Suffix Prediction for Recommendation via Latent Retrieval over Process Graphs",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.05748",
+      "title": "A Multi-Source Ensemble Approach to Candidate Generation for Alternative Vacation Rental Property Recommendations",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.04574",
+      "title": "MURAL: Multimodal Uncertainty-aware Recommendation via Adaptive edge Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.01631",
+      "title": "Graph Neural Team Recommendation: An Integrated Approach",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.01619",
+      "title": "MGDiff: Multi-Interest Sequence Recommendation with Masking GNN-Guided Diffusion",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.39008",
+      "title": "Fed-IGTD: A federated learning-based framework for tabular-to-image encoding",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38970",
+      "title": "Communication-Efficient Clustered Federated Learning in Non-IID Wireless Networks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38793",
+      "title": "Trustworthy Distributed Machine Learning in Cloud-Edge-IoT Systems: A Heterogeneity-Aware Survey of Security, Privacy, and Robustness",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38411",
+      "title": "Governance-Aware Federated Learning for Multi-Agent AI Systems: A Policy-Driven Framework for Trustworthy Collaborative AI",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.35640",
+      "title": "FedAvgIm: Federated Learning for Multi-Site Impedance Identification of Inverter-Based Resources",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.33619",
+      "title": "Geodesic-SVDD Latent Mixup for One-Shot Distributed Tabular Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.32626",
+      "title": "Privacy-Preserving Federated Loss Exploration for Vision-Based Perception under Non-IID Data",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.30634",
+      "title": "FedBST: Bilateral Self-Training for Unsupervised Federated Classification",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.30628",
+      "title": "Future of Time Series Anomaly Detection: From Historical Review to Unified Outlook",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25059",
+      "title": "HCFM: Helmholtz Component Flow Matching for Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.16219",
+      "title": "OneShot: Label-Efficient Detector Weighting for Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.15250",
+      "title": "Correlation-Aware Reconstruction for Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.12754",
+      "title": "NV-Tesseract-AD: Curriculum-Enhanced Conditional Diffusion for Multivariate Time-Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.06980",
+      "title": "A Data-Driven Framework for Unsupervised Monitoring of Transmission Systems Using End-of-Line Testing Data: A Case Study at Ford Motor Company",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.05726",
+      "title": "FreSia: Frequency-Semantic Instantiation and Alignment for Multivariate Time Series Analysis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2606.23766",
+      "title": "Machine Learning and Deep Learning for Exoplanet Detection and Atmospheric Characterization with JWST and the Upcoming Ariel Mission",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2606.18464",
+      "title": "Modeling Doppler Shifts in Radial-Velocity Data with Deep Learning toward Earth-mass Exoplanet Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.22300",
+      "title": "Cross-domain benchmarks reveal when coordinated AI agents improve scientific inference from partial evidence",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.06913",
+      "title": "You Only Stack Once (YOSO): A Motion-Filtered, Deep-Learning Framework for Detecting Faint Moving Sources",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.18579",
+      "title": "The T16 Planet Hunt: 10,000 New Planet Candidates from TESS Cycle 1 and the Confirmation of a Hot Jupiter Around TIC 183374187",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.16073",
+      "title": "Machine learning isotope shifts in molecular energy levels",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.07068",
+      "title": "An astrometric search for planets in debris disk systems",
+      "relevance": 0
+    }
+  ]
+}

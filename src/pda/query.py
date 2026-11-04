@@ -1,6 +1,7 @@
 """Conservative lexical query interpretation baseline; no generated concepts."""
 
 import re
+import unicodedata
 
 from pda.models import Interpretation
 
@@ -51,6 +52,11 @@ def terms(text: str) -> list[str]:
     return list(dict.fromkeys(tokenize(text)))
 
 
+def normalize_title(text: str) -> str:
+    """Compare complete titles without removing meaningful words or punctuation."""
+    return " ".join(unicodedata.normalize("NFKC", text).split()).casefold()
+
+
 def interpret(query: str) -> Interpretation:
     query = " ".join(query.split())
     if not 3 <= len(query) <= 1000:
@@ -63,7 +69,7 @@ def interpret(query: str) -> Interpretation:
         query,
         flags=re.IGNORECASE,
     )
-    quoted = re.fullmatch(r'"([^"\n]+)"', topic)
+    quoted = re.fullmatch(r'["“]([^"“”\n]+)["”]', topic)
     concepts = terms(topic)
     if not concepts:
         raise ValueError("Include at least one specific research concept.")
@@ -85,4 +91,5 @@ def interpret(query: str) -> Interpretation:
         search_query=search,
         warnings=warnings,
         quoted_title=quoted.group(1) if quoted else None,
+        title_candidate=quoted.group(1) if quoted else topic,
     )

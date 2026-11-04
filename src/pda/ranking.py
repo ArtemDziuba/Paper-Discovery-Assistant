@@ -1,6 +1,8 @@
 """Local embeddings and a dependency-light TF-IDF baseline."""
 
+import json
 from collections.abc import Callable
+from pathlib import Path
 
 import numpy as np
 
@@ -8,6 +10,7 @@ from pda.query import tokenize
 
 MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 REVISION = "c9745ed1d9f207416be6d2e6f8de32d1f16199bf"
+FINETUNED_PATH = Path(__file__).resolve().parents[2] / "models" / "finetuned-minilm"
 
 
 def cosine_scores(query: np.ndarray, documents: np.ndarray) -> np.ndarray:
@@ -63,7 +66,7 @@ class LexicalEncoder:
 
 
 class SemanticEncoder:
-    def __init__(self, device: str = "cpu"):
+    def __init__(self, device: str = "cpu", *, model_path: Path | None = None):
         import torch
 
         self.device = device
@@ -75,6 +78,21 @@ class SemanticEncoder:
             )
         from sentence_transformers import SentenceTransformer
 
+        self.model_name = MODEL
+        self.model_revision = REVISION
+        self.training_run = None
+        if model_path is not None:
+            manifest = model_path / "training_manifest.json"
+            if not manifest.is_file():
+                raise RuntimeError(
+                    "The fine-tuned model is not available. Run scripts/prepare_finetuning.py "
+                    "and scripts/train_ranker.py first, or select Semantic."
+                )
+            self.training_run = json.loads(manifest.read_text(encoding="utf-8"))
+            self.model_name = "pda/finetuned-minilm"
+            self.model_revision = self.training_run["run_id"]
+            self.model = SentenceTransformer(str(model_path), device=device, local_files_only=True)
+            return
         try:
             self.model = SentenceTransformer(
                 MODEL,

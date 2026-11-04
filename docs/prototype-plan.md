@@ -14,7 +14,7 @@ Internet access for paper retrieval through the arXiv API is approved. All NLP i
 
 ## Baseline architecture
 
-Streamlit calls ordinary Python components directly. Pydantic validates shared records. Use a lightweight, deterministic concept-extraction baseline, an arXiv retrieval client, metadata normalization/deduplication, a local Sentence Transformers encoder, NumPy cosine ranking, evidence-based match explanations, and an extractive abstract-based overview with source citations. Topic retrieval removes common conversational prefixes and requires retained concepts together; quoted phrases preserve their full wording. Optional Windows CUDA dependencies are selected with the cuda extra.
+Streamlit calls ordinary Python components directly. Pydantic validates shared records. Use a lightweight, deterministic concept-extraction baseline, an arXiv retrieval client, metadata normalization/deduplication, a local Sentence Transformers encoder, NumPy cosine ranking, and per-paper match evidence with source links. Topic retrieval removes common conversational prefixes and requires retained concepts together; quoted phrases preserve their full wording. Optional Windows CUDA dependencies are selected with the cuda extra.
 
 Start with extractive summaries and explanations. Consider a small local generative model only after the baseline works and evaluation identifies a concrete benefit. Exact model selection requires checking model documentation, licensing, input limits, and resource requirements.
 
@@ -28,11 +28,10 @@ flowchart TD
     E --> G[Cosine ranking]
     F --> G
     G --> H[Grounded match explanations]
-    H --> I[Extractive overview with paper citations]
-    I --> J[Streamlit results and source links]
+    H --> J[Streamlit ranked results and source links]
 ```
 
-The arXiv client makes an external API call. The encoder makes local model calls. Extractive explanations and overviews initially require no generative model. Store configuration, model revision, retrieval time, and stage timings for reproducibility.
+The arXiv client makes an external API call. The encoder makes local model calls. Per-paper extractive explanations require no generative model. The overview feature has been removed at the user's request; focus on ranked papers, with 5–50 displayed results in increments of 5. Store configuration, model revision, retrieval time, and stage timings for reproducibility.
 
 ## Evaluation before interpreting results
 
@@ -58,7 +57,7 @@ The two-week window is a deadline, not a prescribed work duration. Proceed as qu
 1. Establish business requirements, investigate data, define evaluation criteria, document architecture, and create reusable skills.
 2. Implement retrieval, metadata preparation, caching, and software tests.
 3. Add embeddings, a lexical baseline, ranking, explanations, and Streamlit integration.
-4. Add an extractive overview, citation validation, and the end-to-end workflow.
+4. Validate source links and the end-to-end ranked search workflow.
 5. Run component evaluations, analyze errors, and measure resource use.
 6. Fix issues, check reproducibility, complete the report and diagrams, and rehearse the demo.
 
@@ -66,11 +65,15 @@ The two-week window is a deadline, not a prescribed work duration. Proceed as qu
 
 Application code will live under src/, with a Streamlit entry point, tests/, evaluation datasets/configurations/results, docs/, and actual reusable skills under .agents/skills/. Create installation/run instructions in docs/ without changing readme.md.
 
-Acceptance: a query produces real retrieved papers, ordered scores explicitly described as similarity rather than probability, evidence-supported explanations, an abstract-based overview with resolvable citations, and clear handling of empty results/API failures. Include a reproducible evaluation command and actual per-component results, limitations, and demo cases. Do not claim quality, hardware compliance, or passing tests until measured.
+Acceptance: a query produces real retrieved papers, ordered scores explicitly described as similarity rather than probability, per-paper evidence and source links, and clear handling of empty results/API failures. Display 5–50 papers in steps of 5, subject to available candidates. Include a reproducible evaluation command and actual per-component results, limitations, and demo cases. Do not claim quality, hardware compliance, or passing tests until measured.
+
+Complete-title lookup supplements topic retrieval and prioritizes actual exact returned
+titles, with optional ASCII/smart quotes. The auxiliary request and merge remain inside
+the existing retrieval and ranking components; see architecture.md for provenance and limits.
 
 ## Risks and decisions to resolve
 
 - arXiv API availability, rate limits, and clear handling of network failures.
-- Whether the initial extractive overview satisfies the intended literature-overview experience.
+- The overview was removed from scope at the user's request; retain per-paper evidence and links.
 - Dataset relevance to live arXiv search and the availability of independent human judgments.
 - Local model downloads, input truncation, CPU/GPU compatibility, and measured memory use.

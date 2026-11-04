@@ -1,0 +1,256 @@
+{
+  "query_id": "automatic-speech-recognition",
+  "query": "automatic speech recognition",
+  "judgments": [
+    {
+      "arxiv_id": "2611.02476",
+      "title": "GigaSpeech 3: Scaling Multi-Dialect Arabic Speech Recognition with Weakly Labeled Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.00692",
+      "title": "Multilingual TASU: Extending Text-Only Alignment to Multilingual Speech Recognition via Simulated CTC Posteriors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.41292",
+      "title": "From Transcription to Reformulation: Defining and Benchmarking Grounded Generative Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.40883",
+      "title": "Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.38739",
+      "title": "Streaming Speech Recognition on a Microcontroller: a 65.7M-Parameter Transducer in 2 and 4 Bits on the ESP32-P4",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38050",
+      "title": "Improving the Dependency on Fine-Tuning Data in Transfer Learning for Speech Emotion Recognition",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.34623",
+      "title": "One Mean Log-Mel Vector per Phoneme: Simple and Fast Text Injection for Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33977",
+      "title": "EmoNet: A Lightweight Attention-Based CNN for Speech Emotion Recognition",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.33952",
+      "title": "Beyond Accuracy: What Are Speech Emotion Recognition Models Learning?",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.33765",
+      "title": "RoleHear: Pseudo-Labeling for Semi-Supervised Role-Attributed Streaming Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32187",
+      "title": "Uni-Stream: A Unified Streaming Speech Language Model for Speech Synthesis and Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.30663",
+      "title": "Group Relative Policy Optimisation Improves Multilingual Speech Recognition in Low-Resource Languages",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29720",
+      "title": "Bio-Inspired Auditory Processing: Coupling Parallel Resonate-and-Fire Dynamics with Ternary Recurrent Networks for Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28673",
+      "title": "How Far Can the Gemma 4 Speech Encoder Go Without Changing Its Weights? Saudi and Gulf Arabic Speech Recognition with a Frozen and an Adapter-Augmented Encoder",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27002",
+      "title": "Evaluating Tibetan Speech Recognition Across Dialects and Adaptation Regimes: A Multi-Granularity Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26986",
+      "title": "Think Before You Transcribe: Context-Steered Reasoning for Hotword-Aware Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26888",
+      "title": "Mixture of Phonetic Experts Based Low-Rank Adaptation of Conformer Models for Accented English Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26821",
+      "title": "AfriBED: a Speech Recognition Bias Evaluation Dataset for Low Resource African Languages",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26446",
+      "title": "Label Authority in Speech Emotion Recognition: Intended and Perceived Ground Truth in Emozionalmente",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.25351",
+      "title": "Probing and Mitigating Hallucinations in Speech-augmented Language Models for Automatic Speech Recognition via Small Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24809",
+      "title": "Ask, Don't Guess: Targeted Clarification for Speech Recognition Errors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23117",
+      "title": "Advancing Sentence-Level Dysarthric Audio-Visual Speech Recognition via Test-Time Adaptation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21440",
+      "title": "SITAR: A Situational Distortion Metric for Automatic Speech Recognition Evaluation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.21164",
+      "title": "Automatic Sentence Completion Using Bengali Audio Speech with a Transformer-Based Early Speech Recognition System",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19134",
+      "title": "CAFE: Confining Feature Distillation to Language-Routed Adapters for Compact Multilingual Automatic Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.17813",
+      "title": "SSEmb: Training a Generalizable Speech Retrieval Model Using Only Automatic Speech Recognition Data",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.17278",
+      "title": "Nufo: A Benchmark for Ewe Automatic Speech Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.16260",
+      "title": "ScreenASR-Bench: A Tiered Benchmark for Speech Recognition with Visual Context",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15671",
+      "title": "Synthesizing Ultrasonic Echo Profiles from Text for Open-Vocabulary Silent Speech Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.14594",
+      "title": "SpikCTU: A Compact Spiking Network with Adaptive Recurrent Computation for Speech Command Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.13662",
+      "title": "Enhancing Speech Recognition through Text-to-Speech and Voice Conversion Augmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13447",
+      "title": "Oído: Open-Vocabulary Speech Recognition on a $5 Microcontroller without a Neural Accelerator",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.11646",
+      "title": "Phonologically Informed Tokenization for German Speech Recognition: A Cross-Domain Study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.09109",
+      "title": "Breaking Adversarial Transferability in Fine-Tuned Speech Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.08994",
+      "title": "Phoneme-Guided Initialization for LLM-based Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05681",
+      "title": "Automatic Speech Recognition for Low-Resource Sinhala: A Critical Review of Methods, Challenges, and Future Directions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03017",
+      "title": "Personalized Automatic Speech Recognition for a Dysarthric and Tracheostomic Speaker using Artificial Conversations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39453",
+      "title": "From Speech to Editable Concepts: Probing Emotion Recognition with Concept Bottleneck Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.38897",
+      "title": "FFASR: Benchmarking Far-Field Automatic Speech Recognition using High-Fidelity Simulated RIRs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.38634",
+      "title": "Estimates of neural health using cochlear implant digital twins correlate with speech recognition",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.36920",
+      "title": "Benchmarking Automatic Speech Recognition Tools for Iberian Languages",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.35564",
+      "title": "Almieyar: A Culturally Grounded Benchmark for Multi-Dialect Arabic Speech Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.33865",
+      "title": "In-Context Adaptation of Encoder-Decoder Models in Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.33060",
+      "title": "Deep Learning Techniques for Phoneme Recognition in Italian Children' s Speech",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.32408",
+      "title": "Automatic Speech Recognition for the Basaà Language: A Low-Resource Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31961",
+      "title": "Improving Audiovisual Speech Recognition through Synthetic Visual Data Augmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31399",
+      "title": "Differential Attention Unlocks Complementary EEG and Speech Fusion for Emotion Recognition",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.30439",
+      "title": "Inference-Time Target Speaker Unlearning in LLM-Based Automatic Speech Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.30160",
+      "title": "A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29800",
+      "title": "Adaptive Fisher-Whitened Cross-Covariance for Low-Resource Speech Recognition",
+      "relevance": 3
+    }
+  ]
+}

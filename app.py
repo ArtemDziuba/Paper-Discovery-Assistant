@@ -10,7 +10,7 @@ import streamlit as st
 
 from pda.pipeline import search
 from pda.query import interpret
-from pda.ranking import LexicalEncoder, SemanticEncoder
+from pda.ranking import FINETUNED_PATH, LexicalEncoder, SemanticEncoder
 from pda.retrieval import ArxivClient, RetrievalError
 
 st.set_page_config(page_title="Paper Discovery Assistant", page_icon="📚", layout="wide")
@@ -25,12 +25,14 @@ def client():
 
 @st.cache_resource
 def encoder(method, device):
+    if method == "Fine-tuned":
+        return SemanticEncoder(device, model_path=FINETUNED_PATH)
     return SemanticEncoder(device) if method == "Semantic" else LexicalEncoder()
 
 
 with st.sidebar:
     st.header("Search settings")
-    method = st.selectbox("Ranking", ["Semantic", "TF-IDF baseline"])
+    method = st.selectbox("Ranking", ["Semantic", "TF-IDF baseline", "Fine-tuned"])
     device = st.selectbox(
         "Inference device",
         ["cpu", "cuda"],
@@ -40,7 +42,7 @@ with st.sidebar:
         "Candidate papers", min_value=10, max_value=10_000, value=1000, step=10
     )
     st.caption("Retrieve up to 10,000 candidates. Larger uncached searches take longer.")
-    top_k = st.slider("Displayed papers", 1, 20, 10)
+    top_k = st.slider("Displayed papers", min_value=5, max_value=50, value=10, step=5)
     st.caption("Semantic ranking downloads a model on first use. Inference stays local.")
 
 with st.form("search"):
@@ -48,7 +50,7 @@ with st.form("search"):
         "Research question or topic",
         max_chars=1000,
         placeholder="Efficient transformers for long document summarization",
-        help="For a known paper, put its complete title in double quotes.",
+        help="Enter a research topic or a complete paper title. Quotation marks are optional for titles.",
     )
     submitted = st.form_submit_button("Find papers", type="primary")
 
@@ -89,6 +91,11 @@ if "result" in st.session_state:
             "Only part of the requested search completed. Results use the retrieved "
             f"candidates. {result.metadata['partial_failure']}"
         )
+    if (result.metadata.get("title_lookup") or {}).get("error"):
+        st.warning(
+            "The exact-title lookup failed; these results use topic retrieval only. "
+            + result.metadata["title_lookup"]["error"]
+        )
     for warning in result.interpretation.warnings:
         st.warning(warning)
     with st.expander("Search interpretation and execution details"):
@@ -100,20 +107,10 @@ if "result" in st.session_state:
         "Ranking covers only the retrieved candidates. Inspect evidence for weak matches."
     )
     if result.metadata.get("exact_title_priority"):
-        st.caption(
-            "Exact title matches appear first for quoted queries; similarity scores are unchanged."
-        )
+        st.caption("Exact title matches appear first; similarity scores are unchanged.")
     if not result.matches:
         st.info("No usable papers found. Try a more specific research topic.")
     else:
-        st.subheader("Abstract-based overview")
-        st.caption(
-            "Extractive baseline: selected source sentences from up to five papers. "
-            "This is not a full-paper analysis or a synthesis of scientific consensus."
-        )
-        for item in result.overview:
-            st.write(item["excerpt"])
-            st.link_button(f"Source: {item['arxiv_id']}", item["url"])
         st.subheader("Ranked papers")
         for match in result.matches:
             with st.expander(f"{match.display_score:.1f}/100 · {match.paper.title}"):

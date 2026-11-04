@@ -24,6 +24,7 @@ class Interpretation(BaseModel):
     concepts: list[str]
     search_query: str
     quoted_title: str | None = None
+    title_candidate: str | None = None
     warnings: list[str] = Field(default_factory=list)
 
 
@@ -38,5 +39,4 @@ class Match(BaseModel):
 class SearchResult(BaseModel):
     interpretation: Interpretation
     matches: list[Match]
-    overview: list[dict[str, str]]
     metadata: dict

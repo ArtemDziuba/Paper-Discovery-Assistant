@@ -1,0 +1,34 @@
+Query: cnn image recognition
+[2608.04379] Image Classification Using CNN-QNN Hybrid Model with Optimized Correlated Features - 2
+[2302.05105] Text recognition on images using pre-trained CNN - 1
+[1803.09218] Image Recognition Using Scale Recurrent Neural Networks - 2
+[2106.14350] Deep Learning Image Recognition for Non-images - 2
+[1912.11035] CNN-generated images are surprisingly easy to spot... for now - 1
+[1612.00983] Food Image Recognition by Using Convolutional Neural Networks (CNNs) - 3
+[1604.04573] CNN-RNN: A Unified Framework for Multi-label Image Classification - 3
+[2505.05957] Efficient Quantum Convolutional Neural Networks for Image Classification: Overcoming Hardware Constraints - 2
+[1409.1556] Very Deep Convolutional Networks for Large-Scale Image Recognition - 3
+[2502.00663] Enhanced Convolutional Neural Networks for Improved Image Classification - 3
+[2507.21156] Comparative Analysis of Vision Transformers and Convolutional Neural Networks for Medical Image Classification - 3
+[1905.11946] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks - 3
+[1511.08458] An Introduction to Convolutional Neural Networks - 3
+[1905.03288] Advancements in Image Classification using Convolutional Neural Network - 3
+[1809.00216] Evaluation of Neural Networks for Image Recognition Applications: Designing a 0-1 MILP Model of a CNN to create adversarials - 2
+[1806.03973] State Classification with CNN - 2
+[2103.00302] Automatic evaluation of human oocyte developmental potential from microscopy images - 2
+[1412.6806] STRIVING FOR SIMPLICITY: THE ALL CONVOLUTIONAL NET - 2
+[1811.08278] Assessing four Neural Networks on Handwritten Digit Recognition Dataset (MNIST) - 3
+[1708.07770] Evaluation of Deep Learning on an Abstract Image Classification Dataset - 3
+[2006.01645] Interpretation of ResNet by Visualization of Preferred Stimulus in Receptive Fields - 2
+[2406.14583] Modeling & Evaluating the Performance of Convolutional Neural Networks for Classifying Steel Surface Defects - 3
+[2210.07973] WILD ANIMAL CLASSIFIER USING CNN - 3
+[1809.06187] Study and Observation of the Variations of Accuracies for Handwritten Digits Recognition with Various Hidden Layers and Epochs using Convolutional Neural Network - 1
+[2209.14454] CompNet: A Designated Model to Handle Combinations of Images and Designed features - 3
+[1803.05963] Studying Invariances of Trained Convolutional Neural Networks - 2
+[1703.04101] Evaluating Deep Convolutional Neural Networks for Material Classification - 3
+[1902.02771] Impact of Fully Connected Layers on Performance of Convolutional Neural Networks for Image Classification - 3
+[2111.11260] MiNet: A Convolutional Neural Network for Identifying and Categorising Minerals - 1
+[1804.11191] HOW CONVOLUTIONAL NEURAL NETWORKS SEE THE WORLD — A SURVEY OF CONVOLUTIONAL NEURAL NETWORK VISUALIZATION METHODS - 2
+[2411.04707] Adapting Visualization Techniques for Time-Series Anomaly Detection: From Convolutional Neural Networks to Convolutional–Recurrent Neural Networks - 1
+[1904.03380] Visualization of Convolutional Neural Networks for Monocular Depth Estimation - 1
+[1311.2901] Visualizing and Understanding Convolutional Networks - 2

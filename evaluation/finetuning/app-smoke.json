@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "method": "Fine-tuned",
+  "mocked_retrieval": true,
+  "actual_local_model": true,
+  "query": "transformer architecture",
+  "metadata": {
+    "cache_hit": true,
+    "candidate_count": 31,
+    "encoder": "pda/finetuned-minilm",
+    "model_revision": "ec2dc397f1446876",
+    "training_run_id": "ec2dc397f1446876",
+    "inference_device": "cuda",
+    "exact_title_priority": false,
+    "title_lookup": {
+      "cache_hit": true,
+      "search_query": "ti:\"transformer architecture\"",
+      "returned_candidates": 31,
+      "exact_matches": []
+    },
+    "retrieval_seconds": 0.001573299989104271,
+    "ranking_seconds": 0.4124084999784827,
+    "total_seconds": 0.4139821999706328,
+    "score_transform": "100 * max(0, cosine); not a probability",
+    "ui_total_seconds": 9.432671899907291
+  },
+  "result_count": 10
+}

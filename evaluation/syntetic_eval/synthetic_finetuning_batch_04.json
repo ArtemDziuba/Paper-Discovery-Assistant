@@ -1,0 +1,258 @@
+[
+  {
+    "query_id": "reinforcement-learning-robotic-manipulation",
+    "query": "reinforcement learning for robotic manipulation",
+    "judgments": [
+      {
+        "arxiv_id": "2607.07459",
+        "title": "EmbodiedGen V2: An Agentic, Simulation-Ready 3D World Engine for Embodied AI",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.06323",
+        "title": "LAMP: Latent Motion Prior-Guided Real-World Learning for Dexterous Hand Manipulation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2607.04940",
+        "title": "Closing the Reality Gap: Zero-Shot Sim-to-Real Deployment for Dexterous Force-Based Grasping and Manipulation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2607.04517",
+        "title": "VLA Grounder: Language-Conditioning Space Optimization for Black-Box VLA Models",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.04367",
+        "title": "A Perception-Manipulation Robotics System for Food Cutting",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2607.04265",
+        "title": "HALO-WA: Hybrid-Attention Latent-Guided Online Reinforcement Learning for World-Action Models",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2607.03828",
+        "title": "ObjRetarget: An Object-Aware Motion Retargeting Framework with Anthropomorphic Arm Constraints and Polyhedral Hand Modeling",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.00808",
+        "title": "Local Motion Matters: A Deconstruct-Recompose Paradigm for Reinforcement Learning Pre-training from Videos",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.00796",
+        "title": "Task-Relevant Representation Decoupling for Visual Reinforcement Learning Generalization",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.00033",
+        "title": "Learning Dexterous Manipulation Using Contact Wrench Guidance From Human Demonstration",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.31993",
+        "title": "OopsieVerse: A Safety Benchmark with Damage-Aware Simulation for Robot Manipulation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.31909",
+        "title": "CoDex: Learning Compositional Dexterous Functional Manipulation without Demonstrations",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.27344",
+        "title": "VibeAct: Vibration to Actions for Contact-Rich Reactive Robot Dexterity",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.26428",
+        "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.26175",
+        "title": "RMTL: Reinforced Micro-task Learning for Long-Horizon Manipulation with VLM Rewards",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.25295",
+        "title": "DynaMOMA: Instantaneous Prediction of Grasp Poses for Mobile Manipulation of Dynamic Objects",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.24450",
+        "title": "NoContactNoWorries: Estimating Contact through Vision and Proprioception for In-Hand Dexterous Manipulation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.20426",
+        "title": "TaCauchy: An Extensible FEM Framework for Vision-Based Tactile Simulation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2606.19752",
+        "title": "Temporal Self-Imitation Learning",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.19656",
+        "title": "DF-ExpEnse: Diffusion Filtered Exploration for Sample Efficient Finetuning",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.18953",
+        "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.18594",
+        "title": "Benchmarking Action Spaces in Reinforcement Learning for Vision-based Robotic Manipulation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2503.04280",
+        "title": "Towards Autonomous Reinforcement Learning for Real-World Robotic Manipulation with Large Language Models",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2202.06027",
+        "title": "End-to-end Reinforcement Learning of Robotic Manipulation with Robust Keypoints Representation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2311.02379",
+        "title": "Accelerating Reinforcement Learning of Robotic Manipulations via Feedback from Large Language Models",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2205.09683",
+        "title": "Dexterous Robotic Manipulation using Deep Reinforcement Learning and Knowledge Transfer for Complex Sparse Reward-based Tasks",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2410.21845",
+        "title": "Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2602.21811",
+        "title": "DexRepNet++: Learning Dexterous Robotic Manipulation with Geometric and Spatial Hand-Object Representations",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2507.06822",
+        "title": "Hierarchical Reinforcement Learning for Articulated Tool Manipulation with Multifingered Hand",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2407.12941",
+        "title": "Robotic Arm Manipulation with Inverse Reinforcement Learning & TD-MPC",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2301.13450",
+        "title": "Learning Vision-based Robotic Manipulation Tasks Sequentially in Offline Reinforcement Learning Settings",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2608.09762",
+        "title": "Efficient Real-World Online Reinforcement Learning for Robot Manipulation via Centralized Training and Critic Decomposition",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.29264",
+        "title": "Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2609.29000",
+        "title": "Learning from Mixed-Quality Deployment Experience for Robot Manipulation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2608.21204",
+        "title": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2601.01948",
+        "title": "Learning Diffusion Policy from Primitive Skills for Robot Manipulation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2303.04137",
+        "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2406.09767",
+        "title": "Language-Guided Manipulation with Diffusion Policies and Constrained Inpainting",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2410.18065",
+        "title": "SPIRE: Synergistic Planning, Imitation, and Reinforcement Learning for Long-Horizon Manipulation",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.31661",
+        "title": "OpenTac: An Open Ecosystem for Customizable, Scalable, and Transferable 3D Tactile Sensing",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.31569",
+        "title": "Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.31427",
+        "title": "FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.31423",
+        "title": "FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.31299",
+        "title": "PiHand: Latent Hand-Object Interaction Priors for Physics-Based Policy Learning",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.31166",
+        "title": "Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.31121",
+        "title": "RGraph-Eval: Task-Grounded Scene Graphs for Evaluating Robot Video Generation",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.31064",
+        "title": "AstroBench: Benchmarking Free-Floating Capture and Space Robotic Manipulation",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.31020",
+        "title": "Demonstration-Based Robotic Feeding Using Dynamic Movement Primitives",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2610.31010",
+        "title": "Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.30991",
+        "title": "UniFlowWAM: A Unified World-Action Model with Visual Semantics and 4D Geometry",
+        "relevance": 0
+      }
+    ]
+  }
+]

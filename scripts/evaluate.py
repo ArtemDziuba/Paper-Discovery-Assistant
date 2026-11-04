@@ -12,26 +12,20 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import numpy as np
 
-from pda.ranking import MODEL, REVISION, LexicalEncoder, SemanticEncoder
-
-
-def metrics(ranked: list[str], judgments: dict[str, float]) -> dict[str, float]:
-    def dcg(values):
-        return sum((2**value - 1) / math.log2(i + 2) for i, value in enumerate(values))
-
-    ideal = dcg(sorted(judgments.values(), reverse=True)[:10])
-    return {
-        "ndcg@10": dcg([judgments.get(i, 0) for i in ranked[:10]]) / ideal if ideal else 0,
-        "precision@5": sum(judgments.get(i, 0) > 0 for i in ranked[:5]) / 5,
-        "mrr": next((1 / (i + 1) for i, doc in enumerate(ranked) if judgments.get(doc, 0) > 0), 0),
-    }
+from pda.evaluation import metrics
+from pda.ranking import FINETUNED_PATH, LexicalEncoder, SemanticEncoder
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--method", choices=["lexical", "semantic"], default="lexical")
+    parser.add_argument("--method", choices=["lexical", "semantic", "finetuned"], default="lexical")
+    parser.add_argument("--model-path", type=Path, default=FINETUNED_PATH)
+    parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
+    parser.add_argument(
+        "--relevant-min", type=float, help="Binary metric threshold; default preserves grade > 0."
+    )
     args = parser.parse_args()
     raw = args.data.read_bytes()
     data = json.loads(raw)
@@ -52,18 +46,24 @@ def main():
         if not any(v > 0 for v in judgments.values()):
             raise ValueError("Each query must have a known relevant document.")
     started = time.perf_counter()
-    encoder = SemanticEncoder() if args.method == "semantic" else LexicalEncoder()
+    if args.method == "finetuned":
+        encoder = SemanticEncoder(args.device, model_path=args.model_path)
+    else:
+        encoder = SemanticEncoder(args.device) if args.method == "semantic" else LexicalEncoder()
     texts = [f"{d['title']}\n{d['abstract']}" for d in documents]
     results = {}
     scores = encoder.score_queries([q["text"] for q in queries], texts)
     for query, query_scores in zip(queries, scores, strict=True):
         ranked = [ids[i] for i in np.argsort(-query_scores, kind="stable")]
-        results[query["id"]] = metrics(ranked, qrels[query["id"]])
+        results[query["id"]] = metrics(ranked, qrels[query["id"]], relevant_min=args.relevant_min)
     report = {
         "dataset_sha256": hashlib.sha256(raw).hexdigest(),
         "method": args.method,
-        "model": MODEL if args.method == "semantic" else None,
-        "revision": REVISION if args.method == "semantic" else None,
+        "model": getattr(encoder, "model_name", None),
+        "revision": getattr(encoder, "model_revision", None),
+        "binary_relevance_rule": "grade > 0"
+        if args.relevant_min is None
+        else f"grade >= {args.relevant_min}",
         "corpus_size": len(ids),
         "query_count": len(queries),
         "elapsed_seconds": time.perf_counter() - started,

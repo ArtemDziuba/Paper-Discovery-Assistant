@@ -27,6 +27,15 @@ uv run python scripts/evaluate.py --data evaluation/data.json --output evaluatio
 
 ## Component criteria
 
+Known-title regression protocol: check the complete lowercase unquoted title, an ASCII-quoted
+variant, and a smart-quoted variant against real arXiv records. Require the actual known ID
+to be returned first, without assigning a fabricated relevance probability. Separately test
+that near-title variants are filtered, auxiliary records merge/deduplicate under the budget,
+and either retrieval path can fail with visible diagnostics. This is a development regression
+for one known item, not evidence of general title-retrieval recall or held-out quality.
+The live title path now uses an auxiliary title-field query and exact returned-title priority
+with or without quotes; earlier quoted-only diagnostic results describe the earlier behavior.
+
 Candidate-scaling protocol: retrieve one real snapshot up to 10,000 entries, then compare
 the first 50, 100, 1,000 and 10,000 usable candidates under the same query and encoder. Record
 retrieval and ranking time separately, actual candidate counts, per-page provenance, peak
@@ -56,8 +65,11 @@ Use the same frozen cases across changes. Include narrow, broad, ambiguous, nega
 missing-data, and no-result cases. Do not select only successful cases.
 
 Executed baseline results are in implementation-results.md and evaluation/*.json.
-The human quality criteria above remain pending; structural source checks alone are
-insufficient to complete explanation and overview quality evaluation.
+Human ranking judgments have now been evaluated for the fine-tuning experiment; see
+finetuning.md and evaluation/finetuning/training-results.json. The comparison uses per-query
+judged pools, grades 0–3 for nDCG and grade >=2 for binary metrics. Synthetic labels are kept
+distinct from human labels, and human papers are excluded from training. Other human quality
+criteria remain pending; structural checks do not complete explanation/overview evaluation.
 
 ## CRISP-DM evidence
 
@@ -74,8 +86,10 @@ Deployment: local Streamlit run instructions, source export, and demo outline in
 - arXiv API protocol and rate guidance: https://info.arxiv.org/help/api/user-manual.html
 - Encoder model card and input limitations: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 
-The current overview is a collection of selected evidence excerpts, not a generated
-cross-paper synthesis. The initial OR retrieval produced broad/noisy candidates; topic search
+The earlier overview was a collection of evidence excerpts and was removed at the user's
+request. Current evaluation scope covers ranked papers and their individual evidence, rather
+than literature-overview generation. Earlier overview criteria above describe the original
+prototype plan. The initial OR retrieval produced broad/noisy candidates; topic search
 now uses AND after conversational-prefix cleanup. This can reduce recall when a required
 term is absent; it does not guarantee retrieval of foundational papers. Quoted titles retain
 their full phrase for known-item search. Fixed-corpus SciFact results remain the earlier

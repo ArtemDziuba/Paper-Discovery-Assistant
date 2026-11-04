@@ -1,0 +1,256 @@
+{
+  "query_id": "federated-learning-non-iid",
+  "query": "federated learning with non-IID data",
+  "judgments": [
+    {
+      "arxiv_id": "2610.41278",
+      "title": "AuditFL: A Contract-Backed Clearing Layer for Open Federated Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.39791",
+      "title": "Device-Induced Mobility Heterogeneity and Its Impact on Federated Next-Location Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.39483",
+      "title": "Does Federated Training Degrade Explainability? A Comparative Analysis of Grad-CAM Faithfulness in Centralized vs. Federated Deepfake Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.39008",
+      "title": "Fed-IGTD: A federated learning-based framework for tabular-to-image encoding",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.38970",
+      "title": "Communication-Efficient Clustered Federated Learning in Non-IID Wireless Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38793",
+      "title": "Trustworthy Distributed Machine Learning in Cloud-Edge-IoT Systems: A Heterogeneity-Aware Survey of Security, Privacy, and Robustness",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.38411",
+      "title": "Governance-Aware Federated Learning for Multi-Agent AI Systems: A Policy-Driven Framework for Trustworthy Collaborative AI",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.35640",
+      "title": "FedAvgIm: Federated Learning for Multi-Site Impedance Identification of Inverter-Based Resources",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33619",
+      "title": "Geodesic-SVDD Latent Mixup for One-Shot Distributed Tabular Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32626",
+      "title": "Privacy-Preserving Federated Loss Exploration for Vision-Based Perception under Non-IID Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.30634",
+      "title": "FedBST: Bilateral Self-Training for Unsupervised Federated Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27952",
+      "title": "Unsupervised Head Network Personalization for Split Computing via Federated Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.26953",
+      "title": "From Last-Layer to Cross-Layer: One-Shot Joint Classifier Reconstruction for Federated Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25810",
+      "title": "Communication-Efficient Federated Domain Generalization in Edge Networks via Dynamic Prototype Regulation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25714",
+      "title": "Peer-Relative Trust-Guided Update Screening for Robust Semi-Decentralized Federated Learning under Label-Flipping Attacks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.25318",
+      "title": "AdaFedXplain: Adaptive Federated Learning with Explainable AI for Ransomware Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.25264",
+      "title": "Federated Learning for Malware Image Classification under Data Heterogeneity",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24036",
+      "title": "Client-Aware Security Adaptive Early Exit Vision Transformers for Heterogeneous Federated Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23705",
+      "title": "FedRAPP: Federated Test-Time Prompt Tuning for Vision-Language Models with Reliability-Aware Prompt Personalization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21547",
+      "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.15692",
+      "title": "Complete Suffix Prediction for Recommendation via Latent Retrieval over Process Graphs",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.05748",
+      "title": "A Multi-Source Ensemble Approach to Candidate Generation for Alternative Vacation Rental Property Recommendations",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.04574",
+      "title": "MURAL: Multimodal Uncertainty-aware Recommendation via Adaptive edge Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.01631",
+      "title": "Graph Neural Team Recommendation: An Integrated Approach",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.01619",
+      "title": "MGDiff: Multi-Interest Sequence Recommendation with Masking GNN-Guided Diffusion",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.27413",
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.22920",
+      "title": "Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.21979",
+      "title": "Beyond Similarity: Heterogeneous Graph Learning for Multi-Objective Food Substitution in Charitable Food Agencies",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.13340",
+      "title": "ProtoCAM: Interpretable Few-Shot Mask-Guided Prototypical Learning for Breast Lesion Classification in Ultrasound Imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.28662",
+      "title": "FRAC-MAS: A Safe and Explainable Multi-Agent System for Fracture Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2607.09664",
+      "title": "From ML Predictions to Informed Diagnostic Assistance Using the Toulmin Model of Argumentation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.25566",
+      "title": "Uncertainty Reasoning with Large Language Models for Explainable Disease Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.22547",
+      "title": "MKG-CARE: Case-Aware Reasoning with Multimodal Knowledge Graphs for Explainable Medical Image Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.06197",
+      "title": "Bridging visual saliency and large language models for explainable deep learning in medical imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.02903",
+      "title": "A User-Centric Analysis of Explainability in AI-Based Medical Image Diagnosis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.01999",
+      "title": "TumorXAI: Self-Supervised Deep Learning Framework for Explainable Brain MRI Tumor Classification",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.15250",
+      "title": "Correlation-Aware Reconstruction for Multivariate Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.12754",
+      "title": "NV-Tesseract-AD: Curriculum-Enhanced Conditional Diffusion for Multivariate Time-Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.06980",
+      "title": "A Data-Driven Framework for Unsupervised Monitoring of Transmission Systems Using End-of-Line Testing Data: A Case Study at Ford Motor Company",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.05726",
+      "title": "FreSia: Frequency-Semantic Instantiation and Alignment for Multivariate Time Series Analysis",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.01223",
+      "title": "Have an LLM Write Your Anomaly Detector: Autonomous Discovery of Compact, Interpretable Detectors for Time Series",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.38789",
+      "title": "LEARN-TS: LLM-Enhanced Alignment and Reconstruction with Normality Guidance for Multivariate Time-Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.38004",
+      "title": "No Scale Left Behind: Multi-Scale Autoencoder with Bi-directional Attention for Time Series Anomaly Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2605.06913",
+      "title": "You Only Stack Once (YOSO): A Motion-Filtered, Deep-Learning Framework for Detecting Faint Moving Sources",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.18579",
+      "title": "The T16 Planet Hunt: 10,000 New Planet Candidates from TESS Cycle 1 and the Confirmation of a Hot Jupiter Around TIC 183374187",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.16073",
+      "title": "Machine learning isotope shifts in molecular energy levels",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.07068",
+      "title": "An astrometric search for planets in debris disk systems",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.00993",
+      "title": "Focal plane wavefront control with model-based reinforcement learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2602.02701",
+      "title": "Visual inspection of potential exocomet transits identified through machine learning and statistical methods",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2601.20620",
+      "title": "Climates of Terrestrial Exoplanets and Biosignatures",
+      "relevance": 0
+    }
+  ]
+}

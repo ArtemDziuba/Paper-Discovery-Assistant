@@ -1,0 +1,258 @@
+[
+  {
+    "query_id": "gnn-molecular-property-prediction",
+    "query": "graph neural networks for molecular property prediction",
+    "judgments": [
+      {
+        "arxiv_id": "2611.02277",
+        "title": "Atom-Wise Allocation of Message-Passing Scale for Molecular Property Prediction",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.38843",
+        "title": "PolyDiscover: an integrated trust-aware platform for multi-objective polymer discovery and simulation validation",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.31183",
+        "title": "Unconstrained learning of equivariant atomistic properties",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.29589",
+        "title": "Fragment-Level Graph Encoding for Interpretable Molecular Property Prediction",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.29111",
+        "title": "SU(2)-Equivariant Spinor Message Passing for Molecular Magnetism",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.18164",
+        "title": "Random Probing for Structural Self-Interactions in Graph Neural Networks",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2610.12039",
+        "title": "MPGE: A Multi-Perspective Graph Explainer for Molecular Classification Explanation",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2610.09389",
+        "title": "Accelerating dynamic polarizability calculations of organic molecules using equivariant graph neural networks",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2610.04588",
+        "title": "Variational Quantum Attention for Molecular Graph Learning",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2609.23134",
+        "title": "ECENet: An Edge Cluster Expansion Line-Graph Neural Network",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2609.19487",
+        "title": "ALIGNN 2.0: A Unified Line-Graph Neural Network Framework for Materials Screening, Force Fields, Inverse Design, Spectroscopy, and Microscopy",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2609.08474",
+        "title": "Predicting directional flexibility in proteins",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2609.04261",
+        "title": "Self-Supervised Pretraining of Molecular Graph Encoders with LeJEPA",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2608.30674",
+        "title": "CoMPASS: Collaborative Molecular Property Prediction via Adaptive Small-Large Model Synergy",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2608.30636",
+        "title": "MolLedger: An Additive Graph Neural Network with Chemically Grounded ADME Attributions",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2608.28853",
+        "title": "Equivariant Sheaf Neural Networks: Learning Geometric Transport on Graphs",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2608.15609",
+        "title": "Graph neural network prediction of temperature-dependent hydrogen diffusion and thermal conductivity tensors of tungsten containing helium bubbles and grain boundaries",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2607.28304",
+        "title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.25169",
+        "title": "CondPSE: A Polynomial-Filtered Structural Encoder with Conditional Modulation for Graphs",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.24314",
+        "title": "MEGA-CL: A Molecular Foundation Model for Generalizable ADMET Prediction through Graph External Attention and Contrastive Learning",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2607.21941",
+        "title": "LatentFlow: Visual Analytics for Latent Space Analysis in Molecular Graph Neural Networks",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.21561",
+        "title": "EnsembleEGNN: Set-Based Graph Learning for Thermodynamic Ensembles of Cyclic Peptides",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2607.19083",
+        "title": "GEqTrain: A Configuration-Driven Framework for Retargeting Equivariant Graph Neural Networks Across 3D Scientific Tasks",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.07935",
+        "title": "path_boost: A Python Package for Interpretable Graph-Level Prediction using Path-Based Gradient Boosting",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2607.07456",
+        "title": "A Multi-Scale Machine Learning Framework for Coupled Chemical, Spin, and Structural Disorder in Alloys",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2607.05736",
+        "title": "Multimodal Molecular Representation Learning with Graph Neural Networks, Deep & Cross Networks, and SMILES Embeddings",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2607.02212",
+        "title": "An Additive MLP-GNN Framework for Characterizing Chemical and Structural Contributions to Aqueous Solubility",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.26873",
+        "title": "Scalable Message-Passing Quantum Graph Neural Networks in the Weisfeiler-Leman Hierarchy",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2606.20906",
+        "title": "MMGNN: Multi-level, multi-color graph neural networks for molecular property prediction",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2606.11382",
+        "title": "GLACIER: A Multimodal Student-Teacher Foundation Model for Molecular Property Prediction",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2606.09647",
+        "title": "Ab initio parametrization of distributed polarizable force fields",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2605.30195",
+        "title": "What drives performance in molecular MPNNs? An operator-level factorial benchmark",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2605.30012",
+        "title": "Charting the thermodynamic stability of hybrid perovskite alloys with machine learning",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2605.10551",
+        "title": "It's All Connected: Topology-Aware Structural Graph Encoding Improves Performance on Polymer Prediction",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2605.10458",
+        "title": "QT-Net: Rethinking Evaluation of AI Models in Atomic Chemical Space",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2605.09495",
+        "title": "Enabling Structure-Only Initialization and Out-of-Distribution Generalization in GNN-based Molecular Dynamics Simulators",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2604.27810",
+        "title": "Hyper-Dimensional Fingerprints as Molecular Representations",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2604.26498",
+        "title": "Do Larger Models Really Win in Drug Discovery? A Benchmark Assessment of Model Scaling in AI-Driven Molecular Property and Activity Prediction",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2604.09320",
+        "title": "Transferable FB-GNN-MBE Framework for Potential Energy Surfaces: Data-Adaptive Transfer Learning in Deep Learned Many-Body Expansion Theory",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2603.27106",
+        "title": "ADEPT-PolyGraphMT: Automated Molecular Simulation and Multi-Task Multi-Fidelity Machine Learning for Polymer Property Generation and Prediction",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2603.24752",
+        "title": "Autotuning T-PaiNN: Enabling Data-Efficient GNN Interatomic Potential Development via Classical-to-Quantum Transfer Learning",
+        "relevance": 2
+      },
+      {
+        "arxiv_id": "2603.12017",
+        "title": "Thermodynamic Descriptors from Molecular Dynamics as Machine Learning Features for Extrapolable Property Prediction",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2603.02810",
+        "title": "ChemFlow:A Hierarchical Neural Network for Multiscale Representation Learning in Chemical Mixtures",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2603.01274",
+        "title": "GlassMol: Interpretable Molecular Property Prediction with Concept Bottleneck Models",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2602.20573",
+        "title": "MolGraphBench: A Benchmark of GNN Architectures for Molecular Regression Tasks",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2602.18313",
+        "title": "Clapeyron Neural Networks for Single-Species Vapor-Liquid Equilibria",
+        "relevance": 0
+      },
+      {
+        "arxiv_id": "2602.03046",
+        "title": "Impact of Local Descriptors Derived from Machine Learning Potentials in Graph Neural Networks for Molecular Property Prediction",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2601.23212",
+        "title": "Disentangling multispecific antibody function with graph neural networks",
+        "relevance": 1
+      },
+      {
+        "arxiv_id": "2601.19037",
+        "title": "XIMP: Cross Graph Inter-Message Passing for Molecular Property Prediction",
+        "relevance": 3
+      },
+      {
+        "arxiv_id": "2601.13275",
+        "title": "Rethinking Noise in Quantum Machine Learning: When Noise Improves Learning",
+        "relevance": 0
+      }
+    ]
+  }
+]

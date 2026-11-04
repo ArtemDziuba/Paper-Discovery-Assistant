@@ -68,7 +68,8 @@ def test_unavailable_cuda_gives_actionable_error(monkeypatch):
         SemanticEncoder("cuda")
 
 
-def test_quoted_exact_title_precedes_semantic_paraphrases():
+@pytest.mark.parametrize("query", ['"Graph Learning"', "graph learning", "“Graph Learning”"])
+def test_exact_title_precedes_semantic_paraphrases(query):
     class Client:
         def search(self, query, limit):
             return [paper(title="Graph Learning"), paper("9999.9999v1", "Other graph paper")], {}
@@ -77,11 +78,66 @@ def test_quoted_exact_title_precedes_semantic_paraphrases():
         def encode_pair(self, query, documents):
             return np.array([1, 0]), np.array([[0, 1], [1, 0]])
 
-    result = search('"Graph Learning"', Client(), Encoder())
+    result = search(query, Client(), Encoder())
     assert result.matches[0].paper.title == "Graph Learning"
     assert result.matches[0].raw_similarity == 0
     assert result.matches[1].raw_similarity == 1
     assert result.metadata["exact_title_priority"]
+
+
+def test_title_probe_merges_missing_exact_title_and_preserves_limit():
+    class Client:
+        def find_exact_titles(self, title):
+            assert title == "graph learning"
+            return [paper(title="Graph Learning")], {"cache_hit": False}
+
+        def search(self, query, limit):
+            return [paper("9999.9999v1", "Other graph paper")], {"cache_hit": True}
+
+    result = search("graph learning", Client(), LexicalEncoder(), limit=1)
+    assert len(result.matches) == 1
+    assert result.matches[0].paper.title == "Graph Learning"
+    assert not result.metadata["cache_hit"]
+
+
+def test_failed_title_probe_uses_topic_results():
+    class Client:
+        def find_exact_titles(self, title):
+            raise RetrievalError("title lookup failed")
+
+        def search(self, query, limit):
+            return [paper()], {}
+
+    result = search("graph learning", Client(), LexicalEncoder())
+    assert result.matches
+    assert result.metadata["title_lookup"]["error"] == "title lookup failed"
+
+
+def test_title_results_survive_topic_failure():
+    class Client:
+        def find_exact_titles(self, title):
+            return [paper()], {}
+
+        def search(self, query, limit):
+            raise RetrievalError("topic lookup failed")
+
+    result = search("graph learning", Client(), LexicalEncoder())
+    assert result.matches
+    assert result.metadata["partial_failure"] == "topic lookup failed"
+
+
+def test_title_probe_filters_near_matches(tmp_path, monkeypatch):
+    monkeypatch.setattr(
+        ArxivClient,
+        "search",
+        lambda *args: (
+            [paper(title="Graph Learning"), paper("9999.9999v1", "Graph Learning Is All You Need")],
+            {},
+        ),
+    )
+    papers, metadata = ArxivClient(tmp_path).find_exact_titles("graph learning")
+    assert [p.title for p in papers] == ["Graph Learning"]
+    assert metadata["returned_candidates"] == 2
 
 
 def test_parse_metadata_and_missing_abstract():
@@ -130,7 +186,7 @@ def test_lexical_and_grounded_pipeline():
     assert result.matches[0].paper.title == "Graph learning"
     assert result.matches[0].display_score > result.matches[1].display_score
     assert all(m.evidence in m.paper.abstract for m in result.matches)
-    assert {o["arxiv_id"] for o in result.overview} <= {m.paper.arxiv_id for m in result.matches}
+    assert "overview" not in result.model_dump()
     assert "not a probability" in result.metadata["score_transform"]
 
 

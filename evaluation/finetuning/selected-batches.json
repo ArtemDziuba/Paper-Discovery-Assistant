@@ -1,0 +1,4876 @@
+{
+  "prepared_sha256": "6909c5dccbe93cee90e7837326b08970599c01bc94d995ce599ed8d0abf0557c",
+  "batches": [
+    {
+      "batch": 1,
+      "query_id": "gnn-molecular-property-prediction",
+      "query": "graph neural networks for molecular property prediction",
+      "candidates": 50,
+      "role_during_finetuning": "train",
+      "source_sha256": "c0621bc0ad54cdefd40023c21dae4d9bf2c2cb426fa43210ac3aa7588861ddcb"
+    },
+    {
+      "batch": 5,
+      "query_id": "deep-learning-time-series-forecasting",
+      "query": "deep learning for time series forecasting",
+      "candidates": 50,
+      "role_during_finetuning": "train",
+      "source_sha256": "56a0a21ed60d8ae689226d73f813e2cf7fe4d321f91c267d0fc9d840e81b1f11"
+    },
+    {
+      "batch": 7,
+      "query_id": "explainable-ai-medical-diagnosis",
+      "query": "explainable artificial intelligence for medical diagnosis",
+      "candidates": 50,
+      "role_during_finetuning": "train",
+      "source_sha256": "cc09603e67ce00faa3110e8be5eb7d48aa84bb9afcf8643757383ea5f863da32"
+    },
+    {
+      "batch": 8,
+      "query_id": "federated-learning-non-iid",
+      "query": "federated learning with non-IID data",
+      "candidates": 50,
+      "role_during_finetuning": "train",
+      "source_sha256": "fd7a96da2c984ecd02596bbbf8a042676f3eafe4e3481e180536d826bf47c703"
+    },
+    {
+      "batch": 13,
+      "query_id": "automatic-speech-recognition",
+      "query": "automatic speech recognition",
+      "candidates": 50,
+      "role_during_finetuning": "train",
+      "source_sha256": "3242f191ef707373e224342c57277ca7df1a12abc20cb32533ac7523ab2863a8"
+    },
+    {
+      "batch": 15,
+      "query_id": "image-segmentation",
+      "query": "image segmentation",
+      "candidates": 50,
+      "role_during_finetuning": "synthetic_dev",
+      "source_sha256": "9fffa719103551f853da8c50efc36c9a03e277b5c53d9c6b58f6dc48da628def"
+    }
+  ],
+  "device": "cuda",
+  "finetuned_manifest": {
+    "run_id": "ec2dc397f1446876",
+    "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "base_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+    "dataset_sha256": "6909c5dccbe93cee90e7837326b08970599c01bc94d995ce599ed8d0abf0557c",
+    "source_hashes": {
+      "evaluation\\human_eval\\human_finetuning_batch_01.json": "b48eb87ca93a27589bd41355bec47c25939c558e7006c9a16d60721e20d552f4",
+      "evaluation\\human_eval\\human_finetuning_batch_02.json": "741345be80ef7f2cae27b6c0801406c4cb227299523ab98c2fc6b84d272b2f43",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_01.json": "c0621bc0ad54cdefd40023c21dae4d9bf2c2cb426fa43210ac3aa7588861ddcb",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_02.json": "75330e16eae01d03f4918b61e585176b9e219bcf84892129110ec6ca8a65418c",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_03.json": "0f2fff16ac35c4fbeeea75cf7609b60fd520145b08538fb4a7563f14159d7a17",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_04.json": "b7bd7a0f60c0ca1975f14cc164604f3b129e982df585bbf1b97950985a178925",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_05.json": "56a0a21ed60d8ae689226d73f813e2cf7fe4d321f91c267d0fc9d840e81b1f11",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_06.json": "70fabf25c160a84f04659b50511a2014533f6fabf0b566ea54776103f75085cc",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_07.json": "cc09603e67ce00faa3110e8be5eb7d48aa84bb9afcf8643757383ea5f863da32",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_08.json": "fd7a96da2c984ecd02596bbbf8a042676f3eafe4e3481e180536d826bf47c703",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_09.json": "4daa9f538d5e186e1d12f2502061b7fdfcfa6cd92bd4f8f7389a2f8d1345d4c8",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_10.json": "1e818d6cc96cced2e0b8dfdf914e8f597991a7ed1145bf817373c95eb8573573",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_11.json": "98329b7766b8aad4fc70ed06c2e559280c56b2dd78f0f77a035e31b7c2ad1aae",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_12.json": "a2552bd81aa37f4cb20eac1ce1eeff6400ef7b999d9b54ef05befd5d74601dcf",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_13.json": "3242f191ef707373e224342c57277ca7df1a12abc20cb32533ac7523ab2863a8",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_14.json": "cac634cc9adfab76ac8361310559d95497b1ed838c800174d40c9ae6a064169d",
+      "evaluation\\syntetic_eval\\synthetic_finetuning_batch_15.json": "9fffa719103551f853da8c50efc36c9a03e277b5c53d9c6b58f6dc48da628def"
+    },
+    "config": {
+      "seed": 42,
+      "epochs": 3,
+      "batch_size": 8,
+      "learning_rate": 2e-05,
+      "weight_decay": 0.01,
+      "warmup_fraction": 0.1,
+      "preferences_per_query": 64,
+      "margin_per_grade": 0.1,
+      "loss": "same-query pairwise cosine hinge",
+      "device": "cuda",
+      "binary_relevant_min": 2,
+      "selection": "best synthetic development nDCG@10; never human labels"
+    },
+    "best_epoch": 1,
+    "training_preferences": 768,
+    "synthetic_training_queries": [
+      "gnn-molecular-property-prediction",
+      "self-supervised-medical-image-segmentation",
+      "object-detection",
+      "federated-learning-non-iid",
+      "deep-learning-time-series-forecasting",
+      "machine-learning-exoplanet-detection",
+      "diffusion-models-image-generation",
+      "explainable-ai-medical-diagnosis",
+      "multivariate-time-series-anomaly-detection",
+      "automatic-speech-recognition",
+      "automatic-text-summarization",
+      "machine-translation"
+    ],
+    "synthetic_dev_queries": [
+      "image-segmentation",
+      "reinforcement-learning-robotic-manipulation",
+      "graph-neural-networks-recommendation"
+    ],
+    "human_test_queries": [
+      "transformer-architecture",
+      "cnn-image-recognition"
+    ],
+    "torch": "2.9.1+cu128",
+    "training_seconds": 29.063961800187826,
+    "peak_process_working_set_bytes": 1717243904,
+    "peak_cuda_allocated_bytes": 995559424,
+    "peak_cuda_reserved_bytes": 1147142144,
+    "limitations": "Synthetic training judgments; only two human test queries. Excluded unverified ID/title pairs. Scores are uncalibrated cosine."
+  },
+  "protocol": "All 50 judged papers per batch, including overlap-filtered papers; macro average across queries; no title priority or live retrieval. These are training/development queries, not held-out test queries.",
+  "results": {
+    "tfidf": {
+      "query_count": 6,
+      "per_query": {
+        "gnn-molecular-property-prediction": {
+          "query": "graph neural networks for molecular property prediction",
+          "metrics": {
+            "ndcg@10": 0.730904593891997,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2602.20573",
+              "grade": 3,
+              "cosine": 0.20830356234806593
+            },
+            {
+              "arxiv_id": "2601.19037",
+              "grade": 3,
+              "cosine": 0.1884516522259842
+            },
+            {
+              "arxiv_id": "2602.03046",
+              "grade": 3,
+              "cosine": 0.18064413593868542
+            },
+            {
+              "arxiv_id": "2606.20906",
+              "grade": 3,
+              "cosine": 0.1654937294639234
+            },
+            {
+              "arxiv_id": "2603.27106",
+              "grade": 2,
+              "cosine": 0.14907816019373543
+            },
+            {
+              "arxiv_id": "2609.19487",
+              "grade": 1,
+              "cosine": 0.1405712504622514
+            },
+            {
+              "arxiv_id": "2610.04588",
+              "grade": 2,
+              "cosine": 0.13350856132203043
+            },
+            {
+              "arxiv_id": "2607.05736",
+              "grade": 3,
+              "cosine": 0.1241504526934225
+            },
+            {
+              "arxiv_id": "2604.27810",
+              "grade": 1,
+              "cosine": 0.12351225656999261
+            },
+            {
+              "arxiv_id": "2610.18164",
+              "grade": 1,
+              "cosine": 0.12166543099397228
+            },
+            {
+              "arxiv_id": "2605.10551",
+              "grade": 2,
+              "cosine": 0.11805075222292687
+            },
+            {
+              "arxiv_id": "2608.30674",
+              "grade": 2,
+              "cosine": 0.11753551309711802
+            },
+            {
+              "arxiv_id": "2603.12017",
+              "grade": 0,
+              "cosine": 0.11694677628435318
+            },
+            {
+              "arxiv_id": "2606.26873",
+              "grade": 1,
+              "cosine": 0.11278345132804872
+            },
+            {
+              "arxiv_id": "2606.11382",
+              "grade": 2,
+              "cosine": 0.10974611910972694
+            },
+            {
+              "arxiv_id": "2610.29589",
+              "grade": 3,
+              "cosine": 0.10527893089162024
+            },
+            {
+              "arxiv_id": "2602.18313",
+              "grade": 0,
+              "cosine": 0.10427731505996372
+            },
+            {
+              "arxiv_id": "2607.07935",
+              "grade": 1,
+              "cosine": 0.1037842362061905
+            },
+            {
+              "arxiv_id": "2605.10458",
+              "grade": 1,
+              "cosine": 0.09878143295037736
+            },
+            {
+              "arxiv_id": "2603.01274",
+              "grade": 1,
+              "cosine": 0.09715487138870249
+            },
+            {
+              "arxiv_id": "2608.28853",
+              "grade": 1,
+              "cosine": 0.09569350763206377
+            },
+            {
+              "arxiv_id": "2607.28304",
+              "grade": 2,
+              "cosine": 0.08987974541025967
+            },
+            {
+              "arxiv_id": "2607.02212",
+              "grade": 3,
+              "cosine": 0.08194228484985891
+            },
+            {
+              "arxiv_id": "2607.25169",
+              "grade": 1,
+              "cosine": 0.0799802523494608
+            },
+            {
+              "arxiv_id": "2605.30195",
+              "grade": 3,
+              "cosine": 0.07835503585351837
+            },
+            {
+              "arxiv_id": "2610.12039",
+              "grade": 2,
+              "cosine": 0.07594232111575924
+            },
+            {
+              "arxiv_id": "2608.30636",
+              "grade": 3,
+              "cosine": 0.07510675995073608
+            },
+            {
+              "arxiv_id": "2611.02277",
+              "grade": 3,
+              "cosine": 0.07308183023295604
+            },
+            {
+              "arxiv_id": "2601.23212",
+              "grade": 1,
+              "cosine": 0.06894738748097455
+            },
+            {
+              "arxiv_id": "2609.04261",
+              "grade": 2,
+              "cosine": 0.06832937714909869
+            },
+            {
+              "arxiv_id": "2604.26498",
+              "grade": 2,
+              "cosine": 0.06638365006795675
+            },
+            {
+              "arxiv_id": "2607.19083",
+              "grade": 1,
+              "cosine": 0.06326514002739533
+            },
+            {
+              "arxiv_id": "2607.24314",
+              "grade": 3,
+              "cosine": 0.06173741835472043
+            },
+            {
+              "arxiv_id": "2605.09495",
+              "grade": 1,
+              "cosine": 0.05985063398229692
+            },
+            {
+              "arxiv_id": "2607.21561",
+              "grade": 2,
+              "cosine": 0.055860195537573036
+            },
+            {
+              "arxiv_id": "2607.21941",
+              "grade": 1,
+              "cosine": 0.053844617707980894
+            },
+            {
+              "arxiv_id": "2610.09389",
+              "grade": 3,
+              "cosine": 0.04939102423607937
+            },
+            {
+              "arxiv_id": "2609.23134",
+              "grade": 2,
+              "cosine": 0.0484667208359694
+            },
+            {
+              "arxiv_id": "2601.13275",
+              "grade": 0,
+              "cosine": 0.048227742336123036
+            },
+            {
+              "arxiv_id": "2603.02810",
+              "grade": 1,
+              "cosine": 0.048174570433634434
+            },
+            {
+              "arxiv_id": "2610.31183",
+              "grade": 2,
+              "cosine": 0.04349472500958598
+            },
+            {
+              "arxiv_id": "2608.15609",
+              "grade": 0,
+              "cosine": 0.03592834665089223
+            },
+            {
+              "arxiv_id": "2610.29111",
+              "grade": 2,
+              "cosine": 0.03473216857686984
+            },
+            {
+              "arxiv_id": "2610.38843",
+              "grade": 1,
+              "cosine": 0.030791123554180178
+            },
+            {
+              "arxiv_id": "2607.07456",
+              "grade": 0,
+              "cosine": 0.02964030658646645
+            },
+            {
+              "arxiv_id": "2604.09320",
+              "grade": 2,
+              "cosine": 0.027196224422597937
+            },
+            {
+              "arxiv_id": "2603.24752",
+              "grade": 2,
+              "cosine": 0.025695371363743242
+            },
+            {
+              "arxiv_id": "2609.08474",
+              "grade": 0,
+              "cosine": 0.0231902431287903
+            },
+            {
+              "arxiv_id": "2606.09647",
+              "grade": 0,
+              "cosine": 0.021344686730655062
+            },
+            {
+              "arxiv_id": "2605.30012",
+              "grade": 0,
+              "cosine": 0.02113112839783947
+            }
+          ]
+        },
+        "deep-learning-time-series-forecasting": {
+          "query": "deep learning for time series forecasting",
+          "metrics": {
+            "ndcg@10": 0.8255800663201708,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2407.13278",
+              "grade": 2,
+              "cosine": 0.40356756691581064
+            },
+            {
+              "arxiv_id": "2402.02592",
+              "grade": 3,
+              "cosine": 0.32907642621370514
+            },
+            {
+              "arxiv_id": "1905.10437",
+              "grade": 3,
+              "cosine": 0.25741626740327495
+            },
+            {
+              "arxiv_id": "2310.08278",
+              "grade": 3,
+              "cosine": 0.23616067235512764
+            },
+            {
+              "arxiv_id": "2310.01728",
+              "grade": 2,
+              "cosine": 0.22997331187793912
+            },
+            {
+              "arxiv_id": "2211.14730",
+              "grade": 3,
+              "cosine": 0.20364942614737142
+            },
+            {
+              "arxiv_id": "1704.04110",
+              "grade": 3,
+              "cosine": 0.1987786801084825
+            },
+            {
+              "arxiv_id": "2303.06053",
+              "grade": 3,
+              "cosine": 0.1942130837238171
+            },
+            {
+              "arxiv_id": "2403.07815",
+              "grade": 3,
+              "cosine": 0.1872741348205193
+            },
+            {
+              "arxiv_id": "2205.14415",
+              "grade": 3,
+              "cosine": 0.1829584508086972
+            },
+            {
+              "arxiv_id": "2410.04803",
+              "grade": 2,
+              "cosine": 0.17230627422940958
+            },
+            {
+              "arxiv_id": "2310.20218",
+              "grade": 2,
+              "cosine": 0.1668972691005731
+            },
+            {
+              "arxiv_id": "2009.11961",
+              "grade": 2,
+              "cosine": 0.15768022296074466
+            },
+            {
+              "arxiv_id": "1912.09363",
+              "grade": 3,
+              "cosine": 0.153089795682893
+            },
+            {
+              "arxiv_id": "2602.00040",
+              "grade": 2,
+              "cosine": 0.14634699911295632
+            },
+            {
+              "arxiv_id": "2405.14616",
+              "grade": 3,
+              "cosine": 0.14525575641316207
+            },
+            {
+              "arxiv_id": "2210.02186",
+              "grade": 2,
+              "cosine": 0.14387752527451161
+            },
+            {
+              "arxiv_id": "2207.01186",
+              "grade": 3,
+              "cosine": 0.14154562912925675
+            },
+            {
+              "arxiv_id": "2106.13008",
+              "grade": 3,
+              "cosine": 0.14010486774691602
+            },
+            {
+              "arxiv_id": "2310.06625",
+              "grade": 3,
+              "cosine": 0.1376870241271343
+            },
+            {
+              "arxiv_id": "2510.00742",
+              "grade": 3,
+              "cosine": 0.13487862507038875
+            },
+            {
+              "arxiv_id": "2309.12659",
+              "grade": 2,
+              "cosine": 0.13274957545978677
+            },
+            {
+              "arxiv_id": "2403.01742",
+              "grade": 1,
+              "cosine": 0.13051190090952652
+            },
+            {
+              "arxiv_id": "2201.12740",
+              "grade": 3,
+              "cosine": 0.12534854202728665
+            },
+            {
+              "arxiv_id": "2602.00589",
+              "grade": 2,
+              "cosine": 0.1239709896218862
+            },
+            {
+              "arxiv_id": "2304.01512",
+              "grade": 1,
+              "cosine": 0.12325834075577591
+            },
+            {
+              "arxiv_id": "2402.19072",
+              "grade": 2,
+              "cosine": 0.12303827270788383
+            },
+            {
+              "arxiv_id": "2407.17880",
+              "grade": 3,
+              "cosine": 0.11488364860787038
+            },
+            {
+              "arxiv_id": "2610.10727",
+              "grade": 2,
+              "cosine": 0.11150003846009003
+            },
+            {
+              "arxiv_id": "2406.09130",
+              "grade": 2,
+              "cosine": 0.11110407017068782
+            },
+            {
+              "arxiv_id": "2205.13504",
+              "grade": 3,
+              "cosine": 0.09758312335131353
+            },
+            {
+              "arxiv_id": "2201.12886",
+              "grade": 3,
+              "cosine": 0.08309370572939093
+            },
+            {
+              "arxiv_id": "2402.10198",
+              "grade": 2,
+              "cosine": 0.08236631817100262
+            },
+            {
+              "arxiv_id": "2501.10448",
+              "grade": 2,
+              "cosine": 0.07869150002816175
+            },
+            {
+              "arxiv_id": "2507.14507",
+              "grade": 2,
+              "cosine": 0.07454042565057886
+            },
+            {
+              "arxiv_id": "1511.08458",
+              "grade": 0,
+              "cosine": 0.07265420724542201
+            },
+            {
+              "arxiv_id": "2310.10688",
+              "grade": 3,
+              "cosine": 0.065197698554413
+            },
+            {
+              "arxiv_id": "2308.11200",
+              "grade": 3,
+              "cosine": 0.06393786456209431
+            },
+            {
+              "arxiv_id": "2605.19231",
+              "grade": 1,
+              "cosine": 0.0597845100474699
+            },
+            {
+              "arxiv_id": "1810.04805",
+              "grade": 0,
+              "cosine": 0.046511853767854563
+            },
+            {
+              "arxiv_id": "2202.01381",
+              "grade": 3,
+              "cosine": 0.04245730895845539
+            },
+            {
+              "arxiv_id": "2012.07436",
+              "grade": 3,
+              "cosine": 0.03454379785568351
+            },
+            {
+              "arxiv_id": "2601.21812",
+              "grade": 2,
+              "cosine": 0.0270839189682369
+            },
+            {
+              "arxiv_id": "1905.11946",
+              "grade": 0,
+              "cosine": 0.019956287834187767
+            },
+            {
+              "arxiv_id": "2111.08095",
+              "grade": 1,
+              "cosine": 0.016309774033775204
+            },
+            {
+              "arxiv_id": "1706.03762",
+              "grade": 1,
+              "cosine": 0.010577139131767985
+            },
+            {
+              "arxiv_id": "2205.14135",
+              "grade": 0,
+              "cosine": 0.006060353852550287
+            },
+            {
+              "arxiv_id": "2010.11929",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2103.14030",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2106.09685",
+              "grade": 0,
+              "cosine": 0.0
+            }
+          ]
+        },
+        "explainable-ai-medical-diagnosis": {
+          "query": "explainable artificial intelligence for medical diagnosis",
+          "metrics": {
+            "ndcg@10": 0.8113499146016455,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2604.16340",
+              "grade": 2,
+              "cosine": 0.28959632813028635
+            },
+            {
+              "arxiv_id": "2605.02903",
+              "grade": 3,
+              "cosine": 0.2084837223688116
+            },
+            {
+              "arxiv_id": "2602.07017",
+              "grade": 2,
+              "cosine": 0.15003500135753364
+            },
+            {
+              "arxiv_id": "2610.36325",
+              "grade": 3,
+              "cosine": 0.1276551572462126
+            },
+            {
+              "arxiv_id": "2605.22547",
+              "grade": 3,
+              "cosine": 0.1265229546600311
+            },
+            {
+              "arxiv_id": "2609.31692",
+              "grade": 3,
+              "cosine": 0.11176335743632415
+            },
+            {
+              "arxiv_id": "2602.21178",
+              "grade": 3,
+              "cosine": 0.10990196080830687
+            },
+            {
+              "arxiv_id": "2603.11818",
+              "grade": 3,
+              "cosine": 0.10619723916912227
+            },
+            {
+              "arxiv_id": "2605.06197",
+              "grade": 3,
+              "cosine": 0.10233615030467436
+            },
+            {
+              "arxiv_id": "2610.37026",
+              "grade": 3,
+              "cosine": 0.1016761810214502
+            },
+            {
+              "arxiv_id": "2610.26215",
+              "grade": 1,
+              "cosine": 0.09560950845512256
+            },
+            {
+              "arxiv_id": "2603.04449",
+              "grade": 3,
+              "cosine": 0.09006422036713672
+            },
+            {
+              "arxiv_id": "2604.02502",
+              "grade": 3,
+              "cosine": 0.08275802368569199
+            },
+            {
+              "arxiv_id": "2609.13340",
+              "grade": 3,
+              "cosine": 0.08010327934044519
+            },
+            {
+              "arxiv_id": "2605.25566",
+              "grade": 3,
+              "cosine": 0.08002501041139029
+            },
+            {
+              "arxiv_id": "2607.09664",
+              "grade": 3,
+              "cosine": 0.07798020333293264
+            },
+            {
+              "arxiv_id": "2605.01999",
+              "grade": 3,
+              "cosine": 0.05751771352016677
+            },
+            {
+              "arxiv_id": "2608.28662",
+              "grade": 3,
+              "cosine": 0.039902947615220376
+            },
+            {
+              "arxiv_id": "2609.18212",
+              "grade": 2,
+              "cosine": 0.03894632788355706
+            },
+            {
+              "arxiv_id": "2609.13523",
+              "grade": 0,
+              "cosine": 0.03244092375107427
+            },
+            {
+              "arxiv_id": "2606.18464",
+              "grade": 0,
+              "cosine": 0.022753841805929917
+            },
+            {
+              "arxiv_id": "2610.19446",
+              "grade": 0,
+              "cosine": 0.01649474466352579
+            },
+            {
+              "arxiv_id": "2610.40192",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.35917",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.15692",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.05748",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.04574",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.01631",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.01619",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.39008",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.38970",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.38793",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.38411",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.35640",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.33619",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.32626",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.30634",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.30628",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.25059",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.16219",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.15250",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.12754",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.06980",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.05726",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2606.23766",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2605.22300",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2605.06913",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2604.18579",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2604.16073",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2604.07068",
+              "grade": 0,
+              "cosine": 0.0
+            }
+          ]
+        },
+        "federated-learning-non-iid": {
+          "query": "federated learning with non-IID data",
+          "metrics": {
+            "ndcg@10": 0.800293291456197,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2610.38970",
+              "grade": 3,
+              "cosine": 0.3103716479955728
+            },
+            {
+              "arxiv_id": "2610.25264",
+              "grade": 3,
+              "cosine": 0.2144888090961634
+            },
+            {
+              "arxiv_id": "2610.39483",
+              "grade": 2,
+              "cosine": 0.21353703624009487
+            },
+            {
+              "arxiv_id": "2610.25318",
+              "grade": 2,
+              "cosine": 0.211087991332169
+            },
+            {
+              "arxiv_id": "2610.23705",
+              "grade": 3,
+              "cosine": 0.19380014272092944
+            },
+            {
+              "arxiv_id": "2610.39008",
+              "grade": 2,
+              "cosine": 0.18102231430256183
+            },
+            {
+              "arxiv_id": "2610.32626",
+              "grade": 3,
+              "cosine": 0.17080707840397444
+            },
+            {
+              "arxiv_id": "2610.33619",
+              "grade": 3,
+              "cosine": 0.141980591073476
+            },
+            {
+              "arxiv_id": "2610.21547",
+              "grade": 2,
+              "cosine": 0.14040684783025495
+            },
+            {
+              "arxiv_id": "2610.39791",
+              "grade": 3,
+              "cosine": 0.13790890591699065
+            },
+            {
+              "arxiv_id": "2610.27952",
+              "grade": 1,
+              "cosine": 0.13311460484058513
+            },
+            {
+              "arxiv_id": "2610.30634",
+              "grade": 3,
+              "cosine": 0.13195388641216352
+            },
+            {
+              "arxiv_id": "2610.24036",
+              "grade": 3,
+              "cosine": 0.12773992751960744
+            },
+            {
+              "arxiv_id": "2610.26953",
+              "grade": 3,
+              "cosine": 0.12638972036155482
+            },
+            {
+              "arxiv_id": "2610.38793",
+              "grade": 2,
+              "cosine": 0.12400578247640619
+            },
+            {
+              "arxiv_id": "2610.25810",
+              "grade": 3,
+              "cosine": 0.10711235443832512
+            },
+            {
+              "arxiv_id": "2610.35640",
+              "grade": 2,
+              "cosine": 0.104359328783491
+            },
+            {
+              "arxiv_id": "2610.38411",
+              "grade": 1,
+              "cosine": 0.10136171276980538
+            },
+            {
+              "arxiv_id": "2610.06980",
+              "grade": 0,
+              "cosine": 0.10105351612379891
+            },
+            {
+              "arxiv_id": "2610.41278",
+              "grade": 1,
+              "cosine": 0.08811267035991974
+            },
+            {
+              "arxiv_id": "2610.25714",
+              "grade": 2,
+              "cosine": 0.08376132934447092
+            },
+            {
+              "arxiv_id": "2609.13340",
+              "grade": 0,
+              "cosine": 0.06781995238699676
+            },
+            {
+              "arxiv_id": "2602.02701",
+              "grade": 0,
+              "cosine": 0.061694365492464834
+            },
+            {
+              "arxiv_id": "2605.01999",
+              "grade": 0,
+              "cosine": 0.05607492132951233
+            },
+            {
+              "arxiv_id": "2604.07068",
+              "grade": 0,
+              "cosine": 0.045757921240854725
+            },
+            {
+              "arxiv_id": "2609.04574",
+              "grade": 0,
+              "cosine": 0.04407744648889122
+            },
+            {
+              "arxiv_id": "2604.16073",
+              "grade": 0,
+              "cosine": 0.04224520411328833
+            },
+            {
+              "arxiv_id": "2605.06197",
+              "grade": 0,
+              "cosine": 0.025789953182729926
+            },
+            {
+              "arxiv_id": "2604.00993",
+              "grade": 0,
+              "cosine": 0.025749320006271607
+            },
+            {
+              "arxiv_id": "2610.12754",
+              "grade": 0,
+              "cosine": 0.01638794003232554
+            },
+            {
+              "arxiv_id": "2608.21979",
+              "grade": 0,
+              "cosine": 0.01535868394063864
+            },
+            {
+              "arxiv_id": "2607.09664",
+              "grade": 0,
+              "cosine": 0.010808975126375154
+            },
+            {
+              "arxiv_id": "2610.05726",
+              "grade": 0,
+              "cosine": 0.010026314181661541
+            },
+            {
+              "arxiv_id": "2608.28662",
+              "grade": 0,
+              "cosine": 0.009168801394756976
+            },
+            {
+              "arxiv_id": "2605.22547",
+              "grade": 0,
+              "cosine": 0.008661060499662653
+            },
+            {
+              "arxiv_id": "2601.20620",
+              "grade": 0,
+              "cosine": 0.007870799406663307
+            },
+            {
+              "arxiv_id": "2609.15692",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.05748",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.01631",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.01619",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2608.27413",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2608.22920",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2605.25566",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2605.02903",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.15250",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2610.01223",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.38789",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2609.38004",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2605.06913",
+              "grade": 0,
+              "cosine": 0.0
+            },
+            {
+              "arxiv_id": "2604.18579",
+              "grade": 0,
+              "cosine": 0.0
+            }
+          ]
+        },
+        "automatic-speech-recognition": {
+          "query": "automatic speech recognition",
+          "metrics": {
+            "ndcg@10": 0.765387439961344,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2610.03017",
+              "grade": 3,
+              "cosine": 0.18578391221528157
+            },
+            {
+              "arxiv_id": "2609.32408",
+              "grade": 3,
+              "cosine": 0.16293586723079545
+            },
+            {
+              "arxiv_id": "2610.17278",
+              "grade": 2,
+              "cosine": 0.13864002386699248
+            },
+            {
+              "arxiv_id": "2610.41292",
+              "grade": 3,
+              "cosine": 0.1295576261558679
+            },
+            {
+              "arxiv_id": "2609.38897",
+              "grade": 2,
+              "cosine": 0.12657363258654136
+            },
+            {
+              "arxiv_id": "2610.26821",
+              "grade": 2,
+              "cosine": 0.12367784794192391
+            },
+            {
+              "arxiv_id": "2609.36920",
+              "grade": 2,
+              "cosine": 0.12319998828131154
+            },
+            {
+              "arxiv_id": "2610.08994",
+              "grade": 3,
+              "cosine": 0.10818549340773014
+            },
+            {
+              "arxiv_id": "2610.32187",
+              "grade": 3,
+              "cosine": 0.10518866220273036
+            },
+            {
+              "arxiv_id": "2609.33060",
+              "grade": 2,
+              "cosine": 0.10381170838457852
+            },
+            {
+              "arxiv_id": "2610.05681",
+              "grade": 3,
+              "cosine": 0.1027938053614621
+            },
+            {
+              "arxiv_id": "2610.26986",
+              "grade": 3,
+              "cosine": 0.100694400038231
+            },
+            {
+              "arxiv_id": "2610.25351",
+              "grade": 3,
+              "cosine": 0.1000724646397876
+            },
+            {
+              "arxiv_id": "2610.13662",
+              "grade": 3,
+              "cosine": 0.09905312845265297
+            },
+            {
+              "arxiv_id": "2610.21440",
+              "grade": 2,
+              "cosine": 0.08939886324219594
+            },
+            {
+              "arxiv_id": "2610.17813",
+              "grade": 1,
+              "cosine": 0.08476651642201588
+            },
+            {
+              "arxiv_id": "2609.30160",
+              "grade": 3,
+              "cosine": 0.08417826063523076
+            },
+            {
+              "arxiv_id": "2610.19134",
+              "grade": 3,
+              "cosine": 0.0824212725210134
+            },
+            {
+              "arxiv_id": "2610.30663",
+              "grade": 3,
+              "cosine": 0.07538090172368643
+            },
+            {
+              "arxiv_id": "2611.02476",
+              "grade": 3,
+              "cosine": 0.07500962070751754
+            },
+            {
+              "arxiv_id": "2609.30439",
+              "grade": 2,
+              "cosine": 0.06973559499334786
+            },
+            {
+              "arxiv_id": "2610.11646",
+              "grade": 3,
+              "cosine": 0.06696466694829561
+            },
+            {
+              "arxiv_id": "2610.09109",
+              "grade": 2,
+              "cosine": 0.06583148031563305
+            },
+            {
+              "arxiv_id": "2609.33865",
+              "grade": 3,
+              "cosine": 0.06418109912134094
+            },
+            {
+              "arxiv_id": "2610.21164",
+              "grade": 3,
+              "cosine": 0.061934673548077135
+            },
+            {
+              "arxiv_id": "2610.33952",
+              "grade": 0,
+              "cosine": 0.06084089143613407
+            },
+            {
+              "arxiv_id": "2610.14594",
+              "grade": 2,
+              "cosine": 0.060074173426576304
+            },
+            {
+              "arxiv_id": "2610.33765",
+              "grade": 3,
+              "cosine": 0.058860181569250464
+            },
+            {
+              "arxiv_id": "2610.23117",
+              "grade": 3,
+              "cosine": 0.056508299847260975
+            },
+            {
+              "arxiv_id": "2610.33977",
+              "grade": 0,
+              "cosine": 0.055565392163273886
+            },
+            {
+              "arxiv_id": "2610.38050",
+              "grade": 0,
+              "cosine": 0.053780902254350685
+            },
+            {
+              "arxiv_id": "2610.28673",
+              "grade": 3,
+              "cosine": 0.05375783118408432
+            },
+            {
+              "arxiv_id": "2610.29720",
+              "grade": 3,
+              "cosine": 0.05262919275583483
+            },
+            {
+              "arxiv_id": "2610.13447",
+              "grade": 3,
+              "cosine": 0.050876660794547536
+            },
+            {
+              "arxiv_id": "2609.31961",
+              "grade": 3,
+              "cosine": 0.05008547132582843
+            },
+            {
+              "arxiv_id": "2609.38634",
+              "grade": 1,
+              "cosine": 0.04835542155850965
+            },
+            {
+              "arxiv_id": "2609.39453",
+              "grade": 0,
+              "cosine": 0.04835006998092162
+            },
+            {
+              "arxiv_id": "2610.15671",
+              "grade": 2,
+              "cosine": 0.04819233621409943
+            },
+            {
+              "arxiv_id": "2610.40883",
+              "grade": 0,
+              "cosine": 0.04697772909552398
+            },
+            {
+              "arxiv_id": "2610.34623",
+              "grade": 3,
+              "cosine": 0.04629423376791025
+            },
+            {
+              "arxiv_id": "2610.16260",
+              "grade": 2,
+              "cosine": 0.044112752380079834
+            },
+            {
+              "arxiv_id": "2609.31399",
+              "grade": 0,
+              "cosine": 0.039817510774622644
+            },
+            {
+              "arxiv_id": "2610.26446",
+              "grade": 0,
+              "cosine": 0.03625785928227619
+            },
+            {
+              "arxiv_id": "2610.24809",
+              "grade": 3,
+              "cosine": 0.036051664784735406
+            },
+            {
+              "arxiv_id": "2610.27002",
+              "grade": 3,
+              "cosine": 0.03413201392965183
+            },
+            {
+              "arxiv_id": "2610.26888",
+              "grade": 3,
+              "cosine": 0.034024538611576206
+            },
+            {
+              "arxiv_id": "2609.29800",
+              "grade": 3,
+              "cosine": 0.03235357408983071
+            },
+            {
+              "arxiv_id": "2611.00692",
+              "grade": 3,
+              "cosine": 0.03066177092619624
+            },
+            {
+              "arxiv_id": "2609.35564",
+              "grade": 2,
+              "cosine": 0.029875927068349312
+            },
+            {
+              "arxiv_id": "2610.38739",
+              "grade": 3,
+              "cosine": 0.013558172805664096
+            }
+          ]
+        },
+        "image-segmentation": {
+          "query": "image segmentation",
+          "metrics": {
+            "ndcg@10": 0.9552009891550427,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2610.06938",
+              "grade": 3,
+              "cosine": 0.1513432587805354
+            },
+            {
+              "arxiv_id": "2610.00279",
+              "grade": 3,
+              "cosine": 0.1336767123169466
+            },
+            {
+              "arxiv_id": "2610.31065",
+              "grade": 3,
+              "cosine": 0.12651992823721894
+            },
+            {
+              "arxiv_id": "2610.14944",
+              "grade": 3,
+              "cosine": 0.12560373020656757
+            },
+            {
+              "arxiv_id": "2610.10306",
+              "grade": 3,
+              "cosine": 0.12000160432725776
+            },
+            {
+              "arxiv_id": "2610.17354",
+              "grade": 2,
+              "cosine": 0.11574390407424426
+            },
+            {
+              "arxiv_id": "2610.40029",
+              "grade": 3,
+              "cosine": 0.11540530890512227
+            },
+            {
+              "arxiv_id": "2610.26954",
+              "grade": 3,
+              "cosine": 0.11476220156832614
+            },
+            {
+              "arxiv_id": "2610.08574",
+              "grade": 3,
+              "cosine": 0.11199497272207434
+            },
+            {
+              "arxiv_id": "2610.29409",
+              "grade": 3,
+              "cosine": 0.11055768861197426
+            },
+            {
+              "arxiv_id": "2610.03474",
+              "grade": 3,
+              "cosine": 0.10942477679925572
+            },
+            {
+              "arxiv_id": "2610.21238",
+              "grade": 2,
+              "cosine": 0.10827948551643449
+            },
+            {
+              "arxiv_id": "2610.28118",
+              "grade": 3,
+              "cosine": 0.10623282646435116
+            },
+            {
+              "arxiv_id": "2610.21990",
+              "grade": 3,
+              "cosine": 0.10146301741087435
+            },
+            {
+              "arxiv_id": "2610.27958",
+              "grade": 3,
+              "cosine": 0.10112089519263606
+            },
+            {
+              "arxiv_id": "2610.41763",
+              "grade": 2,
+              "cosine": 0.09912188597019908
+            },
+            {
+              "arxiv_id": "2610.32377",
+              "grade": 3,
+              "cosine": 0.09274109852355575
+            },
+            {
+              "arxiv_id": "2609.39997",
+              "grade": 1,
+              "cosine": 0.09162566140101233
+            },
+            {
+              "arxiv_id": "2611.02305",
+              "grade": 3,
+              "cosine": 0.0907309713304845
+            },
+            {
+              "arxiv_id": "2609.38930",
+              "grade": 2,
+              "cosine": 0.09048191120686525
+            },
+            {
+              "arxiv_id": "2610.23440",
+              "grade": 3,
+              "cosine": 0.08856467905131526
+            },
+            {
+              "arxiv_id": "2610.24037",
+              "grade": 3,
+              "cosine": 0.08774873097188399
+            },
+            {
+              "arxiv_id": "2610.14651",
+              "grade": 3,
+              "cosine": 0.08273947612579802
+            },
+            {
+              "arxiv_id": "2610.15079",
+              "grade": 3,
+              "cosine": 0.08130101196284015
+            },
+            {
+              "arxiv_id": "2610.31902",
+              "grade": 3,
+              "cosine": 0.07025416922396249
+            },
+            {
+              "arxiv_id": "2610.25460",
+              "grade": 2,
+              "cosine": 0.06734161744555346
+            },
+            {
+              "arxiv_id": "2610.32266",
+              "grade": 3,
+              "cosine": 0.06319551072656517
+            },
+            {
+              "arxiv_id": "2610.09392",
+              "grade": 2,
+              "cosine": 0.0624496548766135
+            },
+            {
+              "arxiv_id": "2610.12786",
+              "grade": 3,
+              "cosine": 0.06157780370433368
+            },
+            {
+              "arxiv_id": "2610.35220",
+              "grade": 3,
+              "cosine": 0.06051389517835305
+            },
+            {
+              "arxiv_id": "2610.32609",
+              "grade": 2,
+              "cosine": 0.0593532031112599
+            },
+            {
+              "arxiv_id": "2610.40085",
+              "grade": 3,
+              "cosine": 0.05907249832471918
+            },
+            {
+              "arxiv_id": "2610.23911",
+              "grade": 3,
+              "cosine": 0.05882098007156428
+            },
+            {
+              "arxiv_id": "2610.28091",
+              "grade": 3,
+              "cosine": 0.05793195111981188
+            },
+            {
+              "arxiv_id": "2610.25488",
+              "grade": 3,
+              "cosine": 0.057700810007905536
+            },
+            {
+              "arxiv_id": "2610.30672",
+              "grade": 3,
+              "cosine": 0.05065480450512113
+            },
+            {
+              "arxiv_id": "2610.37860",
+              "grade": 3,
+              "cosine": 0.04966151509188464
+            },
+            {
+              "arxiv_id": "2610.41362",
+              "grade": 3,
+              "cosine": 0.04948829250310328
+            },
+            {
+              "arxiv_id": "2610.21616",
+              "grade": 2,
+              "cosine": 0.04794974641801346
+            },
+            {
+              "arxiv_id": "2610.13604",
+              "grade": 3,
+              "cosine": 0.04564861514450785
+            },
+            {
+              "arxiv_id": "2610.36506",
+              "grade": 3,
+              "cosine": 0.045183108781704326
+            },
+            {
+              "arxiv_id": "2610.06575",
+              "grade": 3,
+              "cosine": 0.04244827121612388
+            },
+            {
+              "arxiv_id": "2610.18133",
+              "grade": 3,
+              "cosine": 0.041666899927023646
+            },
+            {
+              "arxiv_id": "2611.02603",
+              "grade": 3,
+              "cosine": 0.040925110085728196
+            },
+            {
+              "arxiv_id": "2610.15286",
+              "grade": 3,
+              "cosine": 0.039803697876550866
+            },
+            {
+              "arxiv_id": "2610.06602",
+              "grade": 3,
+              "cosine": 0.03846068911098516
+            },
+            {
+              "arxiv_id": "2610.04300",
+              "grade": 3,
+              "cosine": 0.036275593149919634
+            },
+            {
+              "arxiv_id": "2610.24757",
+              "grade": 3,
+              "cosine": 0.03440555664954267
+            },
+            {
+              "arxiv_id": "2610.29474",
+              "grade": 2,
+              "cosine": 0.030507704472778913
+            },
+            {
+              "arxiv_id": "2610.04553",
+              "grade": 2,
+              "cosine": 0.02546544627779928
+            }
+          ]
+        }
+      },
+      "aggregate": {
+        "ndcg@10": 0.8147860492310661,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "mean_cosine_by_grade": {
+        "0": 0.01816499142204366,
+        "1": 0.08452547865751144,
+        "2": 0.10660588983964171,
+        "3": 0.10264775318798426
+      },
+      "protocol": "Per-query judged candidates only; no title override; binary relevance >=2."
+    },
+    "semantic": {
+      "query_count": 6,
+      "per_query": {
+        "gnn-molecular-property-prediction": {
+          "query": "graph neural networks for molecular property prediction",
+          "metrics": {
+            "ndcg@10": 0.7955024663604254,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2602.20573",
+              "grade": 3,
+              "cosine": 0.8155261319328359
+            },
+            {
+              "arxiv_id": "2602.03046",
+              "grade": 3,
+              "cosine": 0.7649745234304988
+            },
+            {
+              "arxiv_id": "2608.30636",
+              "grade": 3,
+              "cosine": 0.7279885554162013
+            },
+            {
+              "arxiv_id": "2606.20906",
+              "grade": 3,
+              "cosine": 0.7176139975319386
+            },
+            {
+              "arxiv_id": "2610.29589",
+              "grade": 3,
+              "cosine": 0.6997700454090852
+            },
+            {
+              "arxiv_id": "2601.19037",
+              "grade": 3,
+              "cosine": 0.6962395316590252
+            },
+            {
+              "arxiv_id": "2605.10551",
+              "grade": 2,
+              "cosine": 0.686892442213218
+            },
+            {
+              "arxiv_id": "2603.12017",
+              "grade": 0,
+              "cosine": 0.6846078969620624
+            },
+            {
+              "arxiv_id": "2609.19487",
+              "grade": 1,
+              "cosine": 0.6680857902303301
+            },
+            {
+              "arxiv_id": "2603.27106",
+              "grade": 2,
+              "cosine": 0.656628172297281
+            },
+            {
+              "arxiv_id": "2607.07935",
+              "grade": 1,
+              "cosine": 0.6483449855888485
+            },
+            {
+              "arxiv_id": "2602.18313",
+              "grade": 0,
+              "cosine": 0.6479131844026603
+            },
+            {
+              "arxiv_id": "2607.05736",
+              "grade": 3,
+              "cosine": 0.6373710862565041
+            },
+            {
+              "arxiv_id": "2607.02212",
+              "grade": 3,
+              "cosine": 0.6360029510800891
+            },
+            {
+              "arxiv_id": "2607.28304",
+              "grade": 2,
+              "cosine": 0.6356773079666381
+            },
+            {
+              "arxiv_id": "2610.18164",
+              "grade": 1,
+              "cosine": 0.633991822313839
+            },
+            {
+              "arxiv_id": "2606.11382",
+              "grade": 2,
+              "cosine": 0.6200429857673351
+            },
+            {
+              "arxiv_id": "2607.24314",
+              "grade": 3,
+              "cosine": 0.6175338289644486
+            },
+            {
+              "arxiv_id": "2609.04261",
+              "grade": 2,
+              "cosine": 0.6117252066326536
+            },
+            {
+              "arxiv_id": "2605.10458",
+              "grade": 1,
+              "cosine": 0.6013342030706142
+            },
+            {
+              "arxiv_id": "2610.09389",
+              "grade": 3,
+              "cosine": 0.6004823856851066
+            },
+            {
+              "arxiv_id": "2609.23134",
+              "grade": 2,
+              "cosine": 0.595851354918249
+            },
+            {
+              "arxiv_id": "2610.12039",
+              "grade": 2,
+              "cosine": 0.5944437701806488
+            },
+            {
+              "arxiv_id": "2607.21941",
+              "grade": 1,
+              "cosine": 0.5932488870505597
+            },
+            {
+              "arxiv_id": "2607.21561",
+              "grade": 2,
+              "cosine": 0.5879429243780544
+            },
+            {
+              "arxiv_id": "2605.09495",
+              "grade": 1,
+              "cosine": 0.5866945848703087
+            },
+            {
+              "arxiv_id": "2608.30674",
+              "grade": 2,
+              "cosine": 0.5845093252240972
+            },
+            {
+              "arxiv_id": "2606.26873",
+              "grade": 1,
+              "cosine": 0.579291348129303
+            },
+            {
+              "arxiv_id": "2604.27810",
+              "grade": 1,
+              "cosine": 0.5760275014377382
+            },
+            {
+              "arxiv_id": "2610.04588",
+              "grade": 2,
+              "cosine": 0.5718079715435204
+            },
+            {
+              "arxiv_id": "2605.30195",
+              "grade": 3,
+              "cosine": 0.5673578426727285
+            },
+            {
+              "arxiv_id": "2603.02810",
+              "grade": 1,
+              "cosine": 0.553057470462651
+            },
+            {
+              "arxiv_id": "2611.02277",
+              "grade": 3,
+              "cosine": 0.5449093500979029
+            },
+            {
+              "arxiv_id": "2609.08474",
+              "grade": 0,
+              "cosine": 0.5365554187576882
+            },
+            {
+              "arxiv_id": "2604.09320",
+              "grade": 2,
+              "cosine": 0.5357874464068395
+            },
+            {
+              "arxiv_id": "2603.01274",
+              "grade": 1,
+              "cosine": 0.534538056399975
+            },
+            {
+              "arxiv_id": "2603.24752",
+              "grade": 2,
+              "cosine": 0.532650387007841
+            },
+            {
+              "arxiv_id": "2610.31183",
+              "grade": 2,
+              "cosine": 0.5322601780672649
+            },
+            {
+              "arxiv_id": "2601.23212",
+              "grade": 1,
+              "cosine": 0.5317591818477635
+            },
+            {
+              "arxiv_id": "2607.19083",
+              "grade": 1,
+              "cosine": 0.5246072473814327
+            },
+            {
+              "arxiv_id": "2604.26498",
+              "grade": 2,
+              "cosine": 0.5087673309908679
+            },
+            {
+              "arxiv_id": "2606.09647",
+              "grade": 0,
+              "cosine": 0.4967078031488188
+            },
+            {
+              "arxiv_id": "2610.29111",
+              "grade": 2,
+              "cosine": 0.48660603814003034
+            },
+            {
+              "arxiv_id": "2608.15609",
+              "grade": 0,
+              "cosine": 0.48542428753112615
+            },
+            {
+              "arxiv_id": "2601.13275",
+              "grade": 0,
+              "cosine": 0.4852066628794039
+            },
+            {
+              "arxiv_id": "2607.25169",
+              "grade": 1,
+              "cosine": 0.46729212394620506
+            },
+            {
+              "arxiv_id": "2605.30012",
+              "grade": 0,
+              "cosine": 0.46034556257964926
+            },
+            {
+              "arxiv_id": "2607.07456",
+              "grade": 0,
+              "cosine": 0.4416164703292792
+            },
+            {
+              "arxiv_id": "2610.38843",
+              "grade": 1,
+              "cosine": 0.41199869810598266
+            },
+            {
+              "arxiv_id": "2608.28853",
+              "grade": 1,
+              "cosine": 0.35322327160228967
+            }
+          ]
+        },
+        "deep-learning-time-series-forecasting": {
+          "query": "deep learning for time series forecasting",
+          "metrics": {
+            "ndcg@10": 0.8155847851158234,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "1704.04110",
+              "grade": 3,
+              "cosine": 0.7450163972265939
+            },
+            {
+              "arxiv_id": "2303.06053",
+              "grade": 3,
+              "cosine": 0.6788496941704232
+            },
+            {
+              "arxiv_id": "1905.10437",
+              "grade": 3,
+              "cosine": 0.6748276499472227
+            },
+            {
+              "arxiv_id": "2310.20218",
+              "grade": 2,
+              "cosine": 0.6744301745060104
+            },
+            {
+              "arxiv_id": "2009.11961",
+              "grade": 2,
+              "cosine": 0.6668319997511646
+            },
+            {
+              "arxiv_id": "2207.01186",
+              "grade": 3,
+              "cosine": 0.6453857647352143
+            },
+            {
+              "arxiv_id": "2407.13278",
+              "grade": 2,
+              "cosine": 0.6414628031102994
+            },
+            {
+              "arxiv_id": "2610.10727",
+              "grade": 2,
+              "cosine": 0.6293028722926267
+            },
+            {
+              "arxiv_id": "2402.02592",
+              "grade": 3,
+              "cosine": 0.6263009067840171
+            },
+            {
+              "arxiv_id": "2407.17880",
+              "grade": 3,
+              "cosine": 0.6062954877463272
+            },
+            {
+              "arxiv_id": "2308.11200",
+              "grade": 3,
+              "cosine": 0.5979443466305407
+            },
+            {
+              "arxiv_id": "2310.08278",
+              "grade": 3,
+              "cosine": 0.5858898637577193
+            },
+            {
+              "arxiv_id": "2201.12886",
+              "grade": 3,
+              "cosine": 0.568000544734419
+            },
+            {
+              "arxiv_id": "2403.07815",
+              "grade": 3,
+              "cosine": 0.5645264593373983
+            },
+            {
+              "arxiv_id": "1912.09363",
+              "grade": 3,
+              "cosine": 0.5463481530271789
+            },
+            {
+              "arxiv_id": "2402.19072",
+              "grade": 2,
+              "cosine": 0.5454697696002272
+            },
+            {
+              "arxiv_id": "2211.14730",
+              "grade": 3,
+              "cosine": 0.5449538852825051
+            },
+            {
+              "arxiv_id": "2106.13008",
+              "grade": 3,
+              "cosine": 0.539060867206706
+            },
+            {
+              "arxiv_id": "2501.10448",
+              "grade": 2,
+              "cosine": 0.5382283871451914
+            },
+            {
+              "arxiv_id": "2310.06625",
+              "grade": 3,
+              "cosine": 0.5345511789051692
+            },
+            {
+              "arxiv_id": "2310.01728",
+              "grade": 2,
+              "cosine": 0.5321535240429947
+            },
+            {
+              "arxiv_id": "2510.00742",
+              "grade": 3,
+              "cosine": 0.5303427821435943
+            },
+            {
+              "arxiv_id": "2605.19231",
+              "grade": 1,
+              "cosine": 0.5277407333565635
+            },
+            {
+              "arxiv_id": "2406.09130",
+              "grade": 2,
+              "cosine": 0.5167149117925054
+            },
+            {
+              "arxiv_id": "2602.00589",
+              "grade": 2,
+              "cosine": 0.5139472516784996
+            },
+            {
+              "arxiv_id": "2410.04803",
+              "grade": 2,
+              "cosine": 0.5049235630715024
+            },
+            {
+              "arxiv_id": "2402.10198",
+              "grade": 2,
+              "cosine": 0.49667617507257805
+            },
+            {
+              "arxiv_id": "2111.08095",
+              "grade": 1,
+              "cosine": 0.4872850677529522
+            },
+            {
+              "arxiv_id": "2304.01512",
+              "grade": 1,
+              "cosine": 0.4870346973188121
+            },
+            {
+              "arxiv_id": "2309.12659",
+              "grade": 2,
+              "cosine": 0.478403550564538
+            },
+            {
+              "arxiv_id": "2602.00040",
+              "grade": 2,
+              "cosine": 0.4782079483189209
+            },
+            {
+              "arxiv_id": "2405.14616",
+              "grade": 3,
+              "cosine": 0.47321953099678876
+            },
+            {
+              "arxiv_id": "2601.21812",
+              "grade": 2,
+              "cosine": 0.47317200882808724
+            },
+            {
+              "arxiv_id": "2205.14415",
+              "grade": 3,
+              "cosine": 0.4719998290133727
+            },
+            {
+              "arxiv_id": "2201.12740",
+              "grade": 3,
+              "cosine": 0.4717428589493973
+            },
+            {
+              "arxiv_id": "2202.01381",
+              "grade": 3,
+              "cosine": 0.4691263605444423
+            },
+            {
+              "arxiv_id": "2403.01742",
+              "grade": 1,
+              "cosine": 0.46575449288606136
+            },
+            {
+              "arxiv_id": "2310.10688",
+              "grade": 3,
+              "cosine": 0.46266872618507754
+            },
+            {
+              "arxiv_id": "2210.02186",
+              "grade": 2,
+              "cosine": 0.45437550246637665
+            },
+            {
+              "arxiv_id": "2012.07436",
+              "grade": 3,
+              "cosine": 0.4543329940736876
+            },
+            {
+              "arxiv_id": "2205.13504",
+              "grade": 3,
+              "cosine": 0.4447838114215021
+            },
+            {
+              "arxiv_id": "2507.14507",
+              "grade": 2,
+              "cosine": 0.41515301062107873
+            },
+            {
+              "arxiv_id": "1706.03762",
+              "grade": 1,
+              "cosine": 0.3940662086513008
+            },
+            {
+              "arxiv_id": "1905.11946",
+              "grade": 0,
+              "cosine": 0.3477869583711655
+            },
+            {
+              "arxiv_id": "1511.08458",
+              "grade": 0,
+              "cosine": 0.3426188989573961
+            },
+            {
+              "arxiv_id": "2010.11929",
+              "grade": 0,
+              "cosine": 0.3360267517289204
+            },
+            {
+              "arxiv_id": "1810.04805",
+              "grade": 0,
+              "cosine": 0.28661422339219317
+            },
+            {
+              "arxiv_id": "2106.09685",
+              "grade": 0,
+              "cosine": 0.276968649438157
+            },
+            {
+              "arxiv_id": "2103.14030",
+              "grade": 0,
+              "cosine": 0.22184548999048162
+            },
+            {
+              "arxiv_id": "2205.14135",
+              "grade": 0,
+              "cosine": 0.18143935910133321
+            }
+          ]
+        },
+        "explainable-ai-medical-diagnosis": {
+          "query": "explainable artificial intelligence for medical diagnosis",
+          "metrics": {
+            "ndcg@10": 0.8638606976827783,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2605.02903",
+              "grade": 3,
+              "cosine": 0.6887957361221404
+            },
+            {
+              "arxiv_id": "2604.16340",
+              "grade": 2,
+              "cosine": 0.5894486632747347
+            },
+            {
+              "arxiv_id": "2605.25566",
+              "grade": 3,
+              "cosine": 0.5892970435643055
+            },
+            {
+              "arxiv_id": "2610.36325",
+              "grade": 3,
+              "cosine": 0.5762983838098492
+            },
+            {
+              "arxiv_id": "2607.09664",
+              "grade": 3,
+              "cosine": 0.5604166761901355
+            },
+            {
+              "arxiv_id": "2609.31692",
+              "grade": 3,
+              "cosine": 0.5165092606370548
+            },
+            {
+              "arxiv_id": "2602.21178",
+              "grade": 3,
+              "cosine": 0.511257408991907
+            },
+            {
+              "arxiv_id": "2608.28662",
+              "grade": 3,
+              "cosine": 0.48000140012114123
+            },
+            {
+              "arxiv_id": "2610.26215",
+              "grade": 1,
+              "cosine": 0.4751346237622762
+            },
+            {
+              "arxiv_id": "2610.37026",
+              "grade": 3,
+              "cosine": 0.4591742547890648
+            },
+            {
+              "arxiv_id": "2605.22547",
+              "grade": 3,
+              "cosine": 0.45906125163452494
+            },
+            {
+              "arxiv_id": "2605.06197",
+              "grade": 3,
+              "cosine": 0.4263121699789536
+            },
+            {
+              "arxiv_id": "2603.11818",
+              "grade": 3,
+              "cosine": 0.40568425751512643
+            },
+            {
+              "arxiv_id": "2603.04449",
+              "grade": 3,
+              "cosine": 0.40462254115601315
+            },
+            {
+              "arxiv_id": "2602.07017",
+              "grade": 2,
+              "cosine": 0.40052360369644685
+            },
+            {
+              "arxiv_id": "2609.18212",
+              "grade": 2,
+              "cosine": 0.3932638654203996
+            },
+            {
+              "arxiv_id": "2609.13340",
+              "grade": 3,
+              "cosine": 0.3499958809525696
+            },
+            {
+              "arxiv_id": "2604.02502",
+              "grade": 3,
+              "cosine": 0.3441225887155415
+            },
+            {
+              "arxiv_id": "2610.19446",
+              "grade": 0,
+              "cosine": 0.3437160262245188
+            },
+            {
+              "arxiv_id": "2605.01999",
+              "grade": 3,
+              "cosine": 0.32540276530316076
+            },
+            {
+              "arxiv_id": "2605.22300",
+              "grade": 0,
+              "cosine": 0.2580864822642208
+            },
+            {
+              "arxiv_id": "2610.33619",
+              "grade": 0,
+              "cosine": 0.21845185877224962
+            },
+            {
+              "arxiv_id": "2606.18464",
+              "grade": 0,
+              "cosine": 0.2128661197853428
+            },
+            {
+              "arxiv_id": "2610.06980",
+              "grade": 0,
+              "cosine": 0.212481701857602
+            },
+            {
+              "arxiv_id": "2610.38411",
+              "grade": 0,
+              "cosine": 0.19859335783820056
+            },
+            {
+              "arxiv_id": "2610.05726",
+              "grade": 0,
+              "cosine": 0.18813762460002434
+            },
+            {
+              "arxiv_id": "2606.23766",
+              "grade": 0,
+              "cosine": 0.18660020502193703
+            },
+            {
+              "arxiv_id": "2610.30634",
+              "grade": 0,
+              "cosine": 0.16822207479407028
+            },
+            {
+              "arxiv_id": "2609.15692",
+              "grade": 0,
+              "cosine": 0.16710430672213983
+            },
+            {
+              "arxiv_id": "2610.12754",
+              "grade": 0,
+              "cosine": 0.16103700641100474
+            },
+            {
+              "arxiv_id": "2609.01631",
+              "grade": 0,
+              "cosine": 0.15679404090454815
+            },
+            {
+              "arxiv_id": "2610.16219",
+              "grade": 0,
+              "cosine": 0.15354256872502348
+            },
+            {
+              "arxiv_id": "2610.25059",
+              "grade": 0,
+              "cosine": 0.15311591681212347
+            },
+            {
+              "arxiv_id": "2610.30628",
+              "grade": 0,
+              "cosine": 0.14932080888306137
+            },
+            {
+              "arxiv_id": "2604.16073",
+              "grade": 0,
+              "cosine": 0.14127626854261713
+            },
+            {
+              "arxiv_id": "2609.01619",
+              "grade": 0,
+              "cosine": 0.14114319548056106
+            },
+            {
+              "arxiv_id": "2604.07068",
+              "grade": 0,
+              "cosine": 0.13624657851599906
+            },
+            {
+              "arxiv_id": "2610.39008",
+              "grade": 0,
+              "cosine": 0.12627078090769134
+            },
+            {
+              "arxiv_id": "2609.13523",
+              "grade": 0,
+              "cosine": 0.1260855598254407
+            },
+            {
+              "arxiv_id": "2609.04574",
+              "grade": 0,
+              "cosine": 0.12529737246215786
+            },
+            {
+              "arxiv_id": "2610.35640",
+              "grade": 0,
+              "cosine": 0.11762285148556492
+            },
+            {
+              "arxiv_id": "2610.32626",
+              "grade": 0,
+              "cosine": 0.10531301103436032
+            },
+            {
+              "arxiv_id": "2610.15250",
+              "grade": 0,
+              "cosine": 0.10167680548726603
+            },
+            {
+              "arxiv_id": "2609.05748",
+              "grade": 0,
+              "cosine": 0.09996606091403828
+            },
+            {
+              "arxiv_id": "2605.06913",
+              "grade": 0,
+              "cosine": 0.09258490732145076
+            },
+            {
+              "arxiv_id": "2610.40192",
+              "grade": 0,
+              "cosine": 0.08948920645239496
+            },
+            {
+              "arxiv_id": "2609.35917",
+              "grade": 0,
+              "cosine": 0.0873527652834361
+            },
+            {
+              "arxiv_id": "2610.38793",
+              "grade": 0,
+              "cosine": 0.08014128243125984
+            },
+            {
+              "arxiv_id": "2610.38970",
+              "grade": 0,
+              "cosine": 0.04829740984173067
+            },
+            {
+              "arxiv_id": "2604.18579",
+              "grade": 0,
+              "cosine": 0.033116780168138044
+            }
+          ]
+        },
+        "federated-learning-non-iid": {
+          "query": "federated learning with non-IID data",
+          "metrics": {
+            "ndcg@10": 0.646906315112484,
+            "precision@5": 0.8,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2610.38970",
+              "grade": 3,
+              "cosine": 0.6148115715798024
+            },
+            {
+              "arxiv_id": "2610.26953",
+              "grade": 3,
+              "cosine": 0.5984179594233301
+            },
+            {
+              "arxiv_id": "2610.21547",
+              "grade": 2,
+              "cosine": 0.5557592393220239
+            },
+            {
+              "arxiv_id": "2610.39008",
+              "grade": 2,
+              "cosine": 0.5455486064862803
+            },
+            {
+              "arxiv_id": "2610.38411",
+              "grade": 1,
+              "cosine": 0.5262182362281005
+            },
+            {
+              "arxiv_id": "2610.27952",
+              "grade": 1,
+              "cosine": 0.5110612782913885
+            },
+            {
+              "arxiv_id": "2610.23705",
+              "grade": 3,
+              "cosine": 0.5064916386559707
+            },
+            {
+              "arxiv_id": "2610.41278",
+              "grade": 1,
+              "cosine": 0.4877508113169824
+            },
+            {
+              "arxiv_id": "2610.33619",
+              "grade": 3,
+              "cosine": 0.4804994044928411
+            },
+            {
+              "arxiv_id": "2610.39483",
+              "grade": 2,
+              "cosine": 0.46007853990627834
+            },
+            {
+              "arxiv_id": "2610.25318",
+              "grade": 2,
+              "cosine": 0.4353276189570376
+            },
+            {
+              "arxiv_id": "2610.35640",
+              "grade": 2,
+              "cosine": 0.4336182119101418
+            },
+            {
+              "arxiv_id": "2610.24036",
+              "grade": 3,
+              "cosine": 0.43290480049927227
+            },
+            {
+              "arxiv_id": "2610.30634",
+              "grade": 3,
+              "cosine": 0.4249294931156521
+            },
+            {
+              "arxiv_id": "2610.32626",
+              "grade": 3,
+              "cosine": 0.41752392671730576
+            },
+            {
+              "arxiv_id": "2610.38793",
+              "grade": 2,
+              "cosine": 0.41576042904287347
+            },
+            {
+              "arxiv_id": "2610.25264",
+              "grade": 3,
+              "cosine": 0.4134924124223965
+            },
+            {
+              "arxiv_id": "2610.25714",
+              "grade": 2,
+              "cosine": 0.3868434209711546
+            },
+            {
+              "arxiv_id": "2610.39791",
+              "grade": 3,
+              "cosine": 0.38270600619843775
+            },
+            {
+              "arxiv_id": "2610.25810",
+              "grade": 3,
+              "cosine": 0.3777006761736133
+            },
+            {
+              "arxiv_id": "2605.01999",
+              "grade": 0,
+              "cosine": 0.343908793439851
+            },
+            {
+              "arxiv_id": "2608.28662",
+              "grade": 0,
+              "cosine": 0.32393934106836053
+            },
+            {
+              "arxiv_id": "2610.06980",
+              "grade": 0,
+              "cosine": 0.3143511578333308
+            },
+            {
+              "arxiv_id": "2605.22547",
+              "grade": 0,
+              "cosine": 0.26177787917000434
+            },
+            {
+              "arxiv_id": "2609.13340",
+              "grade": 0,
+              "cosine": 0.2587833388456485
+            },
+            {
+              "arxiv_id": "2610.12754",
+              "grade": 0,
+              "cosine": 0.25178861623421256
+            },
+            {
+              "arxiv_id": "2608.21979",
+              "grade": 0,
+              "cosine": 0.24838258731163357
+            },
+            {
+              "arxiv_id": "2608.22920",
+              "grade": 0,
+              "cosine": 0.24811549496977162
+            },
+            {
+              "arxiv_id": "2607.09664",
+              "grade": 0,
+              "cosine": 0.2433118844717387
+            },
+            {
+              "arxiv_id": "2609.04574",
+              "grade": 0,
+              "cosine": 0.2351650261740646
+            },
+            {
+              "arxiv_id": "2609.01631",
+              "grade": 0,
+              "cosine": 0.23392788998989733
+            },
+            {
+              "arxiv_id": "2605.25566",
+              "grade": 0,
+              "cosine": 0.22324954798962524
+            },
+            {
+              "arxiv_id": "2604.16073",
+              "grade": 0,
+              "cosine": 0.21090559457059183
+            },
+            {
+              "arxiv_id": "2604.00993",
+              "grade": 0,
+              "cosine": 0.18898827420336928
+            },
+            {
+              "arxiv_id": "2610.05726",
+              "grade": 0,
+              "cosine": 0.18673336412829972
+            },
+            {
+              "arxiv_id": "2609.01619",
+              "grade": 0,
+              "cosine": 0.18645253715679916
+            },
+            {
+              "arxiv_id": "2610.15250",
+              "grade": 0,
+              "cosine": 0.1827423604885442
+            },
+            {
+              "arxiv_id": "2609.38004",
+              "grade": 0,
+              "cosine": 0.18170622188822746
+            },
+            {
+              "arxiv_id": "2609.38789",
+              "grade": 0,
+              "cosine": 0.1805133122893205
+            },
+            {
+              "arxiv_id": "2605.06197",
+              "grade": 0,
+              "cosine": 0.17197872325416966
+            },
+            {
+              "arxiv_id": "2610.01223",
+              "grade": 0,
+              "cosine": 0.17131547393311358
+            },
+            {
+              "arxiv_id": "2602.02701",
+              "grade": 0,
+              "cosine": 0.17063743607960297
+            },
+            {
+              "arxiv_id": "2609.15692",
+              "grade": 0,
+              "cosine": 0.1705168926258104
+            },
+            {
+              "arxiv_id": "2609.05748",
+              "grade": 0,
+              "cosine": 0.16994871906174033
+            },
+            {
+              "arxiv_id": "2601.20620",
+              "grade": 0,
+              "cosine": 0.15150589657367253
+            },
+            {
+              "arxiv_id": "2605.06913",
+              "grade": 0,
+              "cosine": 0.1447040518318555
+            },
+            {
+              "arxiv_id": "2605.02903",
+              "grade": 0,
+              "cosine": 0.14156818543717709
+            },
+            {
+              "arxiv_id": "2608.27413",
+              "grade": 0,
+              "cosine": 0.12718052827971482
+            },
+            {
+              "arxiv_id": "2604.07068",
+              "grade": 0,
+              "cosine": 0.07265862083805397
+            },
+            {
+              "arxiv_id": "2604.18579",
+              "grade": 0,
+              "cosine": 0.05878388049681739
+            }
+          ]
+        },
+        "automatic-speech-recognition": {
+          "query": "automatic speech recognition",
+          "metrics": {
+            "ndcg@10": 0.7984704346902198,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2609.32408",
+              "grade": 3,
+              "cosine": 0.6507334664560501
+            },
+            {
+              "arxiv_id": "2610.05681",
+              "grade": 3,
+              "cosine": 0.57279305096731
+            },
+            {
+              "arxiv_id": "2610.03017",
+              "grade": 3,
+              "cosine": 0.5597190550811956
+            },
+            {
+              "arxiv_id": "2610.17278",
+              "grade": 2,
+              "cosine": 0.5504512337044017
+            },
+            {
+              "arxiv_id": "2609.30439",
+              "grade": 2,
+              "cosine": 0.5142878179853717
+            },
+            {
+              "arxiv_id": "2610.21164",
+              "grade": 3,
+              "cosine": 0.5038622843000055
+            },
+            {
+              "arxiv_id": "2609.36920",
+              "grade": 2,
+              "cosine": 0.4697076127845478
+            },
+            {
+              "arxiv_id": "2610.08994",
+              "grade": 3,
+              "cosine": 0.46327339265679235
+            },
+            {
+              "arxiv_id": "2610.17813",
+              "grade": 1,
+              "cosine": 0.46039261305990603
+            },
+            {
+              "arxiv_id": "2611.02476",
+              "grade": 3,
+              "cosine": 0.4518183943921929
+            },
+            {
+              "arxiv_id": "2610.13662",
+              "grade": 3,
+              "cosine": 0.4517821303197224
+            },
+            {
+              "arxiv_id": "2610.30663",
+              "grade": 3,
+              "cosine": 0.4499167423970045
+            },
+            {
+              "arxiv_id": "2610.26821",
+              "grade": 2,
+              "cosine": 0.44864768944743744
+            },
+            {
+              "arxiv_id": "2609.30160",
+              "grade": 3,
+              "cosine": 0.447826480675759
+            },
+            {
+              "arxiv_id": "2609.33060",
+              "grade": 2,
+              "cosine": 0.44724065141057306
+            },
+            {
+              "arxiv_id": "2610.15671",
+              "grade": 2,
+              "cosine": 0.4427224572640603
+            },
+            {
+              "arxiv_id": "2610.11646",
+              "grade": 3,
+              "cosine": 0.4389457554371123
+            },
+            {
+              "arxiv_id": "2610.19134",
+              "grade": 3,
+              "cosine": 0.434390877892801
+            },
+            {
+              "arxiv_id": "2610.13447",
+              "grade": 3,
+              "cosine": 0.4317078275531623
+            },
+            {
+              "arxiv_id": "2610.34623",
+              "grade": 3,
+              "cosine": 0.425449214102886
+            },
+            {
+              "arxiv_id": "2610.23117",
+              "grade": 3,
+              "cosine": 0.4234748286814192
+            },
+            {
+              "arxiv_id": "2609.39453",
+              "grade": 0,
+              "cosine": 0.422892172828973
+            },
+            {
+              "arxiv_id": "2610.33952",
+              "grade": 0,
+              "cosine": 0.40942699209400274
+            },
+            {
+              "arxiv_id": "2610.27002",
+              "grade": 3,
+              "cosine": 0.4091755619464963
+            },
+            {
+              "arxiv_id": "2609.35564",
+              "grade": 2,
+              "cosine": 0.40418895229007284
+            },
+            {
+              "arxiv_id": "2610.24809",
+              "grade": 3,
+              "cosine": 0.4041011525405096
+            },
+            {
+              "arxiv_id": "2609.38897",
+              "grade": 2,
+              "cosine": 0.4034327961370042
+            },
+            {
+              "arxiv_id": "2610.32187",
+              "grade": 3,
+              "cosine": 0.40279005153403086
+            },
+            {
+              "arxiv_id": "2609.31961",
+              "grade": 3,
+              "cosine": 0.39801437294281067
+            },
+            {
+              "arxiv_id": "2609.29800",
+              "grade": 3,
+              "cosine": 0.38754750772850455
+            },
+            {
+              "arxiv_id": "2610.26888",
+              "grade": 3,
+              "cosine": 0.38732211574538783
+            },
+            {
+              "arxiv_id": "2610.26986",
+              "grade": 3,
+              "cosine": 0.3862658912453932
+            },
+            {
+              "arxiv_id": "2609.33865",
+              "grade": 3,
+              "cosine": 0.38414391758602356
+            },
+            {
+              "arxiv_id": "2610.41292",
+              "grade": 3,
+              "cosine": 0.38033526788716604
+            },
+            {
+              "arxiv_id": "2610.40883",
+              "grade": 0,
+              "cosine": 0.3802190030682366
+            },
+            {
+              "arxiv_id": "2610.28673",
+              "grade": 3,
+              "cosine": 0.37504936516047155
+            },
+            {
+              "arxiv_id": "2610.33765",
+              "grade": 3,
+              "cosine": 0.37400128458409754
+            },
+            {
+              "arxiv_id": "2610.26446",
+              "grade": 0,
+              "cosine": 0.3689986994006757
+            },
+            {
+              "arxiv_id": "2610.25351",
+              "grade": 3,
+              "cosine": 0.36864500677572826
+            },
+            {
+              "arxiv_id": "2610.21440",
+              "grade": 2,
+              "cosine": 0.3550848985755228
+            },
+            {
+              "arxiv_id": "2610.38050",
+              "grade": 0,
+              "cosine": 0.35049799041793867
+            },
+            {
+              "arxiv_id": "2610.38739",
+              "grade": 3,
+              "cosine": 0.3487634913577062
+            },
+            {
+              "arxiv_id": "2611.00692",
+              "grade": 3,
+              "cosine": 0.3319284582160443
+            },
+            {
+              "arxiv_id": "2610.16260",
+              "grade": 2,
+              "cosine": 0.33093460519799106
+            },
+            {
+              "arxiv_id": "2610.09109",
+              "grade": 2,
+              "cosine": 0.3263084189779652
+            },
+            {
+              "arxiv_id": "2610.33977",
+              "grade": 0,
+              "cosine": 0.2777817969918396
+            },
+            {
+              "arxiv_id": "2610.14594",
+              "grade": 2,
+              "cosine": 0.26131476526990716
+            },
+            {
+              "arxiv_id": "2609.38634",
+              "grade": 1,
+              "cosine": 0.24968650316026364
+            },
+            {
+              "arxiv_id": "2610.29720",
+              "grade": 3,
+              "cosine": 0.2413862600247431
+            },
+            {
+              "arxiv_id": "2609.31399",
+              "grade": 0,
+              "cosine": 0.24055302385848648
+            }
+          ]
+        },
+        "image-segmentation": {
+          "query": "image segmentation",
+          "metrics": {
+            "ndcg@10": 0.940487524054191,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2611.02305",
+              "grade": 3,
+              "cosine": 0.43916745540599256
+            },
+            {
+              "arxiv_id": "2610.12786",
+              "grade": 3,
+              "cosine": 0.41316712166595304
+            },
+            {
+              "arxiv_id": "2610.06938",
+              "grade": 3,
+              "cosine": 0.41087361455106475
+            },
+            {
+              "arxiv_id": "2610.29409",
+              "grade": 3,
+              "cosine": 0.40707756807024
+            },
+            {
+              "arxiv_id": "2610.06575",
+              "grade": 3,
+              "cosine": 0.3999711207055908
+            },
+            {
+              "arxiv_id": "2610.24037",
+              "grade": 3,
+              "cosine": 0.3920287454487648
+            },
+            {
+              "arxiv_id": "2610.27958",
+              "grade": 3,
+              "cosine": 0.384136157740155
+            },
+            {
+              "arxiv_id": "2609.39997",
+              "grade": 1,
+              "cosine": 0.36268263267370987
+            },
+            {
+              "arxiv_id": "2610.32266",
+              "grade": 3,
+              "cosine": 0.34972419952990985
+            },
+            {
+              "arxiv_id": "2610.32377",
+              "grade": 3,
+              "cosine": 0.34775586846374484
+            },
+            {
+              "arxiv_id": "2610.17354",
+              "grade": 2,
+              "cosine": 0.3446004644911907
+            },
+            {
+              "arxiv_id": "2611.02603",
+              "grade": 3,
+              "cosine": 0.34435574275282016
+            },
+            {
+              "arxiv_id": "2610.15286",
+              "grade": 3,
+              "cosine": 0.33918985192817297
+            },
+            {
+              "arxiv_id": "2610.10306",
+              "grade": 3,
+              "cosine": 0.3278948549592881
+            },
+            {
+              "arxiv_id": "2609.38930",
+              "grade": 2,
+              "cosine": 0.3231167652777388
+            },
+            {
+              "arxiv_id": "2610.26954",
+              "grade": 3,
+              "cosine": 0.32192054788132535
+            },
+            {
+              "arxiv_id": "2610.30672",
+              "grade": 3,
+              "cosine": 0.32159782364846295
+            },
+            {
+              "arxiv_id": "2610.31902",
+              "grade": 3,
+              "cosine": 0.32094238420654875
+            },
+            {
+              "arxiv_id": "2610.21616",
+              "grade": 2,
+              "cosine": 0.31974197214768196
+            },
+            {
+              "arxiv_id": "2610.41362",
+              "grade": 3,
+              "cosine": 0.3139315086684846
+            },
+            {
+              "arxiv_id": "2610.00279",
+              "grade": 3,
+              "cosine": 0.3133028164816854
+            },
+            {
+              "arxiv_id": "2610.23911",
+              "grade": 3,
+              "cosine": 0.30563423190364986
+            },
+            {
+              "arxiv_id": "2610.21990",
+              "grade": 3,
+              "cosine": 0.305115203000187
+            },
+            {
+              "arxiv_id": "2610.41763",
+              "grade": 2,
+              "cosine": 0.3019498122002886
+            },
+            {
+              "arxiv_id": "2610.15079",
+              "grade": 3,
+              "cosine": 0.30150060236567966
+            },
+            {
+              "arxiv_id": "2610.40085",
+              "grade": 3,
+              "cosine": 0.2984366730282364
+            },
+            {
+              "arxiv_id": "2610.13604",
+              "grade": 3,
+              "cosine": 0.29708850197865366
+            },
+            {
+              "arxiv_id": "2610.32609",
+              "grade": 2,
+              "cosine": 0.29702296645243187
+            },
+            {
+              "arxiv_id": "2610.03474",
+              "grade": 3,
+              "cosine": 0.2937053019844324
+            },
+            {
+              "arxiv_id": "2610.35220",
+              "grade": 3,
+              "cosine": 0.28907454761338275
+            },
+            {
+              "arxiv_id": "2610.06602",
+              "grade": 3,
+              "cosine": 0.28869103036071964
+            },
+            {
+              "arxiv_id": "2610.29474",
+              "grade": 2,
+              "cosine": 0.2866467972172113
+            },
+            {
+              "arxiv_id": "2610.08574",
+              "grade": 3,
+              "cosine": 0.28458237251132795
+            },
+            {
+              "arxiv_id": "2610.40029",
+              "grade": 3,
+              "cosine": 0.27858348102864583
+            },
+            {
+              "arxiv_id": "2610.14651",
+              "grade": 3,
+              "cosine": 0.2771827884539461
+            },
+            {
+              "arxiv_id": "2610.36506",
+              "grade": 3,
+              "cosine": 0.2641339856630264
+            },
+            {
+              "arxiv_id": "2610.31065",
+              "grade": 3,
+              "cosine": 0.2628723147688593
+            },
+            {
+              "arxiv_id": "2610.28118",
+              "grade": 3,
+              "cosine": 0.262166535160732
+            },
+            {
+              "arxiv_id": "2610.21238",
+              "grade": 2,
+              "cosine": 0.2522979673644077
+            },
+            {
+              "arxiv_id": "2610.25460",
+              "grade": 2,
+              "cosine": 0.250376292469472
+            },
+            {
+              "arxiv_id": "2610.25488",
+              "grade": 3,
+              "cosine": 0.24942308691628573
+            },
+            {
+              "arxiv_id": "2610.23440",
+              "grade": 3,
+              "cosine": 0.24312058333875836
+            },
+            {
+              "arxiv_id": "2610.18133",
+              "grade": 3,
+              "cosine": 0.23706697553045827
+            },
+            {
+              "arxiv_id": "2610.09392",
+              "grade": 2,
+              "cosine": 0.2346721202918747
+            },
+            {
+              "arxiv_id": "2610.28091",
+              "grade": 3,
+              "cosine": 0.2338502478081488
+            },
+            {
+              "arxiv_id": "2610.37860",
+              "grade": 3,
+              "cosine": 0.21952450822701858
+            },
+            {
+              "arxiv_id": "2610.04300",
+              "grade": 3,
+              "cosine": 0.2163733991007032
+            },
+            {
+              "arxiv_id": "2610.04553",
+              "grade": 2,
+              "cosine": 0.20718280555042262
+            },
+            {
+              "arxiv_id": "2610.24757",
+              "grade": 3,
+              "cosine": 0.20360053305185863
+            },
+            {
+              "arxiv_id": "2610.14944",
+              "grade": 3,
+              "cosine": 0.1850370007687417
+            }
+          ]
+        }
+      },
+      "aggregate": {
+        "ndcg@10": 0.8101353705026537,
+        "precision@5": 0.9666666666666667,
+        "mrr": 1.0
+      },
+      "mean_cosine_by_grade": {
+        "0": 0.2327414441281407,
+        "1": 0.5073445581813392,
+        "2": 0.47125632311257293,
+        "3": 0.4428136403509918
+      },
+      "protocol": "Per-query judged candidates only; no title override; binary relevance >=2."
+    },
+    "finetuned": {
+      "query_count": 6,
+      "per_query": {
+        "gnn-molecular-property-prediction": {
+          "query": "graph neural networks for molecular property prediction",
+          "metrics": {
+            "ndcg@10": 0.9636452638863133,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2602.20573",
+              "grade": 3,
+              "cosine": 0.8624131949537162
+            },
+            {
+              "arxiv_id": "2602.03046",
+              "grade": 3,
+              "cosine": 0.8550530985561793
+            },
+            {
+              "arxiv_id": "2601.19037",
+              "grade": 3,
+              "cosine": 0.820178118048953
+            },
+            {
+              "arxiv_id": "2610.29589",
+              "grade": 3,
+              "cosine": 0.7878601387675943
+            },
+            {
+              "arxiv_id": "2608.30636",
+              "grade": 3,
+              "cosine": 0.78379902432979
+            },
+            {
+              "arxiv_id": "2606.20906",
+              "grade": 3,
+              "cosine": 0.7831910145761355
+            },
+            {
+              "arxiv_id": "2607.24314",
+              "grade": 3,
+              "cosine": 0.7602158260179284
+            },
+            {
+              "arxiv_id": "2605.30195",
+              "grade": 3,
+              "cosine": 0.7536176609091604
+            },
+            {
+              "arxiv_id": "2611.02277",
+              "grade": 3,
+              "cosine": 0.7503324679678524
+            },
+            {
+              "arxiv_id": "2606.11382",
+              "grade": 2,
+              "cosine": 0.7442335341365868
+            },
+            {
+              "arxiv_id": "2607.02212",
+              "grade": 3,
+              "cosine": 0.7357238774458768
+            },
+            {
+              "arxiv_id": "2604.27810",
+              "grade": 1,
+              "cosine": 0.7169971467844595
+            },
+            {
+              "arxiv_id": "2607.05736",
+              "grade": 3,
+              "cosine": 0.7054822190347658
+            },
+            {
+              "arxiv_id": "2608.30674",
+              "grade": 2,
+              "cosine": 0.7026615215127702
+            },
+            {
+              "arxiv_id": "2603.27106",
+              "grade": 2,
+              "cosine": 0.6971817600938262
+            },
+            {
+              "arxiv_id": "2609.04261",
+              "grade": 2,
+              "cosine": 0.6920671040771886
+            },
+            {
+              "arxiv_id": "2607.28304",
+              "grade": 2,
+              "cosine": 0.6581040783079518
+            },
+            {
+              "arxiv_id": "2610.12039",
+              "grade": 2,
+              "cosine": 0.6491635756450777
+            },
+            {
+              "arxiv_id": "2605.10551",
+              "grade": 2,
+              "cosine": 0.628607203793517
+            },
+            {
+              "arxiv_id": "2607.07935",
+              "grade": 1,
+              "cosine": 0.6264185073479027
+            },
+            {
+              "arxiv_id": "2603.12017",
+              "grade": 0,
+              "cosine": 0.6104765383143566
+            },
+            {
+              "arxiv_id": "2610.09389",
+              "grade": 3,
+              "cosine": 0.6063224855409568
+            },
+            {
+              "arxiv_id": "2603.01274",
+              "grade": 1,
+              "cosine": 0.6017667715463463
+            },
+            {
+              "arxiv_id": "2604.26498",
+              "grade": 2,
+              "cosine": 0.5945522387872704
+            },
+            {
+              "arxiv_id": "2610.04588",
+              "grade": 2,
+              "cosine": 0.5633525112902741
+            },
+            {
+              "arxiv_id": "2603.02810",
+              "grade": 1,
+              "cosine": 0.5576249826725211
+            },
+            {
+              "arxiv_id": "2609.19487",
+              "grade": 1,
+              "cosine": 0.555704472934932
+            },
+            {
+              "arxiv_id": "2602.18313",
+              "grade": 0,
+              "cosine": 0.5450663055046632
+            },
+            {
+              "arxiv_id": "2607.21941",
+              "grade": 1,
+              "cosine": 0.5387771152825876
+            },
+            {
+              "arxiv_id": "2609.23134",
+              "grade": 2,
+              "cosine": 0.5249277585946877
+            },
+            {
+              "arxiv_id": "2610.31183",
+              "grade": 2,
+              "cosine": 0.5000620090487431
+            },
+            {
+              "arxiv_id": "2605.09495",
+              "grade": 1,
+              "cosine": 0.49985903905298584
+            },
+            {
+              "arxiv_id": "2610.29111",
+              "grade": 2,
+              "cosine": 0.49939417325593327
+            },
+            {
+              "arxiv_id": "2607.21561",
+              "grade": 2,
+              "cosine": 0.4960055189841406
+            },
+            {
+              "arxiv_id": "2603.24752",
+              "grade": 2,
+              "cosine": 0.4785911494070042
+            },
+            {
+              "arxiv_id": "2605.10458",
+              "grade": 1,
+              "cosine": 0.4657469903230606
+            },
+            {
+              "arxiv_id": "2601.13275",
+              "grade": 0,
+              "cosine": 0.4476130533681671
+            },
+            {
+              "arxiv_id": "2610.18164",
+              "grade": 1,
+              "cosine": 0.4393090220381761
+            },
+            {
+              "arxiv_id": "2601.23212",
+              "grade": 1,
+              "cosine": 0.41425178910122196
+            },
+            {
+              "arxiv_id": "2606.09647",
+              "grade": 0,
+              "cosine": 0.38727917278543467
+            },
+            {
+              "arxiv_id": "2604.09320",
+              "grade": 2,
+              "cosine": 0.38324443755719984
+            },
+            {
+              "arxiv_id": "2609.08474",
+              "grade": 0,
+              "cosine": 0.36472226582399514
+            },
+            {
+              "arxiv_id": "2607.19083",
+              "grade": 1,
+              "cosine": 0.36242194555097185
+            },
+            {
+              "arxiv_id": "2610.38843",
+              "grade": 1,
+              "cosine": 0.3513677263315776
+            },
+            {
+              "arxiv_id": "2606.26873",
+              "grade": 1,
+              "cosine": 0.34448579878819524
+            },
+            {
+              "arxiv_id": "2607.25169",
+              "grade": 1,
+              "cosine": 0.2557832597897439
+            },
+            {
+              "arxiv_id": "2608.15609",
+              "grade": 0,
+              "cosine": 0.2512717407792833
+            },
+            {
+              "arxiv_id": "2607.07456",
+              "grade": 0,
+              "cosine": 0.18635843953265427
+            },
+            {
+              "arxiv_id": "2605.30012",
+              "grade": 0,
+              "cosine": 0.1826658325288453
+            },
+            {
+              "arxiv_id": "2608.28853",
+              "grade": 1,
+              "cosine": 0.09221447433177073
+            }
+          ]
+        },
+        "deep-learning-time-series-forecasting": {
+          "query": "deep learning for time series forecasting",
+          "metrics": {
+            "ndcg@10": 0.9603250160361274,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2303.06053",
+              "grade": 3,
+              "cosine": 0.7797304677905547
+            },
+            {
+              "arxiv_id": "2402.02592",
+              "grade": 3,
+              "cosine": 0.7158300134249114
+            },
+            {
+              "arxiv_id": "2308.11200",
+              "grade": 3,
+              "cosine": 0.697994434781233
+            },
+            {
+              "arxiv_id": "2207.01186",
+              "grade": 3,
+              "cosine": 0.6904098482982528
+            },
+            {
+              "arxiv_id": "1704.04110",
+              "grade": 3,
+              "cosine": 0.6834524323413879
+            },
+            {
+              "arxiv_id": "1912.09363",
+              "grade": 3,
+              "cosine": 0.6714923250259484
+            },
+            {
+              "arxiv_id": "1905.10437",
+              "grade": 3,
+              "cosine": 0.6678953782295513
+            },
+            {
+              "arxiv_id": "2310.20218",
+              "grade": 2,
+              "cosine": 0.6647582249193202
+            },
+            {
+              "arxiv_id": "2201.12886",
+              "grade": 3,
+              "cosine": 0.6279028989382446
+            },
+            {
+              "arxiv_id": "2407.17880",
+              "grade": 3,
+              "cosine": 0.6174117617959812
+            },
+            {
+              "arxiv_id": "2510.00742",
+              "grade": 3,
+              "cosine": 0.6086635990471964
+            },
+            {
+              "arxiv_id": "2403.07815",
+              "grade": 3,
+              "cosine": 0.6048628335548492
+            },
+            {
+              "arxiv_id": "2310.06625",
+              "grade": 3,
+              "cosine": 0.5801477981909926
+            },
+            {
+              "arxiv_id": "2211.14730",
+              "grade": 3,
+              "cosine": 0.5768232171679399
+            },
+            {
+              "arxiv_id": "2310.08278",
+              "grade": 3,
+              "cosine": 0.5760302987656829
+            },
+            {
+              "arxiv_id": "2106.13008",
+              "grade": 3,
+              "cosine": 0.561478062441869
+            },
+            {
+              "arxiv_id": "2012.07436",
+              "grade": 3,
+              "cosine": 0.5571830305505951
+            },
+            {
+              "arxiv_id": "2201.12740",
+              "grade": 3,
+              "cosine": 0.5354901919431189
+            },
+            {
+              "arxiv_id": "2402.10198",
+              "grade": 2,
+              "cosine": 0.5347631120108399
+            },
+            {
+              "arxiv_id": "2205.14415",
+              "grade": 3,
+              "cosine": 0.5331091880877045
+            },
+            {
+              "arxiv_id": "2310.10688",
+              "grade": 3,
+              "cosine": 0.5227446835671221
+            },
+            {
+              "arxiv_id": "2501.10448",
+              "grade": 2,
+              "cosine": 0.5100870966441817
+            },
+            {
+              "arxiv_id": "2410.04803",
+              "grade": 2,
+              "cosine": 0.48532906178432633
+            },
+            {
+              "arxiv_id": "2202.01381",
+              "grade": 3,
+              "cosine": 0.47662576848321003
+            },
+            {
+              "arxiv_id": "2610.10727",
+              "grade": 2,
+              "cosine": 0.46149468548949424
+            },
+            {
+              "arxiv_id": "2405.14616",
+              "grade": 3,
+              "cosine": 0.4596462789859271
+            },
+            {
+              "arxiv_id": "2309.12659",
+              "grade": 2,
+              "cosine": 0.45922974856458804
+            },
+            {
+              "arxiv_id": "2601.21812",
+              "grade": 2,
+              "cosine": 0.4477645021741068
+            },
+            {
+              "arxiv_id": "2205.13504",
+              "grade": 3,
+              "cosine": 0.44263606521158394
+            },
+            {
+              "arxiv_id": "2602.00589",
+              "grade": 2,
+              "cosine": 0.4416217433883129
+            },
+            {
+              "arxiv_id": "2402.19072",
+              "grade": 2,
+              "cosine": 0.4103597907749075
+            },
+            {
+              "arxiv_id": "2605.19231",
+              "grade": 1,
+              "cosine": 0.4034492916702839
+            },
+            {
+              "arxiv_id": "2602.00040",
+              "grade": 2,
+              "cosine": 0.4010819917340064
+            },
+            {
+              "arxiv_id": "2009.11961",
+              "grade": 2,
+              "cosine": 0.37909477812885184
+            },
+            {
+              "arxiv_id": "2310.01728",
+              "grade": 2,
+              "cosine": 0.3618105598698073
+            },
+            {
+              "arxiv_id": "2406.09130",
+              "grade": 2,
+              "cosine": 0.36006860897974874
+            },
+            {
+              "arxiv_id": "2507.14507",
+              "grade": 2,
+              "cosine": 0.35479430925721844
+            },
+            {
+              "arxiv_id": "2304.01512",
+              "grade": 1,
+              "cosine": 0.33630473130816696
+            },
+            {
+              "arxiv_id": "2407.13278",
+              "grade": 2,
+              "cosine": 0.33204225914665225
+            },
+            {
+              "arxiv_id": "2210.02186",
+              "grade": 2,
+              "cosine": 0.323982066672128
+            },
+            {
+              "arxiv_id": "2403.01742",
+              "grade": 1,
+              "cosine": 0.2991773668206867
+            },
+            {
+              "arxiv_id": "2111.08095",
+              "grade": 1,
+              "cosine": 0.295519626346648
+            },
+            {
+              "arxiv_id": "1706.03762",
+              "grade": 1,
+              "cosine": 0.2924588209238303
+            },
+            {
+              "arxiv_id": "2010.11929",
+              "grade": 0,
+              "cosine": 0.2882355877234793
+            },
+            {
+              "arxiv_id": "1511.08458",
+              "grade": 0,
+              "cosine": 0.2523250863649917
+            },
+            {
+              "arxiv_id": "1905.11946",
+              "grade": 0,
+              "cosine": 0.2359930351044554
+            },
+            {
+              "arxiv_id": "2205.14135",
+              "grade": 0,
+              "cosine": 0.1697427545214486
+            },
+            {
+              "arxiv_id": "2103.14030",
+              "grade": 0,
+              "cosine": 0.14453884935725886
+            },
+            {
+              "arxiv_id": "2106.09685",
+              "grade": 0,
+              "cosine": 0.13799121810797996
+            },
+            {
+              "arxiv_id": "1810.04805",
+              "grade": 0,
+              "cosine": 0.12334283196170923
+            }
+          ]
+        },
+        "explainable-ai-medical-diagnosis": {
+          "query": "explainable artificial intelligence for medical diagnosis",
+          "metrics": {
+            "ndcg@10": 0.918402774836493,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2605.02903",
+              "grade": 3,
+              "cosine": 0.7026992516779783
+            },
+            {
+              "arxiv_id": "2605.06197",
+              "grade": 3,
+              "cosine": 0.6843772853392961
+            },
+            {
+              "arxiv_id": "2610.37026",
+              "grade": 3,
+              "cosine": 0.6835562679882807
+            },
+            {
+              "arxiv_id": "2602.21178",
+              "grade": 3,
+              "cosine": 0.6813800946953563
+            },
+            {
+              "arxiv_id": "2609.31692",
+              "grade": 3,
+              "cosine": 0.6484542389538379
+            },
+            {
+              "arxiv_id": "2605.22547",
+              "grade": 3,
+              "cosine": 0.6470490037473041
+            },
+            {
+              "arxiv_id": "2602.07017",
+              "grade": 2,
+              "cosine": 0.5881728459210799
+            },
+            {
+              "arxiv_id": "2609.18212",
+              "grade": 2,
+              "cosine": 0.581138448749412
+            },
+            {
+              "arxiv_id": "2610.36325",
+              "grade": 3,
+              "cosine": 0.5794188496123573
+            },
+            {
+              "arxiv_id": "2604.02502",
+              "grade": 3,
+              "cosine": 0.5783393421691242
+            },
+            {
+              "arxiv_id": "2609.13340",
+              "grade": 3,
+              "cosine": 0.5698797941341034
+            },
+            {
+              "arxiv_id": "2605.01999",
+              "grade": 3,
+              "cosine": 0.5656064913395986
+            },
+            {
+              "arxiv_id": "2603.11818",
+              "grade": 3,
+              "cosine": 0.5652136223864284
+            },
+            {
+              "arxiv_id": "2608.28662",
+              "grade": 3,
+              "cosine": 0.5547575436242477
+            },
+            {
+              "arxiv_id": "2603.04449",
+              "grade": 3,
+              "cosine": 0.5330202661637591
+            },
+            {
+              "arxiv_id": "2605.25566",
+              "grade": 3,
+              "cosine": 0.5089857246164069
+            },
+            {
+              "arxiv_id": "2607.09664",
+              "grade": 3,
+              "cosine": 0.5043150387799078
+            },
+            {
+              "arxiv_id": "2610.26215",
+              "grade": 1,
+              "cosine": 0.43971175654149564
+            },
+            {
+              "arxiv_id": "2604.16340",
+              "grade": 2,
+              "cosine": 0.23275116320683928
+            },
+            {
+              "arxiv_id": "2605.22300",
+              "grade": 0,
+              "cosine": 0.14748192969419566
+            },
+            {
+              "arxiv_id": "2606.23766",
+              "grade": 0,
+              "cosine": 0.1280762540121587
+            },
+            {
+              "arxiv_id": "2610.19446",
+              "grade": 0,
+              "cosine": 0.08632359821271438
+            },
+            {
+              "arxiv_id": "2606.18464",
+              "grade": 0,
+              "cosine": 0.07499365853416273
+            },
+            {
+              "arxiv_id": "2604.16073",
+              "grade": 0,
+              "cosine": 0.07204647612304442
+            },
+            {
+              "arxiv_id": "2609.04574",
+              "grade": 0,
+              "cosine": 0.06890405992074715
+            },
+            {
+              "arxiv_id": "2609.01619",
+              "grade": 0,
+              "cosine": 0.04850644905380996
+            },
+            {
+              "arxiv_id": "2610.40192",
+              "grade": 0,
+              "cosine": 0.048471775555077465
+            },
+            {
+              "arxiv_id": "2609.01631",
+              "grade": 0,
+              "cosine": 0.042202050827473796
+            },
+            {
+              "arxiv_id": "2609.15692",
+              "grade": 0,
+              "cosine": 0.038631569035076946
+            },
+            {
+              "arxiv_id": "2609.05748",
+              "grade": 0,
+              "cosine": 0.027797398461609633
+            },
+            {
+              "arxiv_id": "2610.12754",
+              "grade": 0,
+              "cosine": 0.02643579360229094
+            },
+            {
+              "arxiv_id": "2610.33619",
+              "grade": 0,
+              "cosine": -0.0016418258835319516
+            },
+            {
+              "arxiv_id": "2610.05726",
+              "grade": 0,
+              "cosine": -0.0025618926270736227
+            },
+            {
+              "arxiv_id": "2610.06980",
+              "grade": 0,
+              "cosine": -0.008076905017491498
+            },
+            {
+              "arxiv_id": "2610.39008",
+              "grade": 0,
+              "cosine": -0.020190572039945204
+            },
+            {
+              "arxiv_id": "2604.07068",
+              "grade": 0,
+              "cosine": -0.02751087016141119
+            },
+            {
+              "arxiv_id": "2609.35917",
+              "grade": 0,
+              "cosine": -0.02823813563291346
+            },
+            {
+              "arxiv_id": "2610.30634",
+              "grade": 0,
+              "cosine": -0.033417201884295054
+            },
+            {
+              "arxiv_id": "2610.25059",
+              "grade": 0,
+              "cosine": -0.03631200164598554
+            },
+            {
+              "arxiv_id": "2610.15250",
+              "grade": 0,
+              "cosine": -0.04603738670073588
+            },
+            {
+              "arxiv_id": "2605.06913",
+              "grade": 0,
+              "cosine": -0.054380458620379234
+            },
+            {
+              "arxiv_id": "2610.16219",
+              "grade": 0,
+              "cosine": -0.056845286318969804
+            },
+            {
+              "arxiv_id": "2610.30628",
+              "grade": 0,
+              "cosine": -0.06803216218790581
+            },
+            {
+              "arxiv_id": "2610.32626",
+              "grade": 0,
+              "cosine": -0.07319549633387563
+            },
+            {
+              "arxiv_id": "2610.38970",
+              "grade": 0,
+              "cosine": -0.0932191128747317
+            },
+            {
+              "arxiv_id": "2610.38411",
+              "grade": 0,
+              "cosine": -0.09759371401706003
+            },
+            {
+              "arxiv_id": "2610.35640",
+              "grade": 0,
+              "cosine": -0.10401070704262973
+            },
+            {
+              "arxiv_id": "2604.18579",
+              "grade": 0,
+              "cosine": -0.10745985526651741
+            },
+            {
+              "arxiv_id": "2610.38793",
+              "grade": 0,
+              "cosine": -0.12909477045628256
+            },
+            {
+              "arxiv_id": "2609.13523",
+              "grade": 0,
+              "cosine": -0.15149597077564064
+            }
+          ]
+        },
+        "federated-learning-non-iid": {
+          "query": "federated learning with non-IID data",
+          "metrics": {
+            "ndcg@10": 0.7836207435453179,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2610.26953",
+              "grade": 3,
+              "cosine": 0.7686407716697776
+            },
+            {
+              "arxiv_id": "2610.24036",
+              "grade": 3,
+              "cosine": 0.7346589107577968
+            },
+            {
+              "arxiv_id": "2610.38970",
+              "grade": 3,
+              "cosine": 0.7173806092720892
+            },
+            {
+              "arxiv_id": "2610.21547",
+              "grade": 2,
+              "cosine": 0.7094264489662742
+            },
+            {
+              "arxiv_id": "2610.30634",
+              "grade": 3,
+              "cosine": 0.6742888974367799
+            },
+            {
+              "arxiv_id": "2610.39008",
+              "grade": 2,
+              "cosine": 0.6663081945454722
+            },
+            {
+              "arxiv_id": "2610.41278",
+              "grade": 1,
+              "cosine": 0.6494847209881399
+            },
+            {
+              "arxiv_id": "2610.23705",
+              "grade": 3,
+              "cosine": 0.6392513663031555
+            },
+            {
+              "arxiv_id": "2610.32626",
+              "grade": 3,
+              "cosine": 0.6026895037495678
+            },
+            {
+              "arxiv_id": "2610.27952",
+              "grade": 1,
+              "cosine": 0.5803646600072693
+            },
+            {
+              "arxiv_id": "2610.25810",
+              "grade": 3,
+              "cosine": 0.5638376333902348
+            },
+            {
+              "arxiv_id": "2610.39483",
+              "grade": 2,
+              "cosine": 0.557792597082663
+            },
+            {
+              "arxiv_id": "2610.38411",
+              "grade": 1,
+              "cosine": 0.5574139197121785
+            },
+            {
+              "arxiv_id": "2610.33619",
+              "grade": 3,
+              "cosine": 0.5527303244381505
+            },
+            {
+              "arxiv_id": "2610.39791",
+              "grade": 3,
+              "cosine": 0.483569408390106
+            },
+            {
+              "arxiv_id": "2610.25264",
+              "grade": 3,
+              "cosine": 0.47913316701730835
+            },
+            {
+              "arxiv_id": "2610.25714",
+              "grade": 2,
+              "cosine": 0.4738824647468263
+            },
+            {
+              "arxiv_id": "2610.25318",
+              "grade": 2,
+              "cosine": 0.4402045306340226
+            },
+            {
+              "arxiv_id": "2610.35640",
+              "grade": 2,
+              "cosine": 0.425335094674519
+            },
+            {
+              "arxiv_id": "2610.38793",
+              "grade": 2,
+              "cosine": 0.4138156283212622
+            },
+            {
+              "arxiv_id": "2605.01999",
+              "grade": 0,
+              "cosine": 0.18160617787371228
+            },
+            {
+              "arxiv_id": "2608.27413",
+              "grade": 0,
+              "cosine": 0.1259408340746744
+            },
+            {
+              "arxiv_id": "2608.21979",
+              "grade": 0,
+              "cosine": 0.12308001830857346
+            },
+            {
+              "arxiv_id": "2609.01631",
+              "grade": 0,
+              "cosine": 0.11403194007359922
+            },
+            {
+              "arxiv_id": "2610.06980",
+              "grade": 0,
+              "cosine": 0.09650894315148328
+            },
+            {
+              "arxiv_id": "2608.28662",
+              "grade": 0,
+              "cosine": 0.09576225080204188
+            },
+            {
+              "arxiv_id": "2609.13340",
+              "grade": 0,
+              "cosine": 0.08423516718914337
+            },
+            {
+              "arxiv_id": "2608.22920",
+              "grade": 0,
+              "cosine": 0.0734291793670506
+            },
+            {
+              "arxiv_id": "2609.05748",
+              "grade": 0,
+              "cosine": 0.06677974801979862
+            },
+            {
+              "arxiv_id": "2609.04574",
+              "grade": 0,
+              "cosine": 0.0600571231448981
+            },
+            {
+              "arxiv_id": "2605.22547",
+              "grade": 0,
+              "cosine": 0.03570217072573317
+            },
+            {
+              "arxiv_id": "2607.09664",
+              "grade": 0,
+              "cosine": 0.025391903925828293
+            },
+            {
+              "arxiv_id": "2610.12754",
+              "grade": 0,
+              "cosine": 0.0037957374766082828
+            },
+            {
+              "arxiv_id": "2605.25566",
+              "grade": 0,
+              "cosine": -0.00041896774750610694
+            },
+            {
+              "arxiv_id": "2604.00993",
+              "grade": 0,
+              "cosine": -0.007486352909960043
+            },
+            {
+              "arxiv_id": "2610.15250",
+              "grade": 0,
+              "cosine": -0.009533490932599475
+            },
+            {
+              "arxiv_id": "2609.38004",
+              "grade": 0,
+              "cosine": -0.010114036887576216
+            },
+            {
+              "arxiv_id": "2609.01619",
+              "grade": 0,
+              "cosine": -0.011001865389445867
+            },
+            {
+              "arxiv_id": "2609.15692",
+              "grade": 0,
+              "cosine": -0.011839249049301798
+            },
+            {
+              "arxiv_id": "2604.16073",
+              "grade": 0,
+              "cosine": -0.011992382378684153
+            },
+            {
+              "arxiv_id": "2602.02701",
+              "grade": 0,
+              "cosine": -0.01509054738471631
+            },
+            {
+              "arxiv_id": "2605.06197",
+              "grade": 0,
+              "cosine": -0.02038130588371996
+            },
+            {
+              "arxiv_id": "2605.06913",
+              "grade": 0,
+              "cosine": -0.020951535171894797
+            },
+            {
+              "arxiv_id": "2601.20620",
+              "grade": 0,
+              "cosine": -0.027543422293186556
+            },
+            {
+              "arxiv_id": "2609.38789",
+              "grade": 0,
+              "cosine": -0.03917124454691725
+            },
+            {
+              "arxiv_id": "2610.01223",
+              "grade": 0,
+              "cosine": -0.0543272868288539
+            },
+            {
+              "arxiv_id": "2605.02903",
+              "grade": 0,
+              "cosine": -0.05673556351777666
+            },
+            {
+              "arxiv_id": "2604.18579",
+              "grade": 0,
+              "cosine": -0.061583018481830135
+            },
+            {
+              "arxiv_id": "2604.07068",
+              "grade": 0,
+              "cosine": -0.06689442022293118
+            },
+            {
+              "arxiv_id": "2610.05726",
+              "grade": 0,
+              "cosine": -0.06729235952291537
+            }
+          ]
+        },
+        "automatic-speech-recognition": {
+          "query": "automatic speech recognition",
+          "metrics": {
+            "ndcg@10": 1.0,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2609.32408",
+              "grade": 3,
+              "cosine": 0.6930478799446872
+            },
+            {
+              "arxiv_id": "2610.08994",
+              "grade": 3,
+              "cosine": 0.6842149373819981
+            },
+            {
+              "arxiv_id": "2610.19134",
+              "grade": 3,
+              "cosine": 0.6548123357829414
+            },
+            {
+              "arxiv_id": "2609.33865",
+              "grade": 3,
+              "cosine": 0.6523061712420275
+            },
+            {
+              "arxiv_id": "2610.05681",
+              "grade": 3,
+              "cosine": 0.6122025377176211
+            },
+            {
+              "arxiv_id": "2610.13447",
+              "grade": 3,
+              "cosine": 0.6066298327751707
+            },
+            {
+              "arxiv_id": "2610.34623",
+              "grade": 3,
+              "cosine": 0.6016132776435025
+            },
+            {
+              "arxiv_id": "2610.32187",
+              "grade": 3,
+              "cosine": 0.5876784274961322
+            },
+            {
+              "arxiv_id": "2610.26888",
+              "grade": 3,
+              "cosine": 0.5830850477397879
+            },
+            {
+              "arxiv_id": "2611.02476",
+              "grade": 3,
+              "cosine": 0.5751199668131833
+            },
+            {
+              "arxiv_id": "2609.29800",
+              "grade": 3,
+              "cosine": 0.5750722275156954
+            },
+            {
+              "arxiv_id": "2610.13662",
+              "grade": 3,
+              "cosine": 0.5740883979776794
+            },
+            {
+              "arxiv_id": "2610.11646",
+              "grade": 3,
+              "cosine": 0.5675581409912042
+            },
+            {
+              "arxiv_id": "2610.30663",
+              "grade": 3,
+              "cosine": 0.5556510800955755
+            },
+            {
+              "arxiv_id": "2610.17278",
+              "grade": 2,
+              "cosine": 0.5474701330392344
+            },
+            {
+              "arxiv_id": "2609.31961",
+              "grade": 3,
+              "cosine": 0.5383477161627359
+            },
+            {
+              "arxiv_id": "2609.30160",
+              "grade": 3,
+              "cosine": 0.5380425520946432
+            },
+            {
+              "arxiv_id": "2611.00692",
+              "grade": 3,
+              "cosine": 0.5338064522726812
+            },
+            {
+              "arxiv_id": "2610.03017",
+              "grade": 3,
+              "cosine": 0.5243718175642261
+            },
+            {
+              "arxiv_id": "2609.30439",
+              "grade": 2,
+              "cosine": 0.5166589879077718
+            },
+            {
+              "arxiv_id": "2609.36920",
+              "grade": 2,
+              "cosine": 0.5157829492668684
+            },
+            {
+              "arxiv_id": "2610.41292",
+              "grade": 3,
+              "cosine": 0.5063410504019501
+            },
+            {
+              "arxiv_id": "2610.28673",
+              "grade": 3,
+              "cosine": 0.4965299383910417
+            },
+            {
+              "arxiv_id": "2610.27002",
+              "grade": 3,
+              "cosine": 0.49460770283074895
+            },
+            {
+              "arxiv_id": "2610.38739",
+              "grade": 3,
+              "cosine": 0.48859098878203244
+            },
+            {
+              "arxiv_id": "2610.23117",
+              "grade": 3,
+              "cosine": 0.48817660580620426
+            },
+            {
+              "arxiv_id": "2610.21164",
+              "grade": 3,
+              "cosine": 0.4793511867300594
+            },
+            {
+              "arxiv_id": "2610.25351",
+              "grade": 3,
+              "cosine": 0.476561588945554
+            },
+            {
+              "arxiv_id": "2610.24809",
+              "grade": 3,
+              "cosine": 0.462762289992099
+            },
+            {
+              "arxiv_id": "2610.26986",
+              "grade": 3,
+              "cosine": 0.45423027301691943
+            },
+            {
+              "arxiv_id": "2610.29720",
+              "grade": 3,
+              "cosine": 0.4531461208450427
+            },
+            {
+              "arxiv_id": "2610.14594",
+              "grade": 2,
+              "cosine": 0.44771162226701033
+            },
+            {
+              "arxiv_id": "2609.35564",
+              "grade": 2,
+              "cosine": 0.44347429855267073
+            },
+            {
+              "arxiv_id": "2609.33060",
+              "grade": 2,
+              "cosine": 0.4410063076929605
+            },
+            {
+              "arxiv_id": "2610.09109",
+              "grade": 2,
+              "cosine": 0.43067363398738484
+            },
+            {
+              "arxiv_id": "2610.33765",
+              "grade": 3,
+              "cosine": 0.41723109435188976
+            },
+            {
+              "arxiv_id": "2609.38897",
+              "grade": 2,
+              "cosine": 0.3961161280904502
+            },
+            {
+              "arxiv_id": "2610.17813",
+              "grade": 1,
+              "cosine": 0.3855560820546285
+            },
+            {
+              "arxiv_id": "2610.26821",
+              "grade": 2,
+              "cosine": 0.3698968972737338
+            },
+            {
+              "arxiv_id": "2610.16260",
+              "grade": 2,
+              "cosine": 0.36978311127798263
+            },
+            {
+              "arxiv_id": "2610.15671",
+              "grade": 2,
+              "cosine": 0.3647293827988539
+            },
+            {
+              "arxiv_id": "2610.21440",
+              "grade": 2,
+              "cosine": 0.33579577774408503
+            },
+            {
+              "arxiv_id": "2609.38634",
+              "grade": 1,
+              "cosine": 0.25121763143561043
+            },
+            {
+              "arxiv_id": "2610.38050",
+              "grade": 0,
+              "cosine": 0.1329786024432926
+            },
+            {
+              "arxiv_id": "2609.39453",
+              "grade": 0,
+              "cosine": 0.1029261472947865
+            },
+            {
+              "arxiv_id": "2610.33952",
+              "grade": 0,
+              "cosine": 0.07935051990131803
+            },
+            {
+              "arxiv_id": "2609.31399",
+              "grade": 0,
+              "cosine": 0.04366257726278512
+            },
+            {
+              "arxiv_id": "2610.40883",
+              "grade": 0,
+              "cosine": 0.031020392372659113
+            },
+            {
+              "arxiv_id": "2610.33977",
+              "grade": 0,
+              "cosine": 0.023801082634596665
+            },
+            {
+              "arxiv_id": "2610.26446",
+              "grade": 0,
+              "cosine": -0.030202042303672558
+            }
+          ]
+        },
+        "image-segmentation": {
+          "query": "image segmentation",
+          "metrics": {
+            "ndcg@10": 1.0,
+            "precision@5": 1.0,
+            "mrr": 1.0
+          },
+          "judged_candidates": 50,
+          "ranking": [
+            {
+              "arxiv_id": "2610.35220",
+              "grade": 3,
+              "cosine": 0.6247819899710911
+            },
+            {
+              "arxiv_id": "2611.02305",
+              "grade": 3,
+              "cosine": 0.5811651541966845
+            },
+            {
+              "arxiv_id": "2610.15079",
+              "grade": 3,
+              "cosine": 0.5728751889715669
+            },
+            {
+              "arxiv_id": "2610.30672",
+              "grade": 3,
+              "cosine": 0.567871412121895
+            },
+            {
+              "arxiv_id": "2610.26954",
+              "grade": 3,
+              "cosine": 0.5354667718254924
+            },
+            {
+              "arxiv_id": "2611.02603",
+              "grade": 3,
+              "cosine": 0.5264498112830156
+            },
+            {
+              "arxiv_id": "2610.00279",
+              "grade": 3,
+              "cosine": 0.5112001479618828
+            },
+            {
+              "arxiv_id": "2610.40029",
+              "grade": 3,
+              "cosine": 0.5062371925936372
+            },
+            {
+              "arxiv_id": "2610.40085",
+              "grade": 3,
+              "cosine": 0.4986357083145271
+            },
+            {
+              "arxiv_id": "2610.27958",
+              "grade": 3,
+              "cosine": 0.4954439736545994
+            },
+            {
+              "arxiv_id": "2609.38930",
+              "grade": 2,
+              "cosine": 0.4819352082611468
+            },
+            {
+              "arxiv_id": "2610.32266",
+              "grade": 3,
+              "cosine": 0.47965682202869336
+            },
+            {
+              "arxiv_id": "2610.41362",
+              "grade": 3,
+              "cosine": 0.4756944161688519
+            },
+            {
+              "arxiv_id": "2610.06938",
+              "grade": 3,
+              "cosine": 0.47560289617717943
+            },
+            {
+              "arxiv_id": "2610.06575",
+              "grade": 3,
+              "cosine": 0.46523204276003927
+            },
+            {
+              "arxiv_id": "2610.10306",
+              "grade": 3,
+              "cosine": 0.46446683078869005
+            },
+            {
+              "arxiv_id": "2610.29409",
+              "grade": 3,
+              "cosine": 0.4644248658647914
+            },
+            {
+              "arxiv_id": "2610.21990",
+              "grade": 3,
+              "cosine": 0.46203959140565015
+            },
+            {
+              "arxiv_id": "2609.39997",
+              "grade": 1,
+              "cosine": 0.4592627784856216
+            },
+            {
+              "arxiv_id": "2610.31065",
+              "grade": 3,
+              "cosine": 0.4530489800010917
+            },
+            {
+              "arxiv_id": "2610.28118",
+              "grade": 3,
+              "cosine": 0.45027302182106405
+            },
+            {
+              "arxiv_id": "2610.32377",
+              "grade": 3,
+              "cosine": 0.44468576949159017
+            },
+            {
+              "arxiv_id": "2610.25488",
+              "grade": 3,
+              "cosine": 0.435255863174781
+            },
+            {
+              "arxiv_id": "2610.31902",
+              "grade": 3,
+              "cosine": 0.42420879316078064
+            },
+            {
+              "arxiv_id": "2610.14944",
+              "grade": 3,
+              "cosine": 0.40148864448503946
+            },
+            {
+              "arxiv_id": "2610.04300",
+              "grade": 3,
+              "cosine": 0.39360490633081646
+            },
+            {
+              "arxiv_id": "2610.03474",
+              "grade": 3,
+              "cosine": 0.38262278155815155
+            },
+            {
+              "arxiv_id": "2610.14651",
+              "grade": 3,
+              "cosine": 0.38241878066944945
+            },
+            {
+              "arxiv_id": "2610.41763",
+              "grade": 2,
+              "cosine": 0.3812087208731499
+            },
+            {
+              "arxiv_id": "2610.24757",
+              "grade": 3,
+              "cosine": 0.3736573828628278
+            },
+            {
+              "arxiv_id": "2610.21616",
+              "grade": 2,
+              "cosine": 0.36033498946793585
+            },
+            {
+              "arxiv_id": "2610.25460",
+              "grade": 2,
+              "cosine": 0.3562178390058153
+            },
+            {
+              "arxiv_id": "2610.06602",
+              "grade": 3,
+              "cosine": 0.3494989173941081
+            },
+            {
+              "arxiv_id": "2610.29474",
+              "grade": 2,
+              "cosine": 0.3489136279557154
+            },
+            {
+              "arxiv_id": "2610.17354",
+              "grade": 2,
+              "cosine": 0.33713317624621425
+            },
+            {
+              "arxiv_id": "2610.18133",
+              "grade": 3,
+              "cosine": 0.3345444541808092
+            },
+            {
+              "arxiv_id": "2610.28091",
+              "grade": 3,
+              "cosine": 0.3339024242068176
+            },
+            {
+              "arxiv_id": "2610.13604",
+              "grade": 3,
+              "cosine": 0.33305024423407614
+            },
+            {
+              "arxiv_id": "2610.24037",
+              "grade": 3,
+              "cosine": 0.3214504181148832
+            },
+            {
+              "arxiv_id": "2610.12786",
+              "grade": 3,
+              "cosine": 0.31817920713627695
+            },
+            {
+              "arxiv_id": "2610.09392",
+              "grade": 2,
+              "cosine": 0.3171869839663016
+            },
+            {
+              "arxiv_id": "2610.21238",
+              "grade": 2,
+              "cosine": 0.2967893905177346
+            },
+            {
+              "arxiv_id": "2610.23911",
+              "grade": 3,
+              "cosine": 0.2880851994228121
+            },
+            {
+              "arxiv_id": "2610.23440",
+              "grade": 3,
+              "cosine": 0.2726570689132113
+            },
+            {
+              "arxiv_id": "2610.36506",
+              "grade": 3,
+              "cosine": 0.2673553803378542
+            },
+            {
+              "arxiv_id": "2610.08574",
+              "grade": 3,
+              "cosine": 0.2663285498091942
+            },
+            {
+              "arxiv_id": "2610.15286",
+              "grade": 3,
+              "cosine": 0.26589563407162925
+            },
+            {
+              "arxiv_id": "2610.32609",
+              "grade": 2,
+              "cosine": 0.25683285143771184
+            },
+            {
+              "arxiv_id": "2610.37860",
+              "grade": 3,
+              "cosine": 0.21305599790706706
+            },
+            {
+              "arxiv_id": "2610.04553",
+              "grade": 2,
+              "cosine": 0.16386574116946698
+            }
+          ]
+        }
+      },
+      "aggregate": {
+        "ndcg@10": 0.9376656330507086,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "mean_cosine_by_grade": {
+        "0": 0.0599479617338892,
+        "1": 0.4360240899322598,
+        "2": 0.46521867126474975,
+        "3": 0.5504147557882155
+      },
+      "protocol": "Per-query judged candidates only; no title override; binary relevance >=2."
+    }
+  }
+}
