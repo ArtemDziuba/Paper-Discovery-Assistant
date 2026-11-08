@@ -1,0 +1,256 @@
+{
+  "query_id": "human-pose-estimation",
+  "query": "Human pose estimation from images",
+  "judgments": [
+    {
+      "arxiv_id": "2611.06594",
+      "title": "SpikePose: Lightweight Video Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02929",
+      "title": "Comprehensive Evaluation of Monocular and Multi-view 3D Human Pose Estimation Models for Fitness Exercise Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.01400",
+      "title": "RadPose: ISAC-based RF 3D Human Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.37435",
+      "title": "5G Sensing for Human Pose Estimation with PRS-based CSI: An Experimental Demonstration",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.27774",
+      "title": "Radar-Based 3D Human Pose Estimation via Motion-Aware Pose Initialization and Observation-Guided Refinement",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.26641",
+      "title": "EgoRayFormer: Ray-Space Stereo Refinement for Egocentric 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19494",
+      "title": "Robust Real-Time Monocular Human Pose Estimation with Insole-Based Sensor Fusion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.14499",
+      "title": "DSR-Net: Learning Dynamic Skeletal Relations for 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14093",
+      "title": "Human Pose Estimation by Probabilistic Mixtures of Gaussian and Uniform Distributions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.02943",
+      "title": "Kinematics-Induced Multimodal 3D Human Pose Estimation with Subject-Level Privacy",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.18406",
+      "title": "Prosthesis-Aware 3D Human Pose Estimation: A Dataset and Benchmark for RSP Users",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.18336",
+      "title": "Pose2Muscle: Structured Spatio-Temporal Decoding for Discrete Muscle Activity Estimation from Human Pose",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.08013",
+      "title": "A Black-Box Adversarial Attack on Human Pose Estimation and Keypoint-Based Action Recognition Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.01840",
+      "title": "Cross-Model Distillation of a Human-Pose Foundation Model from Unannotated Infant Video for Markerless 3D Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.23995",
+      "title": "Physics-Informed WiFi Sensing for Robust 3D Human Pose Estimation in Mobile and Cross-Environment Settings",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.14176",
+      "title": "Physics-Bounded mmWave Sensing for Schedulable, Privacy-Preserving Human Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.12187",
+      "title": "HSTGFormer: Hyper Spatial-Temporal Graph Transformer for 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.21309",
+      "title": "Factorized Spatio-Temporal Convolutions for Human Pose Estimation from Planar Lidar",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.18875",
+      "title": "Wave2Body: Rethinking mmWave Human Pose Estimation as Radar-to-Body Token Translation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.11064",
+      "title": "WiFi-JEPA: Self-supervised Learning for WiFi-CSI 3D Human Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.09169",
+      "title": "TSR-Ego: Temporally Guided Stereo Refinement Framework for Egocentric 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.08725",
+      "title": "Pose-to-Biomechanics: Bridging 3D Human Pose Estimation and Biomechanical Attribute Prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.03196",
+      "title": "Seeing Through WiFi: Lightweight Human Pose Estimation with Dynamic Kernel Attention",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.02986",
+      "title": "RePos: Relative-to-Absolute Pose Factorization for Cross-Environment WiFi-Based 3D Human Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.13700",
+      "title": "C-MambaPose: Phase-Preserving Complex Mamba for Cross-Environment Wi-Fi Human Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.12473",
+      "title": "Stereo Vision-Based Fall Prediction and Detection using Human Pose Estimation on the AMD Kria K26 SOM",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.10048",
+      "title": "Human Walking Sensing and Pose Estimation in the 6 GHz Band Using Amplitude and Phase CSI",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.07419",
+      "title": "DisPOSE: Projected Polystochastic Diffusion for Self-Supervised Multi-View 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.20889",
+      "title": "Map-Mono-Ego: Map-Grounded Global Human Pose Estimation from Monocular Egocentric Video",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.15583",
+      "title": "Unsupervised 3D Human Pose Estimation via Conditional Multi-view Ancestral Sampling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.14525",
+      "title": "From Sparse to Dense: Spatio-Temporal Fusion for Multi-View 3D Human Pose Estimation with DenseWarper",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.13233",
+      "title": "Doppler Prompting for Stable mmWave-based Human Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2605.12198",
+      "title": "Enhancing Domain Generalization in 3D Human Pose Estimation through Controllable Generative Augmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.10100",
+      "title": "HYPERPOSE: Hyperbolic Kinematic Phase-Space Attention for 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.08806",
+      "title": "L2A: Learning to Accumulate Pose History for Accurate 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.07552",
+      "title": "VIMCAN: Visual-Inertial 3D Human Pose Estimation with Hybrid Mamba-Cross-Attention Network",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.00242",
+      "title": "MAEPose: Self-Supervised Spatiotemporal Learning for Human Pose Estimation on mmWave Video",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2604.24312",
+      "title": "Unconstrained Multi-view Human Pose Estimation with Algebraic Priors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.17959",
+      "title": "Chatting about Upper-Body Expressive Human Pose and Shape Estimation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.17688",
+      "title": "Dual-stream Spatio-Temporal GCN-Transformer Network for 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.10485",
+      "title": "UDAPose: Unsupervised Domain Adaptation for Low-Light Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.08543",
+      "title": "E-3DPSM: A State Machine for Event-Based Egocentric 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.03652",
+      "title": "Motion-Adaptive Multi-Scale Temporal Modelling with Skeleton-Constrained Spatial Graphs for Efficient 3D Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.03299",
+      "title": "MoViD: View-Invariant 3D Human Pose Estimation via Motion-View Disentanglement",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.01322",
+      "title": "Human Pose Estimation in Trampoline Gymnastics: How to Improve Performance on Extreme Poses",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.20323",
+      "title": "NCSTR: Node-Centric Decoupled Spatio-Temporal Reasoning for Video-based Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.16343",
+      "title": "Learning Human-Object Interaction for 3D Human Pose Estimation from LiDAR Point Clouds",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2603.14507",
+      "title": "Expanding mmWave Datasets for Human Pose Estimation with Unlabeled Data and LiDAR Datasets",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2603.08681",
+      "title": "ER-Pose: Rethinking Keypoint-Driven Representation Learning for Real-Time Human Pose Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.08236",
+      "title": "Why Learn What Physics Already Knows? Realizing Agile mmWave-based Human Pose Estimation via Physics-Guided Preprocessing",
+      "relevance": 1
+    }
+  ]
+}

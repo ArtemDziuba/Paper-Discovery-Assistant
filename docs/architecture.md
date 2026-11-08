@@ -11,6 +11,8 @@ flowchart LR
     T --> P
     R --> P[Atom validation and deduplication]
     P --> E[Chunked local encoder or sparse TF-IDF]
+    HF[Hugging Face pinned model / first-use setup] --> M[Project-local MiniLM weights]
+    M --> E
     UI --> E
     E --> S[Cosine ranking]
     S --> X[Abstract evidence selection]
@@ -33,7 +35,27 @@ accepts a maximum of 10,000 raw entries, using pages of at most 1,000. Offsets a
 entry counts, independently of invalid metadata and duplicates. OpenSearch totalResults stops
 pagination when the available result set is exhausted. A short page with no total count or
 an empty page also terminates retrieval. The usable candidate count may be below the limit.
-Initial model download contacts Hugging Face.
+Base-model setup is handled by load_minilm in ranking.py. The project-local folder is
+models/all-MiniLM-L6-v2, resolved against the repository rather than the current directory.
+If absent, the pinned model is loaded from the existing Hugging Face cache when available;
+otherwise setup downloads it from Hugging Face. Sentence Transformers saves weights,
+tokenizer and module/configuration files to a temporary sibling directory. The recorded
+pda_source.json identifies the repository and fixed revision. Only a completed installation
+is renamed into place. Failed setup removes its temporary files and leaves the target absent
+for a retry. Threads serialize initialization; competing processes accept a completed
+installation of the same pinned model.
+
+The staging directory is created with ordinary inherited project permissions and a unique
+name, then removed after publication or failure. It does not use tempfile's owner-only
+directory permissions, which can persist after a rename on Windows and prevent the normal
+app account from reading a model installed by the coding sandbox. Permission failures while
+reading source metadata are reported as access denied, separately from revision errors.
+
+If the folder exists, its source record must match MODEL and REVISION, and loading uses its
+absolute path with local_files_only=True. No Hub model identifier is resolved and no download
+fallback is attempted for a corrupt or mismatched existing installation. Restore a complete
+folder, or rename it before retrying setup. models/ remains ignored by Git. The first setup
+reuses its in-memory model after saving; later instances load the project-local files.
 Semantic inference thereafter is local using all-MiniLM-L6-v2 at a fixed revision in
 ranking.py. The query is encoded once; title/abstract strings are processed in chunks of at
 most 256 documents with inference batches of 16. Only one chunk's dense embeddings is needed
@@ -44,12 +66,14 @@ CPU is default; CUDA is optional through `uv sync --extra cuda` and
 `uv run --extra cuda streamlit run app.py`. Availability is checked before loading the model.
 TF-IDF provides a no-download lexical comparison.
 
-Fine-tuned is a separate selector option loading models/finetuned-minilm and its training
-manifest. The shared encoder keeps the same model inputs, cosine scoring, and chunk limits.
-JSON exports identify pda/finetuned-minilm and the training run ID instead of claiming the
-base revision produced its embeddings. Missing local weights produce a clear error.
+`syntetic finetune v1` loads models/finetuned-minilm; `syntetic finetune v2` loads
+models/syntetic-finetune-v2. Both use local training manifests. The shared encoder keeps the
+same model inputs, cosine scoring, and chunk limits. JSON exports use the manifest's model
+identity and training run ID; legacy v1 manifests retain the pda/syntetic-finetune-v1 identity.
+Missing local weights produce a clear error.
+This fine-tuned path does not create, download or replace the base-model installation.
 
-The offline training flow is:
+The original v1 training flow was:
 
 ```mermaid
 flowchart LR
@@ -60,13 +84,36 @@ flowchart LR
     C --> F[Synthetic development selection]
     E --> F
     F --> G[Local weights and training manifest]
-    G --> H[Fine-tuned ranking option]
+    G --> H[syntetic finetune v1 ranking option]
     G --> I[Human comparison against Semantic and TF-IDF]
 ```
 
-Human labels are reserved from gradient updates and checkpoint selection. This is a modeling
+For v1, human labels were reserved from gradient updates and checkpoint selection. This is a modeling
 and evaluation workflow; live retrieval and per-paper explanations share the same pipeline.
 See finetuning.md for the executed protocol, limitations, and measured regression on human data.
+
+V2 uses the original base encoder with all 45 encoder-training batches. Repeated query-paper
+judgments are retained, including different grades for one paper under different queries.
+The 12 human/synthetic evaluation queries are concatenated as query groups for a single
+development mean and checkpoint selection. Their candidate pools remain separate. Outside
+training, evaluate_annotations.py reports human and synthetic metrics separately for all
+available models, including v2 when its manifest is present. V2's evaluation queries therefore
+measure development performance. See finetuning-v2.md for the executed results and plots.
+
+```mermaid
+flowchart LR
+    A[45 encoder batches] --> B[arXiv ID/title verification]
+    B --> C[Preserved query-paper occurrences]
+    M[Original local MiniLM] --> T[3 epochs of preference training]
+    C --> T
+    H[2 human evaluation queries] --> D[One 12-query development set]
+    S[10 synthetic evaluation queries] --> D
+    T --> D
+    D --> K[Select best nDCG@10 checkpoint / save epoch curves]
+    K --> V[Local v2 weights and manifest]
+    V --> UI[Streamlit v2 option]
+    V --> E[Full comparison / human and synthetic reported separately]
+```
 
 Cosine is retained raw; display score = 100 * max(0, cosine). This is an uncalibrated
 similarity index. Stable ties retain retrieval order. Deduplication collapses arXiv version

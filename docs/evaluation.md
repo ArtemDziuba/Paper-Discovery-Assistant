@@ -4,6 +4,59 @@ Criteria are defined here before reporting quality scores. Unit tests use explic
 synthetic metadata solely to test software behavior. Passing tests does not establish NLP
 quality. No human relevance judgments or quality scores have been fabricated.
 
+Current fixed evaluation (2026-11-07): the two batches in evaluation/human_eval and ten
+batches in evaluation/syntetic_eval are reserved for evaluation. All three rankers are
+compared on both groups using the existing graded/binary metric definitions. New metadata
+is frozen separately in evaluation/annotations/prepared.json; the latest full evaluation
+and title exclusions are in evaluation/results/ranking-comparison-full.json. See
+full-ranking-evaluation.md for all 12 metrics. The earlier five-metric run is preserved as
+evaluation/results/ranking-comparison-extended-metrics.json. The prior three-metric run is
+preserved as evaluation/results/ranking-comparison.json. The 45 batches in finetune_data
+are not part of this run. See ranking-evaluation.md for the complete protocol and results.
+The older fine-tuning and SciFact artifacts remain historical experiments.
+
+V2 (2026-11-08) explicitly changes the role of these evaluation queries during training:
+the ten synthetic and two human query groups form one combined development mean, used for
+checkpoint selection. Human judgments do not supply gradients, but do guide selection. The
+post-training comparison keeps human and synthetic results separate for all four models and
+is saved in evaluation/results/ranking-comparison-full-v2.json. These v2 scores are development
+performance. Training/development paper overlap is retained and reported, following the
+requested no-deduplication policy. See finetuning-v2.md for the audit, parameters and epoch plots.
+
+Two selectable modes now supersede the single extended metric set. Use --mode truncated
+(the default) for primary nDCG@10 and Precision@5, plus MAP@10 and full-pool pairwise accuracy.
+Use --mode full for nDCG@5/10/20/50, Precision@5/10/20, MAP@10/20/50,
+pairwise_accuracy@50 and mrr@50. The report saves its mode, cutoff configuration, metric
+definitions and primary-metric names. Human and synthetic macro averages remain separate.
+Both modes score the complete fixed candidate pools; truncated reduces the metric set,
+not encoder inference or paper retrieval.
+
+For full mode, pairwise accuracy@50 compares unequal-grade judged pairs wholly within the
+first 50 ranked papers, preserving half credit for raw-score ties. It ignores pairs involving
+papers below rank 50. MRR@50 is zero if the first relevant paper is below rank 50. MAP@k
+uses the same min(k, R) normalization at each cutoff, based on all relevant judgments in
+the complete verified pool. nDCG's ideal ordering also uses the complete judged pool.
+Precision@k divides by k even when fewer papers are available; no candidates or judgments
+are invented to reach a cutoff. Score ties retain annotation order, including at rank 50.
+The paragraph below records the definitions used by the earlier extended run; full mode
+restricts pairwise scope to the top 50 and bounds reciprocal rank at 50 as specified above.
+
+The extended evaluation adds MAP@10 and graded pairwise accuracy. For each query, AP@10
+sums precision at each relevant hit in ranks 1–10 and divides by min(10, R), where R is
+the number of relevant judgments in its complete verified pool. Relevant means grade >=2
+for the fixed annotation comparison; AP is zero when R=0. MAP@10 is the unweighted mean
+of AP@10 within each human/synthetic group. This uses the top-k normalization described in
+the [evaluation playbook](https://playbooks.aip.gov.sg/rag-playbook/evaluation/); implementations
+that divide by R without a cap can give different values and must not be compared directly.
+
+Pairwise accuracy compares every scored, explicitly judged unordered pair with unequal
+grades over the full candidate pool, including beyond rank 10. A correctly ordered pair
+scores 1, an inversion 0, and an exactly equal raw-score pair 0.5. Equal-grade pairs are
+excluded. A query without comparable pairs has null accuracy; source-group averages omit
+nulls and report pairwise_valid_query_count. Unscored or unjudged papers do not create
+artificial pairs. The generic fixed-corpus runner retains its grade >0 binary default and
+unjudged-as-zero convention for other metrics; its pairwise measure uses explicit judgments.
+
 ## Existing data investigation
 
 BEIR SciFact supplies scientific claims, abstracts and relevance judgments in a compact
@@ -52,7 +105,7 @@ within floating-point tolerance. Changes to the live API across calls can affect
 | Live retrieval | Known-relevant candidate coverage on a frozen query set; call it recall only relative to specified judgments, never all arXiv |
 | Preprocessing | Required-field completeness, rejected records, duplicate false merges/misses on manually inspected records |
 | Embeddings | Relevant/irrelevant pair score distributions; ranking comparison to TF-IDF under identical corpus and qrels |
-| Ranking | nDCG@10, Precision@5, MRR; per-query failures and comparison to baseline |
+| Ranking | Truncated/full modes with configured nDCG, Precision, MAP, pairwise and reciprocal-rank cutoffs; per-query failures and baseline comparison |
 | Explanations | Human ratings: support (0 unsupported, 1 partial, 2 fully grounded), relevance (0 unrelated, 1 partial, 2 directly relevant) |
 | Overview | Source-ID validity plus human claim support and coverage of relevant top-paper concepts; assess each separately |
 | End to end | User task success (0 failed, 1 partial, 2 useful), timings, measured peak RAM/VRAM, network/error handling |

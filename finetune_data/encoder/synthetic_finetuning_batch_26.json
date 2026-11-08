@@ -1,0 +1,256 @@
+{
+  "query_id": "retrieval-augmented-generation",
+  "query": "Retrieval-augmented generation for question answering",
+  "judgments": [
+    {
+      "arxiv_id": "2611.07928",
+      "title": "ZeroRAG: Adaptive Semantic Peer Routing for Decentralized Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.07517",
+      "title": "Embodied RAG++: Retrieval-Augmented Generation From What Exists to What Works in Embodied Scenes",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2611.07393",
+      "title": "CacheGraft: Enhancing Retrieval-Augmented Generation via Latent-Space Document Enrichment",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.06498",
+      "title": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2611.05900",
+      "title": "Weaver: Weaving Preference Evidence through Incremental Reasoning for Personalized Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.03747",
+      "title": "Enhancing Stock Market Information Retrieval with Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.03725",
+      "title": "From Logs to Faults: Reference-Free Fault Localization for Retrieval-Augmented Generation Pipelines",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2611.02883",
+      "title": "Integrating Domain Adaptation and Retrieval-Augmented Generation for Saline-Alkali Land Reclamation Planning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2611.02810",
+      "title": "TRIO: Task Refinement with Individual Optimization for Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.40409",
+      "title": "Retrieving from Your Own Mistakes: On-Policy Training of Embedding Models for Multi-Hop Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.37728",
+      "title": "Beyond Similarity Search: Knowledge Graph Metadata Enrichment for Enterprise Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.37080",
+      "title": "Tessera: Structure-Completed Evidence Units for Web Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36991",
+      "title": "SpectRAG: Weighted Chunk Graphs for Token-Budgeted Context Selection in Multi-Hop Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35071",
+      "title": "GuardRAG: A Post-Retrieval Defense against Poisoning Attacks in Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.34683",
+      "title": "Topic-Level Fairness in Retrieval-Augmented Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.34294",
+      "title": "Factual Yet One-Sided: Stance Poisoning and Evidence Balancing in Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33277",
+      "title": "GEMS-RAG: Graph-grounded Engineering Multimodal Standards Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.31606",
+      "title": "How Ground Truth Shapes Retrieval Scores: Evidence-Aware Evaluation of a Retrieval-Augmented Generation System for Breast Lesions",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.30728",
+      "title": "Federated Graph Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.29933",
+      "title": "Graph Topology Meets Energy-Driven Pathfinding: Preserving Contextual Consistency in Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29792",
+      "title": "MAPS: Macro-Adaptive Parallel Reasoning for Regulating Search Momentum in Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29722",
+      "title": "Retrieval Augmented Generation Compositionality",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29223",
+      "title": "C$^2$U in RAG: Compositional Concept Unlearning in Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.28686",
+      "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28641",
+      "title": "Transaction Foundation Models for Retrieval-Augmented Generation over Financial Transaction Data: A Comparative Evaluation with Text Embeddings",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26938",
+      "title": "GRaSP: Latency-Aware Optimization for Geo-Distributed Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26432",
+      "title": "E-Layout: Layout-Stage Logic Restructuring via RL-Optimized Equality-Saturated Graph Retrieval-Augmented Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.25937",
+      "title": "RAGLeak: Supply-Chain Privacy Backdoors in Retrieval-Augmented Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.25575",
+      "title": "Benchmark for Structured Retrieval-Augmented Generation in Perovskite Photovoltaics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.25096",
+      "title": "Toward Agentic Retrieval-Augmented Generation for Enterprise Retail Workflows over Heterogeneous Data Sources",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.23618",
+      "title": "ThetreStageAI: Multi-View Retrieval-Augmented Generation for Structured Bengali Theatre Production Planning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.23226",
+      "title": "Characterising and Analysing Retrieval-Augmented Generation Techniques",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.22579",
+      "title": "MemLLM: End-to-end In-Storage Acceleration of On-device Retrieval-Augmented Generation using Precomputed KV Caches",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.22297",
+      "title": "Private Retrieval Augmented Generation via Random Projection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.20419",
+      "title": "Analyzing performance of Retrieval Augmented Generation models for Question Answering Tasks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19549",
+      "title": "GraphRAG-LTM: A Layered Threat Modeling Framework for Attacks on Graph Retrieval-Augmented Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.19398",
+      "title": "RCER: Reconstructing Cross-Evidence Relations for Iterative Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14789",
+      "title": "Training-Free BioNEL-RAG: Advancing Biomedical Entity Linking through Retrieval-Augmented Generation and Large Language Model",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.12666",
+      "title": "Incremental Retrieval-Augmented Generation for Human-in-the-Loop Decision Support",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.11893",
+      "title": "A Security Meta-Model for Retrieval-Augmented Generation Systems",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.11183",
+      "title": "RAG-Stress: Probing the Limits of Evidence Reliance in Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.09757",
+      "title": "EntroPrefill: Renyi-Guided Context Pruning with Conditional Stability Guarantees for Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.08674",
+      "title": "EC-RAG: Event Chain Retrieval-Augmented Generation for Long Video Understanding",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.07622",
+      "title": "DBRAG: Multi-Table Retrieval-Augmented Generation for Complex Database Queries",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04691",
+      "title": "RAGStress: A controlled benchmark for evaluating retrieval-augmented generation under knowledge-base degradation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03421",
+      "title": "CLIMB: Confidence-Guided Complementary Evidence for Multimodal Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03136",
+      "title": "Investigating the Role of Reasoning-Language Alignment in Monolingual Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.01218",
+      "title": "AGO AI Quality Gate: Evidence-First Release Decisions for Retrieval-Augmented Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.00891",
+      "title": "Towards Retrieval Augmented Generation in High-Energy and Astroparticle Physics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.38222",
+      "title": "Conformal Factuality Control for Multi-Hop Retrieval-Augmented Generation",
+      "relevance": 3
+    }
+  ]
+}

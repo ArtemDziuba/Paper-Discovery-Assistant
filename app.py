@@ -10,7 +10,7 @@ import streamlit as st
 
 from pda.pipeline import search
 from pda.query import interpret
-from pda.ranking import FINETUNED_PATH, LexicalEncoder, SemanticEncoder
+from pda.ranking import FINETUNED_OPTIONS, LexicalEncoder, SemanticEncoder
 from pda.retrieval import ArxivClient, RetrievalError
 
 st.set_page_config(page_title="Paper Discovery Assistant", page_icon="📚", layout="wide")
@@ -25,14 +25,14 @@ def client():
 
 @st.cache_resource
 def encoder(method, device):
-    if method == "Fine-tuned":
-        return SemanticEncoder(device, model_path=FINETUNED_PATH)
+    if method in FINETUNED_OPTIONS:
+        return SemanticEncoder(device, model_path=FINETUNED_OPTIONS[method])
     return SemanticEncoder(device) if method == "Semantic" else LexicalEncoder()
 
 
 with st.sidebar:
     st.header("Search settings")
-    method = st.selectbox("Ranking", ["Semantic", "TF-IDF baseline", "Fine-tuned"])
+    method = st.selectbox("Ranking", ["Semantic", "TF-IDF baseline", *FINETUNED_OPTIONS])
     device = st.selectbox(
         "Inference device",
         ["cpu", "cuda"],
@@ -43,7 +43,9 @@ with st.sidebar:
     )
     st.caption("Retrieve up to 10,000 candidates. Larger uncached searches take longer.")
     top_k = st.slider("Displayed papers", min_value=5, max_value=50, value=10, step=5)
-    st.caption("Semantic ranking downloads a model on first use. Inference stays local.")
+    st.caption(
+        "MiniLM is saved locally on first use and reused on later launches. Inference stays local."
+    )
 
 with st.form("search"):
     query = st.text_area(

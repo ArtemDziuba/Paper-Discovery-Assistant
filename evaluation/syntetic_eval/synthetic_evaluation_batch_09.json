@@ -1,0 +1,256 @@
+{
+  "query_id": "satellite-change-detection",
+  "query": "Deep learning for satellite image change detection",
+  "judgments": [
+    {
+      "arxiv_id": "2208.00657",
+      "title": "SiamixFormer: A Siamese Transformer Network For Building Detection And Change Detection From Bi-Temporal Remote Sensing Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2010.05687",
+      "title": "Semantic Change Detection with Asymmetric Siamese Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.18717",
+      "title": "NeXt2Former-CD: Efficient Remote Sensing Change Detection with Modern Vision Architectures",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1810.08452",
+      "title": "High Resolution Semantic Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.15320",
+      "title": "Rethinking Remote Sensing Change Detection With A Mask View",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.13627",
+      "title": "Deep-Learning-based Change Detection with Spaceborne Hyperspectral PRISMA data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.15903",
+      "title": "Inferring 3D change detection from bitemporal optical images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.02126",
+      "title": "Remote Sensing Change Detection via Weak Temporal Supervision",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.20306",
+      "title": "TaCo: Capturing Spatio-Temporal Semantic Consistency in Remote Sensing Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.17747",
+      "title": "Bridging Supervision Gaps: A Unified Framework for Remote Sensing Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.07824",
+      "title": "Exploring Foundation Models in Remote Sensing Image Change Detection: A Comprehensive Survey",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.27018",
+      "title": "On-board Remote-Sensing Foundation Models for Unsupervised Change Detection of Disaster Events",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.28192",
+      "title": "From Change Captions to Change Detection: Semantic-Appearance Agreement Framework for Remote Sensing Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.12604",
+      "title": "S2C: Learning Noise-Resistant Differences for Unsupervised Change Detection in Multimodal Remote Sensing Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.15563",
+      "title": "DC-Mamba: Bi-temporal deformable alignment and scale-sparse enhancement for remote sensing change detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.30168",
+      "title": "OmniCD: A Foundational Framework for Remote Sensing Image Change Detection Guided by Multimodal Semantics",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.05527",
+      "title": "Prior-guided Fusion of Multimodal Features for Change Detection from Optical-SAR Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.03114",
+      "title": "FAF-CD: Frequency-Aware Fusion for Change Detection under Imperfect Multimodal Remote Sensing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.16158",
+      "title": "Cross-Domain Separable Translation Network for Multimodal Image Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1811.07896",
+      "title": "Slum Segmentation and Change Detection : A Deep Learning Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.15128",
+      "title": "End-to-end Remote Sensing Change Detection of Unregistered Bi-temporal Images for Natural Disasters",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.03178",
+      "title": "Relating CNN-Transformer Fusion Network for Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1911.12903",
+      "title": "Land Cover Change Detection via Semantic Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.22658",
+      "title": "Large-Scale Avalanche Mapping from SAR Images with Deep Learning-based Change Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2204.08461",
+      "title": "Investigating Temporal Convolutional Neural Networks for Satellite Image Time Series Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2008.08432",
+      "title": "Deep Neural Networks for automatic extraction of features in time series satellite images",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.16685",
+      "title": "On the use of Graphs for Satellite Image Time Series",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2112.00570",
+      "title": "Toward Foundation Models for Earth Monitoring: Proposal for a Climate Change Benchmark",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1910.07129",
+      "title": "Large-Scale Landslides Detection from Satellite Images with Incomplete Labels",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.02869",
+      "title": "Deep Learning for Rapid Landslide Detection using Synthetic Aperture Radar (SAR) Datacubes",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1803.01945",
+      "title": "M3Fusion: A Deep Learning Architecture for Multi-{Scale/Modal/Temporal} satellite data fusion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.02512",
+      "title": "SatSwinMAE: Efficient Autoencoding for Multiscale Time-series Satellite Imagery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2207.08051",
+      "title": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2310.18660",
+      "title": "Foundation Models for Generalist Geospatial Artificial Intelligence",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.18536",
+      "title": "How Effective is Pre-training of Large Masked Autoencoders for Downstream Earth Observation Tasks?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.04306",
+      "title": "HighFM: Towards a Foundation Model for Learning Representations from High-Frequency Earth Observation Data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.21813",
+      "title": "SITS-DECO: A Generative Decoder Is All You Need For Multitask Satellite Image Time Series Modelling",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.04800",
+      "title": "DeepDamageNet: A two-step deep-learning model for multi-disaster building damage segmentation and classification using satellite imagery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1910.06444",
+      "title": "Building Damage Detection in Satellite Imagery Using Convolutional Neural Networks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.16871",
+      "title": "SPEAR NeXT Causal Latent Forecasting Across Multiple Horizons for Spectral Temporal Earth Representation Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2008.10351",
+      "title": "Model Generalization in Deep Learning Applications for Land Cover Mapping",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2508.02871",
+      "title": "Evaluation and Analysis of Deep Neural Transformers and Convolutional Neural Networks on Modern Remote Sensing Datasets",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2408.11000",
+      "title": "SenPa-MAE: Sensor Parameter Aware Masked Autoencoder for Multi-Satellite Self-Supervised Pretraining",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.10392",
+      "title": "RoMA: Scaling up Mamba-based Foundation Models for Remote Sensing",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2404.11797",
+      "title": "When are Foundation Models Effective? Understanding the Suitability for Pixel-Level Classification Using Multispectral Imagery",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2209.14364",
+      "title": "Semantic Segmentation of Vegetation in Remote Sensing Imagery Using Deep Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2401.09607",
+      "title": "Land Cover Image Classification",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2511.21298",
+      "title": "PathMamba: A Hybrid Mamba-Transformer for Topologically Coherent Road Segmentation in Satellite Imagery",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2510.22697",
+      "title": "WaveMAE: Wavelet decomposition Masked Auto-Encoder for Remote Sensing",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2406.16518",
+      "title": "Vision Mamba-based autonomous crack segmentation on concrete, asphalt, and masonry surfaces",
+      "relevance": 0
+    }
+  ]
+}

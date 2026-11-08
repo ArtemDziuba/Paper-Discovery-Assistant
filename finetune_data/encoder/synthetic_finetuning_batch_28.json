@@ -1,0 +1,256 @@
+{
+  "query_id": "named-entity-recognition",
+  "query": "Named entity recognition in natural language processing",
+  "judgments": [
+    {
+      "arxiv_id": "2610.14756",
+      "title": "Amharic-English Cross-Language Question Answering Using Statistical Machine Translation, Named Entity Recognition, and Semantic Indexing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.02970",
+      "title": "A Guideline-Augmented Multi-Agent Framework for Schema-as-Code Biomedical Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.02949",
+      "title": "Enhancing Biomedical Named Entity Recognition via Multiple Programming Languages Instruction Tuning and Ensemble Method",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.00007",
+      "title": "On-Device Named-Entity Recognition: A Deployability Study of Accuracy, Cost, Reliability, and Confidence",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29682",
+      "title": "Named Entity Recognition using Sliding Window Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.24625",
+      "title": "Custom Named Entity Recognition and Topic Classification for Global Health Publications",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.22529",
+      "title": "IntLawNER: A Named Entity Recognition Dataset and Benchmark in International Law",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.16964",
+      "title": "HUMAID-NER: A Disaster Tweet Dataset for Joint Named Entity Recognition and Event Classification via Uncertainty-Weighted Multitask Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.06963",
+      "title": "TurEngMix: A Text Corpus and Benchmark for Turkish-English Code-Mixed Language Identification and Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.02366",
+      "title": "NE-R1: Enhancing Named Entity Recognition Model via Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.00832",
+      "title": "TWIX: a Two-Stage Approach for End-To-End Named Entity Recognition and Relation Extraction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.31038",
+      "title": "Type-Balanced Contextual Learning for Incremental Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.30827",
+      "title": "Error-Type-Aware Loss Reweighting for Robust Named Entity Recognition with Noisy LLM Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.19558",
+      "title": "Reliable Financial Named Entity Recognition Under Domain Shift: Confidence Estimation and Selective Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.19201",
+      "title": "Automatic bioinformatic software named entity recognition from literature",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.08636",
+      "title": "Enhancing Scientific Named Entity Recognition via Large Language Models: A Type-driven Multi-task Learning Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.04015",
+      "title": "Transfer Learning for Named Entity Recognition of Classical Latin through LLM Prompting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03105",
+      "title": "HomoEnsNER: Does Language Alignment Outperform Architectural Complexity in Gujarati Named Entity Recognition?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.00984",
+      "title": "Unsupervised Multidomain Approaches to Named Entity Recognition with Small Datasets",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.00538",
+      "title": "DE-NER : Zero-shot Named Entity Recognition via Dialogue Elicitation of Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.23344",
+      "title": "BERT-based Models vs. Large Language Models for Low-Resource Named Entity Recognition: A Comparative Study on Marathi",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.22075",
+      "title": "FSE: Continual Learning for Named Entity Recognition by Fast-Slow Experts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.14800",
+      "title": "CrimeNER Demo: Named-Entity Recognition in the Crime Domain",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.27881",
+      "title": "A Study of Temporal Fusion Strategies for Named Entity Recognition in Historical Texts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.24387",
+      "title": "AutoSpecNER: A Fine-Grained Named Entity Recognition Dataset for Vehicle Specification Extraction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.22886",
+      "title": "Explanation-Guided Medical Named Entity Recognition with Stability and Boundary Awareness for Atopic Dermatitis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.21895",
+      "title": "Olfactory-Inspired Sparse Combinatorial Coding for Low-Resource Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.21890",
+      "title": "Scaling Performance and Low-Resource Annotation with Many-Shot In-Context Learning for Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.28375",
+      "title": "PrionNER: A Named Entity Recognition Dataset for Prion Disease Biomedical Literature",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.18462",
+      "title": "From BERT to T5: A Study of Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.10108",
+      "title": "GLiNER-Relex: A Unified Framework for Joint Named Entity Recognition and Relation Extraction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.04489",
+      "title": "A Hybrid Method for Low-Resource Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.03706",
+      "title": "SAM-NER: Semantic Archetype Mediation for Zero-Shot Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.25920",
+      "title": "Analysing Lightweight Large Language Models for Biomedical Named Entity Recognition on Diverse Ouput Formats",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.20447",
+      "title": "Decoding Text Spans for Efficient and Accurate Named-Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.20146",
+      "title": "SAKE: Self-aware Knowledge Exploitation-Exploration for Grounded Multimodal Named Entity Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.18944",
+      "title": "A Mechanism and Optimization Study on the Impact of Information Density on User-Generated Content Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.17319",
+      "title": "E2E-GMNER: End-to-End Generative Grounded Multimodal Named Entity Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.15866",
+      "title": "DiZiNER: Disagreement-guided Instruction Refinement via Pilot Annotation Simulation for Zero-shot Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.12744",
+      "title": "Universal NER v2: Towards a Massively Multilingual Named Entity Recognition Benchmark",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.05624",
+      "title": "YoNER: A New Yorùbá Multi-domain Named Entity Recognition Dataset",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.02904",
+      "title": "BioUNER: A Benchmark Dataset for Clinical Urdu Named Entity Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.02209",
+      "title": "CV-18 NER: Augmented Common Voice for Named Entity Recognition from Arabic Speech",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.29801",
+      "title": "ENEIDE: A High Quality Silver Standard Dataset for Named Entity Recognition and Linking in Historical Italian",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.26510",
+      "title": "Clinical named entity recognition in the Portuguese language: a benchmark of modern BERT models and LLMs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.17314",
+      "title": "A Proposal-Free Query-Guided Network for Grounded Multimodal Named Entity Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.05750",
+      "title": "NERdME: a Named Entity Recognition Dataset for Indexing Research Artifacts in Code Repositories",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.00840",
+      "title": "Learning Nested Named Entity Recognition from Flat Annotations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.23656",
+      "title": "TRIZ-RAGNER: A Retrieval-Augmented Large Language Model for TRIZ-Aware Named Entity Recognition in Patent-Based Contradiction Mining",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.19133",
+      "title": "A Dataset for Named Entity Recognition and Relation Extraction from Art-historical Image Descriptions",
+      "relevance": 3
+    }
+  ]
+}

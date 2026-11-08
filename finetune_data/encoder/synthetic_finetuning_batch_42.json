@@ -1,0 +1,256 @@
+{
+  "query_id": "music-genre-classification",
+  "query": "Music genre classification",
+  "judgments": [
+    {
+      "arxiv_id": "2611.00746",
+      "title": "ResMamba: A Dual-Path Convolution-Mamba Model for Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.05011",
+      "title": "YMIR: A new Benchmark Dataset and Model for Arabic Yemeni Music Genre Classification Using Convolutional Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.15440",
+      "title": "Music Genre Classification: A Comparative Analysis of Classical Machine Learning and Deep Learning Approaches",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.13871",
+      "title": "Evaluating Pretrained General-Purpose Audio Representations for Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.15083",
+      "title": "Bangla Music Genre Classification Using Bidirectional LSTMS",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.07463",
+      "title": "Parallel Algorithms for Structured Sparse Support Vector Machines: Application in Music Genre Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.01762",
+      "title": "Music Genre Classification Using Machine Learning Techniques",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.03769",
+      "title": "Multi-label Cross-lingual automatic music genre classification from lyrics with Sentence BERT",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.15602",
+      "title": "Music Genre Classification: Ensemble Learning with Subcomponents-level Attention",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.05694",
+      "title": "Combining Genre Classification and Harmonic-Percussive Features with Diffusion Models for Music-Video Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2411.14474",
+      "title": "Attention-guided Spectrogram Sequence Modeling with CNNs for Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.14990",
+      "title": "Audio Processing using Pattern Recognition for Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.13581",
+      "title": "Dynamic Range Compression and Its Effect on Music Genre Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2410.08321",
+      "title": "Music Genre Classification using Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.17069",
+      "title": "The Effect of Perceptual Metrics on Music Representation Learning for Genre Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.06690",
+      "title": "Benchmarking Sub-Genre Classification For Mainstage Dance Music",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.17413",
+      "title": "Enhancing Music Genre Classification through Multi-Algorithm Analysis and User-Friendly Visualization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.15096",
+      "title": "Music Genre Classification: Training an AI model",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.04737",
+      "title": "Music Genre Classification: A Comparative Analysis of CNN and XGBoost Approaches with Mel-frequency cepstral coefficients and Mel Spectrograms",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2309.04861",
+      "title": "Exploring Music Genre Classification: Algorithm Analysis and Deployment Architecture",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.10773",
+      "title": "Music Genre Classification with ResNet and Bi-GRU Using Visual Spectrograms",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.07667",
+      "title": "Improving Music Genre Classification from Multi-Modal Properties of Music and Genre Correlations Perspective",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.01599",
+      "title": "Convolution channel separation and frequency sub-bands aggregation for music genre classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.01317",
+      "title": "Low-Resource Music Genre Classification with Cross-Modal Neural Model Reprogramming",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2209.07548",
+      "title": "Open Set Recognition For Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2209.04109",
+      "title": "MATT: A Multiple-instance Attention Mechanism for Long-tail Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2208.12086",
+      "title": "A Study on Broadcast Networks for Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.07857",
+      "title": "The Scattering Transform Network with Generalized Morse Wavelets and Its Application to Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2110.04654",
+      "title": "Complex Network-Based Approach for Feature Extraction and Classification of Musical Genres",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2109.08910",
+      "title": "MS-SincResNet: Joint learning of 1D and 2D kernels using multi-scale SincNet and ResNet for music genre classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2105.07302",
+      "title": "1D CNN Architectures for Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2003.05377",
+      "title": "Brazilian Lyrics-Based Music Genre Classification Using a BLSTM Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1911.04660",
+      "title": "Random Projections of Mel-Spectrograms as Low-Level Features for Automatic Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1910.11117",
+      "title": "Graph Representation learning for Audio & Music genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1910.09242",
+      "title": "On large-scale genre classification in symbolically encoded music by automatic identification of repeating patterns",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1905.11959",
+      "title": "Texture Selection for Automatic Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1901.08928",
+      "title": "Bottom-up Broadcast Neural Network For Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1808.10600",
+      "title": "Content-based feature exploration for transparent music recommendation using self-attentive genre classification",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1805.02043",
+      "title": "Transfer Learning of Artist Group Factors to Musical Genre Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1804.01149",
+      "title": "Music Genre Classification using Machine Learning Techniques",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1803.04652",
+      "title": "Music Genre Classification Using Spectral Analysis and Sparse Representation of the Signals",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1802.09697",
+      "title": "Convolutional Neural Network Achieves Human-level Accuracy in Music Genre Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1802.06432",
+      "title": "Music Genre Classification using Masked Conditional Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1801.05504",
+      "title": "Automatic Classification of Music Genre using Masked Conditional Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1712.08370",
+      "title": "Music Genre Classification with Paralleling Recurrent Convolutional Neural Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1707.04916",
+      "title": "Multi-label Music Genre Classification from Audio, Text, and Images Using Deep Features",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1707.04678",
+      "title": "Lyrics-Based Music Genre Classification Using a Hierarchical Attention Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "0907.3220",
+      "title": "Inter Genre Similarity Modelling For Automatic Music Genre Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.02091",
+      "title": "Comparison of spectrogram scaling in multi-label Music Genre Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2111.11063",
+      "title": "Comparing the Accuracy of Deep Neural Networks (DNN) and Convolutional Neural Network (CNN) in Music Genre Recognition (MGR): Experiments on Kurdish Music",
+      "relevance": 3
+    }
+  ]
+}

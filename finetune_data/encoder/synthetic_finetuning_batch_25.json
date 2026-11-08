@@ -1,0 +1,256 @@
+{
+  "query_id": "imbalanced-classification",
+  "query": "Methods for imbalanced classification",
+  "judgments": [
+    {
+      "arxiv_id": "2609.23926",
+      "title": "Density-Ratio Rescoring for Imbalanced Classification Using Raking Duals and Classifier Scores",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.16147",
+      "title": "When Single-Dataset Conclusions Fail: A 45-Task Study of Threshold Tuning and Resampling for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.09816",
+      "title": "RUBRIC: Realism--Utility Balanced Ranking for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.26053",
+      "title": "When Does Synthetic Data Augmentation Improve Score-Based Imbalanced Classification?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.24625",
+      "title": "QC-SMOTE: Quality-Controlled SMOTE for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.03289",
+      "title": "Imbalanced Classification under Capacity Constraints",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.26024",
+      "title": "Correcting Performance Estimation Bias in Imbalanced Classification with Minority Subconcepts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.25334",
+      "title": "VAE-Inf: A statistically interpretable generative paradigm for imbalanced classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.27650",
+      "title": "Imbalanced Classification through the Lens of Spurious Correlations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.20472",
+      "title": "Concentration and excess risk bounds for imbalanced classification with synthetic oversampling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.13656",
+      "title": "Rebalancing with Calibrated Sub-classes (RCS): A Statistical Fusion-based Framework for Robust Imbalanced Classification across Modalities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.13037",
+      "title": "Conformal Inference for Open-Set and Imbalanced Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.09783",
+      "title": "Large Language Models for Imbalanced Classification: Diversity makes the difference",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.11511",
+      "title": "Learning Majority-to-Minority Transformations with MMD and Triplet Loss for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.06875",
+      "title": "AxelSMOTE: An Agent-Based Oversampling Algorithm for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.02612",
+      "title": "Is Synthetic Image Augmentation Useful for Imbalanced Classification Problems? Case-Study on the MIDOG2025 Atypical Cell Detection Competition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.00955",
+      "title": "ART: Adaptive Resampling-based Training for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.15240",
+      "title": "Exact Reformulation and Optimization for Direct Metric Optimization in Binary Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.20041",
+      "title": "LSH-DynED: A Dynamic Ensemble Framework with LSH-Based Undersampling for Evolving Multi-Class Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.17326",
+      "title": "CopulaSMOTE: A Copula-Based Oversampling Approach for Imbalanced Classification in Diabetes Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.08548",
+      "title": "Asymptotic Normality of Infinite Centered Random Forests -Application to Imbalanced Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.09147",
+      "title": "Kernel-Based Enhanced Oversampling Method for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.11323",
+      "title": "A statistical theory of overfitting for imbalanced classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.06878",
+      "title": "Deep Learning Meets Oversampling: A Learning Framework to Handle Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.16209",
+      "title": "Challenges in the calibration of tree-based models for imbalanced classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.15657",
+      "title": "Synthetic Tabular Data Generation for Imbalanced Classification: The Surprising Effectiveness of an Overlap Class",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.10819",
+      "title": "An Oversampling-enhanced Multi-class Imbalanced Classification Framework for Patient Health Status Prediction Using Patient-reported Outcomes",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.11765",
+      "title": "ECGN: A Cluster-Aware Approach to Graph Neural Networks for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.08994",
+      "title": "Optimal Downsampling for Imbalanced Classification with Generalized Linear Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.03588",
+      "title": "Training Over a Distribution of Hyperparameters for Enhanced Performance and Adaptability on Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.05598",
+      "title": "When resampling/reweighting improves feature learning in imbalanced classification?: A toy-model study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.04101",
+      "title": "Ultra-imbalanced classification guided by statistical information",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.17197",
+      "title": "Covariance-corrected Whitening Alleviates Network Degeneration on Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.07253",
+      "title": "All-around Neural Collapse for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.01777",
+      "title": "Infinite random forests for imbalanced classification tasks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.01557",
+      "title": "An Experimental Study on the Rashomon Effect of Balancing Methods in Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.07661",
+      "title": "Robust performance metrics for imbalanced classification problems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.08407",
+      "title": "Iterative Online Image Synthesis via Diffusion Model for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.14826",
+      "title": "Sharp error bounds for imbalanced classification: how many examples in the minority class?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.08725",
+      "title": "Heterophily-Based Graph Neural Network for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.00158",
+      "title": "Feedback-guided Data Synthesis for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.15457",
+      "title": "From SMOTE to Mixup for Deep Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.14838",
+      "title": "Tackling Diverse Minorities in Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.04024",
+      "title": "Scope Loss for Imbalanced Classification and RL Exploration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.05362",
+      "title": "SleepEGAN: A GAN-enhanced Ensemble Deep Learning Model for Imbalanced Classification of Sleep Stages",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2307.01224",
+      "title": "INGB: Informed Nonlinear Granular Ball Oversampling Framework for Noisy Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.00157",
+      "title": "The Effect of Balancing Methods on Model Behavior in Imbalanced Classification Problems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.09132",
+      "title": "Enlarged Large Margin Loss for Imbalanced Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.13405",
+      "title": "SC-MIL: Supervised Contrastive Multiple Instance Learning for Imbalanced Classification in Pathology",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.03094",
+      "title": "Benchmark of Data Preprocessing Methods for Imbalanced Classification",
+      "relevance": 3
+    }
+  ]
+}

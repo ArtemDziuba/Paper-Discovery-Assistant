@@ -1,0 +1,256 @@
+{
+  "query_id": "adversarial-robustness-deep-learning",
+  "query": "Adversarial robustness in deep learning",
+  "judgments": [
+    {
+      "arxiv_id": "2611.07678",
+      "title": "Adversarially Robust Streaming Algorithms for $(k, z)$-Clustering",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2611.07474",
+      "title": "Adversarial Robustness of Kernel Machines: A Comprehensive Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.02576",
+      "title": "Beyond $L_\\infty$-Norm Sets: Synthesizing Interpretable Non-Uniform Uncertainty Sets for Evaluation-Time State-Adversarial Robustness",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.02139",
+      "title": "Adversarial Robustness of Retrieval-Based Fact-Checking: Detecting and Mitigating Evidence Contamination",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.00715",
+      "title": "Adversarial robustness does not entail human-aligned categorization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.00713",
+      "title": "Adversarial Robustness Is Not Zero-Day Generalization: A Controlled Evaluation of Flow-Based Intrusion Detectors on Corrected CIC-IDS2017",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.40309",
+      "title": "Textual Response-Aware Guidance for Zero-Shot Adversarial Robustness of Vision-Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.39848",
+      "title": "LiDAR-SHIELD: A Fully Dockerized Adversarial Robustness Assessment Framework for LiDAR-Based 3D Perception Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.34535",
+      "title": "SentryBench: A Cost-Sensitive Benchmark for Adversarial Robustness of Tool-Using LLM Agents in Public-Safety Deployments",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.31718",
+      "title": "Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29196",
+      "title": "A Unified Evaluation Framework of Physical Adversarial Robustness in the Edge VLM Era",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27353",
+      "title": "Exposing Vulnerability Monoculture Through Systemic Adversarial Robustness",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26240",
+      "title": "Q-MALDetect: Quantum Image-Based Malware Detection and Adversarial Robustness Analysis",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.24685",
+      "title": "Contrastive Adversarial Training for Robust Graph Neural Networks under Label Poisoning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24248",
+      "title": "Probing Ambiguity: Adversarial Intent Resolution for Robust Text-to-SQL",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.22955",
+      "title": "On the tradeoff between robustness and geometric accuracy in adversarial training",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.20252",
+      "title": "Adversarial Reinforcement Learning for Robust Planetary Landing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19911",
+      "title": "CARD: Closing the Teacher-Student Loop for Adversarial Robustness Distillation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.16012",
+      "title": "Adversarial Robustness of Camera-Radar Sensor Fusion for Autonomous Driving",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15628",
+      "title": "Robust Detection of Directional Adversarial Attacks in Deep Neural Networks for Radiological Imaging",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.14553",
+      "title": "Adversarial Gradient Forcing for Robust Few-Step Autoregressive Video Generation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.11306",
+      "title": "Collaboratively Guided Adversarial Robust Distillation with Teacher-Favorable Examples",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.10617",
+      "title": "MRCert: Towards Post-deployment Patch Robustness Certification for Adversarially Patched Samples via Type-specific Masking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.08590",
+      "title": "TwinViT-DeepJSCC: Adversarially Robust Semantic Image Communication",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.07754",
+      "title": "Adversarially Trained Linear Transformers Are Optimal Robust In-Context Learners for Gaussian Mixtures",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06918",
+      "title": "Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05310",
+      "title": "Transferable Adversarial Robustness for Speech Foundation Models via Hierarchical Stabilization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04378",
+      "title": "COPEX: Benchmarking LLM Robustness to Adversarial Context Across Model Context Protocol (MCP) Layers",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.01574",
+      "title": "Adversarial Robustness in Fake Quantum Simulators",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.01558",
+      "title": "Controllable Stochastic Quantization Encoding for Adversarially Robust Spiking Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.00233",
+      "title": "Robust Is Salient: An Informed Adversary Moves the Optimal Signal onto the Salience Pole",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.34456",
+      "title": "Breaking Windows Malware Detection: A Comprehensive Evaluation of Problem-Space Adversarial Robustness",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.33314",
+      "title": "ZeroGAR: Benchmarking the Adversarial Robustness of Zero-Shot Graph Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31363",
+      "title": "Brenier Meets Adversarial Training: Optimal Transport Geometry for Robust Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.30605",
+      "title": "Probabilistic Robustness-driven Universal Adversarial Perturbations with Explainability against Deep Reinforcement Learning-based Intrusion Detection System",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.30037",
+      "title": "AERIAL: Adversarial Evaluation of Robustness in Accuracy-Preserving Low-Precision EEG Decoders",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.27667",
+      "title": "Robust Adversarial Reinforcement Learning with Risk Sensitivity and Critic Consistency Regularization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.27378",
+      "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.25705",
+      "title": "On the Gradient Heterogeneity Dynamics of Adversarially Robust Federated Regression",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.24260",
+      "title": "Adversarially Robust PAC Learning with Optimal VC Rates",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.22228",
+      "title": "Assessing Adversarial Robustness of Latent Reasoning Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.20314",
+      "title": "DDQN-MLP: An Explainable and Adversarially Robust DRL-Guided Adaptive Learning Framework for Ransomware Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.20063",
+      "title": "Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.17856",
+      "title": "Investigating Adversarial Robustness of Heterogeneous Cooperative Perception",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.13128",
+      "title": "Where to Defend? Layer-Wise Adversarial Training for Robust Transformer-Based Semantic Communications",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1412.6572",
+      "title": "Explaining and Harnessing Adversarial Examples",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1706.06083",
+      "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1905.02175",
+      "title": "Adversarial Examples Are Not Bugs, They Are Features",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1901.08573",
+      "title": "Theoretically Principled Trade-off between Robustness and Accuracy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1902.02918",
+      "title": "Certified Adversarial Robustness via Randomized Smoothing",
+      "relevance": 3
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "query_id": "uncertainty-calibration-deep-learning",
+  "query": "Uncertainty estimation and calibration in deep learning",
+  "judgments": [
+    {
+      "arxiv_id": "2611.06979",
+      "title": "Uncertainty calibration in Bayesian M/EEG source imaging",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.03592",
+      "title": "Evaluating Uncertainty Calibration in Probabilistic Time Series Foundation Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.01984",
+      "title": "Large-Scale Bayesian Optimisation Using Uncertainty-Calibrated Product-of-Experts Gaussian Process Models with Trust Regions",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.21248",
+      "title": "Beyond Confidence: Rethinking Uncertainty Calibration in Deep Code Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.18564",
+      "title": "Observation Quality in DSM-Assisted Aerial Localization: A Benchmark and Base-Anchored Uncertainty Calibration",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.15555",
+      "title": "Bayesian Optimisation Using Product-of-Experts Gaussian Process Models with Uncertainty Calibration",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.30472",
+      "title": "ToxLens: A Reproducible Graph-Learning Framework for Leakage-Aware, Uncertainty-Calibrated Molecular Toxicity Prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.26735",
+      "title": "Recovering General Capabilities via Uncertainty-Calibrated Multi-Teacher On-Policy Distillation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.10372",
+      "title": "Invertible Logits Transformation for Accuracy-Preserving Post-Hoc Uncertainty Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.09166",
+      "title": "Particle-Based Conformal Prediction for Contact-Aware Uncertainty Calibration in Stratified Configuration Spaces",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.08566",
+      "title": "On-Device Multi-Species Malaria Detection with Uncertainty-Calibrated Slide-Level Aggregation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.24875",
+      "title": "FinAbstain: Uncertainty-Calibrated Multimodal RAG for Selective Financial Forecasting",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.27023",
+      "title": "Just how sure are you? Improving Verbalized Uncertainty Calibration in Medical VQA",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.01595",
+      "title": "Uncertainty-Calibrated Diffusion for Reliable 3D Molecular Graph Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.17788",
+      "title": "Uncertainty-Calibrated Recommendations for Low-Active Users",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.24481",
+      "title": "Multi-Agent Reasoning with Consistency Verification Improves Uncertainty Calibration in Medical MCQA",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.18009",
+      "title": "How Confident Is the First Token? An Uncertainty-Calibrated Prompt Optimization Framework for Large Language Model Classification and Understanding",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.12284",
+      "title": "Bayesian Conservative Policy Optimization (BCPO): A Novel Uncertainty-Calibrated Offline Reinforcement Learning with Credible Lower Bounds",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.04431",
+      "title": "Uncertainty-Calibrated Spatiotemporal Field Diffusion with Sparse Supervision",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.08920",
+      "title": "Diffusion-Inspired Reconfiguration of Transformers for Uncertainty Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.02419",
+      "title": "SafeGround: Know When to Trust GUI Grounding Models via Uncertainty Calibration",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2601.00990",
+      "title": "Uncertainty-Calibrated Explainable Artificial Intelligence for Fetal Ultrasound Plane Classification: A Systematic Review",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.23444",
+      "title": "Uncertainty calibration for latent-variable regression models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.16614",
+      "title": "Don't Guess, Escalate: Towards Explainable Uncertainty-Calibrated AI Forensic Agents",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.13872",
+      "title": "Measuring Uncertainty Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.09586",
+      "title": "Graph-Based Bayesian Optimization for Quantum Circuit Architecture Search with Uncertainty Calibrated Surrogates",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2511.13911",
+      "title": "Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2511.10439",
+      "title": "Improving Perturbation-based Explanations by Understanding the Role of Uncertainty Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.08261",
+      "title": "Uncertainty Calibration of Multi-Label Bird Sound Classifiers",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.21691",
+      "title": "On Uncertainty Calibration for Equivariant Functions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.08938",
+      "title": "Bi-level Meta-Policy Control for Dynamic Uncertainty Calibration in Evidential Deep Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.00721",
+      "title": "Flexible Uncertainty Calibration for Machine-Learned Interatomic Potentials",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.15926",
+      "title": "Beyond the Score: Uncertainty-Calibrated LLMs for Automated Essay Assessment",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2508.01227",
+      "title": "Enhancing Multi-view Open-set Learning via Ambiguity Uncertainty Calibration and View-wise Debiasing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2507.21521",
+      "title": "Optimizing Active Learning in Vision-Language Models via Parameter-Efficient Uncertainty Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.19630",
+      "title": "Why Uncertainty Calibration Matters for Reliable Perturbation-based Explanations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.09338",
+      "title": "Know What You Don't Know: Uncertainty Calibration of Process Reward Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.06265",
+      "title": "Large language models as uncertainty-calibrated optimizers for experimental discovery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.01225",
+      "title": "A Conformal Risk Control Framework for Granular Word Assessment and Uncertainty Calibration of CLIPScore Quality Estimates",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2503.15583",
+      "title": "Efficient Post-Hoc Uncertainty Calibration via Variance-Based Smoothing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.00334",
+      "title": "MCNet: Monotonic Calibration Networks for Expressive Uncertainty Calibration in Online Advertising",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.18314",
+      "title": "Learning atomic forces from uncertainty-calibrated adversarial attacks",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2501.17570",
+      "title": "Trustworthy image-to-image translation: evaluating uncertainty calibration in unpaired training scenarios",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.10089",
+      "title": "Classifier Ensemble for Efficient Uncertainty Calibration of Deep Neural Networks for Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.17411",
+      "title": "Pretraining with random noise for uncertainty calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.13695",
+      "title": "Optical aberrations in autonomous driving: Physics-informed parameterized temperature scaling for neural network uncertainty calibration",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.02904",
+      "title": "Enhancing Trust in Large Language Models via Uncertainty-Calibrated Fine-Tuning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.19796",
+      "title": "Feature Clipping for Uncertainty Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.12295",
+      "title": "Consistency Calibration: Improving Uncertainty Calibration via Consistency among Perturbed Neighbors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.17466",
+      "title": "Adjusting Regression Models for Conditional Uncertainty Calibration",
+      "relevance": 3
+    }
+  ]
+}

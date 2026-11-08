@@ -1,0 +1,256 @@
+{
+  "query_id": "active-learning",
+  "query": "Active learning for efficient data labeling",
+  "judgments": [
+    {
+      "arxiv_id": "2611.06394",
+      "title": "KolTa: A Physics-Informed Active Learning Framework for Formulation Discovery with Limited Data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.04231",
+      "title": "Constructing a Regional Slang Lexicon for Electricity Demands via Soft-Label Bidirectional Anchoring and Active Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.04148",
+      "title": "Active Learning with Generative AI in Introductory Physics: A Multi-Institutional Study of the P-A.I.R. Framework",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2611.04054",
+      "title": "Forgetting to Improve: Principled Data Removal in Active Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03117",
+      "title": "Inner optimizers in active-learning Kriging reliability analysis: a pre-specified comparison and the unconservative estimates left by unlearned failure modes",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2611.02488",
+      "title": "End-to-End Stability of Online Active Learning in Large-Scale Neural Systems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.01907",
+      "title": "Online Active Learning Architecture for Safety-Critical Control Systems",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.38582",
+      "title": "Robust Active Learning for More Efficient and Reliable Paths to Optimal Design",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.35652",
+      "title": "Active Learning of Conditional Generative Models via the Transport Neural Tangent Kernel",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35345",
+      "title": "Should Pseudo-Labels Share Mini-Batches with Labeled Examples? Semi-Supervised Continual Active Learning with Limited Training Cost",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35329",
+      "title": "Geometric Consistency Based Label-Free Validation for Checkpoint Selection in Audio Active Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33272",
+      "title": "Autonomous atomistic-continuum coupling through uncertainty-aware active learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.29416",
+      "title": "Alternative Strategies for Active Learning with Bayesian Bradley Terry Model",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27130",
+      "title": "Synthetic Dataset Generation, Physical Consistency and Active Learning for Shape-Informed Surrogate Modeling of Hemodynamics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.23776",
+      "title": "Active Learning for Interatomic Potentials: A Review of Uncertainty-Driven Data Efficiency",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23623",
+      "title": "Deconstructing Multi-Task Active Learning: The Paradox of Gradient Conflict and Orthogonal Decomposition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23477",
+      "title": "Towards optimal selection schedules for online active learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23298",
+      "title": "How the elastic axis folds the transonic flutter boundary: shock energy transfer and conformally calibrated active learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.22122",
+      "title": "Beyond Fixed Acquisition Functions: Temporal Difference Active Learning for Perturbation Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.20881",
+      "title": "Pixels to Tokens: Token Space Efficient Active Learning for Low-Budget Semantic Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19404",
+      "title": "ActMOF: Mapping Reticular Synthesis through Active Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.17808",
+      "title": "SPARCL: Spatially Adaptive Regional Coverage for Active Learning in Chest X-ray Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15165",
+      "title": "Active Learning for Finding a Needle in a Haystack",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14311",
+      "title": "Characterizing adopters of named active learning methods in physics: An interview study",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.11933",
+      "title": "Active-learning construction of hyperspherical-harmonics spaces for A = 3",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.09848",
+      "title": "Stream-Based Active Learning with Cooperative Neural Networks for Data-Efficient Partial Inverse Design: An Automotive Glass Run Channel Case Study",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.07323",
+      "title": "ATLAS-AL: Adaptive Trust-Region for Latent Adversarial Searches via Active Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.07045",
+      "title": "Multi-Task Active Learning with Efficient Resource Allocation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06467",
+      "title": "Quantum spectral thermodynamics and active learning enable million-scale exploration of high-entropy ceramics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05544",
+      "title": "Soft Strategy Selection for Batch-Mode Active Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03824",
+      "title": "Targeted Active Learning for Preference-Based Treatment Effects on Multivariate Outcomes",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.01199",
+      "title": "Low-Budget Active Learning through Entropic Optimal Transport",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.36712",
+      "title": "Information-theoretic receding-horizon active learning of nonlinear dynamical systems",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.36123",
+      "title": "Bayesian Active Learning of Ion Loss-Cone Boundaries in Tokamaks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.34270",
+      "title": "Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.31637",
+      "title": "FIDAL: Diversity-Aware Federated Active Learning Under Real-World Distribution Shifts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31197",
+      "title": "ALF: An Active Learning Framework for Scientific Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.27486",
+      "title": "Active Learning for Low-Altitude Radio Map Construction via Plug-and-Play Flow Matching",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.27409",
+      "title": "Active Learning for Biodiversity Monitoring: From Label Efficiency to Reliable Ecological Inference",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.27241",
+      "title": "On the Sample Complexity of Active Learning with Membership Queries",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.27108",
+      "title": "Towards Extended Active Learning for Modelling Ferroelectric Switching: the Need for 'Gold Standards'",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.26631",
+      "title": "Label-Efficient Learning for Ground-Based Sky-Image Classification: A Benchmark of Transfer Learning, Active Learning, and Pseudo-Labeling on GCD",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.20262",
+      "title": "Generative Verification: Rethinking the Uncertainty Signal for Active Learning of Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.20248",
+      "title": "Distance to Class Prototypes: Active Learning for Object Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.19378",
+      "title": "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.15255",
+      "title": "BioDCASE: Active Learning for Bioacoustics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.10311",
+      "title": "One Loop, Two Gains: Can Active Learning win the Lottery for Free?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.09413",
+      "title": "Decision-Focused Active Learning for Scale-Aware Critical-Materials Recovery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.06843",
+      "title": "RAIDAL: Redundancy-Aware Information Density Active Learning for CTC-Based Continuous Sign Language Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.06806",
+      "title": "Train Smarter, Not Harder: Switching Signal-Guided Training in Active Learning",
+      "relevance": 3
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "query_id": "software-defect-prediction",
+  "query": "Software defect prediction using machine learning",
+  "judgments": [
+    {
+      "arxiv_id": "2609.06272",
+      "title": "KG-Commit: A Dynamic Knowledge Graph for Online Just-in-Time Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.01842",
+      "title": "Understanding Software Defect Prediction: A Large-scale Empirical Study Across Uncertainty Quantification and Performance Evaluation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.20742",
+      "title": "Evaluating Software Defect Prediction Models via the Area Under the ROC Curve Can Be Misleading",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.22403",
+      "title": "XMENTOR: A Rank-Aware Aggregation Approach for Human-Centered Explainable AI in Just-in-Time Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.18477",
+      "title": "An Audit of Machine Learning Experiments on Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.23875",
+      "title": "From Illusion to Insight: Change-Aware File-Level Software Defect Prediction Using Agentic AI",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.17460",
+      "title": "When Data Quality Issues Collide: A Large-Scale Empirical Study of Co-Occurring Data Quality Issues in Software Defect Prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.16665",
+      "title": "Contrasting the Hyperparameter Tuning Impact Across Software Defect Prediction Scenarios",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.10840",
+      "title": "Software Defect Prediction using Autoencoder Transformer Model",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.09192",
+      "title": "ReDef: Do Code Language Models Truly Understand Code Changes for Just-in-Time Software Defect Prediction?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.04408",
+      "title": "Breaking New Ground in Software Defect Prediction: Introducing Practical and Actionable Metrics with Superior Predictive Power for Enhanced Decision-Making",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.19181",
+      "title": "Critical Considerations on Effort-aware Software Defect Prediction Metrics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2502.20806",
+      "title": "Multimodal Learning for Just-In-Time Software Defect Prediction in Autonomous Driving Systems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.07927",
+      "title": "SDPERL: A Framework for Software Defect Prediction Using Ensemble Feature Extraction and Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.07698",
+      "title": "Quantum vs. Classical Machine Learning Algorithms for Software Defect Prediction: Challenges and Opportunities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.05230",
+      "title": "Feature Importance in the Context of Traditional and Just-In-Time Software Defect Prediction Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.19550",
+      "title": "DeMuVGN: Effective Software Defect Prediction Model by Learning Multi-view Software Dependency via Graph Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.16469",
+      "title": "Evaluating the Performance of a D-Wave Quantum Annealing System for Feature Subset Selection in Software Defect Prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2410.12107",
+      "title": "Just-In-Time Software Defect Prediction via Bi-modal Change Representation Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.10046",
+      "title": "A Hybrid Sampling and Multi-Objective Optimization Approach for Enhanced Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.17120",
+      "title": "Cascade Generalization-based Classifiers for Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.07604",
+      "title": "Improving classifier-based effort-aware software defect prediction by reducing ranking errors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.17545",
+      "title": "Three-Stage Adjusted Regression Forecasting (TSARF) for Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.12289",
+      "title": "Deep Incremental Learning of Imbalanced Data for Just-In-Time Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.13707",
+      "title": "Human-in-the-loop online just-in-time software defect prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.13582",
+      "title": "Software Defect Prediction by Online Learning Considering Defect Overlooking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.15369",
+      "title": "A Meta-analytical Comparison of Naive Bayes and Random Forest for Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.08655",
+      "title": "Explainable Software Defect Prediction from Cross Company Project Metrics Using Machine Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2301.08022",
+      "title": "Source Code Metrics for Software Defects Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.02435",
+      "title": "IRJIT: A Simple, Online, Information Retrieval Approach for Just-In-Time Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.02236",
+      "title": "On the Use of Deep Learning in Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2209.14299",
+      "title": "Software Defect Prediction Using Support Vector Machine",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.07919",
+      "title": "An Empirical Study on the Effectiveness of Data Resampling Approaches for Cross-Project Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2202.06145",
+      "title": "Revisiting the Impact of Dependency Network Metrics on Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2111.10901",
+      "title": "Explainable Software Defect Prediction: Are We There Yet?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.04687",
+      "title": "Does class size matter? An in-depth assessment of the effect of class size in software defect prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2103.10201",
+      "title": "The impact of using biased performance metrics on software defect prediction research",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2011.13071",
+      "title": "Early Life Cycle Software Defect Prediction. Why? How?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2011.00998",
+      "title": "A Review On Software Defects Prediction Methods",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2009.02571",
+      "title": "The Integrity of Machine Learning Algorithms against Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2008.13114",
+      "title": "A Novel Multiple Ensemble Learning Models Based on Different Datasets for Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2008.03835",
+      "title": "On the Value of Oversampling for Deep Learning in Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2004.02589",
+      "title": "Software Defect Prediction Based On Deep Learning Models: Performance Study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2003.01182",
+      "title": "Assessing Software Defection Prediction Performance: Why Using the Matthews Correlation Coefficient Matters",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1912.10093",
+      "title": "Assessing Practitioner Beliefs about Software Defect Prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1911.04309",
+      "title": "On the costs and profit of software defect prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1910.13717",
+      "title": "Software defect prediction with zero-inflated Poisson models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1907.12027",
+      "title": "A Systematic Review of Unsupervised Learning Techniques for Software Defect Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1901.01726",
+      "title": "Evaluating software defect prediction performance: an updated benchmarking study",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1808.10033",
+      "title": "Use of Source Code Similarity Metrics in Software Defect Prediction",
+      "relevance": 3
+    }
+  ]
+}

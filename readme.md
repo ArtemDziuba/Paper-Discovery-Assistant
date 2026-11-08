@@ -10,7 +10,9 @@ The application should:
 7. Generate a literature overview based on the retrieved papers, with citations linking back to the sources.
 
 #### 2. Prepare the Data 
-The baseline needs no additional training dataset, because it uses a pretrained encoder (MiniLM). There was an attempt to finetune the encoder. For it was created a syntetic dataset via ChatGPT6 consisting of 15 queries with 50 papers each ranked in relevancy from 0 to 3 and was collected manualy a 2 query human evaluation dataset with 32 and 33 papers.
+Human evaluation dataset - 2 queries - 32 and 33 papers each - collected manually.
+Synthetic evaluation dataset - 10 queries - 50 papers each - created with Undermind and ChatGpt6.
+Synthetic finetuning dataset - 45 queries - 50 papers each - created with ChatGPT6.
 
 #### 3. Describe the Components 
 `Draw a diagram that shows the data flow. Describe the purpose, input, and output of each  component. Identify model calls and external tool calls. Explain how one input passes through  the complete system. You can use LLM for this task, but you must control the process.`
@@ -37,7 +39,7 @@ The baseline needs no additional training dataset, because it uses a pretrained 
 run
 cd "~\Paper Discovery Assistant"
 uv sync --extra cuda
-uv run --extra cuda streamlit run app.py
+uv run --extra cuda python -m streamlit run app.py
 
 tests
 uv run --extra cuda pytest -q

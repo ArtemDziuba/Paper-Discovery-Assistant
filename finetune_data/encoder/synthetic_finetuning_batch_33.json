@@ -1,0 +1,256 @@
+{
+  "query_id": "visual-question-answering",
+  "query": "Visual question answering",
+  "judgments": [
+    {
+      "arxiv_id": "2611.00067",
+      "title": "MedICL: Modality-Anatomy-Aware Visual In-Context Learning for Medical Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38960",
+      "title": "Efficient Agentic Audio-Visual Question Answering through Toolset Pruning and Modality Consolidation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.32423",
+      "title": "Cycle-of-Thought: Self-Evaluative Iterative Reasoning for Table Visual Question Answering in Document Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31385",
+      "title": "A Task-Centric Survey of Long-Document Visual Question Answering: Taxonomy, Evolution, and Future Directions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.22845",
+      "title": "Variational and Decomposed method for Mitigating Bimodal Bias in Robust Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.22474",
+      "title": "Star Light, Star Bright: Can Multimodal Models Parse an Astronomy Visual Question Answering Dataset Right?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.20085",
+      "title": "Designing Textual Interfaces To Enhance Llm Reasoning On Audio-Visual Question Answering",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.17079",
+      "title": "Rethinking LLM-Guided Visual Question Answering: Does Deeper Knowledge Integration Really Help?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.16722",
+      "title": "Lost in Contrast: Instruction-Preserving Decoding for Reliable Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14173",
+      "title": "Do you \"see\" what I \"see\"? A Multi-panel Visual Question Answer Dataset for Large Language Model Chart Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13636",
+      "title": "Benchmarking Answer-Grounding Consistency in Remote Sensing Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12517",
+      "title": "TerraAgent: Demonstration-Grounded Multi-Agent Reasoning for Long-Context Remote Sensing Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.07339",
+      "title": "A doctrine-grounded visual question answering dataset for Tactical Combat Casualty Care",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05274",
+      "title": "Answer with Evidence: Consistency-Aware Grounded Visual Question Answering for Roadside Traffic Scenes",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.01637",
+      "title": "Fusing Visual and Textual Representations via Multi-layer Fusing Transformers for Vietnamese Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.37655",
+      "title": "Exemplar2VQA: A Scalable Exemplar-Driven Visual Question Answering Generation Framework via Multi-Agent Coding",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.32427",
+      "title": "CityToolVQA: Tool-Augmented Visual Question Answering for 3D Spatial Cognition in Urban Low-Altitude Environments",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31651",
+      "title": "PalmLeaf-VQA: A Multi-Script Visual Question Answering Benchmark for Historical Palm-Leaf Manuscript Understanding Across Diverse Regions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29604",
+      "title": "PROVE: Proof-guided Regime-aware Operator Verification for Hallucination Detection in Medical Visual Question Answering",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.24098",
+      "title": "A$^2$Safe: Counterfactual Evidence-Aligned Adaptive Agent Collaboration for Safe and Effective Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.21276",
+      "title": "Beyond Exact Match: Task-Aware GRPO for Cross-Domain PCBA Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.20574",
+      "title": "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.17112",
+      "title": "Not Another Text Benchmark: Putting the \"Visual\" Back in Visual Question Answering for Large Video Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.16567",
+      "title": "Counterfactual Reasoning for Robust Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.16565",
+      "title": "Vision And Text Transformer For Predicting Answerability On Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.15603",
+      "title": "A Unified Vision-Language Model for PSMA PET/CT Report Generation, Visual Question Answering, and Lesion Segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.15137",
+      "title": "SparseTalk - Sparsifying 3D Gaussian Language Fields for Efficient 3D Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.14523",
+      "title": "Selective Tool Use for Agentic Change Visual Question Answering in Remote Sensing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.12168",
+      "title": "USPLIT-VQA: U-Shaped Split Learning for Visual Question Answering with Contribution-Aware Weighted Aggregation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.06922",
+      "title": "BEFORE THE FLIP: Measuring Hidden Score Shifts In Quantized Vision Language Models Before The Answer Changes for Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.29408",
+      "title": "An Integrated Vision-and-Language Pretraining (VLP) and Visual Question Answering (VQA) model to Automate Nondestructive Evaluation Image Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.29037",
+      "title": "DocIntent: Answerability-Guided Agentic Restoration for Real-World Document Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.28762",
+      "title": "Inter-3D VQA: A Roadside Multimodal Benchmark for 3D Spatiotemporally Grounded Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.21796",
+      "title": "SAFE-G: Structure-aware Faithful Evidence-guided Generation for Knowledge-based Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.21450",
+      "title": "Beyond Visual Similarity: Entity-Aligned Retrieval for Knowledge-Based Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.21431",
+      "title": "Boosting Knowledge-based Visual Question Answering with Structured Context Reasoning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.19739",
+      "title": "Question-Guided Evidence Acquisition for Multimodal Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.19355",
+      "title": "GRACE: Grounded Reasoning via Adapter Composition and Evidence-Aware Calibration for Educational Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.17129",
+      "title": "MG-VQA: Manipulation Grounded Visual Question Answering with VLMs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.13239",
+      "title": "Reasoning for Social Audio-Visual Question Answering: Where Do We Stand?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.12928",
+      "title": "Polish Medical Visual Question Answering: Vision-Language Models Underutilize Visual Evidence",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.08307",
+      "title": "Frequency-Domain Dual-Branch Fusion for Medical Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.02907",
+      "title": "Bayesian Data Reweighting Improves Multimodal Retrieval for Knowledge-Based Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.01147",
+      "title": "UniHEAR: Unified Heterogeneous-Source Attentive Retrieval for Knowledge-Based Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.29638",
+      "title": "HierDoc: Hierarchical Page-to-Region Evidence Routing for Long-Document Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.23921",
+      "title": "DDVT: Dynamic Dual-level Vision Transformer Fusion Network for Answer Grounding in Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.12048",
+      "title": "An Empirical Analysis of Continual Learning for Heterogeneous Medical Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.10610",
+      "title": "WasteAssistant: Regulation-Guided Visual Question Answering Framework for Intelligent Waste Segregation and Sustainable Managemen",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.07179",
+      "title": "Comparative Study of Domain-adapted VLMs for General Document Visual Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.03825",
+      "title": "Q-TriM: Question-Guided Tri-Modal Attention for Audio-Visual Question Answering",
+      "relevance": 2
+    }
+  ]
+}

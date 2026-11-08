@@ -1,0 +1,256 @@
+{
+  "query_id": "speaker-verification",
+  "query": "Speaker verification using machine learning",
+  "judgments": [
+    {
+      "arxiv_id": "2610.25892",
+      "title": "Manifold-Constrained Residual Adaptation with Frame-Adaptive Layer Aggregation for Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.16390",
+      "title": "QBFF: Deep Quantum Bottleneck for Automatic Speaker Verification Anti-Spoofing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.13760",
+      "title": "OpenSVBench: Diagnosing Speaker Verification Generalization Across Deployment Scenarios",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12539",
+      "title": "Input Representation, Not Model Size or Pretraining Scale, Shapes Speaker Verification Robustness to Temporal Degradation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.11099",
+      "title": "Cross-Lingual Speaker Verification with Self-Supervised Pre-Trained Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.08845",
+      "title": "Unified Shared Encoder in Spoof-Aware Speaker Verification with Hybrid Wavelet Prompt Tuning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.08107",
+      "title": "Exploiting Acoustic and Content-Oriented Speaker Verification Attacks Against Multilingual Voice Anonymization",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.06013",
+      "title": "Character Identity is not Speaker Identity: KyaraBench and KyaraEmbed for Character Verification",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.38491",
+      "title": "Role-guided Speaker Deletion Verification in Clinical Psychiatry Speech Recordings with Audio Language Models",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.37014",
+      "title": "ReDimNet2+: Multi-Corpus Data Scaling for Robust Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.36500",
+      "title": "InterBias-SV: Compound Conditions in Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.33212",
+      "title": "CoLMbo-SV: A Grounded Language Model for Explainable Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.24061",
+      "title": "MECT: Mixture of Experts with CNN-Transformer Network for Speaker verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.23729",
+      "title": "TTS-Guard: Black-Box Ownership Verification of Text-to-Speech Models via Adaptive Adversarial Speaker-Pair Fingerprints",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.01221",
+      "title": "A Unified Uncertainty-Aware Back-End for Speaker Verification: Scoring, Normalization, and Calibration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03623",
+      "title": "Speaker Verification Under Real Classroom Conditions for English Speech",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.22923",
+      "title": "Simple Language Normalization Wins: Cross-Lingual Speaker Verification for the TidyVoice 2026 Challenge",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.19636",
+      "title": "Multimodal Speaker Verification as a Threat to Speaker Anonymization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.16532",
+      "title": "AMECxSV: Adaptive Metadata-Driven Embedding-Fusion Calibration for X-Lingual Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.14753",
+      "title": "Large Audio Language Models for Spoofing-Aware Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.07579",
+      "title": "Text-Independent Speaker Verification Using Discrete Audio Tokens",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.01161",
+      "title": "Disentangling Speaker and Language Effects in Cross-Lingual Speaker Verification for Iberian Languages",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.00899",
+      "title": "Positive-Incentive Noise Predictor for Adversarial Purification in Speaker Verification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.22369",
+      "title": "Kiwano: A Cutting-Edge Open-Source Toolkit for Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.20106",
+      "title": "Personalized Keyword Spotting for User-Defined Keywords Leveraging Text-Independent Speaker Verification",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.17416",
+      "title": "L-Proto: Language-Aware Episodic Prototypical Training for Multilingual Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.16115",
+      "title": "Stabilizing Short Duration Speaker Verification through Neural Re-scoring with Hybrid Enrollment",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.08087",
+      "title": "Assessing the Energy and Carbon Emissions of Neural Speaker Verification Model in Training and Inference",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.08078",
+      "title": "On Low-Bit Quantization Errors in Speaker Verification: Diagnostic and Mitigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.03283",
+      "title": "SpeakerCard-1M: An Evidence-Grounded Corpus for In-the-Wild Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.15044",
+      "title": "SpeakerLLM: A Speaker-Specialized Audio-LLM for Speaker Understanding and Verification Reasoning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.14896",
+      "title": "Text-Dependent Speaker Verification (TdSV) Challenge 2024: Team Naive System Report",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.26327",
+      "title": "Dual-LoRA: Parameter-Efficient Adversarial Disentanglement for Cross-Lingual Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.20229",
+      "title": "Enhancing Speaker Verification with Whispered Speech via Post-Processing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.05683",
+      "title": "Time-Domain Voice Identity Morphing (TD-VIM): A Signal-Level Approach to Morphing Attacks on Speaker Verification Systems",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2604.01590",
+      "title": "PhiNet: Speaker Verification with Phonetic Interpretability",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.24432",
+      "title": "What and When to Learn: CURriculum Ranking Loss for Large-Scale Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.21875",
+      "title": "Disentangling Speaker Traits for Deepfake Source Verification via Chebyshev Polynomial and Riemannian Metric Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.13780",
+      "title": "Integrated Spoofing-Robust Automatic Speaker Verification via a Three-Class Formulation and LLR",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.11841",
+      "title": "ReDimNet2: Scaling Speaker Verification via Time-Pooled Dimension Reshaping",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.10827",
+      "title": "Speaker Verification with Speech-Aware LLMs: Evaluation and Augmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.08092",
+      "title": "Language-Invariant Multilingual Speaker Verification for the TidyVoice 2026 Challenge",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.05577",
+      "title": "Koopman Regularized Deep Speech Disentanglement for Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.13761",
+      "title": "ELEAT-SAGA: Early & Late Integration with Evading Alternating Training for Spoof-Robust Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.19709",
+      "title": "Hyperbolic Additive Margin Softmax with Hierarchical Information for Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.17557",
+      "title": "Spoofing-Aware Speaker Verification via Wavelet Prompt Tuning and Multi-Model Ensembles",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.16358",
+      "title": "TidyVoice: A Curated Multilingual Dataset for Speaker Verification Derived from Common Voice",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.14699",
+      "title": "Triage knowledge distillation for speaker verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.13999",
+      "title": "DAME: Duration-Aware Matryoshka Embedding for Duration-Robust Speaker Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.13198",
+      "title": "The Achilles' Heel of Angular Margins: A Chebyshev Polynomial Fix for Speaker Verification",
+      "relevance": 3
+    }
+  ]
+}

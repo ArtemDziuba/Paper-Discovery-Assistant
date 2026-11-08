@@ -1,0 +1,256 @@
+{
+  "query_id": "knowledge-graph-completion",
+  "query": "Knowledge graph completion and link prediction",
+  "judgments": [
+    {
+      "arxiv_id": "2007.12374",
+      "title": "A Survey on Graph Neural Networks for Knowledge Graph Completion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1703.08098",
+      "title": "An overview of embedding models of entities and relationships for knowledge base completion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1902.00898",
+      "title": "A Relational Tucker Decomposition for Multi-Relational Link Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2402.04062",
+      "title": "Link Prediction with Relational Hypergraphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1902.10197",
+      "title": "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2302.02209",
+      "title": "A Theory of Link Prediction via Relational Weisfeiler-Leman",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1710.08502",
+      "title": "Convolutional Neural Knowledge Graph Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.23141",
+      "title": "Context-Driven Knowledge Graph Completion with Semantic-Aware Relational Message Passing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1708.06816",
+      "title": "Analysis of the Impact of Negative Sampling on Link Prediction in Knowledge Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.11347",
+      "title": "Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1412.6575",
+      "title": "Embedding Entities and Relations for Learning and Inference in Knowledge Bases",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.04997",
+      "title": "Beyond Transduction: A Survey on Inductive, Few Shot, and Zero Shot Link Prediction in Knowledge Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.04814",
+      "title": "Revisiting Inferential Benchmarks for Knowledge Graph Completion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.02457",
+      "title": "A Survey on Temporal Knowledge Graph Completion: Taxonomy, Progress, and Prospects",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.11917",
+      "title": "A Benchmark for Semi-Inductive Link Prediction in Knowledge Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2301.01172",
+      "title": "A Survey On Few-shot Knowledge Graph Completion with Structural and Commonsense Knowledge",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1911.06962",
+      "title": "Inductive Relation Prediction by Subgraph Reasoning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1807.10511",
+      "title": "Global and Local Evaluation of Link Prediction Tasks with Neural Embeddings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1711.05401",
+      "title": "Revisiting Simple Neural Networks for Learning Representations of Knowledge Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.22981",
+      "title": "Hierarchy-Aware Semantic Losses for Knowledge Graph Link Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2105.12524",
+      "title": "Out-of-Vocabulary Entities in Link Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2109.09566",
+      "title": "Combining Rules and Embeddings via Neuro-Symbolic AI for Knowledge Base Completion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2309.12501",
+      "title": "Knowledge Graph Embedding: An Overview",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2107.07842",
+      "title": "A Survey of Knowledge Graph Embedding and Their Applications",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2002.02406",
+      "title": "Message Passing for Query Answering over Knowledge Graphs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2402.15140",
+      "title": "A Relation-Interactive Approach for Message Passing in Hyper-relational Knowledge Graphs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2212.05581",
+      "title": "Efficient Relation-aware Neighborhood Aggregation in Graph Neural Networks via Tensor Decomposition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1905.04914",
+      "title": "Learning to Exploit Long-term Relational Dependencies in Knowledge Graphs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2210.06418",
+      "title": "Relational Graph Convolutional Neural Networks for Multihop Reasoning: A Comparative Study",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2212.05767",
+      "title": "Reasoning over Different Types of Knowledge Graphs: Static, Temporal and Multi-Modal",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2205.09088",
+      "title": "A Birds Eye View on Knowledge Graph Embeddings, Software Libraries, Applications and Challenges",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.08169",
+      "title": "Few-Shot Inductive Learning on Temporal Knowledge Graphs using Concept-Aware Information",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2005.00637",
+      "title": "A Joint Framework for Inductive Representation Learning and Explainable Reasoning in Knowledge Graphs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2301.08859",
+      "title": "Logical Message Passing Networks with One-hop Inference on Atomic Formulas",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2106.08166",
+      "title": "Query Embedding on Hyper-relational Knowledge Graphs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1905.10417",
+      "title": "Differentiable Representations For Multihop Inference Rules",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.18897",
+      "title": "HEHRGNN: A Unified Embedding Model for Knowledge Graphs with Hyperedges and Hyper-Relational Edges",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.18106",
+      "title": "A Unified Temporal Knowledge Graph Reasoning Model Towards Interpolation and Extrapolation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.11012",
+      "title": "A Survey of Task-Oriented Knowledge Graph Reasoning: Status, Applications, and Prospects",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2307.00865",
+      "title": "A Survey on Graph Classification and Link Prediction based on GNN",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2010.13688",
+      "title": "A Survey of Embedding Space Alignment Methods for Language and Knowledge Graphs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2209.14464",
+      "title": "Neural Methods for Logical Reasoning over Knowledge Graphs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1811.04132",
+      "title": "Reasoning over RDF Knowledge Bases using Deep Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2602.12389",
+      "title": "Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2210.08654",
+      "title": "Learning to Sample and Aggregate: Few-shot Reasoning over Temporal Knowledge Graphs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1512.06900",
+      "title": "Predicting the co-evolution of event and Knowledge Graphs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2205.08777",
+      "title": "Entity Alignment For Knowledge Graphs: Progress, Challenges, and Empirical Studies",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2306.02871",
+      "title": "Text-To-KG Alignment: Comparing Current Methods on Classification Tasks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1812.02536",
+      "title": "Deep Learning Approaches for Question Answering on Knowledge Bases: an evaluation of architectural design choices",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2003.03239",
+      "title": "On the Role of Conceptualization in Commonsense Knowledge Graph Construction",
+      "relevance": 0
+    }
+  ]
+}

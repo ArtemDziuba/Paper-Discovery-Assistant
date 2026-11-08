@@ -12,7 +12,7 @@ def test_initial_page_and_empty_input():
     app = AppTest.from_file(APP).run(timeout=30)
     assert not app.exception
     assert app.title[0].value == "Paper Discovery Assistant"
-    assert "Fine-tuned" in app.selectbox[0].options
+    assert "syntetic finetune v1" in app.selectbox[0].options
     app.selectbox[0].select("TF-IDF baseline")
     app.button[0].click().run(timeout=30)
     assert not app.exception
@@ -78,7 +78,8 @@ def test_10000_limit_and_partial_warning(monkeypatch):
     assert any("Only part" in warning.value for warning in app.warning)
 
 
-def test_finetuned_selection_loads_local_artifact(monkeypatch):
+@pytest.mark.parametrize("label", ["syntetic finetune v1", "syntetic finetune v2"])
+def test_finetuned_selection_loads_local_artifact(monkeypatch, label):
     import numpy as np
     from test_pipeline import paper
 
@@ -89,7 +90,7 @@ def test_finetuned_selection_loads_local_artifact(monkeypatch):
 
     class Encoder:
         model = object()
-        model_name = "pda/finetuned-minilm"
+        model_name = "pda/syntetic-finetune-v1"
         model_revision = "test-run"
 
         def score_documents(self, query, documents, progress=None):
@@ -102,8 +103,8 @@ def test_finetuned_selection_loads_local_artifact(monkeypatch):
     monkeypatch.setattr(ranking, "SemanticEncoder", factory)
     monkeypatch.setattr(ArxivClient, "search", lambda *args, **kwargs: ([paper()], {}))
     app = AppTest.from_file(APP).run(timeout=30)
-    app.selectbox[0].select("Fine-tuned")
+    app.selectbox[0].select(label)
     app.text_area[0].input("graph learning")
     app.button[0].click().run(timeout=30)
     assert not app.exception and not app.error
-    assert calls == [("cpu", ranking.FINETUNED_PATH)]
+    assert calls == [("cpu", ranking.FINETUNED_OPTIONS[label])]

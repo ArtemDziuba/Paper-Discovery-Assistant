@@ -1,0 +1,256 @@
+{
+  "query_id": "audio-source-separation",
+  "query": "Audio source separation",
+  "judgments": [
+    {
+      "arxiv_id": "2610.38624",
+      "title": "SelectSep: Target-Selective Video Queries for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14993",
+      "title": "Learning Where to Split: Dynamic Band Splitting for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.10025",
+      "title": "A Study on Improving Multi-class Audio Source Separation Via Decoupled CLAP Query Optimization and an Automated Data Engine",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.23453",
+      "title": "LiteCASS: A Lightweight End-to-End Network for Real-Time Stereo Cinematic Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.12201",
+      "title": "Real-Time Music Source Separation on a Low-Power Audio DSP",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.22111",
+      "title": "FlowSep 2: Self-Supervised Flow Matching for Language-Queried Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.27403",
+      "title": "A Knowledge-Driven Approach to Target Speech Extraction in the Presence of Background Sound Effects for Cinematic Audio Source Separation (CASS)",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.12480",
+      "title": "Audio Source Separation in Reverberant Environments using $β$-divergence based Nonnegative Factorization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.26113",
+      "title": "Cinematic Audio Source Separation Using Visual Cues",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.21476",
+      "title": "A Knowledge-Driven Approach to Music Segmentation, Music Source Separation and Cinematic Audio Source Separation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2601.14684",
+      "title": "Dissecting Performance Degradation in Audio Source Separation under Sampling Frequency Mismatch",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.07226",
+      "title": "Unsupervised Single-Channel Audio Separation with Diffusion Source Priors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.20850",
+      "title": "Can large audio language models understand child stuttering speech? speech summarization, and source separation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2507.17297",
+      "title": "On Temporal Guidance and Iterative Refinement in Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.00155",
+      "title": "Do Music Source Separation Models Preserve Spatial Information in Binaural Audio?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.16833",
+      "title": "Hybrid-Sep: Language-queried audio source separation via pre-trained Model Fusion and Adversarial Diffusion Training",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.02858",
+      "title": "DGMO: Training-Free Audio Source Separation through Diffusion-Guided Mask Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.02499",
+      "title": "DnR-nonverbal: Cinematic Audio Source Separation Dataset Containing Non-Verbal Sounds",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.21025",
+      "title": "Text-Queried Audio Source Separation via Hierarchical Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.19534",
+      "title": "Training-Free Multi-Step Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.04621",
+      "title": "Score Distillation Sampling for Audio: Source Separation, Synthesis, and Beyond",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.21366",
+      "title": "DGFNet: End-to-End Audio-Visual Source Separation Based on Dynamic Gating Fusion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.13292",
+      "title": "Exploring Text-Queried Sound Event Detection with Audio Source Separation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2408.03588",
+      "title": "Facing the Music: Tackling Singing Voice Separation in Cinematic Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.07275",
+      "title": "Remastering Divide and Remaster: A Cinematic Audio Source Separation Dataset with Multilingual Support",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2407.04936",
+      "title": "A Reference-free Metric for Language-Queried Audio Source Separation using Contrastive Language-Audio Pretraining",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2407.03736",
+      "title": "Semantic Grouping Network for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.11248",
+      "title": "Performance Improvement of Language-Queried Audio Source Separation Based on Caption Augmentation From Large Language Models for DCASE Challenge 2024 Task 9",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.11275",
+      "title": "Jointly Recognizing Speech and Singing Voices Based on Multi-Task Audio Source Separation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2310.00140",
+      "title": "GASS: Generalizing Audio Source Separation with Large-scale Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2309.02539",
+      "title": "A Generalized Bandsplit Neural Network for Cinematic Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.04960",
+      "title": "Representation Learning for Audio Privacy Preservation using Source Separation and Robust Adversarial Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2306.10684",
+      "title": "Visually-Guided Sound Source Separation with Audio-Visual Predictive Coding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.16342",
+      "title": "Language-Guided Audio-Visual Source Separation via Trimodal Consistency",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.01864",
+      "title": "Spectrogram Inversion for Audio Source Separation via Consistency, Mixing, and Magnitude Constraints",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2212.05008",
+      "title": "Hyperbolic Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.15524",
+      "title": "Differentiable Dictionary Search: Integrating Linear Mixing with Deep Non-Linear Modelling for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.16472",
+      "title": "Learning Audio-Visual Dynamics Using Scene Graphs for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2203.15147",
+      "title": "Separate What You Describe: Language-Queried Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2203.10072",
+      "title": "RoSS: Utilizing Robotic Rotation for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2202.00850",
+      "title": "Active Audio-Visual Separation of Dynamic Sound Sources",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2201.05013",
+      "title": "Fish sounds: towards the evaluation of marine acoustic biodiversity through data-driven audio source separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2112.07891",
+      "title": "Zero-shot Audio Source Separation through Query-based Learning from Weakly-labeled Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2110.05054",
+      "title": "Source Mixing and Separation Robust Audio Steganography",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2109.11955",
+      "title": "Visual Scene Graphs for Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2109.00704",
+      "title": "Multichannel Audio Source Separation with Independent Deeply Learned Matrix Analysis Using Product of Source Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2107.06467",
+      "title": "Multi-Task Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.05529",
+      "title": "Independent Deeply Learned Tensor Analysis for Determined Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.03492",
+      "title": "Empirical Bayesian Independent Deeply Learned Matrix Analysis For Multichannel Audio Source Separation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2105.07142",
+      "title": "Move2Hear: Active Audio-Visual Source Separation",
+      "relevance": 3
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "query_id": "monocular-depth-estimation",
+  "query": "Monocular depth estimation",
+  "judgments": [
+    {
+      "arxiv_id": "2611.04491",
+      "title": "SPA-Q: Structure-Preserving Adaptive Post-Training Quantization for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.41190",
+      "title": "FlowMoDE: Coarse-to-fine Flow Matching for Detail-aware Sim-to-Real Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38080",
+      "title": "Efficacy of Monocular Depth Estimation in Lunar Environments",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.35018",
+      "title": "Zero-Shot Monocular Depth Estimation for Visual Perception in Lower-Limb Prostheses",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27199",
+      "title": "Which Depth Estimator for Jetson AGX Orin? A 2026 Benchmark of Monocular and Stereo Methods",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.24506",
+      "title": "SAP-Depth: Scene-Adaptive Probability Framework for Self-Supervised Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.17610",
+      "title": "OpenDepth: Repurposing Image Editing Priors for Robust Open-World Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.07982",
+      "title": "M3SunAgent: Monocular 3D Spatial Understanding Agent for Metric Depth Estimation and 3D Visual Grounding",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05029",
+      "title": "SPACE-CLIPv2: Decoding Local Geometry from Frozen CLIP for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03439",
+      "title": "Depth Hypothesis Guided Iterative Refinement for Event-Image Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.36929",
+      "title": "SFE-VGGT: Source-Free VGGT Distillation for Event-Based Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.33939",
+      "title": "EpiTransfer: Sparse, Training-Free Long-Range Depth Estimation from Temporal Monocular Aerial Frames",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.30987",
+      "title": "Self-Supervised Perceptually Interpretable Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.24494",
+      "title": "CMAMBADEPTH: Self-supervised Monocular Depth Estimation with Channel Mamba and Hybrid Attention",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.08084",
+      "title": "Marigold V2: Revisiting Diffusion Transformers for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.05972",
+      "title": "Efficient and Robust Camera-independent Multiview 3D Geometric Reconstruction from Noisy Monocular Depth Estimation and Multiple Point Matching",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.01172",
+      "title": "Monocular Depth Estimation from a Single Image: Progress and Opportunities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.16984",
+      "title": "PXDepth: Pixel-Space Modeling for Structure Preserving Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03666",
+      "title": "XiDepth: a Lightweight and Efficient Network for Self-supervised Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.02068",
+      "title": "GIFT: Geometry-Invariant Fine-Tuning for Non-Lambertian Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.00678",
+      "title": "Breaking the Horizontal Prior: From Long-Tailed Orientation Bias to Roll-Robust Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.28285",
+      "title": "Beyond Visual Ambiguity: Guiding Robust Monocular Depth Estimation in Challenging Scenarios via Detailed Long Captions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.26600",
+      "title": "JEPADepth: Masked Predictive Representation Learning for Self-Supervised Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.21438",
+      "title": "DAPM: UAV Monocular Depth Estimation from Any Height, Pitch, Roll and FOV",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.12433",
+      "title": "ARDepth: Auto-regressive Monocular Depth Estimation with Progressive Visual Conditioning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.00736",
+      "title": "Towards Robust Driving Perception: A Flexible Scale-Driven Family for Self-Supervised Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.29716",
+      "title": "AerialMetric: Benchmarking and Adapting UAV Monocular Metric Depth Estimation in the Real World",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.15681",
+      "title": "3D Consistency Optimization for Self-Supervised Monocular Video Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.12368",
+      "title": "DepthMaster: Unified Monocular Depth Estimation for Perspective and Panoramic Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.28477",
+      "title": "SA4Depth: Consistent Pose-Depth Scale Alignment for Self-Supervised Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.19797",
+      "title": "Depth2Pose: A Pose-Based Benchmark for Monocular Depth Estimation without Ground-Truth Depth",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.11756",
+      "title": "Focusable Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.10675",
+      "title": "Neuromorphic Monocular Depth Estimation with Uncertainty Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.10251",
+      "title": "Efficient Hybrid CNN-GNN Architecture for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.26454",
+      "title": "Last-Layer-Centric Feature Recombination: Unleashing 3D Geometric Knowledge in DINOv3 for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.24328",
+      "title": "Monocular Depth Estimation via Neural Network with Learnable Algebraic Group and Ring Structures",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.11097",
+      "title": "CDPR: Cross-modal Diffusion with Polarization for Reliable Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.09352",
+      "title": "LuMon: A Comprehensive Benchmark and Development Suite with Novel Datasets for Lunar Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.07665",
+      "title": "Adaptive Depth-converted-Scale Convolution for Self-supervised Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.07664",
+      "title": "Monocular Depth Estimation From the Perspective of Feature Restoration: A Diffusion Enhanced Depth Restoration Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.06576",
+      "title": "LiftFormer: Lifting and Frame Theory Based Monocular Depth Estimation Using Depth and Edge Oriented Subspace Representation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.01791",
+      "title": "PTC-Depth: Pose-Refined Monocular Depth Estimation with Temporal Consistency",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.01118",
+      "title": "Lightweight Prompt-Guided CLIP Adaptation for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.27533",
+      "title": "Demo-Pose: Depth-Monocular Modality Fusion For Object Pose Estimation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2603.16362",
+      "title": "$D^3$-RSMDE: 40$\\\\times$ Faster and High-Fidelity Remote Sensing Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.16340",
+      "title": "Iris: Bringing Real-World Priors into Diffusion Model for Monocular Depth Estimation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.16238",
+      "title": "PureCLIP-Depth: Prompt-Free and Decoder-Free Monocular Depth Estimation within CLIP Embedding Space",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.14998",
+      "title": "Thermal Image Refinement with Depth Estimation using Recurrent Networks for Monocular ORB-SLAM3",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.10438",
+      "title": "AsyncMDE: Real-Time Monocular Depth Estimation via Asynchronous Spatial Memory",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.03571",
+      "title": "Confidence-aware Monocular Depth Estimation for Minimally Invasive Surgery",
+      "relevance": 3
+    }
+  ]
+}

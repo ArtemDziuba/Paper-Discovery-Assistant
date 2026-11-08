@@ -14,8 +14,11 @@ def base_id(identifier: str) -> str:
     return re.sub(r"v\d+$", "", identifier)
 
 
-def load_annotations(folder: Path, source: str) -> tuple[list[dict], dict]:
+def load_annotations(
+    folder: Path, source: str, *, deduplicate: bool = True
+) -> tuple[list[dict], dict]:
     queries = {}
+    preserved = []
     hashes = {}
     for path in sorted(folder.glob("*.json")):
         raw = path.read_bytes()
@@ -27,26 +30,31 @@ def load_annotations(folder: Path, source: str) -> tuple[list[dict], dict]:
             if not isinstance(identifier, str) or not identifier.strip() or not text.strip():
                 raise ValueError(f"Empty query identity in {path}")
             judgments = {}
+            occurrences = []
             for item in row["judgments"]:
                 grade = item["relevance"]
                 if type(grade) is not int or grade not in range(4):
                     raise ValueError(f"Expected integer relevance 0–3 in {path}")
                 paper_id = base_id(item["arxiv_id"])
-                if paper_id in judgments and judgments[paper_id] != item:
+                if deduplicate and paper_id in judgments and judgments[paper_id] != item:
                     raise ValueError(f"Conflicting paper judgment {paper_id} in {path}")
                 judgments[paper_id] = dict(item)
+                occurrences.append(dict(item))
             record = {
                 "query_id": identifier,
                 "query": text,
-                "judgments": list(judgments.values()),
+                "judgments": list(judgments.values()) if deduplicate else occurrences,
                 "source": source,
             }
+            if not deduplicate:
+                preserved.append({**record, "source_file": str(path)})
+                continue
             if identifier in queries and queries[identifier] != record:
                 raise ValueError(f"Conflicting duplicate query {identifier}")
             queries[identifier] = record
-    if not queries:
+    if not queries and not preserved:
         raise ValueError(f"No annotation files in {folder}")
-    return list(queries.values()), hashes
+    return list(queries.values()) if deduplicate else preserved, hashes
 
 
 def title_agreement(expected: str, actual: str) -> float:

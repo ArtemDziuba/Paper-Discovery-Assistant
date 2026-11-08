@@ -4,16 +4,54 @@ Requirements: Python 3.12 or later and uv. Run from the repository root:
 
 For the final human/synthetic ranking comparison and the commands to reproduce it, see
 ranking-evaluation.md. Run `uv run --extra cuda python scripts/evaluate_annotations.py`
-to evaluate all three methods on the human set and the two baselines on the synthetic set.
+to evaluate available methods on the fixed two human and ten synthetic batches. V2 is included
+automatically when models/syntetic-finetune-v2/training_manifest.json is present. The frozen
+snapshot is evaluation/annotations/prepared.json and results go to evaluation/results/.
+Use a new --output path when repeating a run; existing reports are not overwritten.
+The default --mode truncated reports primary nDCG@10/Precision@5 plus MAP@10/pairwise
+accuracy. Use --mode full for all requested cutoffs; see full-ranking-evaluation.md for
+commands and the executed results saved in evaluation/results/ranking-comparison-full.json.
 
 ```powershell
 uv sync
 uv run streamlit run app.py
 ```
 
-Open the localhost URL printed by Streamlit. The initial semantic search downloads the
-encoder from Hugging Face. Subsequent inference runs locally. Internet is required for
-uncached arXiv searches. Select TF-IDF baseline to run without any model download.
+Open the localhost URL printed by Streamlit. The first semantic search sets up the pinned
+encoder under models/all-MiniLM-L6-v2. It reuses already cached Hugging Face weights when
+available, otherwise downloading the model. Later launches load weights, tokenizer and
+configuration directly from that project folder with local_files_only=True. No model-server
+connection is needed after setup. Uncached arXiv searches still need internet. Select TF-IDF
+baseline to run without model setup.
+
+The folder is independent of models/finetuned-minilm and is excluded from Git by the existing
+models/ rule. The pda_source.json file records the pinned base model and revision; keep it
+alongside the complete saved model. Setup publishes the folder only after saving succeeds,
+so an interrupted setup can be retried. An existing folder with missing/incorrect source
+metadata or unreadable weights produces an error without automatic re-downloading. Restore
+the complete folder, or rename it and retry to create a fresh installation.
+
+On Windows, the model folder must be readable by the account running Streamlit. An earlier
+setup used owner-only temporary-directory permissions; publishing that folder from the coding
+sandbox blocked the normal user's access, which appeared as a revision error. The existing
+installation's inherited permissions were restored on 2026-11-08, and setup now preserves
+project permission inheritance. Access-denied source reads now have a distinct diagnostic.
+Offline CUDA loading was verified under the normal Windows account in
+evaluation/model-storage-user-account.json; model weights were not changed.
+
+To set up the base model before opening the app and verify offline loading:
+
+```powershell
+uv run --extra cuda python scripts/verify_model_storage.py --device cuda
+```
+
+This command also checks that the saved model produces the same sample embeddings as the
+pinned encoder in the Hugging Face cache, so retaining that cache is needed for its reference
+comparison. Normal app loading uses only the project folder after setup. The command saves
+evaluation/model-storage.json; use a new --output path for another verification. It blocks
+socket connections during the second load and sample inference. The executed 2026-11-08 run
+passed on CUDA with zero observed embedding difference for three texts. Its timings are
+within one already imported process and do not establish faster complete application startup.
 
 If retrieval fails, inspect the specific connection, timeout, or HTTP error shown in the
 interface and the terminal log. Run the command above in your own terminal; a server
@@ -46,11 +84,17 @@ restore the default CPU dependency selection. The CUDA build also supports CPU i
 Selecting cuda in the interface cannot add CUDA support to a CPU-only PyTorch build.
 The app checks availability before model loading and reports an actionable error.
 
-The Ranking selector also offers Fine-tuned, using the saved local model under
+The Ranking selector also offers `syntetic finetune v1`, using the saved local model under
 models/finetuned-minilm. It is an experimental alternative; the original Semantic option
 performed better on the two human evaluation queries and remains the default. See
-finetuning.md for the comparison and reproduction commands. If the weights are absent,
-prepare metadata with scripts/prepare_finetuning.py and train with scripts/train_ranker.py.
+finetuning.md for its original training experiment and ranking-evaluation.md for the current
+comparison. If the v1 weights are absent, restore the saved artifact for that training run.
+The old prepare_finetuning.py script describes v1 and must not be used with the revised
+evaluation set. V2 now has dedicated prepare_finetuning_v2.py and train_ranker_v2.py scripts
+using all 45 finetune_data/encoder batches; see finetuning-v2.md for parameters and plots.
+The selector includes syntetic finetune v2, loading models/syntetic-finetune-v2. Its combined
+human/synthetic development set selected the checkpoint, while standalone reports remain
+separated. The executed four-model full comparison is evaluation/results/ranking-comparison-full-v2.json.
 Restart Streamlit after creating or replacing model artifacts.
 
 Topic interpretation removes common leading request phrases and joins remaining concepts

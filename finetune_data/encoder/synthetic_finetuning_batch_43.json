@@ -1,0 +1,256 @@
+{
+  "query_id": "protein-structure-prediction",
+  "query": "Protein structure prediction with deep learning",
+  "judgments": [
+    {
+      "arxiv_id": "2611.04287",
+      "title": "Predicting protein structures at any folding stage from sequence",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03183",
+      "title": "Auto-Research Agent on MSA Organization to Improve Protein-Protein Complex Structure Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.14939",
+      "title": "Applying Deep Reinforcement Learning to the HP Model for Protein Structure Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.24842",
+      "title": "Towards Accurate Prediction of Mutation-Induced Changes in Protein Structure",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.02113",
+      "title": "Logarithmic-scale variational quantum eigensolver for off-lattice protein structure prediction in continuous torsional angle space",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.16094",
+      "title": "Protein Structure Prediction: From Evolutionary Constraints to Generative Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.12192",
+      "title": "How to Spend Your Oracle Budget: Practical Guidance for Protein Structure Prediction Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.02866",
+      "title": "Expanding Protein Structure Prediction into Conformational State Space",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.22549",
+      "title": "QFoldAgent: An Autonomous Quantum Optimization Multi-Agent System for Protein Structure Prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.21241",
+      "title": "Assessing Cost Hamiltonian Reliability in Quantum Protein Structure Prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.08647",
+      "title": "Protein Dynamics Beyond Structure Prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.04452",
+      "title": "DeltaDiff: Training-Free, Physics-Guided Machine Learning for Predicting Mutant Protein Structures",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2209.08171",
+      "title": "Deep learning for reconstructing protein structures from cryo-EM density maps: recent advances and future directions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.01781",
+      "title": "Structure-Guided Adaptive Propagation for Protein-Protein Interaction Site Prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2605.22133",
+      "title": "Atom-level Protein Representation Learning Improves Protein Structure Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.29529",
+      "title": "Sampling at intermediate temperatures is optimal for training large language models in protein structure prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.13594",
+      "title": "DRLComplex: Reconstruction of protein quaternary structures using deep reinforcement learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.18505",
+      "title": "From Snapshots to Symphonies: The Evolution of Protein Prediction from Static Structures to Generative Dynamics and Multimodal Interactions",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.12293",
+      "title": "Multi-objective Genetic Programming with Multi-view Multi-level Feature for Enhanced Protein Secondary Structure Prediction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.13160",
+      "title": "Descriptive power and predictive limits of a discrete Hasimoto--DNLS model of protein backbone structure",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2601.07201",
+      "title": "CalPro: Prior-Aware Evidential--Conformal Prediction with Structure-Aware Guarantees for Protein Structures",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.08613",
+      "title": "Protein Secondary Structure Prediction Using Transformers",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.14781",
+      "title": "Quantifying the Role of OpenFold Components in Protein Structure Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.13685",
+      "title": "Protein Secondary Structure Prediction Using 3D Graphs and Relation-Aware Message Passing Transformers",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2201.12041",
+      "title": "Rapid protein assignments and structures from raw NMR spectra with the deep learning technique ARTINA",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.06413",
+      "title": "A Hybrid Quantum-AI Framework for Protein Structure Prediction on NISQ Devices",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.04126",
+      "title": "Attending on Multilevel Structure of Proteins enables Accurate Prediction of Cold-Start Drug-Target Interactions",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2509.22950",
+      "title": "Twin Peaks: Dual-Head Architecture for Structure-Free Prediction of Protein-Protein Binding Affinity and Mutation Effects",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2509.18263",
+      "title": "Efficient Quantum Protein Structure Prediction with Problem-Agnostic Ansatzes",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2507.09054",
+      "title": "Conformation-Aware Structure Prediction of Antigen-Recognizing Immune Proteins",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.08955",
+      "title": "Quantum Algorithm for Protein Structure Prediction Using the Face-Centered Cubic Lattice",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2507.08188",
+      "title": "Unavailability of experimental 3D structural data on protein folding dynamics and necessity for a new generation of structure prediction methods in this context",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2012.09741",
+      "title": "On the performance of deep learning for numerical optimization: an application to protein structure prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.02883",
+      "title": "DISPROTBENCH: Uncovering the Functional Limits of Protein Structure Prediction Models in Intrinsically Disordered Regions",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.22677",
+      "title": "A Quantum Framework for Protein Binding-Site Structure Prediction on Utility-Level Quantum Processors",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2506.06004",
+      "title": "Into the Unknown: From Structure to Disorder in Protein Function Prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2506.04490",
+      "title": "Multiscale guidance of protein structure prediction with heterogeneous cryo-EM data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.14958",
+      "title": "Modeling and prediction of mutation fitness on protein functionality with structural information using high-dimensional Potts model",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2505.05893",
+      "title": "LightNobel: Improving Sequence Length Limitation in Protein Structure Prediction Model via Adaptive Activation Quantization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.16886",
+      "title": "Exploring zero-shot structure-based protein fitness prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2504.04654",
+      "title": "EquiCPI: SE(3)-Equivariant Geometric Deep Learning for Structure-Aware Prediction of Compound-Protein Interactions",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2504.01490",
+      "title": "Deep Learning-Driven Protein Structure Prediction and Design: Key Model Developments by Nobel Laureates and Multi-Domain Applications",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.13522",
+      "title": "Advanced Deep Learning Methods for Protein Structure Prediction and Design",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.08764",
+      "title": "Towards Interpretable Protein Structure Prediction with Sparse Autoencoders",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.00143",
+      "title": "RecCrysFormer: Refined Protein Structural Prediction from 3D Patterson Maps via Recycling Training Runs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.17294",
+      "title": "Integrating protein sequence embeddings with structure via graph-based deep learning for single-residue property prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2502.00508",
+      "title": "PyMOLfold: Interactive Protein and Ligand Structure Prediction in PyMOL",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.20329",
+      "title": "Protein Structure Prediction in the 3D HP Model Using Deep Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.11366",
+      "title": "SCOP: A Sequence-Structure Contrast-Aware Framework for Protein Function Prediction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2410.23321",
+      "title": "Beyond Current Boundaries: Integrating Deep Learning and AlphaFold for Enhanced Protein Structure Prediction from Low-Resolution Cryo-EM Maps",
+      "relevance": 3
+    }
+  ]
+}

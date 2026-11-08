@@ -1,0 +1,256 @@
+{
+  "query_id": "reinforcement-learning-navigation",
+  "query": "Reinforcement learning for autonomous navigation",
+  "judgments": [
+    {
+      "arxiv_id": "2005.13857",
+      "title": "Deep Reinforcement learning for real autonomous mobile robot navigation in indoor environments",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.02902",
+      "title": "Sim-to-Real Transfer for Mobile Robots with Reinforcement Learning: from NVIDIA Isaac Sim to Gazebo and Real ROS 2 Robots",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.05744",
+      "title": "Parallel Distributional Deep Reinforcement Learning for Mapless Navigation of Terrestrial Mobile Robots",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2302.09120",
+      "title": "Robot path planning using deep reinforcement learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.15846",
+      "title": "FlashNav: Training Deployable Robot Navigation Policies in Seconds",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1706.09829",
+      "title": "Towards Monocular Vision based Obstacle Avoidance through Deep Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1610.01733",
+      "title": "Towards Cognitive Exploration through Deep Reinforcement Learning for Mobile Robots",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.05243",
+      "title": "Vision-based navigation and obstacle avoidance via deep reinforcement learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.16266",
+      "title": "Deep Reinforcement Learning with Enhanced PPO for Safe Mobile Robot Navigation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2101.01774",
+      "title": "An A* Curriculum Approach to Reinforcement Learning for RGBD Indoor Robot Navigation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.29934",
+      "title": "RoamFlow: Reinforcement-Aligned One-Step Action MeanFlow Policy for Image-Goal Navigation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1909.13599",
+      "title": "End-to-End Motion Planning of Quadrotors Using Deep Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.18734",
+      "title": "Learning Obstacle Avoidance using Double DQN for Quadcopter Navigation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.14568",
+      "title": "Evaluation of Safety Constraints in Autonomous Navigation with Deep Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.24651",
+      "title": "Hybrid Motion Planning with Deep Reinforcement Learning for Mobile Robot Navigation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2209.11789",
+      "title": "Safe Real-World Reinforcement Learning for Mobile Agent Obstacle Avoidance",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.04668",
+      "title": "Optimizing Path Planning using Deep Reinforcement Learning for UGVs in Precision Agriculture",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1807.05211",
+      "title": "Learning Deployable Navigation Policies at Kilometer Scale from a Single Traversal",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2201.10335",
+      "title": "Tracking and Planning with Spatial World Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2003.03220",
+      "title": "Deep Active Inference for Autonomous Robot Navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1612.07139",
+      "title": "A Survey of Deep Network Solutions for Learning Control in Robotics: From Reinforcement to Imitation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2110.00910",
+      "title": "AI based Algorithms of Path Planning, Navigation and Control for Mobile Ground Robots and UAVs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1803.01446",
+      "title": "Learning to Sequence Robot Behaviors for Visual Navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2212.08801",
+      "title": "Comparison of Model-Free and Model-Based Learning-Informed Planning for PointGoal Navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2207.08021",
+      "title": "Role of reward shaping in object-goal navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1912.11474",
+      "title": "Audio-Visual Embodied Navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.03953",
+      "title": "RVN-Bench: A Benchmark for Reactive Visual Navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.15876",
+      "title": "Instance-Specific Image Goal Navigation: Training Embodied Agents to Find Object Instances",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.11746",
+      "title": "Last-Mile Embodied Visual Navigation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.16248",
+      "title": "Optimizing Low-Speed Autonomous Driving: A Reinforcement Learning Approach to Route Stability and Maximum Speed",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2503.22248",
+      "title": "CRLLK: Constrained Reinforcement Learning for Lane Keeping in Autonomous Driving",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.02372",
+      "title": "Path Planning Using Wassertein Distributionally Robust Deep Q-learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1905.09046",
+      "title": "A Deep Reinforcement Learning Driving Policy for Autonomous Road Vehicles",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1906.08464",
+      "title": "A Hierarchical Architecture for Sequential Decision-Making in Autonomous Driving using Deep Reinforcement Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2407.16857",
+      "title": "SECRM-2D: RL-Based Efficient and Comfortable Route-Following Autonomous Driving with Analytic Safety Guarantees",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.14857",
+      "title": "Towards Perception-based Collision Avoidance for UAVs when Guiding the Visually Impaired",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2006.08967",
+      "title": "Robot Perception enables Complex Navigation Behavior via Self-Supervised Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2108.04097",
+      "title": "Deep Learning for Embodied Vision Navigation: A Survey",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2411.05755",
+      "title": "End-to-End Navigation with Vision Language Models: Transforming Spatial Reasoning into Question-Answering",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.20388",
+      "title": "Navi-Agent: Unlocalized Monocular Navigation Agent",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2106.15648",
+      "title": "Learning to Map for Active Semantic Goal Navigation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.13624",
+      "title": "From Language to Navigation Goals: A Vision-Language Approach for Semantic Navigation of Mobile Robots Using RGB-D Perception",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2606.28760",
+      "title": "Vision-Language Models for Deployable Social Robot Navigation: Bridging Semantic Reasoning and Low-Level Control",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2305.14268",
+      "title": "Masked Path Modeling for Vision-and-Language Navigation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2402.14304",
+      "title": "Vision-Language Navigation with Embodied Intelligence: A Survey",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2501.05750",
+      "title": "Semantic Mapping in Indoor Embodied AI - A Survey on Advances, Challenges, and Future Directions",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2506.02556",
+      "title": "Sign Language: Towards Sign Understanding for Robot Autonomy",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2102.02376",
+      "title": "A review of motion planning algorithms for intelligent robotics",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2602.06427",
+      "title": "Bridging the Indoor-Outdoor Gap: Vision-Centric Instruction-Guided Embodied Navigation for the Last Meters",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.07705",
+      "title": "Vision-Language Navigation for Aerial Robots: Towards the Era of Large Language Models",
+      "relevance": 0
+    }
+  ]
+}

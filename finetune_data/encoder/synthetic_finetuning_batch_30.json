@@ -1,0 +1,256 @@
+{
+  "query_id": "topic-modeling",
+  "query": "Topic modeling for document collections",
+  "judgments": [
+    {
+      "arxiv_id": "2610.24130",
+      "title": "Reducing double-dipping in single-cell topic models with three-way count splitting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.23388",
+      "title": "Sentence-Level Topic Modeling with Lexical and Contextual Evidence",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21901",
+      "title": "In-Context Learning Before Specialisation: Theory of Learning in a Solvable Topic Model",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.19323",
+      "title": "TopicMerge: A Divide and Conquer Approach to Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05095",
+      "title": "vMF Sentence LDA: A Spherical Topic Model over Sentence Embeddings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.34169",
+      "title": "From Word Counts to Context: Topic Models for Asset Pricing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.31460",
+      "title": "Segment-Level Agentic Topic Modeling for Improved Data Exploration and Resource Efficiency",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29630",
+      "title": "A Manifold-Aware Topic Modeling Approach via Rank-Based Prototypes",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.18817",
+      "title": "Trends, Impact, and Thematic Evolution of Physics Education: A Bibliometric and Topic Modelling Analysis of Six Decades of Publications",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.14256",
+      "title": "Document Topic Alignment Metrics for Evaluating Topic Models of Short-Text Public Health Communications on Social Media",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.09575",
+      "title": "Beyond Top Words: MonoTM for Topic Modeling with Interpretable Monosemantic Features",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.07797",
+      "title": "Does Syntax Matter? A Graph-Augmented Variational Topic Model for Computational Social Sciences",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.30216",
+      "title": "Label Semantic Expansion via Label Guided Neural Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.23327",
+      "title": "Flesch-Kincaid Readability Depends Only on the Topic Distribution in Long Texts under Topic Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.23284",
+      "title": "Dynamic Topic Modeling for Cross-Corpus Temporal Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.20365",
+      "title": "Trilingual Topic Modeling of Sri Lankan Parliamentary Debates",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.16269",
+      "title": "Domain-Agnostic Neural Topic Modeling with Contextual Token-Level Semantic Graph Representation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.13835",
+      "title": "When Lexical Change Misleads: Rethinking Dynamic Topic Model Evaluation with Traditional and LLM-Based Metrics",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.24641",
+      "title": "Efficient Topic Model Estimation under Heavy-Tailed Document Lengths",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.03887",
+      "title": "Advanced Topic Modeling Techniques for Categorizing Software Vulnerabilities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.26845",
+      "title": "A Shared IPTC Topic Space for Cross-Source Topic Modelling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.20597",
+      "title": "From Punishment to Protection: Charting Six Decades of U.S. Juvenile Justice Through Topic Modeling and LLM-Assisted Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.13852",
+      "title": "Hybrid Classical-Quantum Variational Autoencoder for Neural Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.29765",
+      "title": "MMTM: Tri-Modal Topic Modeling for Long-Form Video via Similarity-Gated Fusion",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2605.28269",
+      "title": "Dynamic Topic Modeling with a Higher-Order Hypergraphical Representation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.23093",
+      "title": "A Comparative Evaluation of Structural Topic Models and BERTopic for Short, Open-Ended Survey Responses",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.03450",
+      "title": "Retrieving Floods without Floodlights: Topic Models as Binary Classifiers for Extreme Climate Events in German News",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.03299",
+      "title": "LLM-XTM: Enhancing Cross-Lingual Topic Models with Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.02527",
+      "title": "Research trends in music-based interventions in neonatal intensive care units: a text mining and topic modeling study",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.00833",
+      "title": "Agentopic: A Generative AI Agent Workflow for Explainable Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.20334",
+      "title": "An Explainable Approach to Document-level Translation Evaluation with Topic Modeling",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.18919",
+      "title": "Proposing Topic Models and Evaluation Frameworks for Analyzing Associations with External Outcomes: An Application to Leadership Analysis Using Large-Scale Corporate Review Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.14489",
+      "title": "CobwebTM: Probabilistic Concept Formation for Lifelong and Hierarchical Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.12663",
+      "title": "Human-Centric Topic Modeling with Goal-Prompted Contrastive Learning and Optimal Transport",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.29406",
+      "title": "PRISM: PRIor from corpus Statistics for topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.24765",
+      "title": "Enhancing Online Support Group Formation Using Topic Modeling Techniques",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.19940",
+      "title": "Hybrid topic modelling for computational close reading: Mapping narrative themes in Pushkin's Evgenij Onegin",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.10619",
+      "title": "Disentangling Similarity and Relatedness in Topic Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.01945",
+      "title": "When Numbers Tell Half the Story: Human-Metric Alignment in Topic Model Evaluation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.19079",
+      "title": "TriTopic: Tri-Modal Graph-Based Topic Modeling with Iterative Refinement and Archetypes",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.18454",
+      "title": "Exploring the Ethical Concerns in User Reviews of Mental Health Apps using Topic Modeling and Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.17907",
+      "title": "Improving Topic Modeling by Distilling Soft Labels from Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.01933",
+      "title": "Large Language Model and Formal Concept Analysis: a comparative study for Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.21465",
+      "title": "Topeax -- An Improved Clustering Topic Model with Density Peak Detection and Lexical-Semantic Term Importance",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.15299",
+      "title": "MALTopic: Multi-Agent LLM Topic Modeling Framework",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.12154",
+      "title": "Analyzing Cancer Patients' Experiences with Embedding-based Topic Modeling and LLMs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2601.11872",
+      "title": "GloCTM: Cross-Lingual Topic Modeling via a Global Context Space",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.11762",
+      "title": "Industry-Aligned Granular Topic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.10871",
+      "title": "Topic Modeling in New Physics Detection",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2601.08283",
+      "title": "AgriLens: Semantic Retrieval in Agricultural Texts Using Topic Modeling and Language Models",
+      "relevance": 2
+    }
+  ]
+}

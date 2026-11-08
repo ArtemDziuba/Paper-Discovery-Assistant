@@ -7,3 +7,4 @@ __pycache__/
 .env
 evaluation/data/
 models/
+todo.txt

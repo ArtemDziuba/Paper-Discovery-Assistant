@@ -1,0 +1,256 @@
+{
+  "query_id": "contrastive-self-supervised-learning",
+  "query": "Contrastive self-supervised learning for visual representation",
+  "judgments": [
+    {
+      "arxiv_id": "2002.05709",
+      "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1911.05722",
+      "title": "Momentum Contrast for Unsupervised Visual Representation Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2003.04297",
+      "title": "Improved Baselines with Momentum Contrastive Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1906.05849",
+      "title": "Contrastive Multiview Coding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2006.10029",
+      "title": "Big Self-Supervised Models are Strong Semi-Supervised Learners",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1807.03748",
+      "title": "Representation Learning with Contrastive Predictive Coding",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1905.09272",
+      "title": "Data-Efficient Image Recognition with Contrastive Predictive Coding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2005.10243",
+      "title": "What Makes for Good Views for Contrastive Learning?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2011.09157",
+      "title": "Dense Contrastive Learning for Self-Supervised Visual Pre-Training",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1912.01991",
+      "title": "Self-Supervised Learning of Pretext-Invariant Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2104.02057",
+      "title": "An Empirical Study of Training Self-Supervised Vision Transformers",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2005.10242",
+      "title": "Understanding Contrastive Representation Learning through Alignment and Uniformity on the Hypersphere",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2104.14548",
+      "title": "With a Little Help from My Friends: Nearest-Neighbor Contrastive Learning of Visual Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2007.00224",
+      "title": "Debiased Contrastive Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2005.04966",
+      "title": "Prototypical Contrastive Learning of Unsupervised Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2110.09348",
+      "title": "Understanding Dimensional Collapse in Contrastive Self-supervised Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2103.10957",
+      "title": "Efficient Visual Pretraining with Contrastive Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2008.03800",
+      "title": "Spatiotemporal Contrastive Video Representation Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2008.11702",
+      "title": "Delving into Inter-Image Invariance for Unsupervised Visual Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2012.09740",
+      "title": "Understanding the Behaviour of Contrastive Loss",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2011.05499",
+      "title": "Unsupervised Learning of Dense Visual Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2011.11765",
+      "title": "Boosting Contrastive Self-Supervised Learning with False Negative Cancellation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2102.04803",
+      "title": "DetCo: Unsupervised Contrastive Learning for Object Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2010.01028",
+      "title": "Hard Negative Mixing for Contrastive Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2008.05659",
+      "title": "What Should Not Be Contrastive in Contrastive Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2007.13916",
+      "title": "Demystifying Contrastive Self-Supervised Learning: Invariances, Augmentations and Dataset Biases",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1902.09229",
+      "title": "A Theoretical Analysis of Contrastive Unsupervised Representation Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2010.02037",
+      "title": "Conditional Negative Sampling for Contrastive Learning of Visual Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2105.05837",
+      "title": "When Does Contrastive Visual Representation Learning Work?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2010.04592",
+      "title": "Contrastive Learning with Hard Negative Samples",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2006.07733",
+      "title": "Bootstrap your own latent: A new approach to self-supervised Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2011.10566",
+      "title": "Exploring Simple Siamese Representation Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2104.14294",
+      "title": "Emerging Properties in Self-Supervised Vision Transformers",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2111.06377",
+      "title": "Masked Autoencoders Are Scalable Vision Learners",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2103.03230",
+      "title": "Barlow Twins: Self-Supervised Learning via Redundancy Reduction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2105.04906",
+      "title": "VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1803.07728",
+      "title": "Unsupervised Representation Learning by Predicting Image Rotations",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2106.08254",
+      "title": "BEiT: BERT Pre-Training of Image Transformers",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2111.07832",
+      "title": "iBOT: Image BERT Pre-Training with Online Tokenizer",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1603.08511",
+      "title": "Colorful Image Colorization",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1512.03385",
+      "title": "Deep Residual Learning for Image Recognition",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1409.1556",
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2010.11929",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1905.11946",
+      "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2012.12877",
+      "title": "Training data-efficient image transformers & distillation through attention",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2103.14030",
+      "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1804.02767",
+      "title": "YOLOv3: An Incremental Improvement",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1505.04597",
+      "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2304.02643",
+      "title": "Segment Anything",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1703.06870",
+      "title": "Mask R-CNN",
+      "relevance": 0
+    }
+  ]
+}

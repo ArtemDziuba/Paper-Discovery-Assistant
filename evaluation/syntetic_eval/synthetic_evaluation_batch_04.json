@@ -1,0 +1,256 @@
+{
+  "query_id": "neural-radiance-fields",
+  "query": "Neural radiance fields for 3D scene reconstruction",
+  "judgments": [
+    {
+      "arxiv_id": "2305.00375",
+      "title": "Neural Radiance Fields (NeRFs): A Review and Some Recent Developments",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.13041",
+      "title": "Learning Neural Radiance Fields from Multi-View Geometry",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2102.07064",
+      "title": "NeRF--: Neural Radiance Fields Without Known Camera Parameters",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.10050",
+      "title": "Neural Radiance Fields: Past, Present, and Future",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.06972",
+      "title": "Generative Lifting of Multiview to 3D from Unknown Pose: Wrapping NeRF inside Diffusion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2311.16657",
+      "title": "SCALAR-NeRF: SCAlable LARge-scale Neural Radiance Fields for Scene Reconstruction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.14354",
+      "title": "Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2209.10399",
+      "title": "wildNeRF: Complete view synthesis of in-the-wild dynamic scenes captured using sparse monocular data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.05586",
+      "title": "Dynamic Neural Radiance Field From Defocused Monocular Video",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.13629",
+      "title": "Animatable Neural Radiance Fields from Monocular RGB Video",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2204.01218",
+      "title": "Animatable Neural Radiance Fields from Monocular RGB-D",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.02751",
+      "title": "NeRFs: The Search for the Best 3D Representation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.04669",
+      "title": "A General Implicit Framework for Fast NeRF Composition and Rendering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.03000",
+      "title": "BeyondPixels: A Comprehensive Review of the Evolution of Neural Radiance Fields",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2010.07492",
+      "title": "NeRF++: Analyzing and Improving Neural Radiance Fields",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.03772",
+      "title": "Improved Neural Radiance Fields Using Pseudo-depth and Fusion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.01881",
+      "title": "Adaptive Multi-NeRF: Exploit Efficient Parallelism in Adaptive Multiple Scale Neural Radiance Field Rendering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.00252",
+      "title": "PyNeRF: Pyramidal Neural Radiance Fields",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.04962",
+      "title": "Mask-Based Modeling for Neural Radiance Fields",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.04233",
+      "title": "Robustifying the Multi-Scale Representation of Neural Radiance Fields",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2008.03824",
+      "title": "Neural Reflectance Fields for Appearance Acquisition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2302.10970",
+      "title": "Differentiable Rendering with Reparameterized Volume Sampling",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2106.10689",
+      "title": "NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2312.15238",
+      "title": "NoPose-NeuS: Jointly Optimizing Camera Poses with Neural Implicit Surfaces for Multi-view Reconstruction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2106.12052",
+      "title": "Volume Rendering of Neural Implicit Surfaces",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2206.05737",
+      "title": "SparseNeuS: Fast Generalizable Neural Surface Reconstruction from Sparse views",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2106.02634",
+      "title": "Light Field Networks: Neural Scene Representations with Single-Evaluation Rendering",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2206.07698",
+      "title": "Neural Deformable Voxel Grid for Fast Optimization of Dynamic View Synthesis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2105.05994",
+      "title": "Neural Trajectory Fields for Dynamic Novel View Synthesis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2309.15164",
+      "title": "3D Reconstruction with Generalizable Neural Fields using Scene Priors",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2111.15552",
+      "title": "NeuSample: Neural Sample Field for Efficient View Synthesis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2312.02202",
+      "title": "Volumetric Rendering with Baked Quadrature Fields",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.19483",
+      "title": "Learning Radiance Fields from a Single Snapshot Compressive Image",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.04586",
+      "title": "Sampling for View Synthesis: From Local Light Field Fusion to Neural Radiance Fields and Beyond",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.12774",
+      "title": "GaRField++: Reinforced Gaussian Radiance Fields for Large-Scale 3D Scene Reconstruction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.11211",
+      "title": "SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2405.16829",
+      "title": "PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2312.00846",
+      "title": "NeuSG: Neural Implicit Surface Reconstruction with 3D Gaussian Splatting Guidance",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.02301",
+      "title": "InvSplat: Inverse Feed-Forward Scene Splatting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2312.00112",
+      "title": "DynMF: Neural Motion Factorization for Real-time Dynamic View Synthesis with 3D Gaussian Splatting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2406.00434",
+      "title": "MoDGS: Dynamic Gaussian Splatting from Casually-captured Monocular Videos with Depth Priors",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2310.10642",
+      "title": "Real-time Photorealistic Dynamic Scene Representation and Rendering with 4D Gaussian Splatting",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2312.15059",
+      "title": "Deformable 3D Gaussian Splatting for Animatable Human Avatars",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2407.12777",
+      "title": "Generalizable Human Gaussians for Sparse View Synthesis",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2603.25058",
+      "title": "Learning Explicit Continuous Motion Representation for Dynamic Gaussian Splatting from Monocular Videos",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2604.10246",
+      "title": "A Comparison of Multi-View Stereo Methods for Photogrammetric 3D Reconstruction: From Traditional to Learning-Based Approaches",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2410.06475",
+      "title": "3D Representation Methods: A Survey",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.23182",
+      "title": "GrapeSplat: Geometry-Grounded Reconstruction via Amalgamated Pose-Free Encoding for Feed-Forward 3D Gaussian Splatting",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2604.08370",
+      "title": "SurfelSplat: Learning Efficient and Generalizable Gaussian Surfel Representations for Sparse-View Surface Reconstruction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2510.02691",
+      "title": "FSFSplatter: Build Surface and Novel Views with Sparse-Views within 2min",
+      "relevance": 0
+    }
+  ]
+}

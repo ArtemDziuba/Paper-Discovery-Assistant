@@ -1,0 +1,256 @@
+{
+  "query_id": "single-cell-rna-analysis",
+  "query": "Machine learning for single-cell RNA sequencing analysis",
+  "judgments": [
+    {
+      "arxiv_id": "2609.05683",
+      "title": "Nonparametric Hypothesis Testing of High-dimensional Clustering With Application to Single-cell RNA Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.17228",
+      "title": "scDNM-VAE enables directly inspectable deep clustering of single-cell RNA-seq data through signed dendritic gating",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.09722",
+      "title": "Decoding gene regulatory networks from single-cell RNA velocity",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.23821",
+      "title": "SCTA: An Agentic Framework for Stable and Interpretable Target Gene Discovery from Single-Cell RNA Sequencing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.28459",
+      "title": "scKDGM: KAN-guided Dynamic Graph Masked Learning for Single-Cell RNA-seq Clustering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.27657",
+      "title": "Reconstructing the Developmental Trajectory of Adipocytes in Human Adipose Tissue Using Single-Cell RNA Sequencing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.18672",
+      "title": "scGTN: Deep Siamese Graph Transformer Network for Single-cell RNA Sequencing Clustering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.13007",
+      "title": "scLLM-DSC: LLM-Knowledge Enhanced Cross-Modal Deep Structural Clustering for Single-Cell RNA Sequencing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.26904",
+      "title": "SpCAST enables scalable and interpretable integration of single-cell RNA sequencing and single-cell-resolved spatial transcriptomics",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.02380",
+      "title": "VeloTree: Inferring single-cell trajectories from RNA velocity fields with varifold distances",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.26858",
+      "title": "A Hierarchical Sheaf Spectral Embedding Framework for Single-Cell RNA-seq Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.24626",
+      "title": "One Method Does Not Fit All: A Large-Scale Benchmark of Imputation Methods for Single-Cell RNA Sequencing Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.09063",
+      "title": "scBench: Evaluating AI Agents on Single-Cell RNA-seq Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.09036",
+      "title": "Predicting Gene Disease Associations in Type 2 Diabetes Using Machine Learning on Single-Cell RNA-Seq Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.02471",
+      "title": "scCluBench: Comprehensive Benchmarking of Clustering Algorithms for Single-Cell RNA Sequencing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.25807",
+      "title": "Discovering Interpretable Biological Concepts in Single-cell RNA-seq Foundation Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.25884",
+      "title": "scUnified: An AI-Ready Standardized Resource for Single-Cell RNA Sequencing Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.24840",
+      "title": "Cell2Text: Multimodal LLM for Generating Single-Cell Descriptions from RNA-Seq Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.15429",
+      "title": "Random Matrix Theory-guided sparse PCA for single-cell RNA-seq data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.02639",
+      "title": "Enhanced Single-Cell RNA-seq Embedding through Gene Expression and Data-Driven Gene-Gene Interaction Integration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.09890",
+      "title": "Soft Graph Clustering for single-cell RNA Sequencing Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.08058",
+      "title": "HybridQC: Machine Learning-Augmented Quality Control for Single-Cell RNA-seq Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.06113",
+      "title": "A Statistical Framework for Co-Mediators of Zero-Inflated Single-Cell RNA-Seq Data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.13817",
+      "title": "DeepSeq: High-Throughput Single-Cell RNA Sequencing Data Labeling via Web Search-Augmented Agentic Generative AI Foundation Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.00410",
+      "title": "JojoSCL: Shrinkage Contrastive Learning for single-cell RNA sequence Clustering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.12626",
+      "title": "scSiameseClu: A Siamese Clustering Framework for Interpreting single-cell RNA Sequencing Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.03083",
+      "title": "BayVel: A Bayesian Framework for RNA Velocity Estimation in Single-Cell Transcriptomics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.01270",
+      "title": "Defining the relationship between cathepsin B and esophageal adenocarcinoma: conjoint analysis of Mendelian randomization, transcriptome-wide association studies, and single-cell RNA sequencing data",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.20730",
+      "title": "Benchmarking and optimizing organism wide single-cell RNA alignment methods",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.05647",
+      "title": "FeatPCA: A feature subspace based principal component analysis technique for enhancing clustering of single-cell RNA-seq data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.04718",
+      "title": "Knowledge-Guided Biomarker Identification for Label-Free Single-Cell RNA-Seq Data: A Reinforcement Learning Perspective",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.03923",
+      "title": "Explainable AI model reveals disease-related mechanisms in single-cell RNA-seq data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.20509",
+      "title": "Stochastic gradient descent estimation of generalized matrix factorization models with application to single-cell RNA sequencing data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.03027",
+      "title": "Timestamp calibration for time-series single cell RNA-seq expression data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2411.06785",
+      "title": "White-Box Diffusion Transformer for single-cell RNA-seq generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2410.09964",
+      "title": "Lower-dimensional projections of cellular expression improves cell type classification from single-cell RNA sequencing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.00473",
+      "title": "Uncertainty-aware t-distributed Stochastic Neighbor Embedding for Single-cell RNA-seq Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.14326",
+      "title": "Optimal sequencing depth for single-cell RNA-sequencing in Wasserstein space",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.08867",
+      "title": "Quantum Annealing for Enhanced Feature Selection in Single-Cell RNA Sequencing Data Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.05258",
+      "title": "scASDC: Attention Enhanced Structural Deep Clustering for Single-cell RNA-seq Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.14842",
+      "title": "Online t-SNE for single-cell RNA-seq",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.06969",
+      "title": "Systematic evaluation of the isolated effect of tissue environment on the transcriptome using a single-cell RNA-seq atlas dataset",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2406.05258",
+      "title": "Advances in Machine Learning, Statistical Methods, and AI for Single-Cell RNA Annotation Using Raw Count Matrices in scRNA-seq Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.17433",
+      "title": "ScAtt: an Attention based architecture to analyze Alzheimer's disease at cell type level from single-cell RNA-sequencing data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.06167",
+      "title": "scCDCG: Efficient Deep Structural Clustering for single-cell RNA-seq via Deep Cut-informed Graph Embedding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.06153",
+      "title": "scRDiT: Generating single-cell RNA-seq data by diffusion transformers and accelerating sampling",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2403.08959",
+      "title": "scVGAE: A ZINB-Based Variational Graph Autoencoder for Single-Cell RNA-Seq Imputation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2402.11289",
+      "title": "Predicting Breast Cancer Phenotypes from Single-cell RNA-seq Data Using CloudPred",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.14220",
+      "title": "Single-Cell RNA-seq Synthesis with Latent Diffusion Model",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2312.10310",
+      "title": "scBiGNN: Bilevel Graph Representation Learning for Cell Type Classification from Single-cell RNA Sequencing Data",
+      "relevance": 3
+    }
+  ]
+}

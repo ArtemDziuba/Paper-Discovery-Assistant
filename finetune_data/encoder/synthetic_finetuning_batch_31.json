@@ -1,0 +1,256 @@
+{
+  "query_id": "code-generation-llms",
+  "query": "Code generation with large language models",
+  "judgments": [
+    {
+      "arxiv_id": "2611.08060",
+      "title": "xDSL-CCPP: An alternative code generator for atmospheric modelling",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2611.06328",
+      "title": "EvoCodeAgent: Project-Level Code Generation via Architecture-Code Co-Evolution and Experience-Guided Repair",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.06095",
+      "title": "Reasoning-Trace Overflow in Code Generation: An Empirical Study of Explicit Reasoning Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.05590",
+      "title": "Verified but Vacuous: Three Failure Surfaces of LLM-Driven Verified Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.05168",
+      "title": "DSL-Bench: Evaluating and Explaining LLM Code Generation Across Domain-Specific Languages",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.04356",
+      "title": "CloakFEM: Agentic FEM Code Generation for Red-Teaming Computational Resource Exhaustion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.04320",
+      "title": "Planning-Coding Separation in LLM-Based Code Generation: An Empirical Study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02536",
+      "title": "FORGE: Fault-Oriented Rework Code Generation for Executable Interlocking Assembly",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.01692",
+      "title": "Phase-wise MLLM Tuning for Multi-framework WebUI Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.01383",
+      "title": "Toward Executable Multi-framework Front-end Code Generation with Self-Correction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.41097",
+      "title": "RepGen: Reproducing Deep Learning Bugs through Context-Aware Code Generation and Verification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.39890",
+      "title": "PR4Code: A Pull Requests Dataset for AI Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36952",
+      "title": "Does More Thinking Pay Off? Reasoning Cost and Correctness of LLMs in Code Generation and Bug Fixing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36907",
+      "title": "A lightweight C Code Generator for Heterogeneous TinyML Systems",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.36328",
+      "title": "How Stable Are LLM-Generated Proofs Under Program Refactoring? A Stress Test for Verifiable Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35592",
+      "title": "GEAR: Feature-Based Configuration and Code Generation for Agentic Systems",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.34418",
+      "title": "MulFCoder: Framework-conditioned Multi-agent for MLLM-based Multi-framework Front-end Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33450",
+      "title": "Secure and Functional Code Generation with Self-Evaluation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33060",
+      "title": "MARC: Mechanism-Aware Reflective Correction for Articulated Object Code Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.32559",
+      "title": "UAV-SwarmAgent: Scalable Multi-UAV Reconnaissance and Task Allocation via Code Generation and Vision-Language Reasoning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.32017",
+      "title": "SynMark: Semantic-Coordinate Multi-Bit Watermarking during LLM Code Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.28678",
+      "title": "Benchmarking the Quantum Leap: Auditing LLM Evaluation for Quantum Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28160",
+      "title": "From Code Generator to Engineering Companion: A Plant-aware Agent for PLC Programming",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.27600",
+      "title": "Self-Decomposing Diffusion for Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26904",
+      "title": "Pareto-Optimal RTL Code Generation via Multi-Objective Reinforcement Learning with Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.26743",
+      "title": "FOMTools: Development and AI-Assisted Code Generation for First-Order Methods",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26416",
+      "title": "Co-Evolving Policy and Reward for Code Generation: A Mechanistic Study of Single-Adapter Drift",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24907",
+      "title": "CAT-RAG: Improving Secure Code Generation with Category-Aware Agentic Retrieval",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23186",
+      "title": "Code Skill Server: A Large-Scale Search Engine for Code Generation Skills",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.21421",
+      "title": "The Role of Agentic Instruction Categories for Code Generation: A Study of Five Python Libraries",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19157",
+      "title": "DivAlgo: A systematic evaluation of algorithmic diversity for code generation models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.18860",
+      "title": "AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.17907",
+      "title": "SpecCloak: Probing Harmful Code Generation through Engineering Specifications",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15797",
+      "title": "Passing Tests, Missing Semantics: Evidence of Interpretive Lock-In in Plan-Based DataFrame Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15722",
+      "title": "PhySimCode: A Benchmark and Evaluation Method for Physics Video to Code Generation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.14968",
+      "title": "SEEK: Agentic Knowledge Graph Retrieval for Secure Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14453",
+      "title": "SecReason: Vulnerability Detection and In-Stream Self-Repair for LLM Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12920",
+      "title": "SCCGBench: Executability-Oriented Evaluation for Real-World Web Service-Call Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.11618",
+      "title": "PolyCodeEval: Benchmarking Multilingual Code Generation from Functions to Repositories",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.11300",
+      "title": "Characterizing Overconfident Failure in LLM-Based Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.10639",
+      "title": "Visible Reasoning Is Not a Universal Optimizer: Persona- and Thinking-Dependent Effects in Analytics Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.10374",
+      "title": "TaoD2C-Bench: Benchmarking MLLMs for Industrial UI Code Generation Beyond Visual Fidelity",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.09588",
+      "title": "Adaptive Code Generation for Controlling Robots",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.08429",
+      "title": "RAPO-Sol: Retrieval-Augmented Preference Optimization for Repository-Level Solidity Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.07762",
+      "title": "ES-Trace: Auditing Ethical-Sourcing Disclosure of Code Generation Models Beyond Model Cards",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.06481",
+      "title": "AECP: Artifact-Exclusive Communication Protocol for Multi-Agent Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05481",
+      "title": "CodeForge-MA: Execution-Verified Multi-Agent Learning with Language-Conditioned LoRA for Multilingual Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05170",
+      "title": "Verification Trap: Understanding Test-Time Selection Failures under False Premises in Code Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03799",
+      "title": "StepCAD: Mesh-to-CAD Code Generation via LLM Policy and Geometry-Guided Search",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.03663",
+      "title": "BARC codes: general polynomial framework for coherent-state superposition codes",
+      "relevance": 0
+    }
+  ]
+}

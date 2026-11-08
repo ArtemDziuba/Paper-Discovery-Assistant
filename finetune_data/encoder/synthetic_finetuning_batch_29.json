@@ -1,0 +1,256 @@
+{
+  "query_id": "sentiment-analysis",
+  "query": "Sentiment analysis in natural language processing",
+  "judgments": [
+    {
+      "arxiv_id": "2611.04841",
+      "title": "DGC-Net: Cross-Modal Dynamic Routing with Global-Guided Compensation in Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.02989",
+      "title": "Finding Errors Is Not Enough: Selective Model Escalation for Entity-Targeted Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02248",
+      "title": "Metamorphic Testing for Evaluating Robustness of Sentiment Analysis Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36083",
+      "title": "FinLLM-KG: Knowledge Graph-Enhanced LLMs for Financial Sentiment Analysis in Algorithmic Trading",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31731",
+      "title": "ConsMSA: Semantic Distribution Consistency Learning for Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.31087",
+      "title": "I$^2$-KAN: Interpretable Intra- and Inter-Modal Multi-Pathway Representation Learning for Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.27571",
+      "title": "Text-Anchored Modality Experts with Uncertainty-Guided Routing for Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19190",
+      "title": "NEPSEE: A Double-Annotated Benchmark for Nepali Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15761",
+      "title": "Robust Marathi Sentiment Analysis using Domain-Adaptive Pre-training and Data Augmentation Approaches",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15757",
+      "title": "Enhancing Zero-Shot Domain Transfer in Low-Resource Sentiment Analysis: A Case Study in Marathi",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.11695",
+      "title": "Structured Sentiment Analysis Using Sequence Labeling as Dependency Graph Parsing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06298",
+      "title": "DialectSentEval 2026: Arabic Dialect Sentiment Analysis and Swapping Shared Task",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.38820",
+      "title": "BARRAC: Adaptation of an English Aspect-based Sentiment Analysis Approach for Classification Tasks in Arabic Dialects",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.37100",
+      "title": "Prediction-Layer Branch Calibration for Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.30470",
+      "title": "Reliability-aware Cross-sample Enhancement for Robust Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.30238",
+      "title": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.22705",
+      "title": "Analyzing Public Discourse on Urbanism: Topic Clustering, Sentiment Analysis and Retrieval-Augmented Generation using YouTube Comments",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.18470",
+      "title": "Divide and Conquer: Mixture-of-Bottleneck Experts in Informative Ordinal Space for Video-based Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.18404",
+      "title": "Multimodal Aspect-Level Sentiment Analysis Based on Gated Noise Filtering and Emotion-Relevance Interaction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.11247",
+      "title": "The Illusion of Balanced Multimodal Sentiment Analysis: Beyond the Limits of Optimization-Based Methods",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.10950",
+      "title": "Robust Multimodal Sentiment Analysis with Incomplete Modalities via Semantic-aware Completeness based Reconstruction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.07010",
+      "title": "Fine-Grained Visual Preprocessing and Dual-Stream Temporal Modeling for Multimodal Sentiment Analysis on Social Media",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.06497",
+      "title": "Vision-Guided Text Prompt Tuning for Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.06188",
+      "title": "MVFA: A Multi-View Text-Guided Multimodal Fusion LLM Adapter for Sentiment Analysis and Emotion Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.30726",
+      "title": "Multimodal Adaptive Expert Selection with Text Routing and Ordinal Prototype Optimization for Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.30425",
+      "title": "Generative Models Enhanced by Sequence Labelling and Aspect-Code Switching Improve Cross-lingual Aspect-Based Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.20019",
+      "title": "Contrastive Mixed Prompt Learning for Incomplete Multimodal Sentiment Analysis with Unseen Modality Combination",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.19971",
+      "title": "Robust Incomplete Multimodal Sentiment Analysis via Iterative Proxy Correction",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.17931",
+      "title": "SpeechSense: A Paralinguistic-Focused Dataset for Fine-Grained Speech Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.16201",
+      "title": "Multi-Granularity Sentiment Integration for LLM-Based Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.15338",
+      "title": "When AI Rewrites, Classifiers Relax: Uncertainty-Aware Sentiment Analysis on Sarcastic and AI-Paraphrased Social Text",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.12007",
+      "title": "Dual-Model Sentiment Analysis of Consumer Reviews in the Retail Coffee Sector Using Machine Learning and Deep Learning Approaches",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.11049",
+      "title": "Multiclass Sentiment Analysis for Identifying Political Viewpoints",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.09986",
+      "title": "MIDAS: Mutual Information Disentanglement with Uncertainty-Aware Fusion for Incomplete Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.07439",
+      "title": "An Exploratory Evaluation of LLM-Assisted Rewriting of Moderate-Complexity Financial Sentences for DisCoCat-Based Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03611",
+      "title": "Rethinking Modality Reliability in Multimodal Sentiment Analysis with Incomplete Observations",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.28127",
+      "title": "FinSMART: Financial Sentiment Analysis for Algorithmic Trading through Market-Aligned Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.27790",
+      "title": "Semantic-Aligned Structural Abstraction for Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.19794",
+      "title": "TriAgent: Divergence-Aware Multi-Agent Committees for Cost-Efficient Financial Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.17262",
+      "title": "Should Missing Modalities Always Be Necessary to Repair for Multi-modal Sentiment Analysis?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.13977",
+      "title": "Constraint-Aware Counterfactual Editing for Aspect-Based Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.12686",
+      "title": "Segregate, Refine, Integrate: Decomposing Multimodal Fusion for Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.10599",
+      "title": "MRUF: Multi-granularity Routing with Uncertainty-Aware Fusion for Robust Multimodal Sentiment Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.07772",
+      "title": "Unveiling Public Opinion: A Study of Sentiment Analysis Using LSTM and Traditional Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.06611",
+      "title": "Audio Sentiment Analysis via Distillation and Cross-Modal Integration of Generated Multilingual Transcripts",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.05259",
+      "title": "SalAngaBhava: A Sinhala Market Dataset for Aspect-based Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.03414",
+      "title": "The Classics at SemEval-2026 Task 3: Combining Transformer Models and LLM-Generated Annotations for Dimensional Aspect-Based Sentiment Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.01943",
+      "title": "Hybrid quantum-classical neural network for sentiment analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.29614",
+      "title": "Do We Still Need Fine Tuning? Turkish Sentiment Analysis in the Era of Large Language Model",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.24055",
+      "title": "Best Preprocessing Techniques for Sentiment Analysis",
+      "relevance": 3
+    }
+  ]
+}

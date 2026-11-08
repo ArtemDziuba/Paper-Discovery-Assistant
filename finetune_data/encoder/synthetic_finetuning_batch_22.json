@@ -1,0 +1,256 @@
+{
+  "query_id": "fairness-bias-mitigation",
+  "query": "Fairness and bias mitigation in machine learning",
+  "judgments": [
+    {
+      "arxiv_id": "2610.33034",
+      "title": "Algorithmic Fairness for Influence Maximization: A Survey of Models, Metrics, and Optimization Techniques",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15015",
+      "title": "Algorithmic Fairness Over Time: Advances & Prospects",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39025",
+      "title": "A Rank Graduation metric for Algorithmic fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.32004",
+      "title": "Is invariance all you need for algorithmic fairness? Removing demographic information can create new bias",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.26123",
+      "title": "FairMon: A Tool for Monitoring and Visualizing Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.13022",
+      "title": "Applied and Filtered: An End-to-End Algorithmic Fairness Audit of A Public Employment Agency",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.08953",
+      "title": "FairSelect: A Systematic Evaluation of Multi-Level and Intersectional Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.26200",
+      "title": "Statistical and Structural Approaches to Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.11214",
+      "title": "From Awareness to Action: Understanding and Overcoming the Research-Practice Gap in Algorithmic Fairness for Public Health",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.02957",
+      "title": "The Fair Lending Model: How the Longest-Running Algorithmic Fairness Programs Work in Practice",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.19204",
+      "title": "Auditing LLMs for Algorithmic Fairness in Casenote-Augmented Tabular Prediction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.20217",
+      "title": "An Accounting Identity for Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.07700",
+      "title": "On the Role of Calibration in Benchmarking Algorithmic Fairness for Skin Cancer Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.22363",
+      "title": "Bias Begins with Data: The FairGround Corpus for Robust and Reproducible Research on Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.19331",
+      "title": "Algorithmic Fairness in NLP: Persona-Infused LLMs for Human-Centric Hate Speech Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2510.16056",
+      "title": "Algorithmic Fairness in AI Surrogates for End-of-Life Decision-Making",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.17411",
+      "title": "Robust Mixture Models for Algorithmic Fairness Under Latent Heterogeneity",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.17944",
+      "title": "Toward Substantive Intersectional Algorithmic Fairness: Desiderata for a Feminist Approach",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2508.05435",
+      "title": "Competing Risks: Impact on Risk Estimation and Algorithmic Fairness",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2508.05281",
+      "title": "Algorithmic Fairness Perceptions in the Global South: Evidence from Bangladesh on Ride-Sharing, Beauty Filters, and Large Language Models",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2507.20711",
+      "title": "Algorithmic Fairness: A Runtime Perspective",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.11214",
+      "title": "Algorithmic Fair Contracts",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2506.12556",
+      "title": "Algorithmic Fairness: Not a Purely Technical but Socio-Technical Property",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.04193",
+      "title": "Understanding challenges to the interpretation of disaggregated evaluations of algorithmic fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.19317",
+      "title": "Effort-aware Fairness: Incorporating a Philosophy-informed, Human-centered Notion of Effort into Algorithmic Fairness Metrics",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.02856",
+      "title": "The epistemic dimension of algorithmic fairness: assessing its impact in innovation diffusion and fair policy making",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.15119",
+      "title": "A proposal of smooth interpolation to optimal transport for restoring biased data for algorithmic fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.05665",
+      "title": "AIM-Fair: Advancing Algorithmic Fairness via Selectively Fine-Tuning Biased Models with Contextual Synthetic Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.18331",
+      "title": "Stream-Based Monitoring of Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.12962",
+      "title": "It's complicated. The relationship of algorithmic fairness and non-discrimination provisions for high-risk systems in the EU AI Act",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2501.02732",
+      "title": "AFed: Algorithmic Fair Federated Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.16641",
+      "title": "A Systems Thinking Approach to Algorithmic Fairness",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.07879",
+      "title": "Understanding algorithmic fairness for clinical prediction in terms of subgroup net benefit and health equity",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2411.10544",
+      "title": "Debias-CLR: A Contrastive Learning Based Debiasing Method for Algorithmic Fairness in Healthcare Applications",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.08363",
+      "title": "On Algorithmic Fairness and the EU Regulations",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2411.02569",
+      "title": "The Intersectionality Problem for Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.02005",
+      "title": "FairlyUncertain: A Comprehensive Benchmark of Uncertainty in Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.11489",
+      "title": "Beyond Algorithmic Fairness: A Guide to Develop and Deploy Ethical AI-Enabled Decision-Support Tools",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.02558",
+      "title": "Peer-induced Fairness: A Causal Approach for Algorithmic Fairness Auditing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.01448",
+      "title": "15 Years of Algorithmic Fairness -- Scoping Review of Interdisciplinary Developments in the Field",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.13710",
+      "title": "OxonFair: A Flexible Toolkit for Algorithmic Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.12488",
+      "title": "What's Distributive Justice Got to Do with It? Rethinking Algorithmic Fairness from the Perspective of Approximate Justice",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2405.20447",
+      "title": "Algorithmic Fairness in Performative Policy Learning: Escaping the Impossibility of Group Fairness",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.09543",
+      "title": "Algorithmic Fairness: A Tolerance Perspective",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.12143",
+      "title": "The Neutrality Fallacy: When Algorithmic Fairness Interventions are (Not) Positive Action",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2404.06717",
+      "title": "Racial/Ethnic Categories in AI and Algorithmic Fairness: Why They Matter and What They Represent",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2404.04424",
+      "title": "Algorithmic Fairness and Social Welfare",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2404.01608",
+      "title": "FAIRM: Learning invariant representations for algorithmic fairness and domain generalization with minimax optimality",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.20089",
+      "title": "Implications of the AI Act for Non-Discrimination Law and Algorithmic Fairness",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2402.15155",
+      "title": "Algorithmically Fair Maximization of Multiple Submodular Objective Functions and Implications to Constrained Fair Division",
+      "relevance": 1
+    }
+  ]
+}

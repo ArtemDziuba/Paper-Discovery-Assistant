@@ -1,0 +1,256 @@
+{
+  "query_id": "causal-discovery",
+  "query": "Causal discovery from observational data",
+  "judgments": [
+    {
+      "arxiv_id": "2611.03166",
+      "title": "Causal discovery needs explicit epistemic standards",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.01267",
+      "title": "Mixed-Integer Programming for Causal Discovery with Unknown Hard-Intervention Targets",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.00484",
+      "title": "Where Causal Discovery Breaks on Real Data: Measuring the Assumptions One Property at a Time",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33138",
+      "title": "Optimal Correction Sets for Provable Redress of Contestable Causal Discovery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.29992",
+      "title": "SCDM: Scalable Causal Discovery in Nonlinear Temporal Systems with Meta-Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.29530",
+      "title": "Residual-Based Causal Discovery via Pretrained In-Context Quantile Regression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28134",
+      "title": "Causal Discovery for Linear Models with Latent Confounding via Multi-domain Identifiable Representation Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.23543",
+      "title": "Causal Discovery beyond Conditional Independence: Identifiability, Algorithms, and Statistical Inference for Directed Acyclic and Cyclic Graphs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.22846",
+      "title": "Benchmarking and Enhancing Agentic Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21219",
+      "title": "Using Heteroscedasticity for Causal Discovery under Hidden Confounding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.19211",
+      "title": "Generalizing Identifiability Results in Causal Discovery from Complete Data to Missing Data Settings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.18075",
+      "title": "Causal Discovery Under Hard Selection Bias: A New Robust Score-Matching Approach",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15051",
+      "title": "Rate-Based Causal Discovery for Heavy-Tailed Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13430",
+      "title": "One Thing Leads to Another: The Essentials of Time Series Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06656",
+      "title": "Sample Dependence-Aware Blind Source Separation for Linear Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04559",
+      "title": "Coupling Noisy Pairwise Knowledge to the DAG Posterior for Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04291",
+      "title": "Local Fisher Information Enables Sparse Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03258",
+      "title": "Mapping and Advancing the Scalability-Accuracy Frontier of Nonlinear Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.02221",
+      "title": "Causal discovery identifies pathways linking physical activity to dementia risk in the UK BioBank",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.39326",
+      "title": "Discrete Score Matching Enables Causal Discovery from Count Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.37446",
+      "title": "Demistifying Data and Simulator Assumptions in Supervised Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.34115",
+      "title": "Forecast-Necessary Causal Discovery for Nonlinear Political Panel Data: Feedback, Functional Form, and the Dynamics of Democratization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.34050",
+      "title": "The Statistical Cost of Causal Discovery with Feedback",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31801",
+      "title": "seq2cause: One Autoregressive Backbone, Four Causal Discovery Tasks in Event Sequences",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.31675",
+      "title": "Active Causal Discovery Benchmark: Evaluating LLM Agents Under Budgeted Interventions",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2609.30643",
+      "title": "MARCEDES: Score-based causal discovery under non-Gaussianity with continuous optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.28856",
+      "title": "Statistical Inference for Causal Discovery under Selection and Latent Variables via Single-Target Interventions",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.27256",
+      "title": "Functional Causal Discovery via Conditional Covariance Ordering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.23897",
+      "title": "Proxy-Adjusted Causal Discovery from Targeted Interventions",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.23535",
+      "title": "Decoupled Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.23516",
+      "title": "ITSY: Causal Discovery From Irregular Time-Series Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.16931",
+      "title": "Causal Discovery via Transformed Low-Rank Quantile Surfaces",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.16562",
+      "title": "Statistical Inference for Bivariate Functional Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.11897",
+      "title": "CausalArena: Benchmarking Causal Discovery in the Foundation Model Era",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.03705",
+      "title": "Federated Causal Discovery via Regression-Directed Cumulants",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.03442",
+      "title": "Guide, Not Bind: Why Defeasible Priors Fail in Augmented Lagrangian Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.27472",
+      "title": "LLM-Augmented Causal Discovery: Probabilistic Fusion of Edge Existence and Orientation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.21815",
+      "title": "Resilient Concurrent Causal Discovery for Topological Event Sequences",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.17132",
+      "title": "Causal Discovery in Equal Variance Linear Gaussian DAGs via SURE-Tuned Ridge Regression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.16988",
+      "title": "Causes of Hot Jupiter Inflation from Causal Discovery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.15332",
+      "title": "GFCM: A Tail-Sensitive Mixed-Type Conditional Independence Test for Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.12640",
+      "title": "Interpretable Causal Discovery via Causal-Effect Constraints",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.11156",
+      "title": "Conditional Independence Tests for Constraint-Based Causal Discovery: A Survey",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.10466",
+      "title": "Geometry-aware neural causal discovery for large-scale spatiotemporal systems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.04930",
+      "title": "SVI-DAG: A Structured Variational Inference Approach to Bayesian Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03868",
+      "title": "GENESIS: Towards Explainable Causal Discovery",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.02877",
+      "title": "GoT-CD: Graph-of-Thoughts Causal Discovery and the Fragility of Post-hoc Path-Specific Fairness Audits",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.00198",
+      "title": "AutoCause: A Python framework that automates expert decisions in environmental time-series causal discovery",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.28212",
+      "title": "Causal Discovery with Inverted Self-attention for Multivariate Time Series",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.24673",
+      "title": "Causal-TS: A Python Library for Causal Discovery in High-Dimensional and Nonstationary Time Series",
+      "relevance": 3
+    }
+  ]
+}

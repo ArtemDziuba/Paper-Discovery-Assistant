@@ -1,0 +1,256 @@
+{
+  "query_id": "neural-network-compression",
+  "query": "Neural network compression and efficient deployment",
+  "judgments": [
+    {
+      "arxiv_id": "2609.40127",
+      "title": "Learning Functional Subspaces for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.26002",
+      "title": "Hierarchical Reinforcement Learning for Neural Network Compression (HiReLC): Pruning and Quantization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.01402",
+      "title": "Neural Network Compression by Approximate Differential Equivalence",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.04988",
+      "title": "Prune-Quantize-Distill: An Ordered Pipeline for Efficient Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.26048",
+      "title": "Asymptotic Optimism for Tensor Regression Models with Applications to Neural Network Compression",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.14818",
+      "title": "SimCert: Probabilistic Certification for Behavioral Similarity in Deep Neural Network Compression",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.04720",
+      "title": "A Benchmark Study of Neural Network Compression Methods for Hyperspectral Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.17751",
+      "title": "Investigating Target Class Influence on Neural Network Compressibility for Energy-Autonomous Avian Monitoring",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.03614",
+      "title": "Quantization-Aware Regularizers for Deep Neural Networks Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.12272",
+      "title": "AgenticPruner: MAC-Constrained Neural Network Compression via LLM-Driven Strategy Search",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.18636",
+      "title": "C-SWAP: Explainability-Aware Structured Pruning for Efficient Neural Networks Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.04244",
+      "title": "Integrating Pruning with Quantization for Efficient Deep Neural Networks Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.22527",
+      "title": "FGFP: A Fractional Gaussian Filter and Pruning for Deep Neural Networks Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.21146",
+      "title": "Linearity-based neural network compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.04268",
+      "title": "MUC-G4: Minimal Unsat Core-Guided Incremental Verification for Deep Neural Network Compression",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.16332",
+      "title": "Is Quantum Optimization Ready? An Effort Towards Neural Network Compression using Adiabatic Quantum Computing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.20078",
+      "title": "Low-Rank Matrix Approximation for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.13008",
+      "title": "Knowledge Distillation: Enhancing Neural Network Compression with Integrated Gradients",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.07028",
+      "title": "Adaptive Error-Bounded Hierarchical Matrices for Efficient Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.03945",
+      "title": "TropNNC: Structured Neural Network Compression Using Tropical Geometry",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.03555",
+      "title": "Unified Framework for Pre-trained Neural Network Compression via Decomposition and Optimized Rank Selection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.16289",
+      "title": "Convolutional Neural Network Compression Based on Low-Rank Decomposition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.01534",
+      "title": "An Adaptive Tensor-Train Decomposition Approach for Efficient Deep Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.15875",
+      "title": "Shapley Pruning for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.12075",
+      "title": "Tiled Bit Networks: Sub-Bit Neural Network Compression Through Reuse of Learnable Binary Vectors",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.10802",
+      "title": "Reduced storage direct tensor ring decomposition for convolutional neural networks compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.07748",
+      "title": "Neural Network Compression for Reinforcement Learning Tasks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.01775",
+      "title": "Torch2Chip: An End-to-end Customizable Deep Neural Network Compression and Deployment Toolkit for Prototype Hardware Accelerator Design",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.00155",
+      "title": "Towards Explaining Deep Neural Network Compression Through a Probabilistic Latent Space",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2401.08014",
+      "title": "Convolutional Neural Network Compression via Dynamic Parameter Rank Pruning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.04595",
+      "title": "Quantization Aware Factorization for Deep Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.08960",
+      "title": "Neural Network Compression using Binarization and Few Full-Precision Weights",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.06238",
+      "title": "Understanding the Effect of the Long Tail on Neural Network Compression",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2306.05785",
+      "title": "End-to-End Neural Network Compression via $\\frac{\\ell_1}{\\ell_2}$ Regularized Latency Surrogates",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2305.05318",
+      "title": "How Informative is the Approximation Error from Tensor Decomposition for Neural Network Compression?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2210.07451",
+      "title": "Neural Network Compression by Joint Sparsity Promotion and Redundancy Reduction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.11048",
+      "title": "Quantized Sparse Weight Decomposition for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.01578",
+      "title": "Quantum Neural Network Compression",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2206.05604",
+      "title": "A Theoretical Understanding of Neural Network Compression from Sparse Linear Approximation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.03596",
+      "title": "Neural Network Compression via Effective Filter Analysis and Hierarchical Pruning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.08518",
+      "title": "Do Neural Networks Compress Manifolds Optimally?",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2205.05676",
+      "title": "Revisiting Random Channel Pruning for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2202.01214",
+      "title": "Approximate Bisimulation Relations for Neural Networks and Application to Assured Neural Network Compression",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2201.06626",
+      "title": "Neural Network Compression of ACAS Xu Early Prototype is Unsafe: Closed-Loop Verification through Quantized State Backreachability",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2111.10320",
+      "title": "Toward Compact Parameter Representations for Architecture-Agnostic Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2109.15200",
+      "title": "Semi-tensor Product-based TensorDecomposition for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2109.14710",
+      "title": "Convolutional Neural Network Compression through Generalized Kronecker Product Decomposition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2108.12659",
+      "title": "DKM: Differentiable K-Means Clustering Layer for Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2107.05787",
+      "title": "Data-Driven Low-Rank Neural Network Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2107.05298",
+      "title": "HEMP: High-order Entropy Minimization for neural network comPression",
+      "relevance": 3
+    }
+  ]
+}

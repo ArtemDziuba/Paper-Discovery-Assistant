@@ -1,0 +1,256 @@
+{
+  "query_id": "learning-with-noisy-labels",
+  "query": "Learning with noisy labels for image classification",
+  "judgments": [
+    {
+      "arxiv_id": "2107.07041",
+      "title": "Mitigating Memorization in Sample Selection for Learning with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1406.2080",
+      "title": "Learning from Noisy Labels with Deep Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1412.6596",
+      "title": "Training Deep Neural Networks on Noisy Labels with Bootstrapping",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2108.08212",
+      "title": "Confidence Adaptive Regularization for Deep Learning with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1705.10694",
+      "title": "Deep Learning is Robust to Massive Label Noise",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1802.05300",
+      "title": "Using Trusted Data to Train Deep Networks on Labels Corrupted by Severe Noise",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2005.00596",
+      "title": "Learning from Noisy Labels with Noise Modeling Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1909.09338",
+      "title": "A Simple yet Effective Baseline for Robust Deep Learning with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2007.00151",
+      "title": "Early-Learning Regularization Prevents Memorization of Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2111.05428",
+      "title": "Constrained Instance and Class Reweighting for Robust Learning under Label Noise",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1906.11876",
+      "title": "Uncertainty Based Detection and Relabeling of Noisy Image Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1910.00701",
+      "title": "IEG: Robust Neural Network Training to Tackle Severe Label Noise",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2002.07933",
+      "title": "Improving Generalization by Controlling Label-Noise Information in Neural Network Weights",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1904.11238",
+      "title": "Unsupervised label noise modeling and loss correction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.01156",
+      "title": "SELC: Self-Ensemble Label Correction Improves Learning with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2103.13872",
+      "title": "Transform consistency for learning with noisy labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.00455",
+      "title": "Instance Correction for Learning with Open-set Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1804.06872",
+      "title": "Co-teaching: Robust training of deep neural networks with extremely noisy labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1910.01842",
+      "title": "SELF: Learning to Filter Noisy Labels with Self-Ensembling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03432",
+      "title": "Stop Replacing Noise with Noise: Two-Source Reliability Assessment for Label Correction and Sample Reweighting in Label-Noise Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1905.05040",
+      "title": "Understanding and Utilizing Deep Neural Networks Trained with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1706.00038",
+      "title": "Toward Robustness against Label Noise in Training Deep Discriminative Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2110.12088",
+      "title": "Learning with Noisy Labels Revisited: A Study Using Real-World Human Annotations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.05025",
+      "title": "Unleashing the Potential of Regularization Strategies in Learning with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2110.09022",
+      "title": "Mitigating Memorization of Noisy Labels via Regularization between Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2108.11096",
+      "title": "Learning From Long-Tailed Data With Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.04159",
+      "title": "Noisy Label Processing for Classification: A Survey",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.07086",
+      "title": "An Adaptive Data cleaning Framework for Noisy Label Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2011.10077",
+      "title": "Error-Bounded Correction of Noisy Labels",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1910.09792",
+      "title": "Robust Training with Ensemble Consensus",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.17833",
+      "title": "Efficient Bilevel Optimization for Meta Label Correction in Noisy Label Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2301.01143",
+      "title": "Asymmetric Co-teaching with Multi-view Consensus for Noisy Label Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2406.16966",
+      "title": "Mitigating Noisy Supervision Using Synthetic Samples with Soft Labels",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2109.14563",
+      "title": "Robust Temporal Ensembling for Learning with Noisy Labels",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2302.05098",
+      "title": "Confidence-based Reliable Learning under Dual Noises",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2106.00274",
+      "title": "Analysis of classifiers robust to noisy labels",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2103.16324",
+      "title": "Automated Cleanup of the ImageNet Dataset by Model Consensus, Explainability and Confident Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2312.07271",
+      "title": "Analyze the Robustness of Classifiers under Label Noise",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2407.05528",
+      "title": "An accurate detection is not all you need to combat label noise in web-noisy datasets",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1705.01936",
+      "title": "Learning with Confident Examples: Rank Pruning for Robust Classification with Noisy Labels",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.03229",
+      "title": "Bridging Weakly-Supervised Learning and VLM Distillation: Noisy Partial Label Learning for Efficient Downstream Adaptation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.05859",
+      "title": "Selective Posterior Margin Regularization for Forward-Corrected Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.06896",
+      "title": "Recent advances in weakly supervised learning: New supervision paradigms, assumption relaxations, and practical solutions",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1711.11383",
+      "title": "Learning to Learn from Weak Supervision by Full Supervision",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2202.03987",
+      "title": "Data Consistency for Weakly Supervised Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1906.10343",
+      "title": "Exploring Self-Supervised Regularization for Supervised and Semi-Supervised Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1806.03852",
+      "title": "Data augmentation instead of explicit regularization",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2509.10391",
+      "title": "Improving Audio Event Recognition with Consistency Regularization",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1412.6597",
+      "title": "An Analysis of Unsupervised Pre-training in Light of Recent Advances",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2311.03629",
+      "title": "Random Field Augmentations for Self-Supervised Representation Learning",
+      "relevance": 0
+    }
+  ]
+}

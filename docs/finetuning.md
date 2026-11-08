@@ -1,6 +1,9 @@
 # Local fine-tuning experiment
 
-The ranking selector offers Semantic, TF-IDF baseline, and Fine-tuned. Fine-tuned loads
+This page records v1. The new all-45-batch experiment, combined development selection,
+epoch plots and four-model evaluation are documented in [finetuning-v2.md](finetuning-v2.md).
+
+The ranking selector offers Semantic, TF-IDF baseline, and `syntetic finetune v1`. V1 loads
 models/finetuned-minilm locally and shares the same inference batches, cosine calculation,
 score transformation, and exact-title rule as the original semantic encoder. It does not
 silently fall back to the base model if its weights or training manifest are absent.
@@ -95,6 +98,14 @@ evaluation/finetuning/training-results.json and prepared.json. The datasets do n
 live retrieval recall, explanation faithfulness, or literature-overview quality.
 
 ## Reproduction
+
+This section describes the original v1 experiment. Its original 15 synthetic source batches
+have since been replaced by ten fixed evaluation batches, and the human files were renamed.
+Do not run the historical preparation command below against the current evaluation folders:
+it would split evaluation data for training. Adapting training preparation to the 45 batches
+under finetune_data is implemented in the separate v2 preparation/training scripts. V1 was only renamed and evaluated in the earlier run;
+its weights, manifest and original prepared training snapshot were preserved. The current
+evaluation command and new fixed metadata snapshot are documented in ranking-evaluation.md.
 
 Additional requested comparison on synthetic batches 1, 5, 7, 8, 13, and 15 used all 50
 verified papers per query, including papers removed from training for overlap. It reused

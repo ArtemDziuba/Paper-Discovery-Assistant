@@ -1,0 +1,256 @@
+{
+  "query_id": "continual-learning-neural-networks",
+  "query": "Continual learning for neural networks",
+  "judgments": [
+    {
+      "arxiv_id": "2611.07327",
+      "title": "Permanent and Transient Representations for Continual Reinforcement Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.06066",
+      "title": "PRISM-AMC: Replay-Free Continual Learning for Automatic Modulation Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.05108",
+      "title": "From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.05029",
+      "title": "DRAP: Dynamics-Risk Adaptive Plasticity for Continual Learning in Physical AI",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.04931",
+      "title": "Modulating Merging Strengths via Joint Loss Estimation for LoRA-based Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.04885",
+      "title": "DLER: Dual-Logit Experience Replay for Online Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.04309",
+      "title": "What Is the Influence of Task Order in Continual Learning? An Empirical Study and Order-Aware Evaluation for Motion Forecasting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03574",
+      "title": "BISECT: Bilevel Spectral Decomposition for Low-Rank Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03513",
+      "title": "RASP: Read-All, Sparse-Plasticity Continual Learning in a Stationary-Size LoRA",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02746",
+      "title": "Replay for LLM Continual Learning with Multi-Teacher On-Policy Distillation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02091",
+      "title": "HQNN-CL: Regime-Aware Hybrid Quantum Neural Network with Continual Learning for Financial Forecasting",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.00871",
+      "title": "ShiftRAG: Bypassing the Textual Bottleneck via Decoupled Learning and Continuous Soft Tokens",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.41809",
+      "title": "Continual Reinforcement Learning Is an Integration Problem",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.41792",
+      "title": "Implicit Assumptions About Tasks in Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.41663",
+      "title": "ResMerge: Residual Policy Learning and Merging for Continual Adaptation of Pre-trained Robot Policies",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.40757",
+      "title": "AutoHebb: Self-Modifying Neural Networks that Zero-Shot Infer and Continually Learn",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.40401",
+      "title": "Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.40398",
+      "title": "Deep Learning Based Behavioral Drift Modeling for Continuous Biometric Authentication",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.39840",
+      "title": "Surprise Alone Learns Lies: Evidence-Gated Continual Learning for LLMs from Streaming Claims",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38796",
+      "title": "Routed Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38577",
+      "title": "Episodic looking - using reinforcement learning to bias perception enhances few-shot and continual learning with protection from forgetting",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.38436",
+      "title": "Continual Adaptation Across Modalities: Learning and Forgetting in Unified Multimodal Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38248",
+      "title": "MATCH: Execution-Aware Hierarchical Reinforcement Learning for Vision-and-Language Navigation in Continuous Environment",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.37195",
+      "title": "Action-Value Calibration via Continuation Sharing for Long-Horizon Agentic Reinforcement Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.37145",
+      "title": "Beyond Parameter Protection: Fisher-Shaped EWC for Replay-Free Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.37139",
+      "title": "Generative Replay for Equilibrium Propagation: Toward Edge-Friendly Continual Learning in Hopfield Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36734",
+      "title": "CAMR: Compatibility-Aware Memory Replay for Continual Learning in Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.35345",
+      "title": "Should Pseudo-Labels Share Mini-Batches with Labeled Examples? Semi-Supervised Continual Active Learning with Limited Training Cost",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.35313",
+      "title": "CoPE-CGL: Community-aware Prototype Extraction for Replay-Free Continual Graph Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.34724",
+      "title": "Harness-Model Collaboration for Long-Horizon Continual Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.34461",
+      "title": "Task Relevance-Driven Prompt Expansion for Federated Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.34043",
+      "title": "Holding a Steady Course: Knowledge Evolution from Expertise and Lessons for Continual Agent Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.34011",
+      "title": "Cross-User Adaptation for sEMG Gesture Recognition via Continual Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33956",
+      "title": "Continual Learning Exam: Benchmarking Long-Horizon RSI and Experiential Learning in LLM Agents",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.33877",
+      "title": "Semantic Concept Steering Breaks the Explanation Drift Loop in Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33496",
+      "title": "FedSEAM: Federated Continual Learning of LLMs via Subspace Expert Agreement Merging",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32799",
+      "title": "CARES: Coverage-Aware Replay Exemplar Selection for Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32472",
+      "title": "Online Continual Learning in Edge-Cloud Applications",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32301",
+      "title": "Continuous-Time Mean-Variance Portfolio Selection Reinforcement Learning Problems for a Markov Regime-Switching System with No-Shorting Constraints",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.32263",
+      "title": "LapaFM: A Laparoscopic Foundation Model via Multi-Stage Continual Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.31954",
+      "title": "RobustNCL: Robustifying Neuromorphic Continual Learning under Transient Faults with Lightweight Detect-and-Cure Strategy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31927",
+      "title": "ENCL: Enabling Efficient Neuromorphic Continual Learning with Local Learning Rule and Sub-Network Freezing Strategy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31818",
+      "title": "Nested Sparsity for Scalable Pretraining and Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31551",
+      "title": "Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.31521",
+      "title": "Jev-DLC: Decision-Level Continual Learning from Typed Feedback",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.31401",
+      "title": "HERD: Harness-Evolving Recursive Distillation for Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.07009",
+      "title": "NeuCME: Toward Dynamic Multimodal Continual Learning via Neural Combinatorics of Multiple Experts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.05075",
+      "title": "MePo++: Unifying Representation Refinement and Reconciliation for General Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.31096",
+      "title": "One Adapter, Many Tasks: Task-Conditioned Feature Transformations for Continual Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.27763",
+      "title": "Fast Weight Attention for Continual Learning",
+      "relevance": 3
+    }
+  ]
+}

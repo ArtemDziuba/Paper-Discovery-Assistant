@@ -1,0 +1,256 @@
+{
+  "query_id": "point-cloud-classification",
+  "query": "3D point cloud classification",
+  "judgments": [
+    {
+      "arxiv_id": "2611.05291",
+      "title": "Low-Density 3D Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03952",
+      "title": "Do We Still Need Rotation-Invariant Architectures? A Statistical Robustness Benchmark for Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02147",
+      "title": "Refining Roadside 4D Radar Vehicle Classification Using Point-Cloud Dispersion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.08955",
+      "title": "Damage Classification for 3D Point Cloud Data via 3D Data Analysis and Vision Foundation Model-based 2D Projections",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.07106",
+      "title": "Synthetic LiDAR Data Generation and Deterministic Downsampling for Point Cloud Classification on the Edge",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.19711",
+      "title": "Point-Selection Fine-Tuning Framework for Robust Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.14463",
+      "title": "Depth-Dependent Hidden-State Collapse in Dynamical System Autoencoders for LiDAR Point-Cloud Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.12335",
+      "title": "ProtoPointNet: Prototype-Based Interpretable Classification of 3D Dental Point Clouds with Verifiable Spatial Activations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.01272",
+      "title": "Benchmarking Federated Learning and Knowledge Distillation for Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.09123",
+      "title": "An Enhanced Geometric-Spectral Feature Learning Framework for Airborne Multispectral Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.17131",
+      "title": "A Survey on Deep Learning Architectures for Point Cloud Classification and Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.04046",
+      "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.02836",
+      "title": "A Closed-Form Persistence-Landmark Pipeline for Certified Point-Cloud and Graph Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.22883",
+      "title": "NeuroAPS-Net: Neuro-Anatomically Aware Point Cloud Representation for Efficient Alzheimer's Disease Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2604.10780",
+      "title": "LIDARLearn: A Unified Deep Learning Library for 3D Point Cloud Classification, Segmentation, and Self-Supervised Representation Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.20024",
+      "title": "Layered Quantum Architecture Search for 3D Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.07593",
+      "title": "Fast Attention-Based Simplification of LiDAR Point Clouds for Object Detection and Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.16950",
+      "title": "Enhancing Tree Species Classification: Insights from YOLOv8 and Explainable AI Applied to TLS Point Cloud Projections",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.23010",
+      "title": "Desensitizing for Improving Corruption Robustness in Point Cloud Classification through Adversarial Training",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.22150",
+      "title": "Joint graph entropy knowledge distillation for point cloud classification and robustness against corruptions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.09785",
+      "title": "Purge-Gate: Backpropagation-Free Test-Time Adaptation for Point Clouds Classification via Token Purging",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.05198",
+      "title": "Enhancing 3D Point Cloud Classification with ModelNet-R and Point-SkipNet",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.20835",
+      "title": "PointDGRWKV: Generalizing RWKV-like Architecture to Unseen Domains for Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.01269",
+      "title": "ModelNet40-E: An Uncertainty-Aware Benchmark for Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.18683",
+      "title": "SIM-Net: A Multimodal Fusion Network Using Inferred 3D Object Shape Point Clouds from RGB Images for 2D Classification",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2505.21854",
+      "title": "Rethinking Gradient-based Adversarial Attacks on Point Cloud Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.12456",
+      "title": "DG-MVP: 3D Domain Generalization via Multiple Views of Point Clouds for Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2504.08154",
+      "title": "Investigating Vision-Language Model for Point Cloud-based Vehicle Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.06627",
+      "title": "FACT: Multinomial Misalignment Classification for Point Cloud Registration",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.23647",
+      "title": "Introducing the Short-Time Fourier Kolmogorov Arnold Network: A Dynamic Graph CNN Approach for Tree Species Classification in 3D Point Clouds",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.06986",
+      "title": "ConcreTizer: Model Inversion Attack via Occupancy Classification and Dispersion Control for 3D Point Cloud Restoration",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2502.15811",
+      "title": "Spiking Point Transformer for Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.11669",
+      "title": "Deep Subspace Learning for Surface Anomaly Classification Based on 3D Point Cloud Data",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.14238",
+      "title": "Point-LN: A Lightweight Framework for Efficient Point Cloud Classification Using Non-Parametric Positional Encoding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.12974",
+      "title": "MorphoSkel3D: Morphological Skeletonization of 3D Point Clouds for Informed Sampling in Object Classification and Retrieval",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2501.03221",
+      "title": "RW-Net: Enhancing Few-Shot Point Cloud Classification with a Wavelet Transform Projection-based Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.01728",
+      "title": "Multimodal classification of forest biodiversity potential from 2D orthophotos and 3D airborne laser scanning point clouds",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.11407",
+      "title": "An Enhanced Classification Method Based on Adaptive Multi-Scale Fusion for Long-tailed Multispectral Point Clouds",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.04714",
+      "title": "PCTreeS: 3D Point Cloud Tree Species Classification Using Airborne LiDAR Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.03056",
+      "title": "Point-GN: A Non-Parametric Network Using Gaussian Positional Encoding for Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.03052",
+      "title": "Point-GR: Graph Residual Point Cloud Network for 3D Object Classification and Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.09691",
+      "title": "Robust 3D Point Clouds Classification based on Declarative Defenders",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.02020",
+      "title": "Efficient Point Cloud Classification via Offline Distillation Framework and Negative-Weight Self-Distillation Technique",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.02007",
+      "title": "PMT-MAE: Dual-Branch Self-Supervised Learning with Distillation for Efficient Point Cloud Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.01998",
+      "title": "SA-MLP: A Low-Power Multiplication-Free Deep Network for 3D Point Cloud Classification in Resource-Constrained Environments",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.13574",
+      "title": "PointDGMamba: Domain Generalization of Point Cloud Classification via Generalized State Space Model",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.12062",
+      "title": "Enhancing Sampling Protocol for Point Cloud Classification Against Corruptions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.10496",
+      "title": "GPT-based Textile Pilling Classification Using 3D Point Cloud Data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.06110",
+      "title": "RISurConv: Rotation Invariant Surface Attention-Augmented Convolutions for 3D Point Cloud Classification and Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.03545",
+      "title": "CLIP-based Point Cloud Classification via Point Cloud to Image Translation",
+      "relevance": 3
+    }
+  ]
+}

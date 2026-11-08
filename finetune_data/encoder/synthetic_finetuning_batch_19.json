@@ -1,0 +1,256 @@
+{
+  "query_id": "few-shot-image-classification",
+  "query": "Few-shot learning for image classification",
+  "judgments": [
+    {
+      "arxiv_id": "2611.00099",
+      "title": "A Novel Lightweight Multi-Scale Branching Encoder for Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28856",
+      "title": "Depth-guided Geometric Adaptation for Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.16936",
+      "title": "Adaptive receptive field-based spatial-frequency feature reconstruction network for fine-grained few-shot image classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.24528",
+      "title": "Project and Mix: Task-Semantic Prototypes for Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.11845",
+      "title": "ProtoConNet: Prototypical Augmentation and Alignment for Open-Set Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.09299",
+      "title": "ViT-ProtoNet for Few-Shot Image Classification: A Multi-Benchmark Evaluation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.04673",
+      "title": "Interpretable Few-Shot Image Classification via Prototypical Concept-Guided Mixture of LoRA Experts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.03461",
+      "title": "RoNFA: Robust Neural Field-based Approach for Few-Shot Image Classification with Noisy Labels",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.07396",
+      "title": "Brain Inspired Adaptive Memory Dual-Net for Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.13732",
+      "title": "Modeling Multi-modal Cross-interaction for Multi-label Few-shot Image Classification Based on Local Feature Selection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.03159",
+      "title": "Multi-Level Correlation Network For Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.19210",
+      "title": "Learning to Obstruct Few-Shot Image Classification over Restricted Classes",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.07989",
+      "title": "Enhancing Few-Shot Image Classification through Learnable Multi-Scale Embedding and Attention Mechanisms",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.01427",
+      "title": "Siamese Transformer Networks for Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.16145",
+      "title": "Improved Few-Shot Image Classification Through Multiple-Choice Questions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.10954",
+      "title": "Multimodal CLIP Inference for Meta-Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.03722",
+      "title": "Class-relevant Patch Embedding Selection for Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.10519",
+      "title": "Frozen Feature Augmentation for Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.10287",
+      "title": "Few-Shot Image Classification and Segmentation as Visual Question Answering Using Vision-Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.06868",
+      "title": "RAFIC: Retrieval-Augmented Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.05449",
+      "title": "TALDS-Net: Task-Aware Adaptive Local Descriptors Selection for Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.03517",
+      "title": "PrototypeFormer: Learning to Explore Prototype Relationships for Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.15524",
+      "title": "Few-shot Image Classification based on Gradual Machine Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.04114",
+      "title": "FILM: How can Few-Shot Image Classification Benefit from Pre-Trained Language Models?",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2305.09062",
+      "title": "SuSana Distancia is all you need: Enforcing class separability in metric learning via two novel distance-based loss functions for few-shot image classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2302.08909",
+      "title": "Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2302.01190",
+      "title": "On the Efficacy of Differentially Private Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.17161",
+      "title": "Bi-directional Feature Reconstruction Network for Fine-Grained Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.16191",
+      "title": "SgVA-CLIP: Semantic-guided Visual Adapting of Vision-Language Models for Few-shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.06828",
+      "title": "Enhancing Few-shot Image Classification with Cosine Transformer",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.03199",
+      "title": "KGTN-ens: Few-Shot Image Classification with Knowledge Graph Ensembles",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.11000",
+      "title": "Visual-Semantic Contrastive Alignment for Few-Shot Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.06989",
+      "title": "Tree Structure-Aware Few-Shot Image Classification via Hierarchical Aggregation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.03133",
+      "title": "Improving Few-Shot Image Classification Using Machine- and User-Generated Natural Language Descriptions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.07682",
+      "title": "DEQ-Det: Dual Evidence Queries for Few-Shot Analog IC Device Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.07306",
+      "title": "Few-Shot Beam Selection for Embodied AI via In-Context Learning and Conformal Prediction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2611.07063",
+      "title": "SD-LoRA: Training-Time Structural Distillation into LoRA for Few-Shot Vision-Language Adaptation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.06597",
+      "title": "A trust layer for fast pedestal-stability surrogates: calibrated error bars, out-of-distribution alarms and few-shot recalibration",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2611.04490",
+      "title": "Polarimetric Scattering-Structure Contrastive Learning for Few-Shot HRRP Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.04084",
+      "title": "From Visual Matching to Textual Conditioning: Cross-Domain Few-Shot Segmentation via Reference Inversion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.02654",
+      "title": "VerdictAD: Few-Shot Anomaly Detection via Decision-Guided Refinement",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.00022",
+      "title": "Diagnosing Prototype Estimation in Few-Shot Class-Incremental Learning: Training-Free Geometry Selection and Unlabeled-Query Prototype Rectification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.41199",
+      "title": "Beyond CLIP: Calibrated (Few-Shot) Defect Detection With System One Decision Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.38482",
+      "title": "Geometry-Aware Trajectory State Modeling for Few-Shot Action Recognition",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.35533",
+      "title": "An Algorithmic Account of Few-Shot Concept Induction in Language Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.34901",
+      "title": "LE-GDA: Layer Ensemble Gaussian Discriminant Analysis for Training-Free Few-Shot CLIP Adaptation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33518",
+      "title": "Component Pooling Trained Across Orientations for Few-Shot Remote Sensing Scene Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32964",
+      "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.27029",
+      "title": "EGiME: Entropy-Guided Model Evaluation in Few-Shot Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.26909",
+      "title": "Uncertainty Gates the Gradient: Adaptive Updates for Generalized Few-Shot 3D Segmentation",
+      "relevance": 1
+    }
+  ]
+}

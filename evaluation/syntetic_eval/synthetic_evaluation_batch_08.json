@@ -1,0 +1,256 @@
+{
+  "query_id": "multimodal-emotion-recognition",
+  "query": "Multimodal emotion recognition using audio and visual signals",
+  "judgments": [
+    {
+      "arxiv_id": "2407.18552",
+      "title": "Multimodal Emotion Recognition using Audio-Video Transformer Fusion with Cross Attention",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.11971",
+      "title": "Multimodal Emotion Recognition via Bi-directional Cross-Attention and Temporal Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2006.11871",
+      "title": "Human Emotion Detection from Audio and Video Signals",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2010.03692",
+      "title": "An Audio-Video Deep and Transfer Learning Framework for Multimodal Emotion Recognition in the wild",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.16701",
+      "title": "Detail-Enhanced Intra- and Inter-modal Interaction for Audio-Visual Emotion Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1603.08321",
+      "title": "Audio Visual Emotion Recognition with Temporal Alignment and Perception Attention",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2006.08129",
+      "title": "Emotion Recognition in Audio and Video Using Deep Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1804.05788",
+      "title": "Multi-Modal Emotion recognition on IEMOCAP Dataset using Deep Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1602.08225",
+      "title": "Multimodal Emotion Recognition Using Multimodal Deep Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2402.07327",
+      "title": "Multi-Modal Emotion Recognition by Text, Speech and Video Using Pretrained Transformers",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.10060",
+      "title": "CMATH: Cross-Modality Augmented Transformer with Hierarchical Variational Distillation for Multimodal Emotion Recognition in Conversation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2010.07637",
+      "title": "DialogueTRM: Exploring the Intra- and Inter-Modal Emotional Behaviors in the Conversation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2112.01938",
+      "title": "Shapes of Emotions: Multimodal Emotion Recognition in Conversations via Emotion Shifts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29556",
+      "title": "Cross-Modal Emotion Understanding: A Transformer-GAT Approach for Dialogue Emotion Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.09924",
+      "title": "Multimodal Emotion Recognition in Conversations via Class-Wise Adaptive Modality Fusion and Affective Geometry",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.12987",
+      "title": "TelME: Teacher-leading Multimodal Fusion Network for Emotion Recognition in Conversation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2409.05243",
+      "title": "Mamba-Enhanced Text-Audio-Video Alignment Network for Emotion Recognition in Conversations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.06805",
+      "title": "Multimodal Emotion Recognition and Sentiment Analysis in Multi-Party Conversation Contexts",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.00914",
+      "title": "A Baseline Multimodal Approach to Emotion Recognition in Conversations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2402.10921",
+      "title": "AM^2-EmoJE: Adaptive Missing-Modality Emotion Recognition in Conversation via Joint Embedding Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.12251",
+      "title": "Dynamic Modality and View Selection for Multimodal Emotion Recognition with Missing Modalities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.12687",
+      "title": "Audio-Visual Compound Expression Recognition Method based on Late Modality Fusion and Rule-based Decision",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.02414",
+      "title": "MIAR: Modality Interaction and Alignment Representation Fuison for Multimodal Emotion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2603.08034",
+      "title": "Solution to the 10th ABAW Expression Recognition Challenge: A Robust Multimodal Framework with Safe Cross-Attention and Modality Dropout",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.08419",
+      "title": "Multi Modal Facial Expression Recognition with Transformer-Based Fusion Networks and Dynamic Sampling",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2502.08573",
+      "title": "A Novel Approach to for Multimodal Emotion Recognition : Multimodal semantic information fusion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2005.08341",
+      "title": "Impact of multiple modalities on emotion recognition: investigation into 3d facial landmarks, action units, and physiological data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1704.00570",
+      "title": "Spatiotemporal Networks for Video Emotion Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2303.08356",
+      "title": "Continuous emotion recognition based on TCN and Transformer",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2107.04187",
+      "title": "A Multi-modal and Multi-task Learning Method for Action Unit and Expression Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2303.10590",
+      "title": "Multi-modal Facial Action Unit Detection with Large Pre-trained Models for the 5th Competition on Affective Behavior Analysis in-the-wild",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.13056",
+      "title": "Team RAS in 10th ABAW Competition: Multimodal Valence and Arousal Estimation Approach",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.12221",
+      "title": "A Two-Stage Dual-Modality Model for Facial Emotional Expression Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2002.02957",
+      "title": "M3T: Multi-Modal Continuous Valence-Arousal Estimation in the Wild",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.07388",
+      "title": "Recent Advances in Multimodal Affective Computing: An NLP Perspective",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.17292",
+      "title": "AV-EmoDialog: Chat with Audio-Visual Users Leveraging Emotional Cues",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.00811",
+      "title": "MissMAC-Bench: Building Solid Benchmark for Missing Modality Issue in Robust Multimodal Affective Computing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2112.01368",
+      "title": "ScaleVLAD: Improving Multimodal Sentiment Analysis via Multi-Scale Fusion of Locally Descriptors",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.10278",
+      "title": "Towards Robust Arabic Speech Emotion Recognition with Deep Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2309.12714",
+      "title": "Unsupervised Representations Improve Supervised Learning in Speech Emotion Recognition",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2301.10906",
+      "title": "Facial Emotion Recognition",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2107.05160",
+      "title": "Spatial and Temporal Networks for Facial Expression Recognition in the Wild Videos",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2203.13472",
+      "title": "Facial Expression Recognition with Swin Transformer",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2103.15792",
+      "title": "Affect Analysis in-the-wild: Valence-Arousal, Expressions, Action Units and a Unified Framework",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1910.04855",
+      "title": "Expression, Affect, Action Unit Recognition: Aff-Wild2, Multi-Task Learning and ArcFace",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2203.12891",
+      "title": "An Ensemble Approach for Facial Expression Analysis in Video",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2303.09917",
+      "title": "Vision Transformer for Action Units Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2203.12531",
+      "title": "Multi-label Transformer for Action Unit Detection",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1606.06259",
+      "title": "MOSI: Multimodal Corpus of Sentiment Intensity and Subjectivity Analysis in Online Opinion Videos",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2203.13436",
+      "title": "Frame-level Prediction of Facial Expressions, Valence, Arousal and Action Units for Mobile Devices",
+      "relevance": 0
+    }
+  ]
+}

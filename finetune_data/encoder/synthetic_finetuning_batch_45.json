@@ -1,0 +1,256 @@
+{
+  "query_id": "bayesian-hyperparameter-optimization",
+  "query": "Bayesian optimization for hyperparameter tuning",
+  "judgments": [
+    {
+      "arxiv_id": "2610.18306",
+      "title": "Bayesian Optimization of CVaR with Unknown Hyperparameters",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.03987",
+      "title": "On the sensitivity to hyperparameters of a Bayesian method to infer selection signatures",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.07289",
+      "title": "Bayesian Optimization of Genetic Algorithm Hyperparameters in a Multi-Fidelity Framework for Efficient Lattice Material Design",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.03704",
+      "title": "Optimizing Large Language Models for Causality Assessment in Pharmacovigilance: Developing a Performance Metric as Objective for Bayesian Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.03355",
+      "title": "Amortized low-rank approximation for hyperparameter marginalization in PDE-governed Bayesian inverse problems",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2605.06454",
+      "title": "ORTHOBO: Orthogonal Bayesian Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.11171",
+      "title": "A Language-Guided Bayesian Optimization for Efficient LoRA Hyperparameter Search",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.09851",
+      "title": "CoFEH: LLM-driven Feature Engineering Empowered by Collaborative Bayesian Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2602.08774",
+      "title": "Default Machine Learning Hyperparameters Do Not Provide Informative Initialization for Bayesian Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.20051",
+      "title": "Generative Bayesian Hyperparameter Tuning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.11983",
+      "title": "Bayesian--AI Fusion for Epidemiological Decision Making: Calibrated Risk, Honest Uncertainty, and Hyperparameter Intelligence",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2511.02570",
+      "title": "Dynamic Priors in Bayesian Optimization for Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.21379",
+      "title": "Cost-Sensitive Freeze-thaw Bayesian Optimization for Efficient Hyperparameter Tuning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.18547",
+      "title": "Hyperparameter Selection via Early Stopping for Bayesian Semilinear PDEs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2509.20574",
+      "title": "The Sensitivity of Variational Bayesian Neural Network Performance to Hyperparameters",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2508.09792",
+      "title": "Bayesian autoregression to optimize temporal Matérn kernel Gaussian process hyperparameters",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2507.05314",
+      "title": "Dual-Attention U-Net++ with Class-Specific Ensembles and Bayesian Hyperparameter Optimization for Precise Wound and Scale Marker Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.01604",
+      "title": "Bayesian non-parametric survival estimation: stochastic hyperparameter sequences and distribution splicing",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2502.09329",
+      "title": "Bayesian Optimization for Simultaneous Selection of Machine Learning Algorithms and Hyperparameters on Shared Latent Space",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.06044",
+      "title": "Differentially Private Hyperparameter Tuning using Local Bayesian Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.16419",
+      "title": "Amortising over hyperparameters in Generalised Bayesian Inference",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2412.02773",
+      "title": "Efficient hyperparameter estimation in Bayesian inverse problems using sample average approximation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2411.06184",
+      "title": "Alleviating Hyperparameter-Tuning Burden in SVM Classifiers for Pulmonary Nodules Diagnosis with Multi-Task Bayesian Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.21886",
+      "title": "Bayesian Optimization for Hyperparameters Tuning in Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.10384",
+      "title": "Bayesian Optimisation with Unknown Hyperparameters: Regret Bounds Logarithmically Closer to Optimal",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.15303",
+      "title": "A Trajectory-Based Bayesian Approach to Multi-Objective Hyperparameter Optimization with Epoch-Aware Trade-Offs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.06112",
+      "title": "Bayesian Optimization of Sample Entropy Hyperparameters for Short Time Series",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.16795",
+      "title": "In-Context Freeze-Thaw Bayesian Optimization for Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.12688",
+      "title": "Change of Measure for Bayesian Field Inversion with Hierarchical Hyperparameters Sampling",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2401.02544",
+      "title": "Hyperparameter Estimation for Sparse Bayesian Learning Models",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2307.10596",
+      "title": "Ensemble Learning based Anomaly Detection for IoT Cybersecurity via Bayesian Hyperparameters Sensitivity Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2306.06844",
+      "title": "Provably Efficient Bayesian Optimization with Unknown Gaussian Process Hyperparameter Estimation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2306.00357",
+      "title": "Efficient and Robust Bayesian Selection of Hyperparameters in Dimension Reduction for Visualization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.07113",
+      "title": "Path-following methods for Maximum a Posteriori estimators in Bayesian hierarchical models: How estimates depend on hyperparameters",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2210.03481",
+      "title": "Neighbor Regularized Bayesian Optimization for Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.09902",
+      "title": "Bayesian Hyperparameter Optimization for Deep Neural Network-Based Network Intrusion Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.00479",
+      "title": "Asynchronous Decentralized Bayesian Optimization for Large Scale Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.05447",
+      "title": "Improving Accuracy of Interpretability Measures in Hyperparameter Optimization via Bayesian Algorithm Execution",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2206.03592",
+      "title": "Click prediction boosting via Bayesian hyperparameter optimization based ensemble learning pipelines",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.08835",
+      "title": "Fair and Green Hyperparameter Optimization via Multi-objective and Multiple Information Source Bayesian Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2203.12597",
+      "title": "High-dimensional Bayesian Optimization of Hyperparameters for an Attention-based Network to Predict Materials Property: a Case Study on CrabNet using Ax and SAASBO",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2202.07631",
+      "title": "One Configuration to Rule Them All? Towards Hyperparameter Transfer in Topic Models using Multi-Objective Bayesian Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2201.06809",
+      "title": "Comparison of Bayesian and particle swarm algorithms for hyperparameter optimisation in machine learning applications in high energy physics",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2109.09831",
+      "title": "SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.12532",
+      "title": "Bayesian Deep Learning Hyperparameter Search for Robust Function Mapping to Polynomials with Noise",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2106.09179",
+      "title": "Amortized Auto-Tuning: Cost-Efficient Bayesian Transfer Optimization for Hyperparameter Recommendation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2104.10201",
+      "title": "Bayesian Optimization is Superior to Random Search for Machine Learning Hyperparameter Tuning: Analysis of the Black-Box Optimization Challenge 2020",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2010.01855",
+      "title": "Non-trivial informational closure of a Bayesian hyperparameter",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2007.09953",
+      "title": "Multi-level Training and Bayesian Optimization for Economical Hyperparameter Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2004.10092",
+      "title": "Bayesian Optimization of Hyperparameters from Noisy Marginal Likelihood Estimates",
+      "relevance": 2
+    }
+  ]
+}

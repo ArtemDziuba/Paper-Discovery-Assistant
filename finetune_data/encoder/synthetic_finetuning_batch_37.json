@@ -1,0 +1,256 @@
+{
+  "query_id": "image-super-resolution",
+  "query": "Image super-resolution",
+  "judgments": [
+    {
+      "arxiv_id": "2611.00963",
+      "title": "4K Image Super-Resolution on Mobile NPUs: Mobile AI 2026 Challenge Report",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.39340",
+      "title": "Focal-Plane Extreme Adaptive Optics for Deep Super Resolution Imaging and Nanolithography",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.37491",
+      "title": "Adaptive Information Mining: Approaching the Quantum Limit of Super-Resolution Imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.31644",
+      "title": "GigaBench: Benchmarking Learnable Representations for Gigapixel Image Compression and Super-Resolution",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.28423",
+      "title": "WorldSR: Harnessing World Knowledge Search for Grounded Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27759",
+      "title": "PixelSR: Pixel-Space Orthogonal Flow Decoupling for Real-World Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.25770",
+      "title": "VHA: VQA-based Hallucination Assessment for Generative Image Super-Resolution",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.24992",
+      "title": "MultiAltitudeSR: Multi-Altitude Agricultural UAV Image Super-Resolution via Physical Ground Sampling Distance Conditioning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15264",
+      "title": "Dual deconvolution multifocal fluorescence response matrix microscopy for aberration-free high-throughput super-resolution imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2610.14281",
+      "title": "TGSR: Text-Grounded Diffusion for Faithful Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13547",
+      "title": "MOSAIC: Multi-Scale Object-Centric Slot Adaptation with Image-Guided Prototype Conditioning for Remote Sensing Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.09098",
+      "title": "On-Device Super-Resolution Imaging for a Low-Cost SPAD Array on a 640-KB-SRAM Microcontroller",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.09077",
+      "title": "DISRQAD: Diffusion Image Super-Resolution Quality Assessment Dataset and Benchmark",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05182",
+      "title": "TIRMamba: A Thermal-Prior-Modulated State-Space Network for Sub-Million-Parameter Infrared Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04819",
+      "title": "DriftSR: One-Step Real-World Image Super-Resolution via Distribution Drifting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.32705",
+      "title": "DPAMixerSR: An Efficient Degradation-Pattern-Aware Model for Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.30431",
+      "title": "PGDM-MRSRGAN: Physics-Guided Degradation Model with an SRGAN Framework for Magnetic Resonance Image Super-Resolution: Applications in Low-Field MRI",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29240",
+      "title": "TOLA: Text-aware One-Step Latent Adaptation for Diffusion-based Text Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.26731",
+      "title": "ASTRA-SR: Atmospheric Seeing and Turbulence Restoration for Astronomical Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.26103",
+      "title": "MIAR: Medical Image Super-Resolution With Autoregressive Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.25429",
+      "title": "Directional Total Variation-Regularized Implicit Neural Representations (DTV-INR) for Continuous Super-Resolution in Degraded Imaging Domains",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.24039",
+      "title": "Synthetic-Aperture Super-Resolution Imaging via Spatial-Frequency Shift in Near-Field Diffraction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2609.15120",
+      "title": "DNF-SR: Dual-Input and Negative-Aware Feature Fine-Tuning for Real-World Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.11886",
+      "title": "Guided Super-Resolution of Digital Elevation Models with Diffusion-Based Image Generators",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.06874",
+      "title": "MedGSSR: Generalizable Medical Image Super-Resolution 3D Reconstruction via Hierarchical Feed-forward Gaussian Splatting",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.06490",
+      "title": "OracleZoom: On-Policy Self-Distillation Inspired Reference-Constrained Recursive Image Super Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.05912",
+      "title": "FreeTransformSR: Efficient Lightweight Image Super-Resolution via Free Low-Rank Learnable Transform",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.05303",
+      "title": "Learning Spatial-Spectral Refinement and Calibrating Complementary Observations for Hyperspectral Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.03735",
+      "title": "TokenComSR: Task-Sensitivity-Guided Token Communication for Wireless Image Super-Resolution",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.02476",
+      "title": "UnCapsTSR: An Unsupervised Transformer-based Image Super-Resolution Approach for Capsule Endoscopy Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.02063",
+      "title": "LaST-SR: Laplace-Inspired Steady-Transient Complex-Frequency Decomposition for Single Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.02016",
+      "title": "Perceptually Regularized Diffusion Model for Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.30782",
+      "title": "PixelIR: Fidelity-Perception Decoupling via Pixel-Space Image-Residual Flow Matching for Efficient One-Step Real-World Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.25334",
+      "title": "GraftSR: Grafting Authentic Textures for Real-World Image Super-Resolution via Identical-Instance Guidance",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.17966",
+      "title": "SFMformer: A Spatial-Frequency Modulation Transformer for Lightweight Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.16546",
+      "title": "Supervising the Path to Fine Scales: GalerkinFlow for Scientific-Field and Image Super-Resolution",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.15349",
+      "title": "ENAF: A Multi-Exit Network with an Adaptive Patch Fusion for Large Image Super Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.09672",
+      "title": "MPISuperRes-PnP: A Super-Resolution Zero-Shot Plug-and-Play Reconstruction Algorithm for Magnetic Particle Imaging",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.09373",
+      "title": "Preserve More Details: Mitigating Content Drift in Real-World Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.09150",
+      "title": "OGG-FR: Orthogonal Gradient Gaming and Frequency Rectification for Unmanned Aerial Vehicle Infrared Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.04711",
+      "title": "Freeform super-oscillatory optics for CMOS-integrated THz super-resolution imaging",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2608.04525",
+      "title": "Coupled Continuous-Discrete Generation for Scene Text Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03664",
+      "title": "Morphology-Aware Implicit Super-Resolution Network for Pathological Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03540",
+      "title": "S$^3$-Diff: Structural Semantic Synergy Diffusion Model for High Fidelity Super Resolution of Pathological Images",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03106",
+      "title": "FaithIR: Rethinking Infrared Image Super-Resolution from Perceptual Sharpness to Task Relevant Fidelity",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.02401",
+      "title": "USP-Mamba: Unmixing-Derived Spectral and Structural Prompting for Hyperspectral Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.27750",
+      "title": "PhySR: Physics-Informed Neural Network for Super-Resolution Reconstruction in Radio Synthesis Imaging",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2607.20598",
+      "title": "MedDiT4SR: Tri-Stream Joint Adaptation of Pre-Trained Diffusion Transformers for Medical Image Super-Resolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.19652",
+      "title": "An integrated super resolution THz 3D imaging system based on a linear nonlocal achromatic freeform Bessel beam lens and high power oscillator radiator array",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2607.18856",
+      "title": "Think Sparse, Predict Dense: Continuous Thought Machines for Image Super-Resolution",
+      "relevance": 3
+    }
+  ]
+}

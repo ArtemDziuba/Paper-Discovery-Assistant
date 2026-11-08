@@ -1,0 +1,256 @@
+{
+  "query_id": "deep-learning-image-inpainting",
+  "query": "Deep learning for image inpainting and missing-region reconstruction",
+  "judgments": [
+    {
+      "arxiv_id": "2307.07678",
+      "title": "Both Spatial and Frequency Cues Contribute to High-Fidelity Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.18437",
+      "title": "Frequency-Domain Fusion Transformer for Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.13644",
+      "title": "Feature Refinement to Improve High Resolution Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2203.11947",
+      "title": "CM-GAN: Image Inpainting with Cascaded Modulation GAN and Object-Aware Training",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.06976",
+      "title": "BrushNet: A Plug-and-Play Image Inpainting Model with Decomposed Dual-Branch Diffusion",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.03322",
+      "title": "Towards Coherent Image Inpainting Using Denoising Diffusion Implicit Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.09306",
+      "title": "TD-Paint: Faster Diffusion Inpainting Through Time Aware Pixel Conditioning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2212.02963",
+      "title": "Image Inpainting via Iteratively Decoupled Probabilistic Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.03491",
+      "title": "LanPaint: Training-Free Diffusion Inpainting with Asymptotically Exact and Fast Conditional Sampling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.08019",
+      "title": "Coherent and Multi-modality Image Inpainting via Latent Space Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.06790",
+      "title": "Inpaint Anything: Segment Anything Meets Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.18929",
+      "title": "VIPaint: Image Inpainting with Pre-Trained Diffusion Models via Variational Inference",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.04268",
+      "title": "ControlFill: Spatially Adjustable Image Inpainting from Prompt Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.16016",
+      "title": "Fill in the ____ (a Diffusion-based Image Inpainting Pipeline)",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.00862",
+      "title": "Training-Free Inpainting Across Domains with a Frozen Text-to-Image Diffusion Model",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2111.03414",
+      "title": "Structure-aware Image Inpainting with Two Parallel Streams",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1901.00212",
+      "title": "EdgeConnect: Generative Image Inpainting with Adversarial Edge Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2108.08791",
+      "title": "Image Inpainting using Partial Convolution",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.14489",
+      "title": "SuperInpaint: Learning Detail-Enhanced Attentional Implicit Representation for Super-resolutional Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.12035",
+      "title": "GRIG: Few-Shot Generative Residual Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2011.12836",
+      "title": "CR-Fill: Generative Image Inpainting with Auxiliary Contexutal Reconstruction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1812.01458",
+      "title": "Deep Inception Generative Network for Cognitive Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1803.08943",
+      "title": "Image Inpainting using Block-wise Procedural Training with Annealed Adversarial Counterpart",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.03349",
+      "title": "Image Inpainting via Tractable Steering of Diffusion Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2310.02848",
+      "title": "Magicremover: Tuning-free Text-guided Image inpainting with Diffusion Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.01682",
+      "title": "Diffusion Models with Anisotropic Gaussian Splatting for Image Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.12382",
+      "title": "Lazy Diffusion Transformer for Interactive Image Editing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.10537",
+      "title": "Learning Position-Aware Implicit Neural Network for Real-World Face Inpainting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.10584",
+      "title": "Reference-based Painterly Inpainting via Diffusion: Crossing the Wild Reference Domain Gap",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2312.01536",
+      "title": "CalliPaint: Chinese Calligraphy Inpainting with Diffusion Model",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2312.03869",
+      "title": "Inpaint3D: 3D Scene Content Generation using 2D Inpainting Diffusion",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2412.05881",
+      "title": "3D-Consistent Image Inpainting with Diffusion Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2405.00251",
+      "title": "Semantically Consistent Video Inpainting with Conditional Diffusion Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2401.00208",
+      "title": "Inpaint4DNeRF: Promptable Spatio-Temporal NeRF Inpainting with Generative Diffusion Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2404.09995",
+      "title": "Taming Latent Diffusion Model for Neural Radiance Field Inpainting",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2205.07014",
+      "title": "SaiNet: Stereo aware inpainting behind objects with generative networks",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2306.09305",
+      "title": "Fast Training of Diffusion Models with Masked Transformers",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2405.15475",
+      "title": "Efficient Degradation-aware Any Image Restoration",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2305.20049",
+      "title": "A Unified Conditional Framework for Diffusion-based Image Restoration",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2208.00173",
+      "title": "A Survey on Masked Autoencoder for Self-supervised Learning in Vision and Beyond",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2205.10546",
+      "title": "Improvements to Self-Supervised Representation Learning for Masked Image Modeling",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2205.09113",
+      "title": "Masked Autoencoders As Spatiotemporal Learners",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2402.18128",
+      "title": "Downstream Task Guided Masking Learning in Masked Autoencoders Using Multi-Level Optimization",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2401.00897",
+      "title": "Masked Modeling for Self-supervised Representation Learning on Vision and Beyond",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2403.04724",
+      "title": "Masked Capsule Autoencoders",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2205.14540",
+      "title": "SupMAE: Supervised Masked Autoencoders Are Efficient Vision Learners",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2506.20302",
+      "title": "TDiR: Transformer based Diffusion for Image Restoration Tasks",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2501.04740",
+      "title": "Color Correction Meets Cross-Spectral Refinement: A Distribution-Aware Diffusion for Underwater Image Restoration",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2409.18476",
+      "title": "Underwater Image Enhancement with Physical-based Denoising Diffusion Implicit Models",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2510.09934",
+      "title": "Denoising Diffusion as a New Framework for Underwater Images",
+      "relevance": 0
+    }
+  ]
+}

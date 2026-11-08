@@ -1,0 +1,256 @@
+{
+  "query_id": "visual-object-tracking",
+  "query": "Visual object tracking in videos",
+  "judgments": [
+    {
+      "arxiv_id": "2610.19931",
+      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.13053",
+      "title": "UniMergeTrack: Hierarchical Model Merging for General RGB-X Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.07070",
+      "title": "Continuous Token-Level Spatio-Temporal Context Modeling for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.06773",
+      "title": "AnyTrack: Unifying Visual Object Tracking with Any Modalities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.26455",
+      "title": "Active Adversarial Perturbation-driven Associative Memory Retrieval for RGB-Event Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.26933",
+      "title": "Leveraging Text-to-Image Diffusion Models for Unsupervised Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.22538",
+      "title": "Segment Anything with Motion, Geometry, and Semantic Adaptation for Complex Nonlinear Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.08329",
+      "title": "An Efficient Token Compression Framework for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.07379",
+      "title": "RELO: Reinforcement Learning to Localize for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.06112",
+      "title": "Dynamic Pondering Sparsity-aware Mixture-of-Experts Transformer for Event Stream based Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.27913",
+      "title": "Spatial Orthogonal Refinement for Robust RGB-Event Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.03904",
+      "title": "Architecture and evaluation protocol for transformer-based visual object tracking in UAV applications",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.01022",
+      "title": "Decoupling Amplitude and Phase Attention in Frequency Domain for RGB-Event based Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.22624",
+      "title": "Rethinking Memory Design in SAM-Based Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.13864",
+      "title": "Distractor-Aware Memory-Based Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.13000",
+      "title": "Omni Survey for Multimodality Analysis in Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.10655",
+      "title": "Serial Over Parallel: Learning Continual Unification for Multi-Modal Visual Object Tracking and Benchmarking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.21732",
+      "title": "SAMITE: Position Prompted SAM2 with Calibrated Memory for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.23783",
+      "title": "Mamba-FETrack V2: Revisiting State Space Model for Frame-Event based Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2506.21980",
+      "title": "R1-Track: Direct Application of MLLMs to Visual Object Tracking via Reinforcement Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.02866",
+      "title": "MVTD: A Benchmark Dataset for Maritime Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.19990",
+      "title": "Progressive Scaling Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2505.18111",
+      "title": "Adapting SAM 2 for Visual Object Tracking: 1st Place Solution for MMVPR Challenge Multi-Modal Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.12903",
+      "title": "Towards Low-Latency Event Stream-based Visual Object Tracking: A Slow-Fast Approach",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.14423",
+      "title": "Adversarial Attack for RGB-Event based Visual Object Tracking",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.12888",
+      "title": "UncTrack: Reliable Visual Object Tracking with Uncertainty-Aware Prototype Memory Network",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.20111",
+      "title": "MITracker: Multi-View Integration for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.05574",
+      "title": "Event Stream-based Visual Object Tracking: HDETrack V2 and A High-Definition Benchmark",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2501.02467",
+      "title": "DeTrack: In-model Latent Denoising Learning for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2412.09991",
+      "title": "Visual Object Tracking across Diverse Data Modalities: A Review",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.17576",
+      "title": "A Distractor-Aware Memory for Visual Object Tracking with SAM2",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.20421",
+      "title": "NT-VOT211: A Large-Scale Benchmark for Night-time Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.18901",
+      "title": "Improving Visual Object Tracking through Visual Prompting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.10487",
+      "title": "MambaEVT: Event Stream based Visual Object Tracking using State Space Model",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2404.13953",
+      "title": "360VOTS: Visual Object Tracking and Segmentation in Omnidirectional Videos",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2403.16002",
+      "title": "SDSTrack: Self-Distillation Symmetric Adapter Learning for Multi-Modal Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.09634",
+      "title": "OneTracker: Unifying Visual Object Tracking with Foundation Models and Efficient Tuning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.07914",
+      "title": "ACTrack: Adding Spatio-Temporal Condition for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.05839",
+      "title": "Long-Term Visual Object Tracking with Event Cameras: An Associative Memory Augmented Tracker and A Benchmark Dataset",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2403.03493",
+      "title": "VastTrack: Vast Category Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2402.14392",
+      "title": "Reading Relevant Feature from Global Representation Memory for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.03142",
+      "title": "Explicit Visual Prompts for Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2309.14611",
+      "title": "Event Stream-based Visual Object Tracking: A High-Resolution Benchmark Dataset and A Novel Baseline",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2309.13257",
+      "title": "RTrack: Accelerating Convergence for Visual Object Tracking via Pseudo-Boxes Exploration",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2309.05829",
+      "title": "Mobile Vision Transformer-based Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.14630",
+      "title": "360VOT: A New Benchmark Dataset for Omnidirectional Visual Object Tracking",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2304.14394",
+      "title": "Unified Sequence-to-Sequence Learning for Single- and Multi-Modal Visual Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2301.03213",
+      "title": "EgoTracks: A Long-term Egocentric Visual Object Tracking Dataset",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2209.13502",
+      "title": "Visual Object Tracking in First Person Vision",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2208.08829",
+      "title": "Learning Spatial-Frequency Transformer for Visual Object Tracking",
+      "relevance": 3
+    }
+  ]
+}

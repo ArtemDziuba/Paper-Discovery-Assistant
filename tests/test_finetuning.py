@@ -69,14 +69,14 @@ def test_annotation_shape_and_invalid_grade(tmp_path):
 
 def test_binary_threshold_does_not_change_graded_ndcg():
     qrels = {"a": 1, "b": 3}
-    permissive = metrics(["a", "b"], qrels)
-    strict = metrics(["a", "b"], qrels, relevant_min=2)
+    permissive = metrics(["a", "b"], qrels, mode="full")
+    strict = metrics(["a", "b"], qrels, relevant_min=2, mode="full")
     assert permissive["ndcg@10"] == strict["ndcg@10"]
-    assert permissive["mrr"] == 1 and strict["mrr"] == 0.5
+    assert permissive["mrr@50"] == 1 and strict["mrr@50"] == 0.5
     assert permissive["precision@5"] == 0.4 and strict["precision@5"] == 0.2
-    assert metrics(["a"], {"a": 0.5})["mrr"] == 1
+    assert metrics(["a"], {"a": 0.5}, mode="full")["mrr@50"] == 1
 
 
 def test_missing_finetuned_model_is_not_silently_base_model(tmp_path):
-    with pytest.raises(RuntimeError, match="fine-tuned model is not available"):
+    with pytest.raises(RuntimeError, match="syntetic finetune v1 model is not available"):
         SemanticEncoder("cpu", model_path=tmp_path)

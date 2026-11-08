@@ -1,0 +1,256 @@
+{
+  "query_id": "llm-hallucination-detection",
+  "query": "Hallucination detection in large language models",
+  "judgments": [
+    {
+      "arxiv_id": "2611.04697",
+      "title": "When Ground Truth Is Not Ground Truth: Automatic Labeling for Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.38314",
+      "title": "CHORD: Cross-Model Hallucination Detection via Relational Graph Discrimination",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.37229",
+      "title": "Decision Models as Judges for Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.36191",
+      "title": "LLM Hallucination Detection via Low-rank Multilinear Decomposition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.33608",
+      "title": "Mycelium: A Meta-Study of Hallucination Detection Across Provenance, Typology, and Granularities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.32212",
+      "title": "SOPO: Socratic Guided Policy Optimization for Span-Level Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27711",
+      "title": "How Fine-Tuning Objectives Shape Layer-Wise Information in LLM Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.27041",
+      "title": "Robustness of Internal Signals for Hallucination Detection in Vision-Language Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.23610",
+      "title": "Not Every Mention Is a Claim: Rethinking Object Hallucination Detection in Vision-Language Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.22892",
+      "title": "Bengali Hallucination Detection with Retrieval and Programs: A System Study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.22515",
+      "title": "alkhder at ImageEval 2026 Shared Tasks: Constrained Selection and Rotation-Averaged Logit Scoring for Multimodal Hallucination Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19996",
+      "title": "Gray-Box Hallucination Detection in LLMs with Token Identities",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14214",
+      "title": "Embedding Graph Kernel Entropy (EGKE): Fine-grained Hallucination Detection for LLMs from Embeddings",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.10971",
+      "title": "When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.08026",
+      "title": "The Labeling Problem in Hallucination Detection Benchmarks: An Empirical Evaluation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.04642",
+      "title": "Grounding Probes: Generator-Independent Hallucination Detection from Observer Model Hidden States",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03482",
+      "title": "Single-Pass Uncertainty Heads for Claim-Level Hallucination Detection in Persian Medical Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.02066",
+      "title": "External Observers May See More Clearly: Cross-Model Span-Level Hallucination Detection in Large Language Models via Hidden State Probing",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39229",
+      "title": "RAIM: Robust Aggregation of Inexpensive Models for Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.38355",
+      "title": "Halluscoring 2026: The first shared task on llms hallucination detection and answer verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.35860",
+      "title": "The Detectability Gap: Hidden Heterogeneity in Hallucination Detection Across Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.29604",
+      "title": "PROVE: Proof-guided Regime-aware Operator Verification for Hallucination Detection in Medical Visual Question Answering",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.22138",
+      "title": "Does the Truthfulness Signal Survive Code-Mixing? Probing Hidden States for Hallucination Detection in Hinglish",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.11878",
+      "title": "Domain-Specific Hallucination Detection in Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.11244",
+      "title": "OmniHallu: Unified Hallucination Detection for Cross-Modal Comprehension and Generation in Multimodal Large Language Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.10244",
+      "title": "Two-Token Features and Small-Large Ensembles for VLM Hallucination Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.08267",
+      "title": "Evidence-Aligned Entity Verification for Hallucination Detection in Retrieval-Augmented Generation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.05025",
+      "title": "Leveraging Low-Level Symbolic Competences for Unsupervised Grounding in Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.03953",
+      "title": "Beyond Majority Vote: Multi-Perspective Adjudication for Medical Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.02679",
+      "title": "From Tokens to Semantics: Leveraging Complementary Signals for Hallucination Detection in Black-Box LLMs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.00581",
+      "title": "Enoki: Efficient Multi-Level Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.30480",
+      "title": "VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.27165",
+      "title": "Prediction of Prediction (PoP): Inter-Layer Activation Fusion for Single-Pass Hallucination Detection in Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.25662",
+      "title": "Overview of SHROOM-Visions 2026: A Shared Task on Hallucination Detection in Large Vision-Language Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.24707",
+      "title": "Lost in Speech: Trilingual Spoken Hallucination Detection Across Audio and Transcripts",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.24492",
+      "title": "When Do Supervised UQ Ensembles Improve LLM Hallucination Detection? A Robustness Study",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.18115",
+      "title": "Temporal Multi-Signal Fusion for Token-Level Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.18082",
+      "title": "LongNovel: A Multi-Scale Benchmark for Hallucination Detection in Long-Context Novel Summarization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.17687",
+      "title": "Mixture-of-Expert Blocks Contain Strong Hallucination Detection Signals",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.14632",
+      "title": "DeMTS: Denoising Trajectories as Multivariate Time Series for Hallucination Detection in Diffusion Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.10430",
+      "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.08024",
+      "title": "Prompt Embedding Probes (PEP): Hallucination Detection in LLMs from Hidden States",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.05823",
+      "title": "Decomposed Entailment for Factuality Checking and Hallucination Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.05616",
+      "title": "TruthLens: Object Hallucination Detection via Self-Evaluating Truthfulness Scores in LVLMs",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.03966",
+      "title": "HalluTruthQA-4K: A Fine-Grained Corpus and Annotation Process for Arabic Hallucination Detection and Truth Verification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.24586",
+      "title": "D-Score: A Spectral Hidden-State Signal for Hallucination Detection in Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.22661",
+      "title": "TRE: Training-Free Hallucination Detection for Diffusion Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.22098",
+      "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.20219",
+      "title": "HalluTruthQA: A Fine-Grained Benchmark for Hallucination Detection, Localization, and Explanation in Arabic Question Answering",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2607.16643",
+      "title": "Diversity-Oriented Fine-Tuning for Uncertainty-Based Hallucination Detection",
+      "relevance": 3
+    }
+  ]
+}

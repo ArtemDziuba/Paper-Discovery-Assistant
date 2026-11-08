@@ -1,0 +1,256 @@
+{
+  "query_id": "ecg-arrhythmia-detection",
+  "query": "Deep learning for ECG arrhythmia detection",
+  "judgments": [
+    {
+      "arxiv_id": "1707.01836",
+      "title": "Cardiologist-Level Arrhythmia Detection with Convolutional Neural Networks",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.17887",
+      "title": "Arrhythmia Classification from 12-Lead ECG Signals Using Convolutional and Transformer-Based Deep Learning Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.08650",
+      "title": "A Lightweight CNN-Attention-BiLSTM Architecture for Multi-Class Arrhythmia Classification on Standard and Wearable ECGs",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2608.03597",
+      "title": "FOUND-AF: Benchmarking ECG Foundation Models for Atrial Fibrillation Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2605.16441",
+      "title": "DeepArrhythmia: Segment-Contextualized ECG Arrhythmia Classification via Selective Evidence Acquisition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1807.10707",
+      "title": "End-to-end Deep Learning from Raw Sensor Data: Atrial Fibrillation Detection using Wearables",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.02256",
+      "title": "ArrythML: An Autoencoder-Based TinyML Approach for On-Device Arrhythmia Detection on Resource-Constrained Embedded Systems",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.06237",
+      "title": "An Arrhythmia Classification-Guided Segmentation Model for Electrocardiogram Delineation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.23347",
+      "title": "ECG-RAMBA: Zero-Shot ECG Generalization by Morphology-Rhythm Disentanglement and Long-Range Modeling",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.06293",
+      "title": "Two-stream Network for ECG Signal Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.01249",
+      "title": "Transforming ECG Diagnosis: An In-depth Review of Transformer-based DeepLearning Models in Cardiovascular Disease Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2504.16097",
+      "title": "A CNN-based Local-Global Self-Attention via Averaged Window Embeddings for Hierarchical ECG Analysis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.13194",
+      "title": "ECG-NAT: A Self-supervised Neighborhood Attention Transformer for Multi-lead Electrocardiogram Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2310.00818",
+      "title": "ECG-SL: Electrocardiogram(ECG) Segment Learning, a deep learning method for ECG signal",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.12241",
+      "title": "Pretraining Strategies and Scaling for ECG Foundation Models: A Systematic Study",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2509.10151",
+      "title": "BenchECG and xECG: a benchmark and baseline for ECG foundation models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2411.00755",
+      "title": "Hierarchical Transformer for Electrocardiogram Diagnosis",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2505.20481",
+      "title": "CardioPatternFormer: Pattern-Guided Attention for Interpretable ECG Classification with Transformer Architecture",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2603.04589",
+      "title": "ECG-MoE: Mixture-of-Expert Electrocardiogram Foundation Model",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2607.16323",
+      "title": "ECG-LLM: Foundation Model for ECG-Based Cardiac Reasoning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.05178",
+      "title": "ECG-FM: An Open Electrocardiogram Foundation Model",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2410.19877",
+      "title": "A Systematic Review on Foundation Models for Electrocardiogram Analysis: Initial Strides and Expansive Horizons",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.06241",
+      "title": "Few-Shot Prototype Head Adaptation for On-Device ECG Personalization on PSoC~6",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2411.17711",
+      "title": "AnyECG: Foundational Models for Multitask Cardiac Analysis in Real-World Settings",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2602.23060",
+      "title": "RhythmBERT: A Self-Supervised Language Model Based on Latent Representations of ECG Waveforms for Heart Disease Detection",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2512.02180",
+      "title": "CLEF: Clinically-Guided Contrastive Learning for Electrocardiogram Foundation Models",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2306.06340",
+      "title": "ECGBERT: Understanding Hidden Language of ECGs with Self-Supervised Representation Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2503.00711",
+      "title": "OpenECG: Benchmarking ECG Foundation Models with Public 1.2 Million Records",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1811.12194",
+      "title": "Automatic Diagnosis of Short-Duration 12-Lead ECG using a Deep Convolutional Network",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1607.03822",
+      "title": "Feature Extraction and Automated Classification of Heartbeats by Machine Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2608.03690",
+      "title": "LAEF: A Lead-Agnostic ECG Foundation Model Towards Point-of-Care Diagnostics",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2407.20775",
+      "title": "Interpretable Pre-Trained Transformers for Heart Time-Series Data",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2605.25446",
+      "title": "A Signal-Language Foundation Model for Broad-Spectrum Cardiovascular Assessment from Routine Electrocardiography",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "1912.00852",
+      "title": "CNNs, LSTMs, and Attention Networks for Pathology Detection in Medical Data",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2604.02501",
+      "title": "ECG Foundation Models and Medical LLMs for Agentic Cardiovascular Intelligence at the Edge: A Review and Outlook",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2601.21830",
+      "title": "Looking Beyond Accuracy: A Holistic Benchmark of ECG Foundation Models",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2605.16975",
+      "title": "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2312.05409",
+      "title": "Large-scale Training of Foundation Models for Wearable Biosignals",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2603.26475",
+      "title": "Foundation Model for Cardiac Time Series via Masked Latent Attention",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2305.10347",
+      "title": "Subject-based Non-contrastive Self-Supervised Learning for ECG Signal Processing",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2608.26000",
+      "title": "CardioFusion-AI: Robust ECG--PPG Fusion for Multimodal Physiological Monitoring Under Signal Degradation",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1807.11551",
+      "title": "Deep Recurrent Neural Networks for ECG Signal Denoising",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2005.05236",
+      "title": "ECG-DelNet: Delineation of Ambulatory Electrocardiograms with Mixed Quality Labeling Using Neural Networks",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2503.06073",
+      "title": "GEM: Empowering MLLM for Grounded ECG Understanding with Time Series and Images",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1807.04077",
+      "title": "Recognising Cardiac Abnormalities in Wearable Device Photoplethysmography (PPG) with Deep Learning",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2606.07365",
+      "title": "A robust PPG foundation model using multimodal physiological supervision",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2311.12582",
+      "title": "Echocardiogram Foundation Model - Application 1: Estimating Ejection Fraction",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2312.08567",
+      "title": "ConFormer: A Novel Collection of Deep Learning Models to Assist Cardiologists in the Assessment of Cardiac Function",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2510.00520",
+      "title": "CardioBench: Do Echocardiography Foundation Models Generalize Beyond the Lab?",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2410.11092",
+      "title": "EchoApex: A General-Purpose Vision Foundation Model for Echocardiography",
+      "relevance": 0
+    }
+  ]
+}

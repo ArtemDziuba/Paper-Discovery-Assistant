@@ -1,0 +1,256 @@
+{
+  "query_id": "video-action-recognition",
+  "query": "Video action recognition",
+  "judgments": [
+    {
+      "arxiv_id": "2610.16009",
+      "title": "Meaningful Moments: A Corpus of VLM-Derived Temporal Importance Labels for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2606.22416",
+      "title": "Gen2Balance: Generative Balancing for Long-Tailed Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.23415",
+      "title": "A Heterogeneous Two-Stream Framework for Video Action Recognition with Comparative Fusion Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2604.17062",
+      "title": "Motion-Guided Semantic Alignment with Negative Prompts for Zero-Shot Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2512.12586",
+      "title": "StegaVAR: Privacy-Preserving Video Action Recognition via Steganographic Domain Analysis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.21202",
+      "title": "Towards an Effective Action-Region Tracking Framework for Fine-grained Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2511.03725",
+      "title": "Disentangled Concepts Speak Louder Than Words: Explainable Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2510.16444",
+      "title": "RefAtomNet++: Advancing Referring Atomic Video Action Recognition using Multi-Trajectory Semantic Retrieval",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.18473",
+      "title": "MoCrop: Training Free Motion Guided Cropping for Efficient Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2509.05695",
+      "title": "Leveraging Vision-Language Large Models for Interpretable Video Action Recognition with Semantic Tokenization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2508.17442",
+      "title": "Multi-Level LVLM Guidance for Untrimmed Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.16701",
+      "title": "Language-driven Description Generation and Common Sense Reasoning for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2503.02284",
+      "title": "Semi-Supervised Audio-Visual Video Action Recognition with Audio Source Localization Guided Mixup",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2502.03724",
+      "title": "Seeing in the Dark: A Teacher-Student Framework for Dark Video Action Recognition via Knowledge Distillation and Contrastive Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2411.15729",
+      "title": "OccludeNet: A Causal Journey into Mixed-View Actor-Centric Video Action Recognition under Occlusions",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2410.14238",
+      "title": "Storyboard guided Alignment for Fine-grained Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.09220",
+      "title": "Flatten: Video Action Recognition is an Image Classification task",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2408.05421",
+      "title": "EPAM-Net: An Efficient Pose-driven Attention-guided Multimodal Network for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.02713",
+      "title": "Advancing Compressed Video Action Recognition through Progressive Knowledge Distillation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.01872",
+      "title": "Referring Atomic Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2406.15034",
+      "title": "SVFormer: A Direct Training Spiking Transformer for Efficient Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.05584",
+      "title": "A Survey on Backbones for Deep Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.09490",
+      "title": "Leveraging Temporal Contextualization for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2404.09067",
+      "title": "Exploring Explainability in Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.11649",
+      "title": "M2-CLIP: A Multimodal, Multi-task Adapting Framework for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.08010",
+      "title": "EZ-CLIP: Efficient Zeroshot Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2312.02226",
+      "title": "Generating Action-conditioned Prompts for Open-vocabulary Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2311.18825",
+      "title": "CAST: Cross-Attention in Space and Time for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2311.17118",
+      "title": "Towards Weakly Supervised End-to-end Learning for Long-video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2311.15619",
+      "title": "Align before Adapt: Leveraging Entity-to-Region Alignments for Generalizable Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2311.11467",
+      "title": "SkateboardAI: The Coolest Video Action Recognition for Skateboarding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2309.09534",
+      "title": "Selective Volume Mixup for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.04934",
+      "title": "JEDI: Joint Expert Distillation in a Semi-Supervised Multi-Dataset Student-Teacher Scenario for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2308.03908",
+      "title": "ViLP: Knowledge Exploration using Vision, Language, and Pose Embeddings for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.06947",
+      "title": "Video-FocalNets: Spatio-Temporal Focal Modulation for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2305.12437",
+      "title": "SCP: Soft Conditional Prompt Learning for Aerial Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2304.10335",
+      "title": "A baseline on continual learning methods for video action recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.09756",
+      "title": "Video Action Recognition with Attentive Semantic Units",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.02575",
+      "title": "MITFAS: Mutual Information based Temporal Feature Alignment and Sampling for Aerial Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2303.01589",
+      "title": "AZTR: Aerial Video Action Recognition with Auto Zoom and Temporal Reasoning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2302.09187",
+      "title": "Video Action Recognition Collaborative Learning with Dynamics via PSO-ConvNet Transformer",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2302.03024",
+      "title": "AIM: Adapting Image Models for Efficient Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2301.06018",
+      "title": "CMAE-V: Contrastive Masked Autoencoders for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2301.00986",
+      "title": "Look, Listen, and Attack: Backdoor Attacks Against Video Action Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2301.00436",
+      "title": "Hierarchical Explanations for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2211.04888",
+      "title": "Extending Temporal Data Augmentation for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.00132",
+      "title": "Alignment-guided Temporal Attention for Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2209.09194",
+      "title": "Differentiable Frequency-based Disentanglement for Aerial Video Action Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2207.01398",
+      "title": "Large-scale Robustness Analysis of Video Action Recognition Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.01038",
+      "title": "A Survey on Video Action Recognition in Sports: Datasets, Methods and Applications",
+      "relevance": 3
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "query_id": "differential-privacy-deep-learning",
+  "query": "Differential privacy in deep learning",
+  "judgments": [
+    {
+      "arxiv_id": "2110.05679",
+      "title": "Large Language Models Can Be Strong Differentially Private Learners",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2407.07737",
+      "title": "Fine-Tuning Large Language Models with User-Level Differential Privacy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.11113",
+      "title": "Differentially Private Subspace Fine-Tuning for Large Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2601.10045",
+      "title": "Privacy Enhanced PEFT: Tensor Train Decomposition Improves Privacy Utility Tradeoffs under DP-SGD",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2401.04343",
+      "title": "Private Fine-tuning of Large Language Models with Zeroth-order Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2501.18914",
+      "title": "Scaling Laws for Differentially Private Language Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2507.01154",
+      "title": "FlashDP: Private Training Large Language Models with Efficient DP-SGD",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2112.14430",
+      "title": "DP-FP: Differentially Private Forward Propagation for Large Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2102.03013",
+      "title": "Fast and Memory Efficient Differentially Private-SGD via JL Projections",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2405.18194",
+      "title": "Delving into Differentially Private Transformer",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2506.05416",
+      "title": "FERRET: Private Deep Learning Faster And Better Than DPSGD",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.10683",
+      "title": "Scalable and Efficient Training of Large Convolutional Neural Networks with Differential Privacy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2201.12328",
+      "title": "Toward Training at ImageNet Scale with Differential Privacy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.02973",
+      "title": "Large Scale Transfer Learning for Differentially Private Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2204.13650",
+      "title": "Unlocking High-Accuracy Differentially Private Image Classification through Scale",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2205.04095",
+      "title": "SmoothNets: Optimizing CNN architecture design for differentially private deep learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2307.11939",
+      "title": "Batch Clipping and Adaptive Layerwise Clipping for Differential Private Stochastic Gradient Descent",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2403.02571",
+      "title": "DPAdapter: Improving Differentially Private Deep Learning through Noise Tolerance Pre-training",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2306.11754",
+      "title": "Pre-Pruning and Gradient-Dropping Improve Differentially Private Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2210.03403",
+      "title": "TAN without a burn: Scaling Laws of DP-SGD",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2202.05089",
+      "title": "Backpropagation Clipping for Deep Learning with Differential Privacy",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.07136",
+      "title": "Automatic Clipping: Differentially Private Deep Learning Made Easier and Stronger",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2007.11524",
+      "title": "Improving Deep Learning with Differential Privacy using Gradient Encoding and Denoising",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2305.16202",
+      "title": "DP-SGD Without Clipping: The Lipschitz Neural Network Way",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2206.01838",
+      "title": "Differentially Private Model Compression",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2302.01190",
+      "title": "On the Efficacy of Differentially Private Few-shot Image Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2403.02506",
+      "title": "Differentially Private Representation Learning via Image Captioning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2005.00783",
+      "title": "Differentially Private Generation of Small Images",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2211.13403",
+      "title": "Differentially Private Image Classification from Features",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2406.08039",
+      "title": "Beyond the Mean: Differentially Private Prototypes for Private Transfer Learning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2606.01908",
+      "title": "Private and Stable Test-Time Adaptation with Differential Privacy",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2308.10888",
+      "title": "Unlocking Accuracy and Fairness in Differentially Private Image Classification",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2310.18001",
+      "title": "DP-SGD with weight clipping",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2006.13501",
+      "title": "Private Stochastic Non-Convex Optimization: Adaptive Algorithms and Tighter Generalization Bounds",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2206.13033",
+      "title": "Normalized/Clipped SGD with Perturbation for Differentially Private Non-Convex Optimization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2206.10713",
+      "title": "Beyond Uniform Lipschitz Condition in Differentially Private Optimization",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2403.02051",
+      "title": "Privacy of SGD under Gaussian or Heavy-Tailed Noise: Guarantees without Gradient Clipping",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2408.10456",
+      "title": "Differentially Private Stochastic Gradient Descent with Fixed-Size Minibatches: Tighter RDP Guarantees with or without Replacement",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2409.11663",
+      "title": "Training with Differential Privacy: A Gradient-Preserving Noise Reduction Approach with Provable Security",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2306.08173",
+      "title": "Safeguarding Data in Multimodal AI: A Differentially Private Approach to CLIP Training",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2411.10023",
+      "title": "Model Inversion Attacks: A Survey of Approaches and Countermeasures",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2004.12254",
+      "title": "Privacy in Deep Learning: A Survey",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "1911.12562",
+      "title": "Towards Privacy and Security of Deep Learning Systems: A Survey",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2112.05423",
+      "title": "On the Security&Privacy in Federated Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2212.10628",
+      "title": "Holistic risk assessment of inference attacks in machine learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2412.16504",
+      "title": "Privacy in Fine-tuning Large Language Models: Attacks, Defenses, and Future Directions",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2006.12698",
+      "title": "Security and Privacy Preserving Deep Learning",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2305.02225",
+      "title": "Data Privacy with Homomorphic Encryption in Neural Networks Training and Inference",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "1910.04257",
+      "title": "Membership Model Inversion Attacks for Deep Networks",
+      "relevance": 0
+    },
+    {
+      "arxiv_id": "2011.00177",
+      "title": "Evaluation of Inference Attack Models for Deep Learning on Medical Data",
+      "relevance": 0
+    }
+  ]
+}

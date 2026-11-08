@@ -1,0 +1,256 @@
+{
+  "query_id": "domain-adaptation-machine-learning",
+  "query": "Domain adaptation in machine learning",
+  "judgments": [
+    {
+      "arxiv_id": "2611.05744",
+      "title": "Text-Only Domain Adaptation for Low-Resource Medical ASR: Shallow Fusion and Density Ratio Rescoring for Hausa",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.05719",
+      "title": "Adaptive Virtual PIN-Button Recognition on Passive NFC Cards via Domain Adaptation and Uncertainty Quantification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.05106",
+      "title": "Label-Preserving Fourier Domain Adaptation with Generative-AI and Real Style Donors for 3D Mitral Valve Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03588",
+      "title": "3D-BBDA: Backpropagation-Free Black-Box Domain Adaptation for Robust 3D Point Cloud Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.03528",
+      "title": "Contrastive Adapter Training and Consensus Knowledge Distillation for Multi-Source-Free Domain Adaptation in Skin Cancer Diagnosis",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2611.02883",
+      "title": "Integrating Domain Adaptation and Retrieval-Augmented Generation for Saline-Alkali Land Reclamation Planning",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2611.01633",
+      "title": "BanglishDepYT: Depression Detection in Native Bengali Social Media with Emotion-Preserving Preprocessing and Domain-Adaptive Pretraining",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.38016",
+      "title": "Beyond Aggregate WER: In-domain Adaptation, Learner Speech, Code-Switching, and Speaker Attribution in Online Spanish Learning Classrooms",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.35132",
+      "title": "Domain-Adapted Latent Diffusion Models for CT-to-PET Image Translation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.32637",
+      "title": "Residual Expert Routing for Text-Only Domain Adaptation of Factorized Transducer ASR",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.30685",
+      "title": "Learning Domain Trajectories with Flow Matching for Gradual Domain Adaptation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.30646",
+      "title": "One-shot federated unsupervised domain adaptation with Smoothed Knowledge Distillation and teacher refinement",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28892",
+      "title": "Combating Catastrophic Forgetting in Continual Domain Adaptation via Knowledge Recasting",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.28007",
+      "title": "AdaptMIL: Domain Adaptation for Multiple Instance Learning in Digital Pathology",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.24532",
+      "title": "Contrastive Hypergraph Source-free Domain Adaptive Object Detection in Adverse Weather Conditions--Extended Version",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21719",
+      "title": "International Multi-Centre Validation of Unsupervised Domain Adaptation for Precise Discrimination between Normal and Abnormal Retinal Development",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.21238",
+      "title": "A large-scale climate-aware satellite image dataset for domain adaptive land-cover semantic segmentation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.21132",
+      "title": "Trajectory Prediction Method for person under WSN with Hierarchical Envelope Adversarial Domain Adaptation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.19803",
+      "title": "Improving Category-Aware Active Domain Adaptation via Uncertainty-Guided Region Coverage",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.18051",
+      "title": "inLoRA-MINT: Internal Representations for Auditing Training Data in Domain-adapted LLMs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.16466",
+      "title": "PATMT2: Two-stage domain adaptation for multilingual patent translation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15761",
+      "title": "Robust Marathi Sentiment Analysis using Domain-Adaptive Pre-training and Data Augmentation Approaches",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.15613",
+      "title": "Joint Contrastive-Adversarial Representation Learning for Unsupervised Domain Adaptation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.15576",
+      "title": "Synergistic Learning in Domain Adaptation with a Known Link: A Minimax Understanding",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.14961",
+      "title": "HiPAD: A Unified Gait, Audio-Visual, and Personality Fusion Network for Depression Detection, with a Hierarchical Personality Ablation and the Calibration Limits of Domain-Adapted LLMs",
+      "relevance": 1
+    },
+    {
+      "arxiv_id": "2610.12901",
+      "title": "JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.12786",
+      "title": "Domain Adaptation of SAM 2.1 for Building-Component Segmentation in Image-Based 3D Reconstruction",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.06715",
+      "title": "Domain adaptation of Russian ModernBERT for long legal documents",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.05966",
+      "title": "HuatuoGPT-3: RL-Only Domain Adaptation from Base Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05718",
+      "title": "ReMaD: Tuning-free Domain Adaptation for Classification and Out-of-Distribution Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.05717",
+      "title": "Retrieval-Based In-Context Learning: A Domain Adaptation Framework",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.03743",
+      "title": "Structured Neural Modeling of Daily Arctic Sea-Ice Concentration Evolution: Physical-Trajectory-Driven Learning and Forecast-Domain Adaptation",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.03172",
+      "title": "Domain-Adaptive Data Assimilation for Global AI Weather Forecasting",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.02981",
+      "title": "Safeguarding Mutual Correction in Source-Free Domain Adaptation via Cut Statistics",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.02000",
+      "title": "Weather-Aware Domain Adaptation for Street-View Weather Recognition",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2610.01890",
+      "title": "Unsupervised Domain Adaptation for Enhanced Radiometer Image Precipitation Estimation using Conditional Flow Matching",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2610.00973",
+      "title": "Concept Driven Domain Adaptation: Finding an Abstract Needle in a Haystack",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39810",
+      "title": "A Comprehensive Benchmark of Source-Free Universal Domain Adaptation on Time Series Representations",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39681",
+      "title": "MC-PanDA++: Simpler, Stronger, and More Robust Domain-Adaptive Panoptic Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.39421",
+      "title": "IDEAL: A Multimodal Domain Adaptation Framework for EEG-Eye Emotion Recognition",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.38637",
+      "title": "Template-Search Domain Adaptation via Multi-Stage Feature Alignment for Cross-Modal Object Tracking",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.35289",
+      "title": "Domain-adaptive Zero-Shot Image Enhancement via Locality-Constrained Diffusion Guidance",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.34078",
+      "title": "WhiteCon: Semi-Supervised Domain Adaptation Regression Through Whitening Transform and Dual Consistency",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.33716",
+      "title": "Revisiting Diffusion Fine-Tuning for Unsupervised Domain Adaptation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.33709",
+      "title": "Domain-Adaptive Dual-Gating Mixture of Experts for Generalizable Speech Deepfake Detection",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.33490",
+      "title": "Domain-Adapted Diffusion Models for Conditional Independence Testing",
+      "relevance": 2
+    },
+    {
+      "arxiv_id": "2609.33432",
+      "title": "TC-ADA: One-Shot Active Domain Adaptation for Semantic Segmentation",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.32730",
+      "title": "Domain Adaptation with Target Information via Doubly-Anchored Distributionally Robust Optimization",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.31639",
+      "title": "When Does Domain Adaptation Help on Physical Vibration Sensors? A Held-Out-Bearing Study of Neural-Operator and Convolutional Models",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "2609.30009",
+      "title": "Automated Regulatory Compliance Question Answering in Financial Services with Domain-Adapted Retrieval-Augmented Generation",
+      "relevance": 1
+    }
+  ]
+}

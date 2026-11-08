@@ -14,13 +14,20 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 
-from pda.evaluation import metrics
+from pda.evaluation import (
+    aggregate_metrics,
+    evaluation_profile,
+    metric_definitions,
+    metrics,
+    pairwise_metric_name,
+)
 from pda.finetuning_data import make_preferences
 from pda.ranking import FINETUNED_PATH, MODEL, REVISION, LexicalEncoder, SemanticEncoder
 from pda.resources import peak_working_set_bytes
 
 
-def evaluate(encoder, queries: list[dict]) -> dict:
+def evaluate(encoder, queries: list[dict], mode: str = "truncated") -> dict:
+    profile = evaluation_profile(mode)
     rows = {}
     score_groups = {str(grade): [] for grade in range(4)}
     for query in queries:
@@ -31,7 +38,13 @@ def evaluate(encoder, queries: list[dict]) -> dict:
         scores = encoder.score_documents(query["query"], texts)
         ranked = sorted(range(len(items)), key=lambda i: -float(scores[i]))
         judgments = {j["arxiv_id"]: j["relevance"] for j in items}
-        result = metrics([items[i]["arxiv_id"] for i in ranked], judgments, relevant_min=2)
+        result = metrics(
+            [items[i]["arxiv_id"] for i in ranked],
+            judgments,
+            relevant_min=2,
+            scores={j["arxiv_id"]: float(score) for j, score in zip(items, scores, strict=True)},
+            mode=mode,
+        )
         for item, score in zip(items, scores, strict=True):
             score_groups[str(item["relevance"])].append(float(score))
         rows[query["query_id"]] = {
@@ -49,19 +62,56 @@ def evaluate(encoder, queries: list[dict]) -> dict:
         }
     return {
         "query_count": len(rows),
+        "evaluation_mode": mode,
+        "evaluation_configuration": profile,
         "per_query": rows,
-        "aggregate": {
-            name: float(np.mean([r["metrics"][name] for r in rows.values()]))
-            for name in ["ndcg@10", "precision@5", "mrr"]
-        }
-        if rows
-        else None,
+        "aggregate": aggregate_metrics([r["metrics"] for r in rows.values()]) if rows else None,
+        "pairwise_valid_query_count": sum(
+            row["metrics"][pairwise_metric_name(mode)] is not None for row in rows.values()
+        ),
         "mean_cosine_by_grade": {
             grade: float(np.mean(scores)) if scores else None
             for grade, scores in score_groups.items()
         },
-        "protocol": "Per-query judged candidates only; no title override; binary relevance >=2.",
+        "metric_definitions": metric_definitions(mode),
+        "protocol": "Per-query judged candidates only; no title override; binary relevance >=2 "
+        "for Precision, reciprocal rank and AP. Cutoffs follow evaluation_configuration; "
+        "pairwise accuracy uses graded judgments and raw score ties.",
     }
+
+
+def train_epoch(model, samples, optimizer, scheduler, config: dict, epoch: int) -> list[float]:
+    """Run v1's seeded pairwise training loop; return every observed batch loss."""
+    model.train()
+    batches = list(samples)
+    random.Random(config["seed"] + epoch).shuffle(batches)
+    losses = []
+    for start in range(0, len(batches), config["batch_size"]):
+        batch = batches[start : start + config["batch_size"]]
+        optimizer.zero_grad(set_to_none=True)
+        embeddings = []
+        for column in range(3):
+            features = model.preprocess([item[column] for item in batch])
+            features = {
+                key: value.to(config["device"]) if isinstance(value, torch.Tensor) else value
+                for key, value in features.items()
+            }
+            embeddings.append(model(features)["sentence_embedding"])
+        margins = torch.tensor([item[3] for item in batch], device=config["device"])
+        positive = F.cosine_similarity(embeddings[0], embeddings[1])
+        negative = F.cosine_similarity(embeddings[0], embeddings[2])
+        loss = F.relu(margins - positive + negative).mean()
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        optimizer.step()
+        scheduler.step()
+        losses.append(float(loss.detach()))
+        if start % 128 == 0:
+            print(
+                f"epoch {epoch}: preferences {start}/{len(batches)}, loss {losses[-1]:.4f}",
+                flush=True,
+            )
+    return losses
 
 
 def main() -> None:
@@ -125,35 +175,7 @@ def main() -> None:
     history = []
     started = time.perf_counter()
     for epoch in range(1, args.epochs + 1):
-        model.train()
-        batches = list(samples)
-        random.Random(config["seed"] + epoch).shuffle(batches)
-        losses = []
-        for start in range(0, len(batches), config["batch_size"]):
-            batch = batches[start : start + config["batch_size"]]
-            optimizer.zero_grad(set_to_none=True)
-            embeddings = []
-            for column in range(3):
-                features = model.preprocess([item[column] for item in batch])
-                features = {
-                    key: value.to(args.device) if isinstance(value, torch.Tensor) else value
-                    for key, value in features.items()
-                }
-                embeddings.append(model(features)["sentence_embedding"])
-            margins = torch.tensor([item[3] for item in batch], device=args.device)
-            positive = F.cosine_similarity(embeddings[0], embeddings[1])
-            negative = F.cosine_similarity(embeddings[0], embeddings[2])
-            loss = F.relu(margins - positive + negative).mean()
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-            optimizer.step()
-            scheduler.step()
-            losses.append(float(loss.detach()))
-            if start % 128 == 0:
-                print(
-                    f"epoch {epoch}: preferences {start}/{len(batches)}, loss {losses[-1]:.4f}",
-                    flush=True,
-                )
+        losses = train_epoch(model, samples, optimizer, scheduler, config, epoch)
         model.eval()
         dev = evaluate(encoder, splits["synthetic_dev"])
         history.append(
@@ -191,7 +213,7 @@ def main() -> None:
     (args.output / "training_manifest.json").write_text(
         json.dumps(manifest, indent=2), encoding="utf-8"
     )
-    del optimizer, model, encoder, embeddings, features, loss
+    del optimizer, model, encoder
     if args.device == "cuda":
         torch.cuda.empty_cache()
     baseline = SemanticEncoder(args.device)

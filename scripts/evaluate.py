@@ -12,7 +12,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import numpy as np
 
-from pda.evaluation import metrics
+from pda.evaluation import (
+    EVALUATION_MODES,
+    aggregate_metrics,
+    evaluation_profile,
+    metric_definitions,
+    metrics,
+    pairwise_metric_name,
+)
 from pda.ranking import FINETUNED_PATH, LexicalEncoder, SemanticEncoder
 
 
@@ -23,6 +30,7 @@ def main():
     parser.add_argument("--method", choices=["lexical", "semantic", "finetuned"], default="lexical")
     parser.add_argument("--model-path", type=Path, default=FINETUNED_PATH)
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
+    parser.add_argument("--mode", choices=list(EVALUATION_MODES), default="truncated")
     parser.add_argument(
         "--relevant-min", type=float, help="Binary metric threshold; default preserves grade > 0."
     )
@@ -55,7 +63,13 @@ def main():
     scores = encoder.score_queries([q["text"] for q in queries], texts)
     for query, query_scores in zip(queries, scores, strict=True):
         ranked = [ids[i] for i in np.argsort(-query_scores, kind="stable")]
-        results[query["id"]] = metrics(ranked, qrels[query["id"]], relevant_min=args.relevant_min)
+        results[query["id"]] = metrics(
+            ranked,
+            qrels[query["id"]],
+            relevant_min=args.relevant_min,
+            scores=dict(zip(ids, map(float, query_scores), strict=True)),
+            mode=args.mode,
+        )
     report = {
         "dataset_sha256": hashlib.sha256(raw).hexdigest(),
         "method": args.method,
@@ -69,10 +83,13 @@ def main():
         "elapsed_seconds": time.perf_counter() - started,
         "per_query": results,
         "unjudged_convention": "zero relevance; incomplete judgments limit interpretation",
-        "aggregate": {
-            m: float(np.mean([r[m] for r in results.values()]))
-            for m in next(iter(results.values()))
-        },
+        "evaluation_mode": args.mode,
+        "evaluation_configuration": evaluation_profile(args.mode),
+        "metric_definitions": metric_definitions(args.mode),
+        "pairwise_valid_query_count": sum(
+            row[pairwise_metric_name(args.mode)] is not None for row in results.values()
+        ),
+        "aggregate": aggregate_metrics(list(results.values())),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2), encoding="utf-8")
