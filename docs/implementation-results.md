@@ -5,6 +5,31 @@ overview described in the original baseline was subsequently removed. The curren
 separate on-demand per-paper PDF summarization feature and its executed verification are
 documented in [summarization.md](summarization.md); current data flow is in architecture.md.
 
+## Code consolidation verification — 2026-11-10
+
+The cleanup preserves the ranking/model interfaces, exported evidence/provenance, v1 split
+policy and v2 occurrence-preserving policy. Metadata preparation shares one recursive fetch
+helper; Atom responses are parsed once; trainers share original RNG/optimizer/scheduler
+setup. Stored margin, relevance-threshold and clipping settings now drive their corresponding
+calculations, retaining the original defaults.
+
+V1 preparation selects encoder batches 01–15 and the two human evaluation files. All 15
+synthetic contents and both renamed human contents match the historical frozen hashes.
+Selected-batch evaluation validates relocation and model/snapshot provenance. Historical
+data, model weights, manifests and evaluation reports were not changed or regenerated.
+
+Summary repair reuses existing all-chunk findings. Persistent cache keys exclude operational
+settings while job/resource keys retain them. Pipeline v5 introduces the revised namespace;
+older summaries remain on disk and regenerate on demand, while PDFs remain reusable.
+Only active summary panels register polling timers. Streamlit >=1.66 tracks paper-expander
+state so timer transitions preserve open/closed choices.
+
+Verification: the complete suite passed **248 tests**. After the v5 provenance tag was set,
+all **51 targeted summary/UI checks** also passed. Ruff lint, changed-file formatting and
+whitespace checks passed. A temporary headless Streamlit process returned **HTTP 200 / ok**
+from its health endpoint and was stopped afterward. These are software/startup checks;
+no retraining, full ranking comparison, or scientific-summary quality evaluation was run.
+
 The implemented baseline runs as a local Streamlit application. It retrieves real arXiv
 metadata, ranks title/abstract candidates using a local encoder or TF-IDF, displays raw
 and transformed scores, selects source evidence, and produces an extractive overview with

@@ -103,13 +103,19 @@ models/finetuned-minilm. It is an experimental alternative; the original Semanti
 performed better on the two human evaluation queries and remains the default. See
 finetuning.md for its original training experiment and ranking-evaluation.md for the current
 comparison. If the v1 weights are absent, restore the saved artifact for that training run.
-The old prepare_finetuning.py script describes v1 and must not be used with the revised
-evaluation set. V2 now has dedicated prepare_finetuning_v2.py and train_ranker_v2.py scripts
+The v1 prepare_finetuning.py script now reads exactly encoder batches 01–15 from
+finetune_data/encoder and human judgments from evaluation/human_eval. It retains v1's original
+split/overlap policy, not v2's occurrence-preserving policy. Use a new --output path;
+historical snapshots are not overwritten. V2 has dedicated prepare_finetuning_v2.py and train_ranker_v2.py scripts
 using all 45 finetune_data/encoder batches; see finetuning-v2.md for parameters and plots.
 The selector includes syntetic finetune v2, loading models/syntetic-finetune-v2. Its combined
 human/synthetic development set selected the checkpoint, while standalone reports remain
 separated. The executed four-model full comparison is evaluation/results/ranking-comparison-full-v2.json.
 Restart Streamlit after creating or replacing model artifacts.
+
+The interface requires Streamlit >=1.66 for tracked paper-expander state. Idle/completed
+summary panels do not poll; active panels refresh once per second and preserve open/closed
+state when timers are registered or removed. Run `uv sync --extra cuda` to apply the lock file.
 
 Topic interpretation removes common leading request phrases and joins remaining concepts
 with AND. This reduces broad filler matches but can lose relevant papers with missing terms.

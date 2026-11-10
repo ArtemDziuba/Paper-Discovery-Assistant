@@ -105,22 +105,58 @@ def test_failure_retry_and_query_change(ui):
     assert len(jobs.calls) == 2
 
 
-def test_summary_actions_do_not_request_app_reruns_that_recreate_paper_expanders(ui, monkeypatch):
+def test_summary_actions_preserve_the_paper_expander_state(ui):
     app, jobs = ui
-    reruns = []
-    monkeypatch.setattr(st, "rerun", lambda **kwargs: reruns.append(kwargs))
+    expander = next(e for e in app.expander if "/100" in e.label)
+    app.session_state[expander.key] = True
+    app.run(timeout=30)
+    assert next(e for e in app.expander if "/100" in e.label).proto.expanded
     key = jobs.key(paper(), "graph learning")
     button(app, "Summarize").click().run(timeout=30)
     assert not app.exception and button(app, "Summarizing…").disabled
+    assert next(e for e in app.expander if "/100" in e.label).proto.expanded
     jobs.jobs[key] = SummaryJob(status="succeeded", result=result_for("graph learning"))
     app.run(timeout=30)
     button(app, "Regenerate summary").click().run(timeout=30)
     assert not app.exception and button(app, "Summarizing…").disabled
+    assert next(e for e in app.expander if "/100" in e.label).proto.expanded
     jobs.jobs[key] = SummaryJob(status="failed", error="Ollama unavailable")
     app.run(timeout=30)
     button(app, "Retry summary").click().run(timeout=30)
     assert not app.exception and button(app, "Summarizing…").disabled
-    assert len(jobs.calls) == 3 and reruns == []
+    assert len(jobs.calls) == 3
+    assert next(e for e in app.expander if "/100" in e.label).proto.expanded
+    # Respect an intentional close, including when the background job finishes.
+    app.session_state[expander.key] = False
+    jobs.jobs[key] = SummaryJob(status="succeeded", result=result_for("graph learning"))
+    app.run(timeout=30)
+    assert not next(e for e in app.expander if "/100" in e.label).proto.expanded
+
+
+def test_summary_polling_is_registered_only_while_a_job_is_active(ui, monkeypatch):
+    app, jobs = ui
+    intervals = []
+    fragment = st.fragment
+
+    def record_fragment(func=None, **kwargs):
+        intervals.append(kwargs.get("run_every"))
+        return fragment(func, **kwargs)
+
+    monkeypatch.setattr(st, "fragment", record_fragment)
+    app.run(timeout=30)
+    assert intervals == [None]
+    intervals.clear()
+    button(app, "Summarize").click().run(timeout=30)
+    assert intervals == ["1s"]
+    key = jobs.key(paper(), "graph learning")
+    for completed in [
+        SummaryJob(status="succeeded", result=result_for("graph learning")),
+        SummaryJob(status="failed", error="Ollama unavailable"),
+    ]:
+        jobs.jobs[key] = completed
+        intervals.clear()
+        app.run(timeout=30)
+        assert not app.exception and intervals == [None]
 
 
 def test_submission_error_is_displayed_and_can_be_retried(ui, monkeypatch):

@@ -124,7 +124,6 @@ class PdfStore:
                     raise SummaryError(
                         "The full-paper PDF could not be downloaded from arXiv. Please retry later."
                     ) from exc
-        raise SummaryError("The full-paper PDF could not be downloaded.")
 
 
 @dataclass(frozen=True)

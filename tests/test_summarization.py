@@ -197,8 +197,9 @@ def test_regeneration_bypasses_summary_cache_and_pipeline_version_invalidates_it
     service.summarize(paper(), "graph query")
     service.summarize(paper(), "graph query", regenerate=True)
     assert len(model.calls) == 2
-    monkeypatch.setattr("pda.summarization.PIPELINE_VERSION", "new-prompt-version")
-    assert not service.summarize(paper(), "graph query").cache_hit
+    monkeypatch.setattr("pda.summary_config.PIPELINE_VERSION", "new-prompt-version")
+    result = service.summarize(paper(), "graph query")
+    assert not result.cache_hit and result.pipeline_version == "new-prompt-version"
     assert len(model.calls) == 3
 
 
@@ -207,7 +208,8 @@ def test_parser_version_invalidates_summary_cache(setup, monkeypatch):
     service = Summarizer(settings, ollama=model, pdf_store=source)
     service.summarize(paper(), "graph query")
     monkeypatch.setattr("pda.summary_config.PDF_PARSER_VERSION", "future-parser-version")
-    assert not service.summarize(paper(), "graph query").cache_hit
+    result = service.summarize(paper(), "graph query")
+    assert not result.cache_hit and result.parser_version == "future-parser-version"
     assert len(model.calls) == 2
 
 

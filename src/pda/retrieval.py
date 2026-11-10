@@ -26,6 +26,13 @@ class RetrievalError(RuntimeError):
 
 
 def parse_feed(content: str) -> tuple[list[Paper], int]:
+    """Parse public paper records while retaining the original two-value interface."""
+    papers, metadata = _parse_feed(content)
+    return papers, metadata["skipped_records"]
+
+
+def _parse_feed(content: str) -> tuple[list[Paper], dict]:
+    """Parse paper records and raw pagination metadata from one Atom tree."""
     try:
         root = ET.fromstring(content)
     except ET.ParseError as exc:
@@ -34,7 +41,8 @@ def parse_feed(content: str) -> tuple[list[Paper], int]:
         raise RetrievalError("arXiv did not return an Atom feed.")
     records: dict[str, Paper] = {}
     skipped = 0
-    for entry in root.findall("a:entry", NS):
+    entries = root.findall("a:entry", NS)
+    for entry in entries:
 
         def value(key: str, entry=entry) -> str:
             return " ".join((entry.findtext(f"a:{key}", "", NS)).split())
@@ -66,7 +74,16 @@ def parse_feed(content: str) -> tuple[list[Paper], int]:
             records.setdefault(key, paper)
         except (ValueError, KeyError):
             skipped += 1
-    return list(records.values()), skipped
+    total_text = root.findtext("{http://a9.com/-/spec/opensearch/1.1/}totalResults")
+    try:
+        total = max(0, int(total_text)) if total_text is not None else None
+    except ValueError:
+        total = None
+    return list(records.values()), {
+        "skipped_records": skipped,
+        "received_entries": len(entries),
+        "total_results": total,
+    }
 
 
 class ArxivClient:
@@ -100,7 +117,8 @@ class ArxivClient:
         phrase = " ".join(title.replace('"', " ").split())
         query = f'ti:"{phrase}"'
         papers, metadata = self.search(query, 50)
-        matches = [p for p in papers if normalize_title(p.title) == normalize_title(title)]
+        normalized_title = normalize_title(title)
+        matches = [p for p in papers if normalize_title(p.title) == normalized_title]
         return matches, {
             **metadata,
             "search_query": query,
@@ -225,20 +243,11 @@ class ArxivClient:
                         time.sleep(min(30, max(3.1, delay)))
                         continue
                     response.raise_for_status()
-                    papers, skipped = parse_feed(response.text)
-                    root = ET.fromstring(response.text)
-                    received = len(root.findall("a:entry", NS))
-                    total_text = root.findtext("{http://a9.com/-/spec/opensearch/1.1/}totalResults")
-                    try:
-                        total = max(0, int(total_text)) if total_text is not None else None
-                    except ValueError:
-                        total = None
+                    papers, parsed_metadata = _parse_feed(response.text)
                     data = {
                         "retrieved_at": time.time(),
-                        "skipped_records": skipped,
                         "papers": [p.model_dump(mode="json") for p in papers],
-                        "received_entries": received,
-                        "total_results": total,
+                        **parsed_metadata,
                     }
                     try:
                         self.cache_dir.mkdir(parents=True, exist_ok=True)
@@ -248,11 +257,9 @@ class ArxivClient:
                     return papers, {
                         "cache_hit": False,
                         "retrieved_at": data["retrieved_at"],
-                        "skipped_records": skipped,
-                        "received_entries": received,
+                        **parsed_metadata,
                         "requested_entries": limit,
                         "start": start,
-                        "total_results": total,
                     }
                 except httpx.HTTPError as exc:
                     LOGGER.warning(

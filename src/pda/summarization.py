@@ -6,12 +6,12 @@ import re
 import time
 from dataclasses import dataclass
 
+from pda import summary_config
 from pda.fulltext import PdfStore, atomic_write, checked_id, chunk_document, extract_pdf
 from pda.models import Paper
 from pda.ollama import OllamaClient
 from pda.retrieval import ArxivClient, RetrievalError
 from pda.summary_config import (
-    PIPELINE_VERSION,
     SummaryError,
     SummaryResult,
     SummarySettings,
@@ -149,8 +149,7 @@ class Summarizer:
                 "model": identity.name,
                 "digest": identity.digest,
                 "ollama_version": identity.server_version,
-                "pipeline": PIPELINE_VERSION,
-                "settings": self.settings.fingerprint(),
+                "settings": self.settings.content_fingerprint(),
                 "pdf_sha256": pdf_sha,
             }
         )
@@ -166,38 +165,46 @@ class Summarizer:
                 LOGGER.warning("Ignoring invalid summary cache entry")
         update("Extracting text from every PDF page…")
         document = extract_pdf(pdf_path, self.settings)
+        evidence = None
+        expected = frozenset()
+        chunk_count = 1
+        reduction_rounds = 0
 
-        def prepare_source(
-            instruction: str, previous_summary: str | None = None
-        ) -> tuple[str, int]:
-            source = document.text
-            if self.ollama.fits(
-                messages(query, paper.title, source, instruction, previous_summary=previous_summary)
-            ):
-                return source, 1
-            # JSON escaping can double ASCII source bytes. Reserve that space as well as
-            # query/instructions, model output and the chat template; never slice a paper.
-            empty_size = max(
-                sum(
-                    len(m["content"].encode())
-                    for m in messages(query, paper.title, "", instruction)
+        def prepare_source(instruction: str, previous_summary: str | None = None) -> str:
+            nonlocal evidence, expected, chunk_count, reduction_rounds
+            if evidence is None:
+                source = document.text
+                if self.ollama.fits(
+                    messages(
+                        query, paper.title, source, instruction, previous_summary=previous_summary
+                    )
+                ):
+                    return source
+                # JSON escaping can double ASCII source bytes. Reserve that space as well as
+                # query/instructions, model output and the chat template; never slice a paper.
+                empty_size = max(
+                    sum(
+                        len(m["content"].encode()) for m in messages(query, paper.title, "", prompt)
+                    )
+                    for prompt in (FINAL, EXTRACT, REDUCE)
                 )
-                for instruction in (FINAL, EXTRACT, REDUCE)
-            )
-            budget = (
-                self.settings.num_ctx
-                - self.settings.num_predict
-                - self.settings.template_reserve
-                - empty_size
-            ) // 2
-            chunks = chunk_document(document, budget, self.settings.max_chunks)
-            chunk_count = len(chunks)
-            evidence = []
-            for index, chunk in enumerate(chunks):
-                update(f"Reading full-paper chunk {index + 1} of {len(chunks)}…")
-                evidence.append(Evidence(generate(chunk, EXTRACT), frozenset({index})))
-            expected = frozenset(range(len(chunks)))
-            for level in range(self.settings.max_reduce_rounds + 1):
+                budget = (
+                    self.settings.num_ctx
+                    - self.settings.num_predict
+                    - self.settings.template_reserve
+                    - empty_size
+                ) // 2
+                chunks = chunk_document(document, budget, self.settings.max_chunks)
+                chunk_count = len(chunks)
+                evidence = []
+                for index, chunk in enumerate(chunks):
+                    update(f"Reading full-paper chunk {index + 1} of {len(chunks)}…")
+                    evidence.append(Evidence(generate(chunk, EXTRACT), frozenset({index})))
+                expected = frozenset(range(len(chunks)))
+
+            # Keep the latest all-chunk findings for a possible contextual rewrite.
+            # A larger repair prompt may require further consolidation, never remapping.
+            while True:
                 source = self._join_evidence(evidence)
                 if self.ollama.fits(
                     messages(
@@ -208,12 +215,13 @@ class Summarizer:
                         raise SummaryError(
                             "Full-paper coverage validation failed; no summary was generated."
                         )
-                    break
-                if level == self.settings.max_reduce_rounds:
+                    return source
+                if reduction_rounds >= self.settings.max_reduce_rounds:
                     raise SummaryError(
                         "The paper exceeds hierarchical processing limits; increase the context or reduction limits."
                     )
-                update(f"Consolidating all findings, pass {level + 1}…")
+                reduction_rounds += 1
+                update(f"Consolidating all findings, pass {reduction_rounds}…")
                 groups = []
                 current = []
                 for item in evidence:
@@ -237,9 +245,8 @@ class Summarizer:
                         )
                     )
                 evidence = reduced
-            return source, chunk_count
 
-        source, chunk_count = prepare_source(FINAL)
+        source = prepare_source(FINAL)
         update("Writing the query-focused summary…")
         failure = None
         draft = None
@@ -247,12 +254,7 @@ class Summarizer:
             instruction = FINAL if attempt == 0 else REPAIR
             if attempt:
                 update("Rewriting the summary using the paper evidence and previous draft…")
-                if not self.ollama.fits(
-                    messages(query, paper.title, source, instruction, previous_summary=draft)
-                ):
-                    # Reuse the all-section hierarchy if adding the draft requires more
-                    # compact evidence. Never truncate either the paper or the draft.
-                    source, chunk_count = prepare_source(instruction, draft)
+                source = prepare_source(instruction, draft)
             raw = generate(source, instruction, previous_summary=draft)
             try:
                 text = validate_summary(raw)
@@ -268,6 +270,8 @@ class Summarizer:
             query=query,
             model=identity.name,
             model_digest=identity.digest,
+            pipeline_version=summary_config.PIPELINE_VERSION,
+            parser_version=summary_config.PDF_PARSER_VERSION,
             pdf_sha256=pdf_sha,
             pages=document.pages,
             chunks=chunk_count,

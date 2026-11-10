@@ -7,12 +7,10 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-import httpx
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from pda.finetuning_data import base_id, hydrate, load_annotations
-from pda.retrieval import ArxivClient, RetrievalError
+from pda.finetuning_data import base_id, fetch_metadata, hydrate, load_annotations
+from pda.retrieval import ArxivClient
 
 PREPARED_PATH = Path("evaluation/annotations/prepared.json")
 ANNOTATION_FOLDERS = {
@@ -49,31 +47,11 @@ def main() -> None:
     identifiers = sorted(
         {base_id(j["arxiv_id"]) for rows in datasets.values() for q in rows for j in q["judgments"]}
     )
-    client = ArxivClient()
-    records, batches = {}, []
-
-    def fetch(batch: list[str]) -> None:
-        try:
-            papers, metadata = client.fetch_ids(batch)
-        except RetrievalError as exc:
-            if (
-                not isinstance(exc.__cause__, httpx.HTTPStatusError)
-                or exc.__cause__.response.status_code != 400
-            ):
-                raise
-            if len(batch) == 1:
-                batches.append({"requested_ids": batch, "error": str(exc)})
-                return
-            midpoint = len(batch) // 2
-            fetch(batch[:midpoint])
-            fetch(batch[midpoint:])
-            return
-        records.update({base_id(p.arxiv_id): p.model_dump(mode="json") for p in papers})
-        batches.append({"requested_ids": batch, "metadata": metadata})
-
-    for start in range(0, len(identifiers), 50):
-        fetch(identifiers[start : start + 50])
-        print(f"Metadata: {min(start + 50, len(identifiers))}/{len(identifiers)} IDs", flush=True)
+    records, batches = fetch_metadata(
+        ArxivClient(),
+        identifiers,
+        progress=lambda done, total: print(f"Metadata: {done}/{total} IDs", flush=True),
+    )
     verified, exclusions = {}, {}
     for name, rows in datasets.items():
         verified[name], exclusions[name] = hydrate(rows, records, threshold=0.85)

@@ -1,4 +1,4 @@
-"""Live PDF/extraction smoke check; does not invoke or download an NLP model."""
+"""Live PDF/extraction check using local layout inference, with no Qwen inference."""
 
 import argparse
 import json
@@ -52,7 +52,7 @@ def main():
         raise RuntimeError("Chunking lost or reordered extracted words")
     report = {
         "executed_at": datetime.now(UTC).isoformat(),
-        "kind": "live PDF retrieval/extraction/chunking smoke check; no model inference or quality judgments",
+        "kind": "live PDF retrieval/extraction/chunking smoke check; local layout inference, no Qwen inference or summary-quality judgments",
         "arxiv_id": args.arxiv_id,
         "pdf_sha256": sha,
         "pdf_bytes": path.stat().st_size,

@@ -5,7 +5,6 @@ import csv
 import hashlib
 import importlib.metadata
 import json
-import random
 import sys
 import time
 from datetime import UTC, datetime
@@ -16,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import numpy as np
 import torch
 from prepare_evaluation import validate_snapshot
-from train_ranker import evaluate, train_epoch
+from train_ranker import build_optimizer_and_scheduler, evaluate, seed_training, train_epoch
 
 from pda.finetuning_data import load_annotations, make_preferences
 from pda.ranking import (
@@ -118,38 +117,31 @@ def main() -> None:
         "selection": "best combined 12-query development nDCG@10; first epoch wins ties",
         "development_pooling": "one unweighted macro mean across 10 synthetic and 2 human query pools",
         "dataset_deduplication": False,
-        "gradient_clip_norm": 1.0,
+        "gradient_clip_norm": original["config"].get("gradient_clip_norm", 1.0),
+        # Describes the fixed float32 path; this is not a precision-selection option.
         "precision": "float32",
     }
     dataset_hash = hashlib.sha256(raw).hexdigest()
     run_id = hashlib.sha256(
         (dataset_hash + json.dumps(config, sort_keys=True)).encode()
     ).hexdigest()[:16]
-    random.seed(config["seed"])
-    np.random.seed(config["seed"])
-    torch.manual_seed(config["seed"])
-    torch.set_num_threads(4)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(config["seed"])
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
-    samples = make_preferences(data["training"], config["seed"], config["preferences_per_query"])
+    seed_training(config)
+    samples = make_preferences(
+        data["training"],
+        config["seed"],
+        config["preferences_per_query"],
+        margin_per_grade=config["margin_per_grade"],
+    )
     encoder = SemanticEncoder(args.device)  # Always the original base, never v1 weights.
     model = encoder.model
     if args.device == "cuda":
         torch.cuda.reset_peak_memory_stats()
-    baseline = evaluate(encoder, data["combined_development"], mode="full")
-    optimizer = torch.optim.AdamW(
-        model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"]
+    relevant_min = config["binary_relevant_min"]
+    baseline = evaluate(
+        encoder, data["combined_development"], mode="full", relevant_min=relevant_min
     )
-    steps_per_epoch = (len(samples) + config["batch_size"] - 1) // config["batch_size"]
-    total_steps = steps_per_epoch * config["epochs"]
-    warmup = max(1, int(total_steps * config["warmup_fraction"]))
-    scheduler = torch.optim.lr_scheduler.LambdaLR(
-        optimizer,
-        lambda step: min(
-            (step + 1) / warmup, max(0, (total_steps - step) / max(1, total_steps - warmup))
-        ),
+    optimizer, scheduler, steps_per_epoch, warmup = build_optimizer_and_scheduler(
+        model, len(samples), config
     )
     history, best_epoch, best_score = [], None, -1.0
     started = time.perf_counter()
@@ -159,7 +151,9 @@ def main() -> None:
     for epoch in range(1, config["epochs"] + 1):
         losses = train_epoch(model, samples, optimizer, scheduler, config, epoch)
         model.eval()
-        development = evaluate(encoder, data["combined_development"], mode="full")
+        development = evaluate(
+            encoder, data["combined_development"], mode="full", relevant_min=relevant_min
+        )
         row = {
             "epoch": epoch,
             "training_loss": float(np.mean(losses)),

@@ -8,14 +8,12 @@ from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
-import httpx
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from prepare_evaluation import validate_snapshot
 
-from pda.finetuning_data import base_id, hydrate, load_annotations
-from pda.retrieval import ArxivClient, RetrievalError
+from pda.finetuning_data import base_id, fetch_metadata, hydrate, load_annotations
+from pda.retrieval import ArxivClient
 
 
 def occurrence_audit(queries: list[dict]) -> dict:
@@ -66,34 +64,11 @@ def main() -> None:
     development = json.loads(development_raw)
     validate_snapshot(development)
     identifiers = sorted({base_id(j["arxiv_id"]) for q in training for j in q["judgments"]})
-    client = ArxivClient()
-    records, batches = {}, []
-
-    def fetch(batch: list[str]) -> None:
-        try:
-            papers, metadata = client.fetch_ids(batch)
-        except RetrievalError as exc:
-            if (
-                not isinstance(exc.__cause__, httpx.HTTPStatusError)
-                or exc.__cause__.response.status_code != 400
-            ):
-                raise
-            if len(batch) == 1:
-                batches.append({"requested_ids": batch, "error": str(exc)})
-                return
-            midpoint = len(batch) // 2
-            fetch(batch[:midpoint])
-            fetch(batch[midpoint:])
-            return
-        records.update({base_id(p.arxiv_id): p.model_dump(mode="json") for p in papers})
-        batches.append({"requested_ids": batch, "metadata": metadata})
-
-    for start in range(0, len(identifiers), 50):
-        fetch(identifiers[start : start + 50])
-        print(
-            f"arXiv verification: {min(start + 50, len(identifiers))}/{len(identifiers)} IDs",
-            flush=True,
-        )
+    records, batches = fetch_metadata(
+        ArxivClient(),
+        identifiers,
+        progress=lambda done, total: print(f"arXiv verification: {done}/{total} IDs", flush=True),
+    )
     verified, exclusions = hydrate(training, records, threshold=0.85)
     if any(not q["judgments"] for q in verified):
         raise ValueError("A training batch has no verified papers; review its IDs and titles.")

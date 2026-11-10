@@ -26,7 +26,9 @@ from pda.ranking import FINETUNED_PATH, MODEL, REVISION, LexicalEncoder, Semanti
 from pda.resources import peak_working_set_bytes
 
 
-def evaluate(encoder, queries: list[dict], mode: str = "truncated") -> dict:
+def evaluate(
+    encoder, queries: list[dict], mode: str = "truncated", *, relevant_min: float = 2
+) -> dict:
     profile = evaluation_profile(mode)
     rows = {}
     score_groups = {str(grade): [] for grade in range(4)}
@@ -41,7 +43,7 @@ def evaluate(encoder, queries: list[dict], mode: str = "truncated") -> dict:
         result = metrics(
             [items[i]["arxiv_id"] for i in ranked],
             judgments,
-            relevant_min=2,
+            relevant_min=relevant_min,
             scores={j["arxiv_id"]: float(score) for j, score in zip(items, scores, strict=True)},
             mode=mode,
         )
@@ -74,7 +76,7 @@ def evaluate(encoder, queries: list[dict], mode: str = "truncated") -> dict:
             for grade, scores in score_groups.items()
         },
         "metric_definitions": metric_definitions(mode),
-        "protocol": "Per-query judged candidates only; no title override; binary relevance >=2 "
+        "protocol": f"Per-query judged candidates only; no title override; binary relevance >={relevant_min:g} "
         "for Precision, reciprocal rank and AP. Cutoffs follow evaluation_configuration; "
         "pairwise accuracy uses graded judgments and raw score ties.",
     }
@@ -102,7 +104,7 @@ def train_epoch(model, samples, optimizer, scheduler, config: dict, epoch: int) 
         negative = F.cosine_similarity(embeddings[0], embeddings[2])
         loss = F.relu(margins - positive + negative).mean()
         loss.backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        torch.nn.utils.clip_grad_norm_(model.parameters(), config.get("gradient_clip_norm", 1.0))
         optimizer.step()
         scheduler.step()
         losses.append(float(loss.detach()))
@@ -112,6 +114,38 @@ def train_epoch(model, samples, optimizer, scheduler, config: dict, epoch: int) 
                 flush=True,
             )
     return losses
+
+
+def seed_training(config: dict) -> None:
+    """Apply the shared original RNG, thread-count and deterministic CUDA settings."""
+    random.seed(config["seed"])
+    np.random.seed(config["seed"])
+    torch.manual_seed(config["seed"])
+    torch.set_num_threads(4)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(config["seed"])
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
+
+def build_optimizer_and_scheduler(
+    model, sample_count: int, config: dict
+) -> tuple[torch.optim.AdamW, torch.optim.lr_scheduler.LambdaLR, int, int]:
+    """Build the original AdamW and warmup/decay schedule from stored parameters."""
+    optimizer = torch.optim.AdamW(
+        model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"]
+    )
+    batch_size = config["batch_size"]
+    steps_per_epoch = (sample_count + batch_size - 1) // batch_size
+    total_steps = steps_per_epoch * config["epochs"]
+    warmup = max(1, int(total_steps * config["warmup_fraction"]))
+    scheduler = torch.optim.lr_scheduler.LambdaLR(
+        optimizer,
+        lambda step: min(
+            (step + 1) / warmup, max(0, (total_steps - step) / max(1, total_steps - warmup))
+        ),
+    )
+    return optimizer, scheduler, steps_per_epoch, warmup
 
 
 def main() -> None:
@@ -144,40 +178,29 @@ def main() -> None:
     run_id = hashlib.sha256(
         (dataset_hash + json.dumps(config, sort_keys=True)).encode()
     ).hexdigest()[:16]
-    random.seed(config["seed"])
-    np.random.seed(config["seed"])
-    torch.manual_seed(config["seed"])
-    torch.set_num_threads(4)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(config["seed"])
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
-    samples = make_preferences(splits["train"], config["seed"], config["preferences_per_query"])
+    seed_training(config)
+    samples = make_preferences(
+        splits["train"],
+        config["seed"],
+        config["preferences_per_query"],
+        margin_per_grade=config["margin_per_grade"],
+    )
     encoder = SemanticEncoder(args.device)
     model = encoder.model
     if args.device == "cuda":
         torch.cuda.reset_peak_memory_stats()
-    baseline_dev = evaluate(encoder, splits["synthetic_dev"])
+    relevant_min = config["binary_relevant_min"]
+    baseline_dev = evaluate(encoder, splits["synthetic_dev"], relevant_min=relevant_min)
     if not baseline_dev["query_count"]:
         raise ValueError("No verified synthetic development queries are available.")
-    optimizer = torch.optim.AdamW(
-        model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"]
-    )
-    total_steps = ((len(samples) + 7) // 8) * args.epochs
-    warmup = max(1, int(total_steps * config["warmup_fraction"]))
-    scheduler = torch.optim.lr_scheduler.LambdaLR(
-        optimizer,
-        lambda step: min(
-            (step + 1) / warmup, max(0, (total_steps - step) / max(1, total_steps - warmup))
-        ),
-    )
+    optimizer, scheduler, _, _ = build_optimizer_and_scheduler(model, len(samples), config)
     best_score, best_epoch = -1.0, None
     history = []
     started = time.perf_counter()
     for epoch in range(1, args.epochs + 1):
         losses = train_epoch(model, samples, optimizer, scheduler, config, epoch)
         model.eval()
-        dev = evaluate(encoder, splits["synthetic_dev"])
+        dev = evaluate(encoder, splits["synthetic_dev"], relevant_min=relevant_min)
         history.append(
             {"epoch": epoch, "mean_training_loss": float(np.mean(losses)), "synthetic_dev": dev}
         )
@@ -220,14 +243,18 @@ def main() -> None:
     comparison = {
         "synthetic_dev_before": baseline_dev,
         "human_test": {
-            "lexical": evaluate(LexicalEncoder(), splits["human_test"]),
-            "semantic": evaluate(baseline, splits["human_test"]),
+            "lexical": evaluate(LexicalEncoder(), splits["human_test"], relevant_min=relevant_min),
+            "semantic": evaluate(baseline, splits["human_test"], relevant_min=relevant_min),
         },
     }
     del baseline
     tuned = SemanticEncoder(args.device, model_path=args.output)
-    comparison["human_test"]["finetuned"] = evaluate(tuned, splits["human_test"])
-    comparison["synthetic_dev_selected"] = evaluate(tuned, splits["synthetic_dev"])
+    comparison["human_test"]["finetuned"] = evaluate(
+        tuned, splits["human_test"], relevant_min=relevant_min
+    )
+    comparison["synthetic_dev_selected"] = evaluate(
+        tuned, splits["synthetic_dev"], relevant_min=relevant_min
+    )
     report = {
         "manifest": manifest,
         "history": history,

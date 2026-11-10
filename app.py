@@ -12,7 +12,7 @@ from pda.pipeline import search
 from pda.query import interpret
 from pda.ranking import FINETUNED_OPTIONS, LexicalEncoder, SemanticEncoder
 from pda.retrieval import ArxivClient, RetrievalError
-from pda.summary_config import SummaryError, SummarySettings, word_count
+from pda.summary_config import SummaryError, SummarySettings, digest, normalized_query, word_count
 from pda.summary_jobs import SummaryJobs
 
 st.set_page_config(page_title="Paper Discovery Assistant", page_icon="📚", layout="wide")
@@ -39,7 +39,6 @@ def summary_jobs():
     return SummaryJobs(SummarySettings.from_env())
 
 
-@st.fragment(run_every="1s")
 def summary_panel(paper, research_query):
     try:
         jobs = summary_jobs()
@@ -48,9 +47,24 @@ def summary_panel(paper, research_query):
         return
     key = jobs.key(paper, research_query)
     requested = st.session_state.setdefault("requested_summaries", set())
-    request_errors = st.session_state.setdefault("summary_request_errors", {})
     job = jobs.snapshot(key) if key in requested else None
-    busy = job is not None and job.status in {"queued", "running"}
+    polling = job is not None and job.status in {"queued", "running"}
+
+    @st.fragment(run_every="1s" if polling else None)
+    def render_summary():
+        current = jobs.snapshot(key) if key in requested else None
+        busy = current is not None and current.status in {"queued", "running"}
+        if busy != polling:
+            # Re-register timers only at job start/completion. Stateful paper
+            # expanders preserve the user's open/closed choices on this rerun.
+            st.rerun()
+        render_summary_contents(jobs, paper, research_query, key, requested, current, busy)
+
+    render_summary()
+
+
+def render_summary_contents(jobs, paper, research_query, key, requested, job, busy):
+    request_errors = st.session_state.setdefault("summary_request_errors", {})
     if job and job.result:
         st.write(job.result.text)
         st.caption(
@@ -80,8 +94,8 @@ def summary_panel(paper, research_query):
         except SummaryError as exc:
             request_errors[key] = str(exc)
 
-    # The callback runs before this fragment redraws, so its next snapshot already
-    # shows the queued job. Do not rerun the app and recreate the parent expander.
+    # Callbacks update the job before the fragment redraws. Idle/completed panels
+    # have no timer; transitions register or remove just the active polling timers.
     st.button(label, key=f"summarize-{key}", disabled=busy, on_click=submit_summary)
 
 
@@ -170,7 +184,14 @@ if "result" in st.session_state:
     else:
         st.subheader("Ranked papers")
         for match in result.matches:
-            with st.expander(f"{match.display_score:.1f}/100 · {match.paper.title}"):
+            paper_key = "paper-" + digest(
+                [match.paper.arxiv_id, normalized_query(result.interpretation.original)]
+            )
+            with st.expander(
+                f"{match.display_score:.1f}/100 · {match.paper.title}",
+                key=paper_key,
+                on_change="rerun",
+            ):
                 st.write(", ".join(match.paper.authors))
                 st.caption(
                     f"{match.paper.published.date()} · "

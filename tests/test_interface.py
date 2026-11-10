@@ -90,7 +90,11 @@ def test_finetuned_selection_loads_local_artifact(monkeypatch, label):
 
     class Encoder:
         model = object()
-        model_name = "pda/syntetic-finetune-v1"
+        model_name = (
+            ranking.FINETUNED_V2_MODEL
+            if label == ranking.FINETUNED_V2_LABEL
+            else ranking.FINETUNED_MODEL
+        )
         model_revision = "test-run"
 
         def score_documents(self, query, documents, progress=None):
@@ -108,3 +112,4 @@ def test_finetuned_selection_loads_local_artifact(monkeypatch, label):
     app.button[0].click().run(timeout=30)
     assert not app.exception and not app.error
     assert calls == [("cpu", ranking.FINETUNED_OPTIONS[label])]
+    assert app.session_state.result.metadata["encoder"] == Encoder.model_name

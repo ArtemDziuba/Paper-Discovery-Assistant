@@ -8,7 +8,6 @@ from dataclasses import dataclass, replace
 from pda.models import Paper
 from pda.summarization import Summarizer
 from pda.summary_config import (
-    PIPELINE_VERSION,
     SummaryError,
     SummaryResult,
     SummarySettings,
@@ -41,7 +40,6 @@ class SummaryJobs:
                 "id": paper.arxiv_id,
                 "query": normalized_query(query),
                 "settings": self.settings.fingerprint(),
-                "pipeline": PIPELINE_VERSION,
             }
         )
 

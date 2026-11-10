@@ -63,6 +63,8 @@ def search(
         ) and title_metadata.get("cache_hit", False)
     retrieved = time.perf_counter()
     matches = []
+    exact_title = normalize_title(interpreted.title_candidate or "")
+    title_matches = [normalize_title(paper.title) == exact_title for paper in papers]
     if papers:
         texts = [p.text for p in papers]
         ranking_progress = (
@@ -73,11 +75,10 @@ def search(
         else:
             query_vector, document_vectors = encoder.encode_pair(query, texts)
             scores = cosine_scores(query_vector, document_vectors)
-        exact_title = normalize_title(interpreted.title_candidate or "")
         order = sorted(
             range(len(papers)),
             key=lambda i: (
-                -(bool(exact_title) and normalize_title(papers[i].title) == exact_title),
+                -(bool(exact_title) and title_matches[i]),
                 -float(scores[i]),
             ),
         )
@@ -106,10 +107,7 @@ def search(
             "model_revision": getattr(encoder, "model_revision", REVISION) if semantic else None,
             "training_run_id": (getattr(encoder, "training_run", None) or {}).get("run_id"),
             "inference_device": getattr(encoder, "device", "cpu"),
-            "exact_title_priority": any(
-                normalize_title(p.title) == normalize_title(interpreted.title_candidate or "")
-                for p in papers
-            ),
+            "exact_title_priority": any(title_matches),
             "title_lookup": title_metadata,
             "retrieval_seconds": retrieved - started,
             "ranking_seconds": time.perf_counter() - retrieved,

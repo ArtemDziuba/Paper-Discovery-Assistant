@@ -134,13 +134,15 @@ flowchart TD
 
 The background queue allows at most four queued/running jobs in total, serializes model
 inference, and disables the same paper/query button during work. Workers never call
-Streamlit. Each requesting session polls snapshots once per second; completed summaries
+Streamlit. Each requesting session polls active jobs once per second; idle and completed
+panels register no timer. Completed summaries
 remain within the corresponding result. A fresh session must explicitly request a summary
 before accessing a shared job result/cache. Regenerate bypasses the summary cache and
 reuses the PDF. A failed regeneration offers Retry. A query change uses a different key.
-Summary buttons submit work in callbacks before the paper's summary fragment redraws;
-they do not explicitly rerun the entire app or recreate the enclosing paper expander.
-This preserves the user's open paper while starting, regenerating or retrying a summary.
+Summary buttons submit work in callbacks before the paper's summary fragment redraws.
+At job start/completion the app reruns once to register/remove the appropriate timers.
+Paper expanders have stable keys and tracked open/closed state, so these transitions
+preserve the user's choice. This requires Streamlit >=1.66, reflected in project metadata.
 
 ## Full-paper coverage and limits
 
@@ -196,8 +198,13 @@ do not constitute a proof that a generated claim is supported.
 digest, PDF hash, pipeline/PyMuPDF versions, page/chunk/call counts, and bibliography status.
 
 The summary key includes versioned arXiv ID, Unicode NFKC/whitespace/case-normalized query,
-installed model digest/tag, Ollama version, PyMuPDF version, pipeline version, settings fingerprint, and PDF
+installed model digest/tag, Ollama version, PyMuPDF version, pipeline version, content-settings fingerprint, and PDF
 hash. Changing any of these invalidates reuse. Different queries share only the PDF.
+The content fingerprint includes model, context, temperature, generation limit, seed, thinking
+mode and template allowance. Cache paths, HTTP endpoint/timeouts, keep-alive and processing
+caps do not invalidate otherwise valid persistent summaries. A separate full fingerprint
+keeps jobs/resources with different operational settings isolated; installed model identity
+is still verified before a disk-cache hit.
 Invalid summary cache records are ignored. Remove individual cache files to clear them;
 do not remove model directories. The pipeline version must change when prompt/processing
 semantics change in future implementations.
@@ -213,9 +220,11 @@ An output outside the accepted range (or invalid format) triggers one automatic 
 The rewrite receives the original research query, paper evidence, and rejected summary as
 a separate untrusted JSON field. The draft is explicitly not factual evidence, and the
 model is again instructed to return 100–150 words. If both evidence and draft cannot fit,
-the complete paper is processed through the existing all-section hierarchy to make room;
-neither input is silently truncated. A second invalid response produces a retryable error,
-and invalid outputs are not cached. Pipeline version `full-paper-qwen-v4` (2026-11-10)
+existing all-section findings are consolidated further to make room, without repeating their
+chunk-extraction calls. A direct first pass creates chunk findings only if its repair needs
+them. Neither input is silently truncated; processing budgets are shared across attempts.
+A second invalid response produces a retryable error,
+and invalid outputs are not cached. Pipeline version `full-paper-qwen-v5` (2026-11-10)
 invalidates the previous summary cache policy while preserving downloaded PDFs.
 This validation checks format and length, not scientific truth or relevance.
 

@@ -11,7 +11,7 @@ from urllib.parse import urlsplit
 
 from pydantic import BaseModel, Field, model_validator
 
-PIPELINE_VERSION = "full-paper-qwen-v4"
+PIPELINE_VERSION = "full-paper-qwen-v5"
 PDF_PARSER_VERSION = version("pymupdf")
 # Output tolerance only: the model is still instructed to write 100–150 words.
 SUMMARY_SHADOW_MIN_WORDS = 50
@@ -77,11 +77,21 @@ class SummarySettings(BaseModel):
         )
 
     def fingerprint(self) -> str:
+        """Identify configured resources/jobs, including operational differences."""
+        return self._fingerprint()
+
+    def content_fingerprint(self) -> str:
+        """Identify settings that can change accepted summary text or its evidence."""
+        return self._fingerprint(
+            {"model", "num_ctx", "temperature", "num_predict", "seed", "think", "template_reserve"}
+        )
+
+    def _fingerprint(self, fields: set[str] | None = None) -> str:
         return digest(
             {
                 "pipeline": PIPELINE_VERSION,
                 "pdf_parser_version": PDF_PARSER_VERSION,
-                **self.model_dump(mode="json"),
+                **self.model_dump(mode="json", include=fields),
             }
         )
 

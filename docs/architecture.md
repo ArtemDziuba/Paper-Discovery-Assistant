@@ -40,6 +40,17 @@ flowchart LR
 | summarization.py | Paper and original query | Direct or hierarchical full-paper summary, provenance and query-specific cache |
 | summary_jobs.py | Explicit per-paper requests | Serial background work, duplicate suppression, progress and retry state |
 
+Retrieval parses each Atom response once for both validated papers and pagination metadata.
+The preparation CLIs share `finetuning_data.fetch_metadata`, with strict singleton HTTP-400
+handling retained for v1. Annotation loading constructs only the selected deduplicated or
+occurrence-preserving representation. Both trainers share RNG setup and optimizer/scheduler
+construction while retaining their distinct data/development protocols and original defaults.
+
+Summary repairs retain existing all-chunk findings rather than extracting them again.
+Persistent cache identity uses content-affecting settings; resource/job identity also includes
+operational settings. The app polls only queued/running summaries. Timer start/stop transitions
+perform a full rerun with tracked paper-expander state preserved by stable widget keys.
+
 The PDF parser now calls `Document.to_markdown(page_chunks=True, use_ocr=False)` using
 PyMuPDF 2.1's local ONNX layout analysis. This model call identifies reading order and element
 classes from PDF content/geometry; it does not generate the scientific summary. The adapter

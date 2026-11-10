@@ -125,17 +125,29 @@ Batches 1, 5, 7, 8, and 13 were synthetic training query groups; batch 15 was a 
 group used for checkpoint selection. Their higher fine-tuned scores do not establish
 held-out performance and do not supersede the human evaluation regression above.
 Full rankings and provenance are in evaluation/finetuning/selected-batches.json. Reproduce
-with `uv run --extra cuda python scripts/evaluate_selected_batches.py`.
+with `uv run --extra cuda python scripts/evaluate_selected_batches.py --output evaluation/finetuning/selected-batches-rerun.json`.
+The evaluator now reads the relocated files in finetune_data/encoder, accepts relocation
+only when unique source filenames and frozen byte hashes match, and checks the model's
+prepared-data hash. Existing reports are not overwritten. Optional --training, --prepared
+and --model-path arguments select alternative locations without weakening those checks.
 
 From the repository root, with GPU dependencies installed:
 
 ```powershell
-uv run --extra cuda python scripts/prepare_finetuning.py
-uv run --extra cuda python scripts/train_ranker.py
+uv run --extra cuda python scripts/prepare_finetuning.py --output evaluation/finetuning/reprepared.json
+uv run --extra cuda python scripts/train_ranker.py --data evaluation/finetuning/reprepared.json --output models/reproduced-minilm
 uv run --extra cuda streamlit run app.py
 ```
 
-Metadata preparation uses the internet. Training uses frozen local abstracts and a cached
+V1 preparation selects exactly synthetic_finetuning_batch_01.json through _15.json from
+finetune_data/encoder, plus the two human files in evaluation/human_eval. It preserves the
+original v1 split and paper-overlap removal. The relocated synthetic files and renamed human
+files were checked against the original snapshot: all 17 contents match their frozen hashes.
+This cleanup did not reprepare data, retrain models or regenerate evaluation reports.
+
+Metadata preparation uses the internet. The training command above uses the newly prepared
+snapshot. To reproduce the original experiment, use --data evaluation/finetuning/prepared.json
+and retain that original snapshot instead of re-fetching metadata. Training uses frozen local abstracts and a cached
 base encoder. For reproducing this exact run, retain the existing prepared.json rather than
 re-fetching changing metadata. Training refuses to overwrite a completed model; use a new
 folder such as `--output models/reproduced-minilm` for another run. The application uses the
