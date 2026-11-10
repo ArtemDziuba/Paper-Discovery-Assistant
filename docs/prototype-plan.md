@@ -6,7 +6,7 @@ setup.md, evaluation.md, and implementation-results.md for actual behavior and v
 
 ## Scope and constraints
 
-Build a local Streamlit application for English-language research queries and arXiv title/abstract search. Preserve paper identifiers, source links, raw similarity scores, and citation provenance. Initial scope excludes full-text analysis, accounts, cloud deployment, vector databases, and hosted inference.
+Build a local Streamlit application for English-language research queries and arXiv title/abstract search. Preserve paper identifiers, source links, raw similarity scores, and citation provenance. The initial scope excluded full-text analysis; the later user-requested extension adds on-demand, query-focused per-paper PDF summaries through local Qwen3.5-4B/Ollama. Accounts, cloud deployment, vector databases and hosted inference remain excluded. See summarization.md for the implemented extension and validation criteria.
 
 Target hardware: laptop RTX 4060, 8 GB VRAM. Target system RAM below 8 GB, with an upper allowance of 12-13 GB when justified. Resource usage and latency must be measured on representative workloads. The user authorized up to 10,000 arXiv candidates and longer searches; use paginated retrieval, progress reporting, chunked semantic encoding, and sparse lexical scoring.
 
@@ -16,7 +16,10 @@ Internet access for paper retrieval through the arXiv API is approved. All NLP i
 
 Streamlit calls ordinary Python components directly. Pydantic validates shared records. Use a lightweight, deterministic concept-extraction baseline, an arXiv retrieval client, metadata normalization/deduplication, a local Sentence Transformers encoder, NumPy cosine ranking, and per-paper match evidence with source links. Topic retrieval removes common conversational prefixes and requires retained concepts together; quoted phrases preserve their full wording. Optional Windows CUDA dependencies are selected with the cuda extra.
 
-Start with extractive summaries and explanations. Consider a small local generative model only after the baseline works and evaluation identifies a concrete benefit. Exact model selection requires checking model documentation, licensing, input limits, and resource requirements.
+The original baseline used extractive explanations. The user subsequently selected local
+`qwen3.5:4b` for explicit per-paper summary requests. Its separate PDF/extraction/inference
+path does not modify retrieval, ranking or MiniLM training. The cross-paper overview remains
+outside scope, and actual summary quality/resource use must be measured independently.
 
 ```mermaid
 flowchart TD
@@ -45,7 +48,7 @@ Investigate real academic retrieval datasets before preparing synthetic data. Ch
 | Embeddings | Separation of judged relevant and irrelevant query-paper pairs; compare lexical baseline |
 | Ranking | nDCG@10 and Precision@5 against graded/binary judgments and a lexical baseline |
 | Explanations | Human rubric for evidence support, relevance, and unsupported claims |
-| Overview | Citation validity, human-reviewed factual support, and coverage of relevant source material |
+| On-demand paper summary | Full-text extraction/processing coverage, human-reviewed claim support, query relevance, contribution/method/result/limitation coverage, and a 100–150 word target with internal tolerance of 50–180 |
 | End to end | Representative task completion, measured latency, RAM/VRAM use, and failure cases |
 
 Automated tests verify correctness separately: mocked API responses, malformed/missing metadata, identifier preservation, empty results, similarity calculations, citation membership, and pipeline integration. Extracting a source sentence does not by itself establish that it is useful or representative.

@@ -1,0 +1,96 @@
+{
+  "executed_at": "2026-11-10T17:26:40.934722+00:00",
+  "kind": "Parser migration diagnostics; no Qwen inference or scientific-summary quality judgments",
+  "parser_version": "2.1",
+  "pipeline_version": "full-paper-qwen-v4",
+  "acceptance_criteria": [
+    "Every returned page has matching provenance and valid layout spans",
+    "All extracted substantive words survive chunking in order; repeated table headers allowed",
+    "Native multi-column reading order and synthetic table row/cell associations pass software tests",
+    "Recognized bibliography boundaries exclude references and allow later supplements"
+  ],
+  "papers": [
+    {
+      "report": "fulltext-pymupdf2.json",
+      "arxiv_id": "1706.03762v7",
+      "pdf_sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "pages": 15,
+      "chunks": 16,
+      "extracted_words": 5179,
+      "unit_kinds": {
+        "text": 75,
+        "section-header": 26,
+        "caption": 10,
+        "formula": 5,
+        "footnote": 2,
+        "list-item": 3,
+        "table": 4,
+        "picture": 3
+      },
+      "bibliography_removed": true,
+      "all_extracted_words_preserved_in_order": true,
+      "additional_chunk_words": 0,
+      "extraction_seconds": 9.237246999982744
+    },
+    {
+      "report": "fulltext-pymupdf2-2304.10557v6.json",
+      "arxiv_id": "2304.10557v6",
+      "pdf_sha256": "ad6e0372551b5050e1dda8b30af5b5d9b5ee1e98b61e67f550eeea9e03a0fe6b",
+      "pages": 10,
+      "chunks": 17,
+      "extracted_words": 5333,
+      "unit_kinds": {
+        "section-header": 14,
+        "text": 75,
+        "footnote": 2,
+        "list-item": 2,
+        "caption": 6,
+        "formula": 13
+      },
+      "bibliography_removed": true,
+      "all_extracted_words_preserved_in_order": true,
+      "additional_chunk_words": 0,
+      "extraction_seconds": 4.659649700042792
+    },
+    {
+      "report": "fulltext-pymupdf2-2106.04554v2.json",
+      "arxiv_id": "2106.04554v2",
+      "pdf_sha256": "4d4d323f9f7d92c1c68a7747a896566d90c188bfb16c31504349e0226bd8b234",
+      "pages": 40,
+      "chunks": 52,
+      "extracted_words": 16970,
+      "unit_kinds": {
+        "section-header": 28,
+        "text": 226,
+        "list-item": 33,
+        "footnote": 7,
+        "formula": 51,
+        "picture": 15,
+        "caption": 14,
+        "table": 2
+      },
+      "bibliography_removed": true,
+      "all_extracted_words_preserved_in_order": true,
+      "additional_chunk_words": 0,
+      "extraction_seconds": 16.05296910001198
+    }
+  ],
+  "total_pages": 65,
+  "historical_baseline": {
+    "report": "fulltext-smoke.json",
+    "executed_at": "2026-11-08T14:35:01.593710+00:00",
+    "pipeline_version": "full-paper-qwen-v1",
+    "arxiv_id": "1706.03762v7",
+    "pages": 15,
+    "chunks": 20,
+    "extracted_words": 5129,
+    "note": "Earlier low-level parser report; differences in word/chunk counts are not quality scores."
+  },
+  "observed_limitations": [
+    "The real page-8 Transformer table still has split BLEU and training-cost header cells in native Markdown.",
+    "Merged and multi-row table headings and mathematical layout require source review; the adapter does not infer corrected values.",
+    "Word coverage checks the extracted representation, not recovery of every PDF element.",
+    "Timing includes per-process parser initialization; these single runs are not comparative performance benchmarks.",
+    "No OCR, vision interpretation, Qwen summary quality or joint memory evaluation was executed."
+  ]
+}

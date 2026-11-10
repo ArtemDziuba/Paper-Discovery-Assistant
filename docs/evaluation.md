@@ -4,6 +4,20 @@ Criteria are defined here before reporting quality scores. Unit tests use explic
 synthetic metadata solely to test software behavior. Passing tests does not establish NLP
 quality. No human relevance judgments or quality scores have been fabricated.
 
+On-demand full-paper summarization now has its own [validation protocol](summarization.md#verification-and-quality-protocol).
+Its software tests use mocked model responses; PDF/chunk coverage, query-sensitive caching,
+word counts and UI state checks establish implementation behavior. Scientific claim support,
+query relevance, coverage and resource use require separately recorded real-model/human
+review. Ranking evaluation and fine-tuning protocols are unchanged by this feature.
+
+The 2026-11-10 parser migration uses PyMuPDF 2.1 layout/Markdown output. Component checks
+cover synthetic multi-column order, table cell/row preservation, classified margin removal,
+reference boundaries, page provenance and malformed extraction failures. Three cached real
+papers (65 pages total) also pass extracted-word coverage checks; reports are listed in
+`evaluation/summarization/parser-migration.json`. This does not establish perfect PDF recovery
+or scientific-summary quality. Complex real table headers still show extraction errors;
+see summarization.md. Earlier extraction reports are retained for comparison.
+
 Current fixed evaluation (2026-11-07): the two batches in evaluation/human_eval and ten
 batches in evaluation/syntetic_eval are reserved for evaluation. All three rankers are
 compared on both groups using the existing graded/binary metric definitions. New metadata

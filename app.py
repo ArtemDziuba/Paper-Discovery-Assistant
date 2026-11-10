@@ -12,10 +12,14 @@ from pda.pipeline import search
 from pda.query import interpret
 from pda.ranking import FINETUNED_OPTIONS, LexicalEncoder, SemanticEncoder
 from pda.retrieval import ArxivClient, RetrievalError
+from pda.summary_config import SummaryError, SummarySettings, word_count
+from pda.summary_jobs import SummaryJobs
 
 st.set_page_config(page_title="Paper Discovery Assistant", page_icon="📚", layout="wide")
 st.title("Paper Discovery Assistant")
-st.write("Find arXiv papers for a research question, with local ranking and abstract evidence.")
+st.write(
+    "Find arXiv papers for a research question, with local ranking and on-demand full-paper summaries."
+)
 
 
 @st.cache_resource
@@ -28,6 +32,57 @@ def encoder(method, device):
     if method in FINETUNED_OPTIONS:
         return SemanticEncoder(device, model_path=FINETUNED_OPTIONS[method])
     return SemanticEncoder(device) if method == "Semantic" else LexicalEncoder()
+
+
+@st.cache_resource
+def summary_jobs():
+    return SummaryJobs(SummarySettings.from_env())
+
+
+@st.fragment(run_every="1s")
+def summary_panel(paper, research_query):
+    try:
+        jobs = summary_jobs()
+    except ValueError as exc:
+        st.error(f"Summarization configuration is invalid: {exc}")
+        return
+    key = jobs.key(paper, research_query)
+    requested = st.session_state.setdefault("requested_summaries", set())
+    request_errors = st.session_state.setdefault("summary_request_errors", {})
+    job = jobs.snapshot(key) if key in requested else None
+    busy = job is not None and job.status in {"queued", "running"}
+    if job and job.result:
+        st.write(job.result.text)
+        st.caption(
+            f"{word_count(job.result.text)} words · full-paper PDF text · {'cached summary' if job.result.cache_hit else 'summary ready'}"
+        )
+    if busy:
+        st.status(job.progress, state="running", expanded=False)
+    elif key in request_errors:
+        st.error(request_errors[key])
+    elif job and job.error:
+        st.error(job.error)
+    label = (
+        "Summarizing…"
+        if busy
+        else "Regenerate summary"
+        if job and job.result
+        else "Retry summary"
+        if (job and job.error) or key in request_errors
+        else "Summarize"
+    )
+
+    def submit_summary():
+        request_errors.pop(key, None)
+        try:
+            jobs.submit(paper, research_query, regenerate=bool(job and job.result))
+            requested.add(key)
+        except SummaryError as exc:
+            request_errors[key] = str(exc)
+
+    # The callback runs before this fragment redraws, so its next snapshot already
+    # shows the queued job. Do not rerun the app and recreate the parent expander.
+    st.button(label, key=f"summarize-{key}", disabled=busy, on_click=submit_summary)
 
 
 with st.sidebar:
@@ -122,11 +177,10 @@ if "result" in st.session_state:
                     f"{', '.join(match.paper.categories)} · {match.paper.arxiv_id}"
                 )
                 st.write("Matching terms:", ", ".join(match.matched_terms) or "No exact overlap")
-                st.write("Selected abstract evidence:")
-                st.write(match.evidence)
                 st.write("Abstract:", match.paper.abstract)
                 st.caption(f"Raw cosine: {match.raw_similarity:.6f}")
                 st.link_button("Open arXiv abstract / paper", str(match.paper.url))
+                summary_panel(match.paper, result.interpretation.original)
         st.download_button(
             "Download results and provenance",
             result.model_dump_json(indent=2),

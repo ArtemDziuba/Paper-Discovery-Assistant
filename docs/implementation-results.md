@@ -1,5 +1,10 @@
 # First prototype: implementation and verification
 
+This records the historical baseline and its follow-up experiments. The cross-paper
+overview described in the original baseline was subsequently removed. The current,
+separate on-demand per-paper PDF summarization feature and its executed verification are
+documented in [summarization.md](summarization.md); current data flow is in architecture.md.
+
 The implemented baseline runs as a local Streamlit application. It retrieves real arXiv
 metadata, ranks title/abstract candidates using a local encoder or TF-IDF, displays raw
 and transformed scores, selects source evidence, and produces an extractive overview with

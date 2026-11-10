@@ -1,7 +1,8 @@
 # Implemented architecture
 
-The prototype is one Python process with Streamlit calling a UI-independent pipeline.
-No backend server, vector database, hosted inference, or generative model is required.
+Streamlit calls a UI-independent search/ranking pipeline in one Python process. Optional,
+on-demand full-paper summaries use a separate local Ollama process serving Qwen3.5-4B.
+Search/ranking works without that service. No hosted inference or vector database is used.
 
 ```mermaid
 flowchart LR
@@ -17,6 +18,12 @@ flowchart LR
     E --> S[Cosine ranking]
     S --> X[Abstract evidence selection]
     X --> UI
+    UI -->|Summarize click only| J[Serial background summary worker]
+    J --> PDC[Versioned arXiv PDF cache / external download]
+    PDC --> PDF[PyMuPDF 2.1 local CPU layout / structured Markdown / table-aware chunks]
+    PDF --> OL[Local Ollama / Qwen direct or hierarchical synthesis]
+    OL --> SC[Validate length with internal tolerance / contextual rewrite / summary cache]
+    SC --> UI
 ```
 
 | Component | Input | Output / purpose |
@@ -27,6 +34,21 @@ flowchart LR
 | ranking.py | Original query, titles and abstracts | Base or locally fine-tuned dense embeddings, or document-fitted TF-IDF vectors |
 | pipeline.py | Query, client, encoder | Ranked matches, per-paper evidence, timings and provenance |
 | app.py | User settings and query | Results, warnings, links, JSON download |
+| summary_config.py | Environment configuration / model output | Validated settings, query normalization, plain text and internal 50–180 word acceptance for a 100–150 word prompt target |
+| fulltext.py | Versioned arXiv ID / PDF | PDF cache, PyMuPDF 2.1 layout elements/Markdown, page and section provenance, complete chunks preserving table rows |
+| ollama.py | Installed local model / prompt messages | Digest/version checks, context checks and bounded local inference |
+| summarization.py | Paper and original query | Direct or hierarchical full-paper summary, provenance and query-specific cache |
+| summary_jobs.py | Explicit per-paper requests | Serial background work, duplicate suppression, progress and retry state |
+
+The PDF parser now calls `Document.to_markdown(page_chunks=True, use_ocr=False)` using
+PyMuPDF 2.1's local ONNX layout analysis. This model call identifies reading order and element
+classes from PDF content/geometry; it does not generate the scientific summary. The adapter
+removes classified page headers/footers, retains captions, footnotes and formulas, and applies
+bibliography/appendix boundaries. All returned pages and text spans are validated. Oversized
+Markdown tables split only at row boundaries with repeated column headers. Unsupported
+oversized structured blocks fail explicitly. The PDF parser version participates in summary
+cache identity and provenance. Qwen inference remains local in Ollama; MiniLM ranking and
+training are unchanged. See summarization.md for migration diagnostics and limitations.
 
 The external call is HTTPS GET to export.arxiv.org/api/query. Requests from the shared
 client are serialized with at least 3.1 seconds between starts, a 15-second connection timeout,
@@ -138,11 +160,18 @@ fails, successfully retrieved exact titles remain available with a partial-resul
 For a query such as `graph learning`, concepts create an AND search, arXiv returns candidates,
 the parser validates records, vectors are compared against the unchanged query, and the
 highest-ranked papers receive the abstract sentence with greatest exact concept overlap.
-Each ranked paper retains its abstract, selected evidence, similarity score, and source link.
+Each ranked paper retains its abstract, selected evidence in JSON, similarity score and source link.
+The UI shows matching terms and the abstract; the selected evidence section was replaced by
+an on-demand **Summarize** control. Its query is the result's original query, independently
+of any unsubmitted edits to the input form.
 The user can request 5–50 displayed papers in increments of 5, with a default of 10.
 The abstract-based overview was removed from both results and JSON export at the user's
 request. An exact-overlap explanation remains incomplete evidence of semantic relevance,
-especially for synonyms. No cross-paper consensus or full-text conclusions are generated.
+especially for synonyms. No cross-paper consensus is generated. The optional summary path
+is separate from ranking and uses every substantive section of that paper's extracted PDF
+text. See [summarization.md](summarization.md) for its data flow, external/local API boundaries,
+cache identity, limits, error behavior and extraction limitations. MiniLM models and training
+are unchanged. All Qwen model installation is an explicit setup step.
 
 Empty retrieval skips encoding. A failure before any page is retrieved appears as a UI error.
 A later page failure preserves earlier candidates and produces an explicit partial-results
