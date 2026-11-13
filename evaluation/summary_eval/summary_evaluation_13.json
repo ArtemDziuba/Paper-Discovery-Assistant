@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_13",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_03.json",
+  "source_sha256": "6c32e1c5ff9335f352a409dc3a8b5b095ca02c60ab9d3dda4db2b369773ee76a",
+  "query_index": 3,
+  "paper_index": 1,
+  "query_id": "learning-with-noisy-labels",
+  "query": "Learning with noisy labels for image classification",
+  "paper": {
+    "arxiv_id": "2107.07041",
+    "title": "Mitigating Memorization in Sample Selection for Learning with Noisy Labels",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "b8426bee4274b46024f79215500c8e2d576f09c20e5b9ebed6e2f3c418980cc8",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses DNN memorization in noisy label image classification by proposing **Criteria ALL**, a class-wise penalty mechanism that reduces dominant noisy sample inclusion. The methodology combines standard selection with penalties based on average prediction confidence for non-observed classes within identical label groups, alongside temporal ensemble updates to stabilize learning. Empirical results across CIFAR-10, CIFAR-100, and datasets like Clothing1M demonstrate significant test error reductions (0.9–16.0%) compared to standard sample selection, with **MentorNet–Prop** consistently outperforming baselines such as Co-teaching under pair-flipping noise. However, performance degrades notably at high noise levels (e.g., 20.4% error on CIFAR-100 at 40% noise), and gains rely heavily on empirically set parameters like $\\lambda=1$, which are sensitive to noise distribution types. A critical theoretical limitation is identified: under \"Symmetry Flipping\" noise, where true labels are replaced by those of classes sharing identical noise rates, the penalty mechanism fails to distinguish dominant samples because sample selection criteria produce identical orderings. Consequently, the method's efficacy is strictly bounded within scenarios lacking inherent dominance relative to its penalty structure.",
+    "metadata": {
+      "arxiv_id": "2107.07041v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "a461e159be20affa87351773f5b0fe90bd89790b5930b1d7cffdd661bd85a457",
+      "pages": 14,
+      "chunks": 26,
+      "model_calls": 35,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 145.51156939996872,
+    "generated_at": "2026-11-11T09:06:14.482863+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.6,
+        "reason": "Criteria ALL, class-wise penalty labels, temporal ensembling, and evaluation on noisy-label image datasets are supported. However, the claimed 20.4% error for CIFAR-100 at 40% noise is a dataset/noise-setting mix-up: 20.4% appears for a CIFAR-10 symmetric-flipping 60% case (SELFIE–Prop), while CIFAR-100 at 40% pair flipping has substantially higher errors. The 0.9–16.1-point improvement range describes particular SL–Prop comparisons, not a general gain for the method. The conclusion misreads the symmetry-flipping theorem: when there are no dominant noisy samples, the penalty leaves the sample ordering unchanged by design, not because the method fails to detect dominant examples. The final claim about efficacy being bounded to settings lacking dominance reverses the main motivation.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "It focuses on sample selection and memorization under noisy labels, accurately situating the method as an image-classification response to class-dependent label corruption.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The central criterion, penalty computation, datasets, and comparisons are present, but quantitative mistakes and the misrepresented symmetry-flipping result obscure a key conceptual distinction. The summary should emphasize that the method specifically handles dominant noisy classes and is complementary to existing selectors.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The summary follows a logical problem–method–findings–limitations structure and is readable. The final discussion of symmetry flipping and dominance is conceptually confusing because it treats a deliberately neutral penalty as a failure.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Reasonably compact and rich in query-relevant details, although space devoted to the misinterpreted special case could instead clarify the proposed selection rule and validated scenarios.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.805,
+    "weighted_score_10": 8.05,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://arxiv.org/pdf/2107.07041",
+      "verified_sections": [
+        "§2.2 Criteria ALL",
+        "§4 Experiments, Tables 1–2",
+        "Appendix A.1.1 Temporal Ensembling",
+        "Appendix C Symmetry Flipping Theorem"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/pdf/2107.07041",
+      "verified_sections": [
+        "§2.2 Criteria ALL",
+        "§4 Experiments, Tables 1–2",
+        "Appendix A.1.1 Temporal Ensembling",
+        "Appendix C Symmetry Flipping Theorem"
+      ]
+    }
+  }
+}

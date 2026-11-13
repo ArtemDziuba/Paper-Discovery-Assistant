@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_29",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_08.json",
+  "source_sha256": "1dcb2e60d629a522d2442974e430ac976e37482f0fd6c4ea5495685bd8555bba",
+  "query_index": 8,
+  "paper_index": 2,
+  "query_id": "multimodal-emotion-recognition",
+  "query": "Multimodal emotion recognition using audio and visual signals",
+  "paper": {
+    "arxiv_id": "2603.11971",
+    "title": "Multimodal Emotion Recognition via Bi-directional Cross-Attention and Temporal Modeling",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "6a15aeceb3ce9275c4064a9a353565a613e30012b17a30d30adc59669d473b33",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper presents a multimodal emotion recognition framework addressing the ABAW 10th EXPR challenge by integrating frozen CLIP and Wav2Vec 2.0 backbones with a temporal convolutional network and bi-directional cross-attention fusion. The methodology employs label-based prompt supervision via text-guided contrastive regularization to handle challenges such as head pose variation and occlusion. Experimental results on the validation set achieved a Macro F1 score of 0.3670 using a 30-frame window, significantly outperforming the baseline of 0.2500; however, test set performance peaked at 0.32 with a 60-frame window, revealing inconsistent gains across datasets and diminishing returns beyond specific temporal contexts. While the study confirms that single-modality approaches are insufficient for complex emotional cues in unconstrained environments, it lacks comprehensive quantitative validation regarding absolute efficacy or detailed qualitative analysis of the attention mechanism. The reliance on frozen backbones and class-specific text prompts remains a documented limitation, and the provided evidence does not support claims about generalization limits beyond the reported F1 score improvement.",
+    "metadata": {
+      "arxiv_id": "2603.11971v2",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "7e1241266d48c7d989f35e59655a0ba52d429d538652ed5675aa1617b2f2e05d",
+      "pages": 7,
+      "chunks": 11,
+      "model_calls": 15,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 51.944656100007705,
+    "generated_at": "2026-11-11T09:30:41.850018+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The model components (frozen CLIP and Wav2Vec 2.0, TCN, bidirectional cross-attention and text-prompt supervision) and numerical results are accurate: 0.3670 Macro F1 on validation with 30 frames, versus 0.2500 baseline, and 0.32 on the test set with 60 frames. However, the paper does report quantitative test and validation results, so stating that comprehensive quantitative validation of efficacy is lacking is overly broad. The claim that frozen backbones and prompts are documented limitations is not explicitly established; and superiority over single-modality methods is discussed largely as motivation rather than demonstrated by a component ablation.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses audio-visual emotion recognition, temporal modeling and fusion, with task-specific benchmark evidence.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Covers the method, exact validation/test performance, temporal-window selection and caveats. It omits the class-weighted training loss and the important experimental limitation that no component-level ablation was reported.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Readable, coherent technical description that separates model structure, evaluation and limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Information dense and largely relevant; some generic statements about unverified generalization could be replaced with the concrete absence of component ablations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.905,
+    "weighted_score_10": 9.05,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2603.11971",
+      "verified_sections": [
+        "Original arXiv HTML v2, sections 3 and 4, Tables 1-2 and Conclusion."
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2603.11971",
+      "verified_sections": [
+        "Original arXiv HTML v2, sections 3 and 4, Tables 1-2 and Conclusion."
+      ]
+    }
+  }
+}

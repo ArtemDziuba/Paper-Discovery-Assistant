@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_09",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_01.json",
+  "source_sha256": "642d172796a1acfa9da2088727ab43f111e35788e56ff46641219206f1bd7312",
+  "query_index": 1,
+  "paper_index": 3,
+  "query_id": "contrastive-self-supervised-learning",
+  "query": "Contrastive self-supervised learning for visual representation",
+  "paper": {
+    "arxiv_id": "2003.04297",
+    "title": "Improved Baselines with Momentum Contrastive Learning",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "21ed9571813bd8df4b6a75eb5ed5314b59ac948113fd717784a8fea32a05b2b6",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper introduces MoCo v2, an improved baseline for contrastive self-supervised learning that decouples batch size from negative sample count using a momentum encoder and queue. The methodology integrates two key design choices: replacing the fully connected projection head with a 2-layer MLP and incorporating blur augmentation. Experiments on ImageNet (ResNet-50) demonstrate that MoCo v2 achieves 67.5% linear classification accuracy with a modest batch size of 256, significantly outperforming SimCLR's 61.9% under identical conditions. A critical finding is the removal of the requirement for large training batches (4k–8k) or specialized hardware like TPUs; MoCo v2 operates effectively on standard 8-GPU configurations with lower memory costs compared to end-to-end variants. While transfer performance in object detection shows gains, the study notes that linear classification accuracy does not monotonically correlate with downstream task success. Documented limitations include reliance on specific augmentation strategies and cosine learning rate schedules for optimal results, as well as the fact that SimCLR ablation data was sourced externally rather than reproduced within this work.",
+    "metadata": {
+      "arxiv_id": "2003.04297v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "12279a05ec386febacea77313d12fdb63eb8fde8250cd6d6fb39d88ae6ae80d9",
+      "pages": 3,
+      "chunks": 5,
+      "model_calls": 6,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 27.403315000003204,
+    "generated_at": "2026-11-11T08:53:47.449323+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The summary accurately identifies the MoCo v2 improvements (two-layer MLP projection head, blur augmentation, cosine learning-rate schedule), the queue/momentum design, and the reported 67.5% versus 61.9% ImageNet linear-classification comparison at batch size 256 and 200 epochs. It correctly notes VOC object-detection transfer and that linear evaluation does not track detection performance monotonically. Minor overstatement: the paper shows a feasible 8-GPU implementation and a favorable comparison for tested settings, not a universal elimination of specialized hardware requirements or a formal demonstration of general memory-cost superiority.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The summary directly addresses better contrastive self-supervised visual representations by detailing the MoCo v2 training modifications and comparing ImageNet representation quality and detection transfer with MoCo v1 and SimCLR.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "It includes the purpose, core architectural and augmentation changes, controlled ImageNet comparison, computational practicality of smaller batches, downstream detection findings, and the caution that improved linear evaluation does not guarantee better transfer. This covers the important query-relevant material in the short paper.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The summary moves logically from the method to comparison results, computational implications, and qualifications. Numbers and technical choices are presented in an understandable order.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The summary is focused and efficient; it includes the central contributions and evidence with little repetition or extraneous background.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      }
+    },
+    "weighted_score": 0.965,
+    "weighted_score_10": 9.65,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_html",
+      "source_url": "https://arxiv.org/html/2003.04297",
+      "verified_sections": [
+        "§3 Experiments and Tables 1–2"
+      ]
+    },
+    "supplemental_judge": {
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "framework": "chatgpt_manual_llm_judge",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "method": "Model judgment of missing criteria against public arXiv HTML full text; not a DeepEval execution",
+      "source_url": "https://arxiv.org/html/2003.04297",
+      "verified_sections": [
+        "§3 Experiments and Tables 1–2"
+      ],
+      "evaluated_at": "2026-11-11T10:00:35.689426+00:00"
+    }
+  }
+}

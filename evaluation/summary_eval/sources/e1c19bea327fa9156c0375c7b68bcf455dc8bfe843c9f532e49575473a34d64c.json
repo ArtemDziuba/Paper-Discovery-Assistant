@@ -1,0 +1,326 @@
+{
+  "arxiv_id": "1612.00983v2",
+  "pdf_sha256": "ce43e89e78801c4cb9bd734bdba7717b4870f79c614a565a260abfb86306b4e5",
+  "parser_version": "2.1",
+  "summary_parser_version": "2.1",
+  "text_sha256": "18bd0a0fd28e49b2e6619bb867fc552ca4450d1d24b03a5b45df494ecd3a55cd",
+  "document": {
+    "units": [
+      {
+        "section": "Yuzhen Lu<sup>1</sup>",
+        "page": 1,
+        "text": "# Yuzhen Lu<sup>1</sup>",
+        "kind": "section-header"
+      },
+      {
+        "section": "Yuzhen Lu<sup>1</sup>",
+        "page": 1,
+        "text": "> _1Department of Biosystems and Agricultural Engineering, Michigan State University, East Lansing, MI 48824, USA; email: luyuzhen@msu.edu_",
+        "kind": "text"
+      },
+      {
+        "section": "Yuzhen Lu<sup>1</sup>",
+        "page": 1,
+        "text": "Food image recognition is one of the promising applications of visual object recognition in computer vision. In this study, a small-scale dataset consisting of 5822 images of ten categories and a fivelayer CNN was constructed to recognize these images. The bag-of-features (BoF) model coupled with support vector machine (SVM) was first evaluated for image classification, resulting in an overall accuracy of 56%; while the CNN model performed much better with an overall accuracy of 74%. Data augmentation techniques based on geometric transformation were applied to increase the size of training images, which achieved a significantly improved accuracy of more than 90% while preventing the overfitting issue that occurred to the CNN based on raw training data. Further improvements can be expected by collecting more images and optimizing the network architecture and hyper-parameters.",
+        "kind": "text"
+      },
+      {
+        "section": "I. INTRODUCTION",
+        "page": 1,
+        "text": "## **I. INTRODUCTION**",
+        "kind": "section-header"
+      },
+      {
+        "section": "I. INTRODUCTION",
+        "page": 1,
+        "text": "Due to the widespread use of low-cost imaging devices like smart-phone cameras, more and more applications are being developed in computer vision communities to facilitate automatic object recognition, among which recognition of food images has recently gained much attention<sup>1–4</sup> . Nowadays, people, especially diabetes patients, are increasingly cautious about their diet for improved health care. Food image recognition provides a simple means to estimate the dietary caloric intake and evaluate eating habits of people, by using cameras to keep track of their food consumption.",
+        "kind": "text"
+      },
+      {
+        "section": "I. INTRODUCTION",
+        "page": 1,
+        "text": "In recent years, Convolutional neural networks (CNN) have enjoyed great popularity as a means for image classification/categorization since Krizhevsky et al<sup>5</sup> won the ImageNet Large-Scale Visual Recognition Challenge (ILSVRC) 2012 competition. CNN, as a variant of the standard deep neural network (DNN), is characterized by a special network architecture consisting of alternating convolutional and pooling layers<sup>6</sup> , to extract and combine local features from a two-dimensional input. Compared to conventional hand-crafted feature extraction based approaches, CNN is advantageous since it is able to learn optimal features from images adaptively. In implementing CNN for image classification, researchers have to collect such a large-scale dataset as the ILSVERC that contains more than one million images<sup>5,7</sup> , for network training because of the need for learning a large number of parameters involved in the network, which, however, is not a trivial task. One simple way to deal with the situation is to apply the CNN model that has been pre-trained based on a large-scale image data<sup>1,8</sup> , which is so-called transfer learning. Alternatively, one can algorithmically expand the existing training data, e.g., by performing affine transformations (e.g., translation, rotation, scaling, zooming, etc.) to the raw images<sup>9,10</sup> .",
+        "kind": "text"
+      },
+      {
+        "section": "I. INTRODUCTION",
+        "page": 1,
+        "text": "This study was aimed to apply CNNs aided with data expansion techniques to a ten-class small-scale food image data. As comparison, a conventional a bag-of-feature (BoF) model combined with linear support vector machine (SVM) based approach was also employed for food image recognition. Experimental results demonstrated the superior performance of CNN and the effectiveness of data expansion techniques in training small-scale data.",
+        "kind": "text"
+      },
+      {
+        "section": "II. EXPERIMENTATION",
+        "page": 1,
+        "text": "## **II. EXPERIMENTATION**",
+        "kind": "section-header"
+      },
+      {
+        "section": "A. Database",
+        "page": 1,
+        "text": "## **A. Database**",
+        "kind": "section-header"
+      },
+      {
+        "section": "A. Database",
+        "page": 1,
+        "text": "A total of 5822 color images, representing ten-class food items, were collected from the ImageNet (http://imagenet.org/). The number of images for each category is summarized in TABLE 1.",
+        "kind": "text"
+      },
+      {
+        "section": "A. Database",
+        "page": 1,
+        "text": "TABLE I: Image number for each category of food items",
+        "kind": "caption"
+      },
+      {
+        "section": "A. Database",
+        "page": 1,
+        "text": "|Category<br>|Apple|Banana|Broccoli|Burger|Egg|Frenchfry|Hotdog|Pizza|Rice|Strawberry|\n|---|---|---|---|---|---|---|---|---|---|---|\n|Image number|1050|310|327|519|626|296|639|1248|352|455|",
+        "kind": "table"
+      },
+      {
+        "section": "A. Database",
+        "page": 1,
+        "text": "These images had a large variations in quality and size. Some of them have a neat, uniform background while some have cluttered background. Prior to image analysis, all the images were down-sampled to a fixed resolution of 128 _×_ 128, and then randomly divided into two parts for training and test with a 4:1 ratio, resulting in 4654 training and 1168 test images.",
+        "kind": "text"
+      },
+      {
+        "section": "B. BoF",
+        "page": 2,
+        "text": "## **B. BoF**",
+        "kind": "section-header"
+      },
+      {
+        "section": "B. BoF",
+        "page": 2,
+        "text": "The BoF model has been extensively used for image classification. In this method, an image is treated as a collection of orderless descriptors extracted from local patches, which are quantized into discrete visual words and represented by a compact histogram<sup>11</sup> . Scale invariant feature transform (SIFT) descriptors that are not affected by perspective, scale, occlusion or illumination<sup>12</sup> , are one of the most robust and popular feature descriptors. In this study, the BoF model with SIFT descriptors was used to extract features that were then fed to linear SVM for image classification, and this approach was implemented by means of the VLFeat library<sup>13</sup> .",
+        "kind": "text"
+      },
+      {
+        "section": "C. CNN",
+        "page": 2,
+        "text": "## **C. CNN**",
+        "kind": "section-header"
+      },
+      {
+        "section": "C. CNN",
+        "page": 2,
+        "text": "The architecture of the CNN used in this study is schematically illustrated in FIG. 1. The network has four layers of hidden neurons (three convolutional-pooling and one fully-connected), apart from a final layer of output neurons (the input is not considered as a layer). The input contains 128 _×_ 128 _×_ 3 neurons, representing the RGB values for a 128 _×_ 128 _×_ 3 image. The first convolutional-pooling layer uses a local receptive field (also known as convolutional kernel) of size 7 _×_ 7 with a stride length of 1 pixel to extract 32 feature maps, followed by a max pooling operation conducted in a 2 _×_ 2 region; the second and third convolutional-pooling layers use 5 _×_ 5 and 3 _×_ 3 local receptive fields, resulting in 64 and 128 feature maps, respectively, and the other parameters remain unchanged. The fourth layer is a fully-connected layer with 128 rectified linear units (ReLU) neurons, and the output layer has 10 softmax neurons that correspond to the ten categories of food. The three convolutional-pooling layers also use ReLU activation functions.",
+        "kind": "text"
+      },
+      {
+        "section": "C. CNN",
+        "page": 2,
+        "text": "FIG. 1: Schematic of the architecture of a convolutional neural network model.",
+        "kind": "caption"
+      },
+      {
+        "section": "C. CNN",
+        "page": 2,
+        "text": "The network was trained with the stochastic gradient descent (SGD) algorithm with a cross-entropy cost function. The dropout that randomly eliminate a portion of neurons from the network was used to reduce possible overfitting. The dropout rates of 0.25 and 0.5 were set for the third convolutional-pooling layer and the fully-connected layer, respectively. Training a CNN model requires to select a set of hyper-parameters, among which the leaning rate _η_ is the the most critical one affecting the training performance. A fixed learning rate over the entire training process seems suboptimal, since it takes account of the dynamical training behavior. Here, a dynamically updated learning rate was used, which was an exponential function of cost _η_ = _η_ 0 _×_ exp( _C_ ) where _η_ 0 is set to 0.00l through trials and errors and C is the training loss. Such learning rate updating schedule is directly related to the training performance. At the initial stage, the training loss was large, resulting in a large learning rate to speed up the training process; gradually, the learning rate decreased with the loss, which helped avoid overshooting the best result. Given the limited images available, affine transformations including rotation, translation and scaling were conducted to expand the training data. Upper bounds were set up in performing these transformations, within which each image was randomly subjected to those transformations, which substantially increased the training data size. FIG. 2 shows an example of a raw image and expanded images.",
+        "kind": "text"
+      },
+      {
+        "section": "C. CNN",
+        "page": 2,
+        "text": "The CNN model was trained by using deep learning packages of Keras (https://github.com/keras-team) and Theano (https://github.com/Theano)(the implementation codes are available at: https://github.com/jingweimo/food-imageclassification-).",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 2,
+        "text": "## **III. RESULTS AND DISCUSSION**",
+        "kind": "section-header"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 2,
+        "text": "The BoF combined with SVM resulted in an overall accuracies (the ratio of the number correctly recognized images to the number of total images) of 68% and 56% for training and test images, respectively. TABLE 2 presents the",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "FIG. 2: The raw fruit image (right) and expanded images (left).",
+        "kind": "caption"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "confusion matrix on the test images and recognition rates (i.e., the average of true positive and true negative rates) for all the categories.",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "TABLE II: Confusion matrix and recognition rates by BoF on the test images",
+        "kind": "caption"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "|Category|Apple|Banana|Broccoli|Burger|Egg|Frenchfry|Hotdog|Pizza|Rice S|trawberry|\n|---|---|---|---|---|---|---|---|---|---|---|\n|Apple|**178**|1|0|4|8|0|2|6|5|7|\n|Banana|2|**43**|1|2|4|4|5|2|1|1|\n|Broccoli|1|0|**28**|2|0|3|2|24|1|4|\n|Burger|5|0|2|**72**|2|2|7|12|1|1|\n|Egg|20|1|2|7|**75**|1|6|6|6|1|\n|Frenchfry|1|4|3|4|1|**21**|6|16|1|0|\n|Hotdog|5|8|4|10|4|9|**76**|10|2|1|\n|Pizza|5|0|4|5|1|1|7|**221**|3|4|\n|Rice|6|1|1|2|4|1|1|18|**35**|1|\n|Strawberry|11|1|2|1|1|0|1|29|1|**45**|\n|R.R.|0.89|0.82|0.71|0.83|0.79|0.67|0.78|0.87|0.74|0.73|",
+        "kind": "table"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "R.R. denotes the recognition rate (i.e, the average of the true positive and true negative rates).",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "Apple and pizza gave the two highest recognition rates, which were mainly because the two categories had a large number of training images; while french-fry and broccoli was the two hardest categories, the majority of which were misclassified into another distinct class. The BoF based approach did not performed well as expected, which was possibly because that the extraction of SIFT descriptors was conducted only to grayscale images, and also the parameter optimization was not fully done in descriptor quantization. The CNN was first implemented without using data expansion techniques. FIG. 3 show the accuracy and loss curves during training with the maximum training epoch set to 100. A large gaps between training and test occurred after 10 epochs, indicating the presence of overfitting. The highest accuracy on the test images was found to be 74%, corresponding to a training accuracy 95%. These results were much better than those obtained by the BoF approach, which confirmed the superiority of CNN.",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 3,
+        "text": "Then, the CNN was trained with the expanded image data. As illustrated in FIG. 4, two significant improvements were achieve through almost trivial data transformations. First, the test accuracy was greatly elevated to a level up to 87% within 100 epochs, and second, the overfitting issue observed above was completely eliminated. The data expansion substantially increases the effective size of the training data, thus helping improve the training performance and making the model generalize well.",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 4,
+        "text": "FIG. 3: Accuracy (left) and loss (right) curves for convolutional neural network models without data augmentation. The training process was early stopped because of no improvement over a preset period of time (20 epchos in this study).",
+        "kind": "caption"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 4,
+        "text": "FIG. 4: Accuracy (left) and loss (right) curves for convolutional neural network models based on data augmentation.",
+        "kind": "caption"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 4,
+        "text": "According to the accuracy and loss curves, it seemed that the CNN model could be further improved by increasing the training epochs. Hence, another three training schemes with 200, 400 and 600 epochs respectively were implemented. FIG. 5 shows their accuracy and loss curves. The test accuracy did increase further, but not by a large margin. After 200 epochs the training accuracy started to exceed the test accuracy and the gaps between training and test tended to enlarge. Training the CNN with 400 epochs resulted in the highest test accuracy of more than 90%; while training 600 epochs only increased the training accuracy, but not the test accuracy which seemed to level off around 90%. This suggested that overfitting was possible to escalate, and one may not further increasing the test accuracy by simply increasing the training epochs. While data augmentation is an effective method for improving the CNN performance, it does not overshadow the importance of manually collecting more training images.",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 4,
+        "text": "TABLE 3 presents the confusion matrix by the best CNN model for the test images and the corresponding recognition rates for each food category. Compared with Table 2, the CNN model resulted in the overall accuracy improved from 56% to 90%, and the average recognition rate from 0.78% to 94%.",
+        "kind": "text"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 5,
+        "text": "FIG. 5: Accuracy (left) and loss (right) curves for convolutional neural network models with training epochs set to 200, 400 and 600 (from top to bottom), where early stopping could occur because of no accuracy improvement on test images.",
+        "kind": "caption"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 6,
+        "text": "TABLE III: Confusion matrix and recognition rates by BoF on the test images",
+        "kind": "caption"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 6,
+        "text": "|Category|Apple|Banana|Broccoli|Burger|Egg|Frenchfry|Hotdog|Pizza|Rice S|trawberry|\n|---|---|---|---|---|---|---|---|---|---|---|\n|Apple|**193**|6|1|0|1|0|2|1|0|6|\n|Banana|4|**49**|0|0|4|2|3|0|0|0|\n|Broccoli|0|0|**64**|0|0|0|1|1|0|0|\n|Burger|1|0|0|**87**|0|1|9|6|0|0|\n|Egg|3|1|0|2|**110**|2|5|1|2|0|\n|Frenchfry|0|2|0|0|0|**53**|1|4|0|0|\n|Hotdog|1|2|0|5|0|3|**109**|8|0|0|\n|Pizza|0|0|0|3|0|1|6|**239**|0|1|\n|Rice|0|0|0|1|0|0|1|5|**64**|0|\n|Strawberry|3|0|0|0|0|0|0|0|0|**88**|\n|R.R.|0.95|0.89|0.98|0.91|0.93|0.94|0.91|0.96|0.95|0.98|",
+        "kind": "table"
+      },
+      {
+        "section": "III. RESULTS AND DISCUSSION",
+        "page": 6,
+        "text": "R.R. denotes the recognition rate (i.e., the average of the true positive and true negative rates).",
+        "kind": "text"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "## **IV. CONCLUSIONS**",
+        "kind": "section-header"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "This study reported on the applications of CNNs to a ten-class small-scale food image data. A five-layer CNN model was constructed achieved the best test accuracy of 74%, which was better than the accuracy of 56% achieved by the BoF approach. The CNN model however suffered from noticeable overfitting due to limited training data. This issue was addressed by expanding the training data through various affine transformations, which also considerably increased the overall test accuracy to more than 90%. Training the CNNs with different epochs showed limited room for improving test accuracy. Further improvements can be anticipated by collecting more training data and or by optimizing the architecture and hyper-parameters of the network, rather than by based on increasing the training epochs in the current framework, which, otherwise, could be liable to overtraining.",
+        "kind": "text"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 1 Yanai, K., Kawano, Y., 2015. Food image recognition using deep convolutional network with pre-training and fine-tuning, in Multimedia and Expo Workshops (ICMEW), 2015 IEEE International Conference on.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 2 Kagaya, H., Aizawa, K., Ogawa, M., 2014. Food detection and recognition using convolutional neural network, in Proc. of ACM International Conference Multimedia, pp. 1085-1088.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 3 Liu, C., Cao, Y., Luo, Y., Chen, G., Vokkarane, V., Ma, Y., 2016. DeepFood: Deep Learning-Based Food Image Recognition for Computer-Aided Dietary Assessment, in International Conference on Smart Homes and Health Telematics, pp. 37-48.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 4 Hou, L., Wu, Q., Sun, Q., Yang H., Li, P., 2016. Fruit Recognition Based On Convolution Neural Network, in 12th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery (ICNC-FSKD), pp. 18-22.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 5 Krizhevsky, A., Sutskever I., Hinton, G.E., 2012. Imagenet classification with deep convolutional neural networks, in Advances in Neural Information Processing Systems.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 6 Lecun, Y., Bottou, L., Bengio, Y., Haffner, P., 1998. Gradient-based learning applied to document recognition, in Proceedings of the IEEE 86(11): 2278-2324.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 7 Simonyan, K., Zisserman, A., 2014. Very deep convolutional networks for large-scale image recognition, arXiv preprint arXiv:1409.1556.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 8 Oquab, M., Bottou, L., Laptev, I., Sivic, J., 2014. Learning and transferring mid-level image representations using convolutional neural networks, in Proc. of IEEE Computer Vision and Pattern Recognition.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 9 Simard, P.Y., Steinkraus, D., Platt, J.C., 2003. Best practices for convolutional neural networks applied to visual document analysis, in Proc. 7th Intl. Conf. Document Analysis and Recognition, pp. 958-962.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 10 Lu, Y., Lu, R., 2018. Detection of surface and subsurface defects of apples using structurd-illumination reflectance imaging with machiine learning algorithms. Transactions of the ASABE 61(6), 1831-1842.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 11 Csurka, G., Dance, C.R., Fan, L., Willamowski, J., Bray, C., 2004. Visual categorization with bags of keywords, in Workshop on Statistical Learning in Computer Vision, ECCV.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 12 Lowe, D.G., 2004. Distinctive image features from scale-invariant keypoints, International Journal of Computer Vision 60(2): 91-110.",
+        "kind": "list-item"
+      },
+      {
+        "section": "IV. CONCLUSIONS",
+        "page": 6,
+        "text": "- 13 Vedaldi, A., Fulkerson, B., 2008. VLFeat: An open and portable library of computer vision algorithms, in Proceedings of the 18th ACM international conference on Multimedia, pp.1469-1472.",
+        "kind": "list-item"
+      }
+    ],
+    "pages": 6,
+    "bibliography_removed": false,
+    "removed_artifact_lines": 6
+  }
+}

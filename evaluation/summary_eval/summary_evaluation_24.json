@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_24",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_06.json",
+  "source_sha256": "cf3f3aaf8ae608f31907687108bb3ab575d26be2b3df1e7f3d83a1189fceea52",
+  "query_index": 6,
+  "paper_index": 3,
+  "query_id": "ecg-arrhythmia-detection",
+  "query": "Deep learning for ECG arrhythmia detection",
+  "paper": {
+    "arxiv_id": "2511.08650",
+    "title": "A Lightweight CNN-Attention-BiLSTM Architecture for Multi-Class Arrhythmia Classification on Standard and Wearable ECGs",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "5694d502324d711234a7c39c9d4bb295c9b634fc75dab62a33b187a75a7dfa6d",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper proposes a lightweight CNN-Attention-BiLSTM architecture for multi-class arrhythmia classification on standard and wearable ECGs, specifically addressing edge device constraints. The methodology combines downsampling, class-weighted loss, and bidirectional LSTM layers to capture temporal dependencies while maintaining only 0.945 million parameters. Evaluated on the CPSC 2018 dataset via 10-fold cross-validation, the model achieved an average F1-score of 0.86 on 12-lead data, outperforming ResNet-18 and TI-CNN baselines, with specific AF detection reaching 0.94. However, performance degraded significantly on single-lead Lead-I recordings (F1: 0.78), where STE detection was severely impacted with an F1 of only 0.27 due to low-frequency signal characteristics. Documented limitations include unresolved class imbalance, high intra-class variance, and reduced accuracy for rare events like STE, particularly in wearable configurations. While real-time inference on a Raspberry Pi 4 is confirmed at 0.174s/sample, the study notes that explicit numerical metrics for wearable domains remain absent from the provided text, suggesting potential but unverified applicability to specific consumer devices.",
+    "metadata": {
+      "arxiv_id": "2511.08650v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "813e4724b30c9f2b9b7fb981a872dc0c0b0d0e5cbe896b2ac637d23bfcb0a15e",
+      "pages": 7,
+      "chunks": 13,
+      "model_calls": 19,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 83.95705199998338,
+    "generated_at": "2026-11-11T09:23:34.687888+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "Correctly describes the CNN-attention-BiLSTM design, 0.945M parameters, CPSC 2018 benchmark, F1=0.86 for the main 12-lead performance table, Lead-I F1=0.78 and STE F1=0.27, and Raspberry Pi 4 inference of 0.174 s/sample. However, it incorrectly assigns the 0.86 F1 to 10-fold cross-validation: the paper separately reports 0.839 mean cross-validation F1. The closing claim that explicit numerical wearable-domain results are absent is misleading because the paper reports a detailed single-lead table and edge inference results, although it does not test consumer wearables directly.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses ECG arrhythmia detection with an efficient hybrid deep-learning architecture, per-class performance, single-lead degradation, and edge-device constraints.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Includes principal architecture components, dataset, parameter count, 12-lead versus single-lead performance, difficult STE class, and deployment test. Could distinguish holdout F1 (0.86) from 10-fold F1 (0.839) and mention the ablation demonstrating the benefit of attention and BiLSTM.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Well-structured and understandable technical overview with concrete performance comparisons and appropriate terminology.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Most details are relevant, but the unsupported final sentence about missing numerical wearable evidence is redundant given the reported Lead-I and edge results.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.87,
+    "weighted_score_10": 8.7,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 qualitative judgments in 0.1 increments, normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html",
+      "source_url": "https://arxiv.org/html/2511.08650",
+      "verified_sections": [
+        "Sections IV-VI; Tables II, III, IV, V, VI; edge inference measurements"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using available paper evidence; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2511.08650",
+      "verified_sections": [
+        "Sections IV-VI; Tables II, III, IV, V, VI; edge inference measurements"
+      ]
+    }
+  }
+}

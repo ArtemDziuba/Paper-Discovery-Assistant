@@ -12,6 +12,11 @@ Target hardware: laptop RTX 4060, 8 GB VRAM. Target system RAM below 8 GB, with 
 
 Internet access for paper retrieval through the arXiv API is approved. All NLP inference runs locally. Initial model downloads are setup dependencies rather than hosted inference. Propose cached retrieved records and an explicitly labeled replay mode for a repeatable offline demo.
 
+Later evaluation extension: the user explicitly authorized Google's `gemini-2.5-flash`
+as a cloud judge for the separately run DeepEval summary quality evaluation. This exception
+applies only to offline judging; application retrieval, ranking and Qwen summarization
+remain local. See [summary-evaluation.md](summary-evaluation.md).
+
 ## Baseline architecture
 
 Streamlit calls ordinary Python components directly. Pydantic validates shared records. Use a lightweight, deterministic concept-extraction baseline, an arXiv retrieval client, metadata normalization/deduplication, a local Sentence Transformers encoder, NumPy cosine ranking, and per-paper match evidence with source links. Topic retrieval removes common conversational prefixes and requires retained concepts together; quoted phrases preserve their full wording. Optional Windows CUDA dependencies are selected with the cuda extra.

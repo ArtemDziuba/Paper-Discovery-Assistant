@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_27",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_07.json",
+  "source_sha256": "dcd6bf26baba5b8c78b5c23cf9c063810935fa4ece05d27405d98a57ba05c9aa",
+  "query_index": 7,
+  "paper_index": 3,
+  "query_id": "reinforcement-learning-navigation",
+  "query": "Reinforcement learning for autonomous navigation",
+  "paper": {
+    "arxiv_id": "2408.05744",
+    "title": "Parallel Distributional Deep Reinforcement Learning for Mapless Navigation of Terrestrial Mobile Robots",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "f803e9ea274ab58aba2789bc7e5d162fa2fabf60958135a5cfc1df155d7eccae",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper introduces Parallel Distributional Deep Reinforcement Learning (PDDRL) for mapless terrestrial robot navigation, extending D4PG by modeling return uncertainty through categorical distributions over reward bins rather than single expected values. The methodology integrates maximum entropy regularization with parallel training structures and noisy action policies, evaluated across Gazebo simulations and real-world TurtleBot3 trials in four complex geometric scenarios. Key findings indicate that distributional methods achieved perfect precision (100%) in most simulated environments, significantly outperforming behavior-based algorithms and standard DDPG/SAC baselines which exhibited instability or total failure in complex settings. While specific quantitative metrics like success rates are reported for certain configurations, the study explicitly lacks comprehensive documented failure modes and relies heavily on inconsistent results from original D4PG studies as motivation. A critical limitation is that the authors state real-world validation remains a future direction despite presenting some physical robot trials; furthermore, safety constraints and general deployment feasibility were not rigorously evaluated, suggesting the current evidence primarily supports simulation-based efficacy rather than robust real-world autonomy.",
+    "metadata": {
+      "arxiv_id": "2408.05744v2",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "3cfa31fda4098ce3fe72e5218bb676a3c4892cb89b573fd6d51cf2cc0fa82bcf",
+      "pages": 6,
+      "chunks": 12,
+      "model_calls": 16,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 71.35167999996338,
+    "generated_at": "2026-11-11T09:27:23.169535+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.5,
+        "reason": "The summary correctly identifies categorical return distributions, parallelized actor-critic mapless navigation, Gazebo training, TurtleBot3 field experiments, and strong results in several environments. However, it conflates deterministic PDDRL with the maximum-entropy stochastic PDSRL approach; inaccurately says real-world validation was only future work even though the paper reports multiple real-robot experiments; and presents success as nearly uniformly perfect despite large variations across methods and scenarios. Claims about an explicit lack of failure-mode documentation and inconsistent original D4PG studies are not established as the paper's central limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly answers the autonomous navigation query by discussing map-free robot control, distributional RL, simulation-to-real validation, navigation success, and practical limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Captures the broad methodology and favorable results, but underrepresents separate deterministic PDDRL and stochastic PDSRL variants, prioritized-replay comparisons, and the detailed real-robot performance differences across four scenarios. A more query-useful overview would describe the LiDAR/goal observations and real-world failure rates.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Technically fluent and largely well organized, but the simultaneous mention of real TurtleBot3 trials and a claim that real-world validation remains future work creates a confusing contradiction.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Fairly compact and mostly focused on navigation, though speculative limitation statements consume space that could explain actual comparative results.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.77,
+    "weighted_score_10": 7.7,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2408.05744",
+      "verified_sections": [
+        "Original arXiv HTML, sections 3.2-3.5 and 4.1-4.2, Tables 1-2, and Conclusion; compared against arXiv 2408.05744v2."
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2408.05744",
+      "verified_sections": [
+        "Original arXiv HTML, sections 3.2-3.5 and 4.1-4.2, Tables 1-2, and Conclusion; compared against arXiv 2408.05744v2."
+      ]
+    }
+  }
+}

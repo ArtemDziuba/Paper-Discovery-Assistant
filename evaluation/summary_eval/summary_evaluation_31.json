@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_31",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_09.json",
+  "source_sha256": "ab0c204ba58da8f5b146a1dd6c09c35c82cd815efc168a7a6f56358b881a9db8",
+  "query_index": 9,
+  "paper_index": 1,
+  "query_id": "satellite-change-detection",
+  "query": "Deep learning for satellite image change detection",
+  "paper": {
+    "arxiv_id": "2208.00657",
+    "title": "SiamixFormer: a fully-transformer Siamese network with temporal Fusion for accurate building detection and change detection in bi-temporal remote sensing images",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "cac23fffacbb6e802c1b3aca920b8dd8d540201d68510dc0f6558a564641c96b",
+  "summarization": {
+    "status": "completed",
+    "summary": "SiamixFormer introduces a fully-transformer Siamese network designed for bi-temporal building detection and change detection in remote sensing imagery. Utilizing SegFormer-based encoders with hierarchical temporal fusion, the architecture replaces CNN-based stages to model long-range dependencies while reducing sequence complexity via reduction ratios. Evaluated on xBD, WHU, LEVIR-CD, and CDD datasets, SiamixFormer-5 achieved peak performance of 93.58% mIoU and 96.69% F1-score for building detection on xBD, surpassing state-of-the-art methods like DamFormer and Changeformer. In change detection tasks, it recorded an F1 score of 97.13 on LEVIR-CD, outperforming UVACD and other baselines by significant margins. However, the model exhibits high computational costs, requiring 175.15M parameters and substantial GPU memory, which necessitates patch resizing to 256×256 for most datasets. Additionally, while quantitative metrics are robust for building detection, specific numerical results for change detection in some excerpts rely on qualitative analysis or comparative improvements rather than absolute baseline comparisons.",
+    "metadata": {
+      "arxiv_id": "2208.00657v2",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "b4ddc7dc0f8b2ebf8d062470a103866ed4e3cd795de585b981b7550ab5997cfd",
+      "pages": 16,
+      "chunks": 18,
+      "model_calls": 23,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 138.13478600000963,
+    "generated_at": "2026-11-11T09:50:25.473562+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.5,
+        "reason": "The SiamixFormer architecture, evaluated datasets and 175.15-million parameter count of SiamixFormer-5 are supported. However, it repeatedly assigns results to the wrong datasets: 93.58% building IoU and 96.69% building F1 are reported for WHU, not xBD; xBD has 79.26% building IoU and 88.43% F1 for SiamixFormer-5. The 97.13% change F1 belongs to CDD, not LEVIR-CD, whose result is 91.58%. The summary also calls building-class IoU 'mIoU' and suggests that absolute change detection results are unavailable although they appear in Tables 4 and 5.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Clearly focuses on satellite/remote-sensing change detection, bi-temporal image fusion, dataset-level performance and computational tradeoffs.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Explains the architecture and covers both building and change detection, but incorrectly anchors important numbers to datasets, reducing the usability of its benchmark comparisons. It could distinguish xBD/WHU as building detection evaluations and LEVIR-CD/CDD as change detection evaluations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Well structured and technically accessible, but dataset/metric mix-ups make the quantitative claims hard to interpret correctly.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Compact and focused, though the last sentence speculates about missing numerical evidence rather than accurately describing available experimental tables.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.77,
+    "weighted_score_10": 7.7,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2208.00657",
+      "verified_sections": [
+        "Original arXiv HTML v2, methodology, experimental implementation and Tables 2-5 for xBD, WHU, LEVIR-CD and CDD."
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2208.00657",
+      "verified_sections": [
+        "Original arXiv HTML v2, methodology, experimental implementation and Tables 2-5 for xBD, WHU, LEVIR-CD and CDD."
+      ]
+    }
+  }
+}

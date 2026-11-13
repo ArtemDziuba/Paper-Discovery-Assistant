@@ -2,7 +2,35 @@
 
 Streamlit calls a UI-independent search/ranking pipeline in one Python process. Optional,
 on-demand full-paper summaries use a separate local Ollama process serving Qwen3.5-4B.
-Search/ranking works without that service. No hosted inference or vector database is used.
+Search/ranking works without that service. Application inference remains local; no vector
+database is used. The separately invoked summary quality evaluator uses user-authorized
+Google Gemini cloud inference through DeepEval, outside the application request path.
+
+The offline evaluation boundary is independent of Streamlit:
+
+```mermaid
+flowchart LR
+    D[Two human and ten synthetic query batches] --> F[Fixed first three papers / 36 stable slots]
+    F --> C[Permanent query-summary JSON cache]
+    C -->|Missing summary only| S[Existing local Qwen summarizer]
+    S -->|Save before judging| C
+    C --> V[Verify versioned PDF and source hash]
+    V --> P[Existing PDF store and extraction / frozen text evidence]
+    P --> E[Full text or verified excerpts from every chunk]
+    C --> G[DeepEval five fixed G-Eval rubrics]
+    E --> G
+    G --> M[Google Gemini API / external judge]
+    M --> C
+    C --> R[Python weighted scores / CSV JSON and statistics]
+```
+
+`summary_eval_data.py` selects and validates records; `summary_evaluation.py` manages
+durable summary/metric boundaries and resumption; `summary_eval_judge.py` owns Gemini,
+rubrics and evidence budgets; `summary_eval_reports.py` computes reports without inference.
+See [summary-evaluation.md](summary-evaluation.md) for cache identities, configuration,
+cloud data sent, execution modes and limitations. The existing PDF/source and generated
+summary provenance remain separate from judge configuration so changing a judge cannot
+trigger summary generation.
 
 ```mermaid
 flowchart LR

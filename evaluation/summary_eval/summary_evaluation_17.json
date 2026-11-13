@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_17",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_04.json",
+  "source_sha256": "fe945ba36831fc0721dd63aa09cbc9ab698eba0858a1fc896989ada8435c5a30",
+  "query_index": 4,
+  "paper_index": 2,
+  "query_id": "neural-radiance-fields",
+  "query": "Neural radiance fields for 3D scene reconstruction",
+  "paper": {
+    "arxiv_id": "2210.13041",
+    "title": "Learning Neural Radiance Fields from Multi-View Geometry",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "3e4010507c1c274eace6ad03cba248172d8804aa1ab946a5d33eafebadad9c39",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses neural radiance fields for 3D scene reconstruction by introducing MVG-NeRF, which integrates classical multi-view geometry with NeRF training to mitigate issues like noisy mesh generation and hallucinated structures. The methodology employs pixelwise depths and normals derived from a classical pipeline as pseudo-ground truth, jointly optimizing color and normal vectors through confidence-weighted supervision based on forward-backward reprojection error. Experiments on the Truck scene demonstrate that this approach significantly improves surface quality compared to standard NeRF, achieving a Chamfer Distance of $1.8865 \\times 10^{-3}$ versus a baseline PSNR of 21.24, despite slightly lower PSNR scores. However, documented limitations include an inherent reliance on pre-executed classical pipelines, which imposes substantial computational burdens restricting the method to offline reconstruction rather than real-time use. Furthermore, the approach struggles with textureless regions and non-Lambertian surfaces where MVS fails, and rendered backgrounds remain subject to NeRF's limited sampling intervals due to the absence of explicit geometric constraints during training.",
+    "metadata": {
+      "arxiv_id": "2210.13041v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "254a873f1e1fd330ff1bb1b489290ce9e532da2502b87726be3af40a5e3853e7",
+      "pages": 17,
+      "chunks": 14,
+      "model_calls": 18,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 125.59112700005062,
+    "generated_at": "2026-11-11T09:10:45.201378+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "Correctly describes MVG-NeRF, the classical SfM/MVS-derived pixelwise depth and normal priors, confidence weighting from forward-backward reprojection error, and the offline-only computational limitation. The reported Chamfer distance 1.8865×10^-3 and standard NeRF PSNR 21.24 both occur in Table 1, but they represent different metrics and cannot meaningfully be compared against each other: the appropriate Chamfer-distance baseline is 2.3823×10^-3 and MVG-NeRF PSNR is 21.0013 versus baseline 21.2384. The ending claims about background rendering being limited by an absence of explicit geometric constraints misrepresent this method, whose contribution is precisely to add geometric supervision, and are not established as a documented limitation. Textureless/non-Lambertian difficulties are background limitations of classical MVS rather than quantified failure modes of MVG-NeRF.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses NeRF-based 3D reconstruction, the geometric deficiencies of vanilla NeRF, classical multi-view geometric priors, reported mesh-quality improvement, and practical limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Captures the research problem, proposed method, geometric supervision and confidence weighting, the central 3D geometry result, and computational limitation. Omits the actual matched quantitative comparison (MVG-NeRF vs vanilla NeRF on Chamfer distance, PSNR, SSIM and LPIPS), details of distinct RGB/depth/normal losses, and that the quantitative experiment is on the Tanks & Temples Truck scene.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Coherent problem-method-results-limitations structure, but the comparison of a Chamfer Distance to a PSNR value conflates incompatible performance measures, and the final sentence contains an ambiguous claim about geometric constraints.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "A compact query-focused explanation with little repetition; some space spent on loosely supported background/sampling limitations would be better allocated to the relevant baseline comparisons.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.85,
+    "weighted_score_10": 8.5,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://ar5iv.labs.arxiv.org/html/2210.13041",
+      "verified_sections": [
+        "§3 Method and Confidence-Weighted RGB/Depth/Normal Losses",
+        "§4.2 Quantitative Results, Table 1",
+        "§5 Limitations and Future Work"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://ar5iv.labs.arxiv.org/html/2210.13041",
+      "verified_sections": [
+        "§3 Method and Confidence-Weighted RGB/Depth/Normal Losses",
+        "§4.2 Quantitative Results, Table 1",
+        "§5 Limitations and Future Work"
+      ]
+    }
+  }
+}

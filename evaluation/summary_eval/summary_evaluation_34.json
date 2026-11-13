@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_34",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_10.json",
+  "source_sha256": "accd03480acb42c68a899855b8c5bf5281e28ed24b04c2d47a6e6c31211fc4fe",
+  "query_index": 10,
+  "paper_index": 1,
+  "query_id": "deep-learning-image-inpainting",
+  "query": "Deep learning for image inpainting and missing-region reconstruction",
+  "paper": {
+    "arxiv_id": "2307.07678",
+    "title": "Both Spatial and Frequency Cues Contribute to High-Fidelity Image Inpainting",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "09d6540924bfa1afbe575291aac53fb3ab3eab77240baa9cf2ca8e0d690d8a04",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper introduces the Frequency-Spatial Complementary Network (FSCN), a dual-branch architecture designed to enhance deep learning image inpainting by integrating spatial and frequency cues. The methodology employs Fast Fourier Transformation to convert inputs into the frequency domain, utilizing a dedicated frequency branch fused with a UNet-based spatial branch via a Frequency-Spatial Cross-Attention Block (FSCAB). This design explicitly addresses neural network biases toward low-frequency components and over-smoothing artifacts through a multi-component loss function including frequency, reconstruction, adversarial, and perceptual losses. Quantitative experiments on CelebA-HQ and Places datasets demonstrate superior performance over state-of-the-art baselines like LaMa, Wavefill, and MAT, achieving an SSIM of 0.9184 on CelebA-HQ and significantly reducing computational complexity by decreasing parameters from 61.6M to 12.3M. While the study confirms that removing the frequency branch causes significant performance degradation due to lost high-frequency information, it acknowledges limitations such as the absence of code release at publication time and challenges in handling thick masks where performance slightly drops against large-capacity models despite reduced complexity.",
+    "metadata": {
+      "arxiv_id": "2307.07678v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "edc6791ade35fa6f9254c6cfe66938b04f63ed55d1ddf44ccb0b47d1f1d088fc",
+      "pages": 10,
+      "chunks": 16,
+      "model_calls": 21,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 96.54866109997965,
+    "generated_at": "2026-11-11T09:37:04.426943+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The Frequency-Spatial Complementary Network, FFT frequency branch, residual UNet spatial branch, FSCAB fusion and frequency/perceptual/adversarial/reconstruction losses are supported. The 0.9184 CelebA-HQ SSIM, 61.6M-to-12.3M parameter comparison against MAT, ablation degradation without frequency branch, stated code-release plan and reduced performance for thick Places masks against larger approaches are consistent with the source.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly discusses deep-learning inpainting, missing-region reconstruction, high-frequency detail restoration, fusion architecture and quantitative comparisons on inpainting datasets.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Describes the main problem, dual-branch method, losses, benchmark results, efficiency and ablation. It does not report important FID/LPIPS details or distinguish CelebA-HQ and Places results as fully as the original paper.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Clear progression from spectral biases and inpainting artifacts to the proposed architecture, evaluation and limitations; terminology is appropriate.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Compact and avoids redundancy; several closely related claims about frequency/high-frequency preservation could be compressed slightly.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.975,
+    "weighted_score_10": 9.75,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2307.07678",
+      "verified_sections": [
+        "ArXiv v1 architecture and frequency branch, loss definition, CelebA-HQ and Places results, complexity comparison, ablation and thick-mask discussion"
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2307.07678",
+      "verified_sections": [
+        "ArXiv v1 architecture and frequency branch, loss definition, CelebA-HQ and Places results, complexity comparison, ablation and thick-mask discussion"
+      ]
+    }
+  }
+}

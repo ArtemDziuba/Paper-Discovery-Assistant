@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_23",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_06.json",
+  "source_sha256": "cf3f3aaf8ae608f31907687108bb3ab575d26be2b3df1e7f3d83a1189fceea52",
+  "query_index": 6,
+  "paper_index": 2,
+  "query_id": "ecg-arrhythmia-detection",
+  "query": "Deep learning for ECG arrhythmia detection",
+  "paper": {
+    "arxiv_id": "2502.17887",
+    "title": "Arrhythmia Classification from 12-Lead ECG Signals Using Convolutional and Transformer-Based Deep Learning Models",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "d820fbeb9d60c43d957db579a0bf406f0860a8cc52c50045d4da6762509a512c",
+  "summarization": {
+    "status": "completed",
+    "summary": "This study addresses deep learning for 12-lead ECG arrhythmia detection by evaluating six architectures on five international datasets, including PTB-XL. The primary contribution is the comparative analysis of hybrid CNN/GRU models against image-based and Transformer approaches using Pan-Tompkins preprocessing and signal-to-image mapping (506 × 187 pixels). Key findings indicate that a hybrid **CNN1D+GRU** model achieved superior performance with **93.42%** accuracy and an F1 score of **0.9338**, outperforming the best 2D CNN (**92.16%**) and Transformer variants (up to **84.60%**). While ResNet reached **98.6%** accuracy on specific AFib cases, overall arrhythmia classification lagged behind beat-level detection (~99%). Documented limitations include poor performance in detecting 1st degree Atrioventricular Block (**<93%**), attributed to feature ambiguity and insufficient PR interval data, as well as generalization issues under extreme noise. The authors note that while these models offer lightweight alternatives to complex infrastructure, their deployment remains constrained by resource limitations and the lack of post-processing for ectopic beats.",
+    "metadata": {
+      "arxiv_id": "2502.17887v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "82993bd571953f2deff53630922b312264b76ab7a18dcb99f9c1d2cd2ab3eeb9",
+      "pages": 34,
+      "chunks": 24,
+      "model_calls": 32,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 133.1686794999987,
+    "generated_at": "2026-11-11T09:22:10.728643+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "The paper supports the use of five public 12-lead ECG datasets, Pan-Tompkins-inspired preprocessing, the 506x187 image representation, and 93.42% accuracy / 0.9338 F1 for CNN1D+GRU versus 92.16% for CNN2D. But the summary incorrectly says six architectures when the paper states twelve evaluated models. The 98.6% ResNet accuracy on AFib is not established as a reported result of this study; other 99%-level figures in the paper refer to prior beat-classification research. The statement that first-degree AV block was below 93% is imprecise and omits the evaluation setting.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly compares deep convolutional, recurrent, and Transformer-based approaches for ECG arrhythmia detection and names the principal quantitative results.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Captures the core comparison, data sources, preprocessing, leading hybrid model, CNN2D and ViT baselines, and first-degree AV block confusion. Omits that metrics are measured on validation data and does not clearly distinguish full-signal arrhythmia classification from beat-level classification in cited literature.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Generally coherent and compact, though the comparison with an unexplained AFib-specific 98.6% figure introduces confusion over whether scores refer to this experiment or another benchmark.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Concise for its technical scope, but the extraneous ResNet AFib figure and vague deployment generalization add little relevant information.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.86,
+    "weighted_score_10": 8.6,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 qualitative judgments in 0.1 increments, normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_pdf_screenshots",
+      "source_url": "https://arxiv.org/pdf/2502.17887",
+      "verified_sections": [
+        "Abstract, preprocessing Section 4, Tables 3 and 4, conclusions; visually checked PDF pp. 25-26"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using available paper evidence; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/pdf/2502.17887",
+      "verified_sections": [
+        "Abstract, preprocessing Section 4, Tables 3 and 4, conclusions; visually checked PDF pp. 25-26"
+      ]
+    }
+  }
+}

@@ -4,6 +4,12 @@ Criteria are defined here before reporting quality scores. Unit tests use explic
 synthetic metadata solely to test software behavior. Passing tests does not establish NLP
 quality. No human relevance judgments or quality scores have been fabricated.
 
+The [DeepEval summary evaluation protocol](summary-evaluation.md) selects the first three
+papers from each existing human/synthetic query batch (36 fixed pairs). An independent
+Gemini judge assesses factual consistency, query relevance, coverage, clarity and conciseness
+against full-paper evidence. Its permanent summary cache, five fixed rubrics, weighted
+scores, cloud boundary and resumable commands are documented separately. Ranking is unchanged.
+
 On-demand full-paper summarization now has its own [validation protocol](summarization.md#verification-and-quality-protocol).
 Its software tests use mocked model responses; PDF/chunk coverage, query-sensitive caching,
 word counts and UI state checks establish implementation behavior. Scientific claim support,

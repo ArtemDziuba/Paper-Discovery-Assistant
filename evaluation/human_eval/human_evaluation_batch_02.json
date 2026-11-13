@@ -3,6 +3,21 @@
   "query": "cnn image recognition",
   "judgments": [
     {
+      "arxiv_id": "1612.00983",
+      "title": "Food Image Recognition by Using Convolutional Neural Networks (CNNs)",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1604.04573",
+      "title": "CNN-RNN: A Unified Framework for Multi-label Image Classification",
+      "relevance": 3
+    },
+    {
+      "arxiv_id": "1409.1556",
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "relevance": 3
+    },
+    {
       "arxiv_id": "2608.04379",
       "title": "Image Classification Using CNN-QNN Hybrid Model with Optimized Correlated Features",
       "relevance": 2
@@ -28,24 +43,9 @@
       "relevance": 1
     },
     {
-      "arxiv_id": "1612.00983",
-      "title": "Food Image Recognition by Using Convolutional Neural Networks (CNNs)",
-      "relevance": 3
-    },
-    {
-      "arxiv_id": "1604.04573",
-      "title": "CNN-RNN: A Unified Framework for Multi-label Image Classification",
-      "relevance": 3
-    },
-    {
       "arxiv_id": "2505.05957",
       "title": "Efficient Quantum Convolutional Neural Networks for Image Classification: Overcoming Hardware Constraints",
       "relevance": 2
-    },
-    {
-      "arxiv_id": "1409.1556",
-      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
-      "relevance": 3
     },
     {
       "arxiv_id": "2502.00663",

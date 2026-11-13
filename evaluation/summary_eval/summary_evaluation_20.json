@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_20",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_05.json",
+  "source_sha256": "9b3362876977281ca47fe30a2c7e533fc35479d56d317c7b42f180978ab73b90",
+  "query_index": 5,
+  "paper_index": 2,
+  "query_id": "knowledge-graph-completion",
+  "query": "Knowledge graph completion and link prediction",
+  "paper": {
+    "arxiv_id": "1703.08098",
+    "title": "An overview of embedding models of entities and relationships for knowledge base completion",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "75f60d6cb1dc68b465741ae55a70419fae9c6e6174a2c0d4c899d4d080298188",
+  "summarization": {
+    "status": "completed",
+    "summary": "This survey addresses knowledge graph completion (KGC) and link prediction, identifying a critical data sparsity issue where up to 94% of Freebase persons lack parent facts. The paper categorizes embedding models into triple-based extensions like TransE variants (TransH, TransD), bilinear/tensor approaches (DISTMULT, HolE), and complex vector methods (ComplEx, RotatE). While it details architectural mechanisms such as convolutional operators in ConvKB or relation path initialization in R-GCN, the text explicitly lacks experimental results, benchmark names, or quantitative performance comparisons for these specific models. Although it cites prior work demonstrating that external corpora and lexical semantics generally outperform standard triple approaches on FB15k-237 and WN18RR datasets, this survey itself provides no new metrics. A primary limitation noted is the closed-world assumption, which hinders performance on unseen entities without augmentation, alongside a lack of generalization to domain-specific graphs lacking lexical semantics.",
+    "metadata": {
+      "arxiv_id": "1703.08098v9",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "0364956357d637b2d8d3a70976088f134a0c6b825cb7eed6913cea9e132925aa",
+      "pages": 16,
+      "chunks": 23,
+      "model_calls": 29,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 112.90375620010309,
+    "generated_at": "2026-11-11T09:17:18.686483+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.5,
+        "reason": "Correctly introduces knowledge graph incompleteness (the 94% Freebase-parent-facts statistic), several embedding families, and the closed-world issue with unseen entities. However, it falsely states that the survey lacks benchmark names or quantitative comparisons: Tables 2–4 explicitly name FB15k, WN18, FB15k-237 and WN18RR and tabulate published Hits@10, MRR and related model-performance results. The source does not categorically establish that external corpora and lexical semantics generally outperform all standard triple-based methods; its discussion more carefully compares external text/path information against triple-only methods, with strong complex-valued baselines. Relation-path initialization in R-GCN is also not a faithful description of that GNN neighborhood-aggregation method.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Entirely on-topic: a survey of entity/relation representation models, knowledge graph completion, and link prediction.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.5,
+        "reason": "Names many model families, background sparsity and the open-world limitation, but fails to cover the central benchmark results and quantitative comparisons that the survey explicitly emphasizes. Missing or misleading treatment of the standard link-prediction ranking task, filtered metrics and contrast among translational, complex-valued, path-based and graph-neural models substantially reduces coverage.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Well-structured and readable for a compact survey summary, although a confusing description of ConvKB and R-GCN makes the middle sentence less precise.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "No major redundancy, but too much space is spent describing an allegedly absent evaluation instead of succinctly giving the paper’s actual results.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.71,
+    "weighted_score_10": 7.1,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://arxiv.org/html/1703.08098",
+      "verified_sections": [
+        "§1 Introduction and Data Incompleteness",
+        "§3 Model Taxonomy",
+        "§4.1 Benchmark Datasets and Task",
+        "§4.2 Main Results, Tables 3 and 4",
+        "§5 Discussion and Conclusion"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/1703.08098",
+      "verified_sections": [
+        "§1 Introduction and Data Incompleteness",
+        "§3 Model Taxonomy",
+        "§4.1 Benchmark Datasets and Task",
+        "§4.2 Main Results, Tables 3 and 4",
+        "§5 Discussion and Conclusion"
+      ]
+    }
+  }
+}

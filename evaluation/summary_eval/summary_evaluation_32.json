@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_32",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_09.json",
+  "source_sha256": "ab0c204ba58da8f5b146a1dd6c09c35c82cd815efc168a7a6f56358b881a9db8",
+  "query_index": 9,
+  "paper_index": 2,
+  "query_id": "satellite-change-detection",
+  "query": "Deep learning for satellite image change detection",
+  "paper": {
+    "arxiv_id": "2010.05687",
+    "title": "Semantic Change Detection with Asymmetric Siamese Networks",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "006117692efbd38f0f97184c360ec52badf352ca5242bc6c51c292e829120785",
+  "summarization": {
+    "status": "completed",
+    "summary": "This study proposes an Asymmetric Siamese Network (ASN) for satellite image change detection, specifically addressing label imbalance and asymmetric changes in mixed land-cover regions. The methodology integrates Adaptive Threshold Learning (ATL), a Separated Kappa (SeK) metric, and asymmetric spatial and representation pyramids to utilize heterogeneous feature pairs. Validated on the SECOND dataset with 4,662 image pairs, the SeK coefficient achieved a Mean Square Error of 0.003 against human experts, significantly outperforming Overall Accuracy (0.212) and standard Kappa (0.028). On the HRSCD dataset, ASN-ATL attained 69.1–69.8% mIoU, surpassing baseline models by approximately 2.1%. Ablation studies confirmed that removing asymmetric modules reduced performance to 67.7%, highlighting their critical role; specifically, aRP added 0.8 to metrics with residual blocks, while aSP contributed +0.5 mIoU and +0.8 SeK. However, the paper documents significant limitations, including structural trade-offs where stronger modules risk over-fitting in simple structures, sensitivity to rotation parameters, and an inability to detect sparse categories (<2%). Furthermore, a weak correlation exists between Binary Change Detection performance and Specificity.",
+    "metadata": {
+      "arxiv_id": "2010.05687v2",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "7529e6d4a63e755fd4afb91669feba844b9d7d7a10d7f3a7ba588986d85bf27d",
+      "pages": 14,
+      "chunks": 27,
+      "model_calls": 37,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 155.97680980002042,
+    "generated_at": "2026-11-11T09:34:06.493458+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The architecture, ASN/ATL/SeK contributions, 4,662 SECOND image pairs, SeK-human MSE 0.003 versus 0.212 OA and 0.028 kappa, HRSCD 69.1-69.8 mIoU, 2.1-point gain and asymmetric-module ablations are consistent with the paper. However, alleged rotation-parameter sensitivity, an absolute inability to detect classes below 2%, and weak correlation of binary change detection with specificity are not established as stated. The article instead discusses how better binary change detection does not automatically imply better semantic change detection/SeK. These limitations are overgeneralized or mistranscribed.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses satellite/remote sensing change detection, including semantic change segmentation, asymmetric image feature extraction, imbalanced labels, dataset benchmarks, and results.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Includes the central asymmetric Siamese architecture, ATL, SeK, SECOND dataset, performance comparisons, and component ablations. It could explain the specific distinction between binary and semantic change detection more accurately and avoid invented limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The method and results are organized clearly, but the unclear phrase \"aRP added 0.8 to metrics\" and unexplained specificity correlation undermine precision near the end.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Information is generally dense and efficiently query-focused, though speculative limitations and peripheral claims could be removed in favor of a cleaner concluding observation.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.895,
+    "weighted_score_10": 8.95,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2010.05687",
+      "verified_sections": [
+        "Sections III-VI of arXiv v2; SECOND dataset; SeK comparison, HRSCD benchmark and ablation Tables I, V, VI"
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2010.05687",
+      "verified_sections": [
+        "Sections III-VI of arXiv v2; SECOND dataset; SeK comparison, HRSCD benchmark and ablation Tables I, V, VI"
+      ]
+    }
+  }
+}

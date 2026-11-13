@@ -1,0 +1,1844 @@
+{
+  "arxiv_id": "2510.03989v2",
+  "pdf_sha256": "60b4c5349a4e11c47ac662592f1f3a67390d241b45719b7951f0becab7d4ce75",
+  "parser_version": "2.1",
+  "summary_parser_version": "2.1",
+  "text_sha256": "e5b64606e3fd6323b49be4cdf3402ca1775e29d5d61ad8937f54685172a7b628",
+  "document": {
+    "units": [
+      {
+        "section": "Opening material",
+        "page": 1,
+        "text": "Xue-Cheng Tai<sup>∗</sup> , Hao Liu<sup>†</sup> , Lingfeng Li<sup>‡</sup> , Raymond H. Chan<sup>§</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "Abstract",
+        "page": 1,
+        "text": "#### **Abstract**",
+        "kind": "section-header"
+      },
+      {
+        "section": "Abstract",
+        "page": 1,
+        "text": "The Transformer architecture has revolutionized the field of sequence modeling and underpins the recent breakthroughs in large language models (LLMs). However, a comprehensive mathematical theory that explains its structure and operations remains elusive. In this work, we propose a novel continuous framework that rigorously interprets the Transformer as a discretization of a structured integro-differential equation. Within this formulation, the self-attention mechanism emerges naturally as a non-local integral operator, and layer normalization is characterized as a projection to a time-dependent constraint. This operator-theoretic and variational perspective offers a unified and interpretable foundation for understanding the architecture’s core components, including attention, feedforward layers, and normalization. Our approach extends beyond previous theoretical analyses by embedding the entire Transformer operation in continuous domains for both token indices and feature dimensions. This leads to a principled and flexible framework that not only deepens on theoretical insight but also offers new directions for architecture design, analysis, and control-based interpretations. This new interpretation provides a step toward bridging the gap between deep learning architectures and continuous mathematical modeling, and contributes a foundational perspective to the ongoing development of interpretable and theoretically grounded neural network models.",
+        "kind": "text"
+      },
+      {
+        "section": "Abstract",
+        "page": 1,
+        "text": "**Key words:** Transformer, attention, operator splitting, integro-differential equation",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "# **1 Introduction**",
+        "kind": "section-header"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "Deep neural networks (DNNs) have revolutionized numerous fields, including natural language processing [17, 61], computer vision [28], scientific computing [36, 42, 31], and medical diagnostics [40, 25]. Among these architectures, Transformers [52] have recently emerged as particularly powerful tools, underpinning remarkable successes in large language models (LLMs) such as GPT-3 and GPT-4 [52]. Besides language processing [65], the Transformer and its variants have also been applied in applications, including image processing [10, 47, 41], graph processing [62], operator learning [8, 5, 33, 60].",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "Recently, a series of works have been conducted to study the theoretical foundation or interpretability of Transformers. Approximation and generalization error of Transformers were studied in [12, 50, 22]. It was shown in [22, 46] that Transformers are adaptive to data’s lowdimensional structures. For interpretability, in [29], it was shown that Transformers are cubic or high-order splines. It was shown in [24] that the vision Transformer can learn spatial structures of the dataset. The Transformer was interpreted as an ODE solver for multi-particle dynamical systems in [11, 13, 38]. The importance of layer normalizaiton in Transformer was studied in",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "> ∗NORCE Norwegian Research Centre, Nygårdstangen, NO-5838 Bergen, Norway Email: xtai@norceresearch.no, xuechengtai@gmail.com.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "> †Department of Mathematics, Hong Kong Baptist University, Kowloon Tong, Hong Kong. Email: haoliu@hkbu.edu.hk.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "> ‡Hetao Institue of Mathematics and Interdisciplinary Sciences (Shenzhen). Email: lilingfeng@himis-sz.cn.",
+        "kind": "footnote"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 1,
+        "text": "> §School of Data Science and Department of Operations and Risk Management, Lingnan University, Tuen Mun, Hong Kong. Email: raymond.chan@ln.edu.hk.",
+        "kind": "footnote"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "[26]. A general introduction to Transformers with mathematical descriptions can be found in [51].",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "In this work, we will develop a mathematical theoretical framework to explain the Transformer architecture of [52], which has achieved remarkable success in large language models (LLMs) and other sequence modeling tasks. We show that the Transformer can be interpreted as a discretization of the following continuous integro-differential equation:",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "<!-- Start of picture text -->\n<br> ut = �� γ ( x , ·, t ;  u ) , V �� ( ·,  y , t ;  u )�Ω x � + � ∂IS 1( σ 1(�� t ) ,σ 2( t ))( u �)<br> I: attention II: layer normalization<br> J<br> + � j =1 �� Wj ( ·,  y , t ) u ( x , ·, t )�Ω y +  bj ( x , t ) � +  ∂IS 2( u ) for t ∈ (0 , T ] , (1)<br> � �� �<br><br><br> III: fully connected network<br><br> u ( x ,  y ,  0) =  f ( x ,  y ) ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "for ( **x** _,_ **y** ) _∈_ Ω _x ×_ Ω _y_ , where **x** denotes the token index, **y** the entry of token vectors, Ω _x_ and Ω _y_ are continuous domains, and _T >_ 0 is a fixed terminal time. This formulation provides a rigorous mathematical interpretation of the Transformer and its key components, such as self-attention and feedforward layers. The definitions of attention, layer normalization, and the fully connected layer, along with detailed explanations of the domains Ω _x_ , Ω _y_ , and the control variables, are given in Section 2. Equation (1) highlights the non-local nature of attention and reveals the Transformer as a structured operator derived from a discretized variational principle. We note that several previous works have also established connections between Transformerbased models and multi-particle dynamical systems [11, 13, 38]. These studies interpret the original or modified Transformer models as discretizations of interacting particle systems in a time-continuous setting, treating interactions across spatial variables as particle interactions. In contrast, our formulation (1) is fundamentally different: we show that the Transformer arises as a discretization of a continuous integro-differential equation, offering a more unified operatortheoretic and variational perspective.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "This perspective offers several advantages. First, it provides a unifying mathematical framework that connects diverse architectures, such as CNNs, UNets, and Transformers, under the common lens of differential and integral equations. This unification improves our understanding of the design principles underlying modern deep networks and provides insights for crossarchitectural studies.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "Second, by casting neural network architectures as time-stepping schemes of dynamical systems, our framework allows the systematic exploration of new architectures using well-established tools from numerical analysis. For instance, stability, convergence, and approximation properties of the underlying continuous models can inform the selection of network structures and hyperparameters, leading to more robust and interpretable models.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "Third, this approach creates a principled pathway for embedding domain-specific knowledge, such as physical laws, geometric structures, or conservation principles, directly into the design of neural architectures, leading to architectures tailored for specific scientific or engineering tasks.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "In summary, our formulation not only advances the theoretical understanding of deep neural networks but also provides actionable tools for the principled design of next-generation models. It bridges the gap between continuous mathematical modeling and discrete network implementation, establishing a foundation for informed, explainable, and application-aware neural network development.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 2,
+        "text": "This paper is organized as follows: We introduce the integral equation for Transformer with single-head attention in continuous setting in Section 2. An operator-splitting based algorithm is proposed in Section 3 to solve the integral equation. We show in Section 4 that the discretized algorithm exactly recovers the Transformer encoder in [52], and also discuss how to adapt the",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 3,
+        "text": "proposed algorithm to recover the architecture of Vision Transformer (ViT) [10]. In Section 5, we extend the integral equation and proposed algorithm to Transformer with multi-head attention. Extension to convolutional Transformer and its relation to Convolutional vision Transformer (CvT) [56] are discussed in Section 6. This paper is concluded in Section 7.",
+        "kind": "text"
+      },
+      {
+        "section": "1 Introduction",
+        "page": 3,
+        "text": "In the rest of this paper, we use bold lowercase letters to denote vectors, normal letters to denote scalars and functions, and calligraphic letters to denote operators.",
+        "kind": "text"
+      },
+      {
+        "section": "Related works",
+        "page": 3,
+        "text": "## **Related works**",
+        "kind": "section-header"
+      },
+      {
+        "section": "Related works",
+        "page": 3,
+        "text": "It is essential to examine the results of relevant literature and situate our approach within a historical context. Compared to Transformers, more studies can be found for deep neural networks (DNNs). A widely accepted interpretation views DNN as nonlinear high-dimensional function approximators [59, 35, 64, 6]. Under this view, the layers of a DNN perform successive nonlinear transformations that approximate complex mappings from input to output data. This approximation framework has been instrumental in explaining the expressive power of DNNs. Another promising direction for explaining and designing neural network architectures involves interpreting them as discretizations of continuous-time dynamical systems governed by differential or integral equations [7, 55, 4, 54]. E et al. show that DNNs can be viewed as continuous dynamical systems in [54] and special discretization of continuous problems in [55]. In [7], Chen et al. pointed out connections between residual networks and ordinary differential equations, and proposed Neural ODE. Benning et al. investigated the relations between DNNs and optimal control problems [4]. In this class of approach, neural network training is seen as an optimal control problem constrained by a continuous evolution equation. Related to the approach mentioned above, we especially want to mention some recent studies that have proposed a general framework for designing neural network architectures inspired by continuous-time dynamical systems [48, 32]. These methods leverage operator-splitting techniques to construct neural networks, which are so-called continuous neural networks, as discretizations of continuous differential equations. The continuous learning problem is an optimal control problem with this “neural network” as a constraint. In this framework, the evolution of hidden states in a network is governed by differential equations (continuous neural network). The goal of this continuous learning problem is to find optimal controls—represented by learnable parameters—within a discretized dynamical process.",
+        "kind": "text"
+      },
+      {
+        "section": "Related works",
+        "page": 3,
+        "text": "The use of operator-splitting allows these complex dynamics to be decomposed into simpler substeps, each of which corresponds to a specific type of operation (e.g., convolution, nonlinearity). These substeps are then unrolled into individual layers of a neural network. This interpretation not only clarifies the structure and purpose of different architectural components but also facilitates the incorporation of prior knowledge about the underlying data dynamics or physics.",
+        "kind": "text"
+      },
+      {
+        "section": "Related works",
+        "page": 3,
+        "text": "Building on this theory, we have recently provided a rigorous mathematical explanation of the well-known UNet architecture [49]. We demonstrated that UNet can be viewed as a specific discretization of the following simple differential equation, where each encoder and decoder stage corresponds to a particular substep in the operator-splitting scheme:",
+        "kind": "text"
+      },
+      {
+        "section": "Related works",
+        "page": 3,
+        "text": "<!-- Start of picture text -->\nu ( x ,t )<br>∂t =  W ( x , t )  ∗ u ( x , t ) +  d ( t )  − ln 1 −u ( x ,t ) +  ∂I Σ( u ) , ( x , t )  ∈ Ω ×  (0 , T ] ,<br>(2)<br>� u∂u ( x ( x ,,  0) = t )  f ( x ) , x  ∈ Ω ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "Related works",
+        "page": 3,
+        "text": "where _∗_ denotes convolution, _I_ Σ is the indicator function of Σ = _{u_ : _u_ ( **x** ) _≥_ 0 for **x** _∈_ Ω _}_ , _f_ is a function defined in a domain Ω and _T_ is the final time chosen by the user for time variable _t_ . The learnable variables _θ_ = _{W_ ( **x** _, t_ ) _, d_ ( _t_ ) _}_ are regarded as control variables which will be learned in the training process. The mapping _Nθ_ ( _f_ ) _�→ u_ ( **x** _, T_ ) turns out to be the UNet in the continuous setting. This perspective not only elucidates the structure of the UNet architecture but also provides a foundation for systematic modifications and enhancements. A range of alternative interpretations and mathematically inspired designs of deep neural networks",
+        "kind": "text"
+      },
+      {
+        "section": "Related works",
+        "page": 4,
+        "text": "can be found in the literature, including [45, 4, 20, 44, 19, 23, 30, 34, 18, 58, 2]. For example, neural networks have been interpreted as optimal control problems in [4, 44]. Gregor and LeCun [18] were among the first to connect deep learning with sparse coding through learned iterative shrinkage algorithms. Ruthotto and Haber [45] proposed neural networks derived from partial differential equations (PDEs), while He and Xu [23] introduced MgNet, which employs multigrid principles for feature extraction. Hagemann et al. [21] formulated stochastic normalizing flows as Markov chains to tackle inverse problems. Altekrüger et al. [1] analyzed the robustness of conditional generative model. Long et al. [34] built PDENet based on finite difference schemes to recover PDE models from data. Yang et al. [58] constructed ADMM-CSNet by unrolling the ADMM optimization algorithm into a network architecture. Wang et al. [53] developed a diffusion-residual network inspired by convection-diffusion ODEs for classification tasks. Most recently, Martin et al. [39] introduced a plug-and-play architecture using flow matching for image restoration. These pioneering efforts have provided essential insights and have directly inspired our recent work [48, 49] and the present study.",
+        "kind": "text"
+      },
+      {
+        "section": "2 The Continuous Model",
+        "page": 4,
+        "text": "# **2 The Continuous Model**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2 The Continuous Model",
+        "page": 4,
+        "text": "In the following, we explain the Transformer in the seminal work in [52] in the continuous setting and show later that proper discretizations of the proposed model will recover the Transformer exactly.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "## **2.1 A brief recap of the discrete Transformer encoder**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "The Transformer architecture introduced in [52] is built around a core encoder block that processes sequential data through three principal components: a self-attention mechanism, layer normalization, and a feedforward network. In this section, we briefly recall its mathematical formulation, which will serve as the starting point for our continuous interpretation.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "Let the input to a Transformer encoder layer be represented by a matrix",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nu  = [ u 1 ⊤,  u ⊤ 2 , . . . ,  u ⊤ Nx ] ⊤ ∈ R Nx×Ny ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "where _Nx_ is the number of tokens and _Ny_ is the embedding dimension. Each row **u** _i ∈_ R<sup>_Ny_</sup> corresponds to the embedded representation of a token. **Self-Attention:** The self-attention mechanism transforms **u** through learned weight matrices **W**<sup>_Q_</sup> _,_ **W**<sup>_K_</sup> _,_ **W**<sup>_V_</sup> _∈_ R<sup>_Ny×Ny_</sup> to obtain query, key, and value matrices:",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nQ  =  uW Q , K  =  uW K , V  =  uW V .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "The scaled dot-product attention is then computed as:",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nQK ⊤<br>Attention( Q ,  K ,  V ) = Softmax V ,<br>� � Ny �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "where the softmax is applied row-wise. This operation allows each token to aggregate information from all tokens in the sequence, weighted by their compatibility.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "**Layer Normalization:** Following [3], layer normalization is applied per token (row-wise). Given an input vector **z** _∈_ R<sup>_Ny_</sup> , the normalized output is:",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nLayerNorm( z ) = z  − µ ⊙ γ  +  β ,<br>σ<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 4,
+        "text": "where _µ_ and _σ_ are the mean and standard deviation of **z** , _⊙_ represents the elementwise product and **_γ_** _,_ **_β_** _∈_ R<sup>_Ny_</sup> are learnable parameters.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 5,
+        "text": "**Feedforward Network:** The feedforward network consists of two linear transformations with a ReLU activation in between:",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 5,
+        "text": "<!-- Start of picture text -->\nFFN( z ) = ReLU( zW 1 +  b 1)  W 2 +  b 2 ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 5,
+        "text": "where **W** 1 _,_ **W** 2 _∈_ R<sup>_Ny×Ny_</sup> and **b** 1 _,_ **b** 2 _∈_ R<sup>_Ny_</sup> .",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 5,
+        "text": "**Overall Encoder Block:** A standard Transformer encoder layer combines these components with residual connections [52]:",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 5,
+        "text": "<!-- Start of picture text -->\nu ′ =  u  + Attention( Q ,  K ,  V ) ,<br>u ′′ = LayerNorm( u ′ ) ,<br>u ′′′ =  u ′′ + FFN( U ′′ ) ,<br>u out = LayerNorm( u ′′′ ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 A brief recap of the discrete Transformer encoder",
+        "page": 5,
+        "text": "This discrete, layer-wise processing will be our reference structure. In what follows, we show that this architecture can be viewed as a numerical discretization of a continuous dynamical system.",
+        "kind": "text"
+      },
+      {
+        "section": "2.2 The continuous setting for Transformers",
+        "page": 5,
+        "text": "## **2.2 The continuous setting for Transformers**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.2 The continuous setting for Transformers",
+        "page": 5,
+        "text": "The interpretation of deep neural networks as discretizations of continuous-time dynamical systems has gained considerable traction in recent years [7, 45, 48, 54]. These continuous viewpoints not only deepen theoretical understanding but also provide principled frameworks for architecture design and analysis.",
+        "kind": "text"
+      },
+      {
+        "section": "2.2 The continuous setting for Transformers",
+        "page": 5,
+        "text": "In this section, we propose a control problem in continuous setting, named continuous Transformer, that reproduces the standard Transformer encoder through a structured discretization scheme. The continuous Transformer is a time-dependent integral equation. We will subsequently show that after discretizations by operator splitting for the time variable _t_ and spatial discretizations for the **x** _,_ **y** variables, the resulting splitting method recovers the Transformer architecture. The Transformer proposed in [52] consists of three components: attention, layer normalization, and feedforward networks. In the derivation of our control problem, we show that each component has a corresponding operation in the integral equation. We first focus on single-head attention. Our framework can be easily extended to the multi-head case, which will be detailed in Section 5.",
+        "kind": "text"
+      },
+      {
+        "section": "2.2 The continuous setting for Transformers",
+        "page": 5,
+        "text": "To make the explanation clearer and simpler, our notations and setup will follow [52], but in a continuous counterpart. We consider bounded sets Ω _x_ = [0 _, Lx_ ]<sup>_dx_</sup> _,_ Ω _y_ = [0 _, Ly_ ]<sup>_dy_</sup> for _Lx, Ly >_ 0 and positive integers _dx, dy_ . When _dx_ = _dy_ = 1, this corresponds to a sequence of bounded tokens and a bounded embedding in practice. Let _u_ ( **x** _,_ **y** _, t_ ) be a function of **x** _,_ **y** and time _t_ . In applications of LLMs, **x** _∈_ Ω _x_ refers to the index of tokens, **y** _∈_ Ω _y_ refers to entries of token vectors. Please refer to Appendix A for explanations of the physical meanings of **x** _,_ **y** , and _u_ for applications of Transformers to LLM.",
+        "kind": "text"
+      },
+      {
+        "section": "2.2 The continuous setting for Transformers",
+        "page": 5,
+        "text": "As stated in [52], attention is all you need for the Transformer. In fact, we show below that the attention layer has a very simple mathematical explanation in the continuous setting. It consists of integral transformations on the input functions to extract features with three different kernels. We use features extracted from the first two kernels to generate the attention score through a softmax operator, and then multiply the attention score by the feature extracted from the third kernel to compute the output. All three kernels in the integral transformation will be parameterized as learnable variables, see (13).",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 5,
+        "text": "## **2.3 Integral Transformations for Attention and Feature Extraction**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 5,
+        "text": "Let the functions _W_<sup>_Q_</sup> ( **y** _,_ � **y** _, t_ ), _W_<sup>_K_</sup> ( **y** _,_ � **y** _, t_ ), and _W_<sup>_V_</sup> ( **y** _,_ � **y** _, t_ ) be three kernels defined on Ω _y ×_ Ω _y ×_ [0 _, T_ ], and they will be learned from data as shown in LLM applications. See Appendix A",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "for explanations of the physical meanings of **x** _,_ **y** _, u_ ( **x** _,_ **y** _, t_ ). For a given function _u_ ( **x** _,_ **y** _, t_ ), we define integral transformations:",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "<!-- Start of picture text -->\nQ ( x ,  y , t ;  u ) = � W Q ( ·,  y , t ) , u ( x , ·, t )�Ω y = �Ω y W Q ( ξ,  y , t ) u ( x , ξ, t ) dξ, (3)<br>K ( x ,  y , t ;  u ) = � W K ( ·,  y , t ) , u ( x , ·, t )�Ω y = �Ω y W K ( ξ,  y , t ) u ( x , ξ, t ) dξ, (4)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "<!-- Start of picture text -->\nV  ( x ,  y , t ;  u ) = � W V ( ·,  y , t ) , u ( x , ·, t )�Ω y = �Ω y W V ( ξ,  y , t ) u ( x , ξ, t ) dξ. (5)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "Here and later, we use _⟨·, ·⟩_ Ω _y_ to denote _L_<sup>2</sup> inner product on a given domain Ω _y_ . Its induced norm will be denoted by _∥·∥_ Ω _y_ . Functions _Q_ and _K_ will be used to generate attention scores, and _V_ is used to extract features from _u_ . When all these functions are discretized over a pixel-type grid over Ω _x ×_ Ω _y_ , the discrete counterparts of these functions are represented by matrices and the discrete counterparts of the integral transformations are just standard matrix multiplications, see Section 3.4, especially formula (35). We compute the attention score by",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "<!-- Start of picture text -->\n1<br>γ ( x ,  � x , t ;  u ) = Softmax2 Q ( x , ·, t ;  u ) , K ( x � , ·, t ;  u ) , (6)<br>� � | Ω y| � �Ω y �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "where _γ_ ( **x** _,_ � **x** _, t_ ) is defined on Ω _x ×_ Ω _x ×_ [0 _, T_ ], Softmax2 represents the softmax function along the second dimension defined as:",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "<!-- Start of picture text -->\nexp( a ( x ,  � x , t ))<br>Softmax2( a ( x ,  � x , t )) =<br>�Ω x exp( a ( x , η, t )) dη.<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.3 Integral Transformations for Attention and Feature Extraction",
+        "page": 6,
+        "text": "The output of the attention layer is then obtained by taking the inner product of the attention score _γ_ and the feature _V_ : _γ_ ( **x** _, ·, t_ ; _u_ ) _, V_ ( _·,_ **y** _, t_ ; _u_ ) � �Ω _x_<sup>_._We emphasize that the first two integral</sup> transformations in (3)–(4) are used to generate the attention score _γ_ ( **x** _,_ � **x** _, t_ ; _u_ ) and the last integral transformation (5) will be used for feature extractions. All three integral kernels will be learned during training, see explanations later in this section.",
+        "kind": "text"
+      },
+      {
+        "section": "2.4 Mathematical formulations for the Layer Normalization",
+        "page": 6,
+        "text": "## **2.4 Mathematical formulations for the Layer Normalization**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.4 Mathematical formulations for the Layer Normalization",
+        "page": 6,
+        "text": "The layer normalization [3] in the Transformer [52] and also many other neural networks [66, 63, 57, 9] can be mathematically described as a projection of a function to a set with given mean value _σ_ 1 and variance _σ_ 2<sup>2.Definesets</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.4 Mathematical formulations for the Layer Normalization",
+        "page": 6,
+        "text": "<!-- Start of picture text -->\n1<br>S 1( σ 1 , σ 2) = u  : u ( x , ξ, t ) dξ =  σ 1 ,<br>� | Ω y| �Ω y<br>1<br>( u ( x , ξ, t )  − σ 1) 2 dξ =  σ 2 2 , (7)<br>| Ω y| �Ω y �<br>S 2 =  {u  :  u ≥ 0 }, (8)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.4 Mathematical formulations for the Layer Normalization",
+        "page": 6,
+        "text": "and their corresponding indicator functions",
+        "kind": "text"
+      },
+      {
+        "section": "2.4 Mathematical formulations for the Layer Normalization",
+        "page": 6,
+        "text": "<!-- Start of picture text -->\n0 if u ∈ S 1 , 0 if u ∈ S 2 ,<br>IS 1( σ 1 ,σ 2)( u ) = IS 2( u ) = (9)<br>�+ ∞ otherwise, �+ ∞ otherwise.<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.4 Mathematical formulations for the Layer Normalization",
+        "page": 6,
+        "text": "Later, we shall show that layer normalization is just a projection of a function into the set _S_ 1( _σ_ 1 _, σ_ 2), see Section 3.3.2 and the ReLU activation function is just a projection of a function to the set _S_ 2, see Section 3.3.3.",
+        "kind": "text"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "## **2.5 Our continuous Transformer**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "In addition to the control variables _W_<sup>_Q_</sup> ( **y** _,_ � **y** _, t_ ), _W_<sup>_K_</sup> ( **y** _,_ � **y** _, t_ ), _W_<sup>_V_</sup> ( **y** _,_ � **y** _, t_ ), let us also introduce control variables _{Wj_ ( **y** � _,_ **y** _, t_ ) _}_<sup>_J_</sup> _j_ =1<sup>on Ω</sup><sup>_y ×_Ω</sup><sup>_y ×_[0</sup><sup>_, T_],and</sup><sup>_b_(</sup><sup>**x**</sup><sup>_, t_)</sup><sup>_, bj_(</sup><sup>**x**</sup><sup>_, t_) on Ω</sup><sup>_x ×_[0</sup><sup>_, T_].We call</sup> the following continuous integral equation a **Continuous Transformer** :",
+        "kind": "text"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\n<br> ut = �� γ ( x , ·, t ;  u ) , �� V  ( ·,  y , t ;  u )�Ω x � + � ∂IS 1( σ 1(� t )� ,σ 2( t ))( u �)<br> I: attention II: layer normalization<br> J<br> + � j =1 �� Wj ( ·,  y , t ) , u ( x , ·, t )�Ω y +  bj ( x , t ) � +  ∂IS 2( u ) , t ∈ (0 , T ] , (10)<br> � �� �<br><br><br> III: fully connected network<br><br> u ( x ,  y ,  0) =  f ( x ,  y ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "For simplicity and to align with common practice in Transformer implementations, we equip (10) with zero boundary conditions or periodic boundary conditions in both **x** and **y** . This is commonly used in LLMs and image processing applications.",
+        "kind": "text"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "We shall show in the rest of this paper that the Transformer proposed in [52] is just a discretization of this continuous Transformer. In (10), _f_ is some initial state, _T_ is a fixed time chosen by the user. Following conventions in the literature, we denote all the control variables as",
+        "kind": "text"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\nθ = � W Q ( x ,  y , t ) , W K ( x ,  y , t ) , W V ( x ,  y , t ) , {Wj ( x ,  y , t ) , bj ( x , t ) } J j =1 , σ 1( t ) , σ 2( t ) � . (11)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "The Continuous Transformer is the mapping:",
+        "kind": "text"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\nNθ :  f �→ u ( x ,  y , T ) . (12)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "In Section 3, we will discretize (10) by the operator-splitting method for the time variable and use a uniform grid for the spatial variables **x** _,_ **y** . After discretization, the continuous Transformer becomes the Transformer proposed in [52]. In relation to this equivalence, the operations in the right-hand side of (10) can be classified into three sets:",
+        "kind": "text"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "- Operations in Set I correspond to attentions in Transformers. It computes the attention score _γ_ ( **x** _,_ � **x** _, t_ ; _u_ ) and applies it to the extracted features in _V_ ( **x** _,_ **y** _, t_ ).",
+        "kind": "list-item"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "- Operations in Set II correspond to layer normalization. For each token location **x** , it requires function _u_ to have mean _σ_ 1 and variance _σ_ 2<sup>2along the</sup><sup>**y**direction.In other words,</sup> for each token, the corresponding series is expected to have mean _σ_ 1 and variance _σ_ 2<sup>2.</sup>",
+        "kind": "list-item"
+      },
+      {
+        "section": "2.5 Our continuous Transformer",
+        "page": 7,
+        "text": "- Operations in Set III correspond to feedforward networks with _J_ layers. The first component corresponds to linear layers, each of which contains one linear transformation _Wj_ and a bias _bj_ . The second component corresponds to activation functions. This term projects _u_ to _S_ 1, which can be realized by ReLU functions.",
+        "kind": "list-item"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 7,
+        "text": "## **2.6 The continuous control problem for learning**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 7,
+        "text": "Our objective is to optimize _θ_ so that given an input _f_ ( **x** _,_ **y** ), the control problem will drive _u_ ( **x** _,_ **y** _, T_ ) to a desired state _v_ . Specifically, given a dataset _{_ ( _ui, vi_ ) _}_<sup>_B_</sup> _i_ =1<sup>,where</sup><sup>_ui_istheinput</sup> and _vi_ is the target state, let _ℓ_ ( _·, ·_ ) be a loss function measuring the discrepancy between its arguments. Let _θ, Nθ_ be as defined in (11)–(12), the training process with the loss function _ℓ_ is in fact a process to optimize _θ_ for the following minimization problem:",
+        "kind": "text"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\nB<br>1<br>min θ B � ℓ ( Nθ ( ui ) , vi ) . (13)<br>i =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 8,
+        "text": "<!-- Start of picture text -->\n(a)<br>(b)<br>Input Attention Layer Feedforward Layer Output<br>Normalization Network Normalization<br><!-- End of picture text -->",
+        "kind": "picture"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 8,
+        "text": "Figure 1: (a) Illustration of the whole evolution. (b) Illustration of the discretized operatorsplitting scheme (16)–(21).",
+        "kind": "caption"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 8,
+        "text": "This is essentially an optimization problem constrained by an integral differential equation of the following form:",
+        "kind": "text"
+      },
+      {
+        "section": "2.6 The continuous control problem for learning",
+        "page": 8,
+        "text": "<!-- Start of picture text -->\nB<br>1<br>min θ B � ℓ ( wi, vi ) , under constraint wi =  Nθ ( ui ) solves the control problem (10) . (14)<br>i =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3 Discretizations of the Continuous Problem",
+        "page": 8,
+        "text": "# **3 Discretizations of the Continuous Problem**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3 Discretizations of the Continuous Problem",
+        "page": 8,
+        "text": "Following the idea of PottsMGNet [48], in this section, we use some proper operator-splitting methods to discretize the time variable for (10). For a review about operator splitting methods, please refer to [14, 15, 16]. Specifically, we discretize the temporal domain of (10) by sequential splitting, c.f. [16, Sec. 2.2]. The number of sequential splittings corresponds to the number of layers in Transformers. Spatial discretization for **x** and **y** will be discussed in Section 3.4. The discretization of **x** determines the number of tokens in the input, and the discretization of **y** determines the size of the embedding vector for each token.",
+        "kind": "text"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 8,
+        "text": "## **3.1 The overall time discretization**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 8,
+        "text": "Let _{t_<sup>_n_</sup> _}_<sup>_N_</sup> _n_ =0<sup>_t_be the set of time grids with time step ∆</sup><sup>_t_=</sup><sup>_T/Nt_.We denote the numerical solution</sup> of (13) at time _t_<sup>_n_</sup> by _u_<sup>_n_</sup> . We will design a numerical scheme to approximate _Nθ_ . Specifically, for each _t_<sup>_n_</sup> , we design a discrete propagator _N_<sup>¯</sup><sup>_n_</sup> propagating _u_<sup>_n−_1</sup> to _u_<sup>_n_</sup> . Then, problem (10) is numerically approximated by",
+        "kind": "text"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 8,
+        "text": "<!-- Start of picture text -->\nu ( t Nt )  ≈ u Nt = N ¯ Nt ◦ N ¯ Nt− 1 ◦· · · ◦ N ¯ 1 ( f ) ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 8,
+        "text": "see Figure 1(a) for an illustration.",
+        "kind": "text"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 8,
+        "text": "In each _N_<sup>¯</sup><sup>_n_</sup> , time-discretized control variables _θ_ will be used. We denote the control variables _N_ used¯ _θ_<sup>_nn_to</sup> in<sup>denote</sup> _N_<sup>¯</sup><sup>_n_</sup> by<sup>the</sup> _θ_<sup>_n_</sup> .<sup>propagator</sup> To show the _N_<sup>¯</sup><sup>_n_</sup> dependence. From the offollowing _N_<sup>¯</sup><sup>_n_</sup> on subsections,the control variablec.f. §3.4 _θ_ ,<sup>_n_</sup> we, wewillwillseealsothatuse",
+        "kind": "text"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 8,
+        "text": "<!-- Start of picture text -->\nθ n =  {W Q,n− 1 , W K,n− 1 , W V,n− 1 , {Wj n− 1 , b n j − 1 } J j =1 , σ 1 n− 1 , σ 2 n− 1 }.<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 9,
+        "text": "Denote all of the discretized variables by _θ_<sup>¯</sup> , i.e. _θ_<sup>¯</sup> = _{θ_<sup>_n_</sup> _}_<sup>_N_</sup> _n_ =1<sup>_t_.Thewholeevolutionprocedure</sup> from _f_ to _u_<sup>_Nt_</sup> by _N_<sup>¯</sup> _θ_ ¯, i,e, _N_<sup>¯</sup> _θ_ ¯ = _N_<sup>¯</sup> _θ_<sup>_NNtt◦_</sup> _N_<sup>¯</sup> _θ_<sup>_NNtt−−_11</sup><sup>_◦· · · ◦_</sup> _N_<sup>¯</sup> _θ_<sup>11.Givenadataset</sup><sup>_{_(</sup><sup>_ui, vi_)</sup><sup>_}_</sup> _i_<sup>_B_</sup> =1<sup>,thenthe</sup> discrete training problem is to solve the following constrained optimization problem:",
+        "kind": "text"
+      },
+      {
+        "section": "3.1 The overall time discretization",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nB<br>1<br>min θ ¯ B � ℓ ( N ¯ θ ¯( ui ) , vi ) . (15)<br>i =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "## **3.2 Time Discretizations by Operator Splitting Method**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "In _N_ ¯ _θ_<sup>_nn_</sup> the<sup>for</sup> following<sup>_n_= 2</sup><sup>_, ..., N_</sup> sections,<sup>_t_is exactly the same by replacing</sup> we illustrate our numerical<sup>_θ_1</sup> scheme<sup>by</sup><sup>_θn_.Our numerical scheme is designed</sup> for propagator _N_<sup>¯</sup> _θ_<sup>11.Propagator</sup> based on operator splitting methods. For simplicity, we take ∆ _t_ = 1. It is often used in data analysis and image processing literature and is equivalent to changing the network parameters properly. In the following, with a slight abuse of notation, we denote the time-discretized version of any time-dependent function _a_ ( _·, t_ ) by _a_<sup>_n_</sup> ( _·_ ) := _a_ ( _·, t_<sup>_n_</sup> ), where _t_<sup>_n_</sup> is the _n_ -th time step. Using the Lie scheme [16, Sec. 2.2] as explained in Appendix C, given _u_<sup>0</sup> = _f_ , we compute _u_<sup>1</sup> by _M_ = 4 + _J_ substeps:",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "**Substep 1** : Solve _u_<sup>1</sup><sup>_/M_</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nu 1 /M − u 0 = γ 0 ( x , · ;  u 0 ) , V 0 ( ·,  y ;  u 0 ) (16)<br>� �Ω x .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "**Substep 2** : Compute _u_<sup>2</sup><sup>_/M_</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nu 2 /M − u 1 /M =  ∂IS 1( σ 10 ,σ 2 0)( u 2 /M ) . (17)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "**Substep 2+j** : Compute _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> sequentially for _j_ = 1 _, ..., J −_ 1 from",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nu (2+ j ) /M − u (1+ j ) /M = � Wj 0( ·,  y ) , u (1+ j ) /M ( x , · ) �Ω y +  b j 0( x ) +  ∂IS 2 ( u (2+ j ) /M ) . (18)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "**Substep 2+J** : Compute _u_<sup>(2+</sup><sup>_J_)</sup><sup>_/M_</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nu (2+ J ) /M − u (1+ J ) /M = � Wj 0( ·,  y ) , u (1+ J ) /M ( x , · ) �Ω y +  b j 0( x ) . (19)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "**Substep 3+J** : Compute _u_<sup>(3+</sup><sup>_J_)</sup><sup>_/M_</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nu (3+ J ) /M = 1 2 ( u (2+ J ) /M +  u 2 /M ) . (20)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "**Substep 4+J** : Compute _u_<sup>1</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "<!-- Start of picture text -->\nu 1 − u (3+ J ) /M =  ∂IS 1( σ 10 ,σ 2 0)( u 1) . (21)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "Note that in (16)–(19) and (21), the left hand side _u_<sup>(</sup><sup>_k_+1)</sup><sup>_/M_</sup> _−u_<sup>_k/M_</sup> =<sup>_<u>u</u>_(</sup><sup>_k_+1)</sup><sup>_/M_</sup> ∆ _t_<sup>_−uk/M_</sup> with ∆ _t_ = 1 is the finite difference approximation of _ut_ .",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 9,
+        "text": "Substep 1 to Substep (4 + _J_ ) evolve _u_<sup>0</sup> to _u_<sup>1</sup> by sequentially passing it through all operators in (10), corresponding to all components in Transformer from input to output. Substep 1 corresponds to the attention layer and the skip connection. Substep 2 corresponds to layer normalization. Substep 3 to Substep (2 + _J_ ) correspond to the _J_ layers in the fully connected network. Substep 3 + _J_ corresponds to the skip connection after the fully connected network. The last substep corresponds to the final layer normalization. From here, we can already see that each substep in the Lie splitting scheme corresponds to one layer in the Transformer. In",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 10,
+        "text": "[52], it used _J_ = 2 and thus _M_ = 6. The different layers in the Transformer is just a sequential computation of the substep solutions:",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 10,
+        "text": "<!-- Start of picture text -->\nu 0 (input token)  �→ u 1 / 6 (attention)  �→ u 2 / 6 (normalization layer)<br>�→ u 3 / 6 and u 4 / 6 (fully connected layer with ReLU)<br>�→ u 5 / 6 (skip connection layer)  �→ u 1 (normalization layer) . (22)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 10,
+        "text": "**Remark 1.** _In scheme (16)–(21), substep (20) is a relaxation step and substep (17) and (21) repeat ∂IS_ 1( _σ_ 10<sup>_,σ_</sup> 2<sup>0)</sup><sup>_twice.Thesetwoarenumericaltechniquescommonlyusedtoimprovealgo-_</sup> _rithm stability and accuracy. For example, it is shown in [27] that applying relaxation technique (averaging step) to Runge-Kutta methods helps guarantee conservation or stability with respect to any inner-product norm. For another example, compared to Lie’s splitting, the Strang splitting intentionally repeat an operator twice which improves the accuracy from first order to second order [15]._",
+        "kind": "text"
+      },
+      {
+        "section": "3.2 Time Discretizations by Operator Splitting Method",
+        "page": 10,
+        "text": "**Remark 2.** _The Lie splitting scheme was used for three reasons: (1) The layer-by-layer structure of the Transformer naturally aligns with a sequential splitting approach, where each operator (attention, normalization, feedforward) is applied in a stepwise manner, mirroring the sequential flow of data through the encoder block. (2) Sequential splitting allows each substep to be mapped directly to a specific component of the Transformer. This enhances interpretability and facilitates the extension of the framework to variants such as Vision Transformers and Convolutional Transformers. (3) While parallel splitting could also be applied, they do not directly recover the standard Transformer’s serial layer composition. The sequential scheme is thus the most natural choice for reproducing the Transformer architecture._",
+        "kind": "text"
+      },
+      {
+        "section": "3.3 Solutions to Each Subproblem",
+        "page": 10,
+        "text": "## **3.3 Solutions to Each Subproblem**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.3 Solutions to Each Subproblem",
+        "page": 10,
+        "text": "In the following, we supply the details for the solution to each subproblem in the splitting scheme (16)–(21).",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.1 Solution to Subproblem (16)",
+        "page": 10,
+        "text": "### **3.3.1 Solution to Subproblem (16)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.3.1 Solution to Subproblem (16)",
+        "page": 10,
+        "text": "We have",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.1 Solution to Subproblem (16)",
+        "page": 10,
+        "text": "<!-- Start of picture text -->\n1<br>u 1 /M = u 0 + Softmax2 Q 0 ( x , · ;  u 0 ) , K 0 ( η, · ;  u 0 ; ) V 0 ( η,  y ;  u 0 ) dη. (23)<br>�Ω x � � | Ω y| � �Ω y �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.1 Solution to Subproblem (16)",
+        "page": 10,
+        "text": "This step is a continuous version of the attention layer in [52]. It looks simple and uses two integral transformations to get the attention score through a softmax operator. This score function has values between [0 _,_ 1] and it is multiplied with the _V_<sup>0</sup> ( _η,_ **y** ; _u_<sup>0</sup> ), which are the extracted features from the input data through another integral transformation.",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 10,
+        "text": "### **3.3.2 Solution to Subproblem (17) and (21)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 10,
+        "text": "For _u_<sup>2</sup><sup>_/M_</sup> and _u_<sup>1</sup> in problem (17) and (21), they are in the form of",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 10,
+        "text": "<!-- Start of picture text -->\nu − v =  ∂IS 1( σ 1 ,σ 2)( u ) (24)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 10,
+        "text": "for the given function _v_ ( **x** _,_ **y** ) and constants _σ_ 1 _, σ_ 2. It is easy to derive that the solution _u_ of (24) solves the following problem:",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 10,
+        "text": "<!-- Start of picture text -->\n1<br>u  = argmin 2 ∥u ¯  − v∥ Ω 2 y . (25)<br>u ¯ ∈S 1( σ 1 ,σ 2)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 10,
+        "text": "This shows that _u_ is a projection of _v_ to the set _S_ 1( _σ_ 1 _, σ_ 2). The following theorem gives a closed-form solution formula for _u_ :",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 11,
+        "text": "**Theorem 3.1.** _The solution to problem (25) is given as:_",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\nu ( x ,  y ) = v ( x , y )  − α ( x ) σ 2 +  σ 1 , (26)<br>� β ( x )<br>1 1<br>with α ( x ;  v ) = v ( x , ξ ) dξ, β ( x ;  v ) = ( v ( x , ξ )  − α ( x )) 2 dξ. (27)<br>| Ω y| �Ω y | Ω y| �Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 11,
+        "text": "Theorem 3.1 is proved in Appendix B. We remark that the expression (27) recovers the normalization layer in the continuous setting. According to Theorem 3.1, we see that the solutions _u_<sup>2</sup><sup>_/M_</sup> and _u_<sup>(4+</sup><sup>_J_)</sup><sup>_/M_</sup> are explicitly given as:",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.2 Solution to Subproblem (17) and (21)",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\nu 2 /M ( x ,  y ) = u 1 /M ( x , y )  − α ( x ;  u 1 /M ) σ 2 0 +  σ 1 0 , (28)<br>� β ( x ;  u 1 /M )<br>u 1 ( x ,  y ) = u (3+ J ) /M ( x , y )  − α ( x ;  u (3+ J ) /M ) σ 2 0 +  σ 1 0 . (29)<br>� β ( x ;  u (3+ J ) /M )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "### **3.3.3 Solution to Subproblem (18) and (19)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "Problem (18) is a semi-implicit equation for _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> . It can be solved exactly by the following sequential splitting",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\n<br>u ¯ (2+ j ) /M =  u (1+ j ) /M + � Wj 0( ·,  y ) , u (1+ j ) /M ( x , · ) �Ω y +  b j 0( x ) , (30)<br><br> u (2+ j ) /M − u ¯ (2+ j ) /M =  ∂IS 2( u (2+ j ) /M ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "The first equation in (30) is linear in _u_ ¯<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> , corresponding to a linear layer in a feed-forward network in continuous settings. The second equation solves",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\nu (2+ j ) /M = argmin |v − u ¯ (2+ j ) /M | 2 d y d x . (31)<br>v∈S 1 �Ω x �Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "It is easy to see that its solution can be computed point-wisely:",
+        "kind": "text"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\nu (2+ j ) /M = max {u ¯ (2+ j ) /M ,  0 }  = ReLU(¯ u (2+ j ) /M ) , (32)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.3.3 Solution to Subproblem (18) and (19)",
+        "page": 11,
+        "text": "which corresponds ReLU activation. As a result, Substep 2+ _j_ for _j_ = 1 _, ..., J −_ 1 is a feedforward network layer activated by ReLU. Similarly, Substep 2 + _J_ in (19) is just a linear feedforward layer.",
+        "kind": "text"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 11,
+        "text": "## **3.4 Spatial Discretizations**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 11,
+        "text": "In this subsection, we discretize the solution discussed in Section 3.3 spatially. We will show that after spatial discretizations, the splitting scheme (16)–(21) exactly recovers the Transformer architecture in [52].",
+        "kind": "text"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 11,
+        "text": "Suppose Ω _x_ = [0 _, Lx_ ] _,_ Ω _y_ = [0 _, Ly_ ]. We uniformly discretize Ω _x,_ Ω _y_ by _Nx_ and _Ny_ grids in the **x** and **y** coordinates, respectively. For simplicity, we suppose _Lx_ = _Nx, Ly_ = _Ny_ , leading to discretization steps ∆ _x_ = _Lx/Nx_ = 1 _,_ ∆ _y_ = _Ly/Ny_ = 1, and the grids by **x** _k_ = _k,_ **y** _k_ = _k_ . We use **1** _m_ to denote an _m_ -dimensional vector with elements 1. For a matrix **W** _∈_ R<sup>_Nx×Ny_</sup> and a vector **_b_** _∈_ R<sup>_Nx_</sup> , the matrix **z** = ( **W** + **_b_** ) _∈_ R<sup>_Nx×Ny_</sup> is computed so that",
+        "kind": "text"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\nz k,l =  Wk,l  +  bk.<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 11,
+        "text": "This is an easy notation to add a vector to a matrix in the discrete setting. With the spatial discretizations above, we define the discrete integrals (sum) as",
+        "kind": "text"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 11,
+        "text": "<!-- Start of picture text -->\nNx Nx Ny<br>fd x  = � fk, f ( x ,  y ) d x d y  = � � fk,l. (33)<br>�¯Ω x k =1 �¯Ω x �¯Ω y k =1 l =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 12,
+        "text": "For any functions _v_ ( **x** ) _, w_ ( **x** ) defined on Ω _x_ , denote their discrete counterpart by **v** _,_ **w** . We denote the discretized inner product between **v** and **w** as",
+        "kind": "text"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nNx<br>� v ,  w �¯Ω x =  v ⊤ w  = � vkwk. (34)<br>k =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4 Spatial Discretizations",
+        "page": 12,
+        "text": "The discretized integrals and inner products _⟨·, ·⟩_ ¯Ω _y_ and _⟨·, ·⟩_ ¯Ω _x×_ ¯Ω _y_ are defined similarly.",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "### **3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "Before we discretize the formula (23), we first discretize some related quantities and operations. To compute the attention scores, we discretize the integral transformations as follows:",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nQ 0 ( u 0 ) =  u 0 W Q, 0 , K 0 ( u 0 ) =  u 0 W K, 0 , V 0 ( u 0 ) =  u 0 W V, 0 . (35)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "Here, **u**<sup>0</sup> is in R<sup>_Nx×Ny_</sup> and **W**<sup>_Q,_0</sup> _,_ **V**<sup>_Q,_0</sup> _,_ **K**<sup>_Q,_0</sup> are in R<sup>_Ny×Ny_</sup> , and the expressions such as **u**<sup>0</sup> **W**<sup>_Q,_0</sup> represent standard matrix multiplications that yield new matrices in R<sup>_Nx×Ny_</sup> . We emphasize that the multiplication used here is the conventional matrix product. For **A** = _{ak,l}k,l ∈_ R<sup>_Nx×Nx_</sup> , the discretized version of Softmax2( **A** ) is given as",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nexp( ak,l )<br>(Softmax2 , dis( A )) k,l = . (36)<br>� Nl =1 x exp( ak,l )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "Then the updating formula (23) for _u_<sup>1</sup><sup>_/M_</sup> in the discrete setting is",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nu 1 /M =  u 0 + Softmax2 , dis � Q 0 ( u 0 )( K 0 ( u 0 )) ⊤ � V 0 ( u 0 ) . (37)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.1 Computing the Discrete Solutions** _u_<sup>1</sup><sup>_/M_</sup> **in (23)",
+        "page": 12,
+        "text": "We emphasis again that this is exactly the attention layer in [52]. This is just a compact mathematical expression for it. All the matrices **W**<sup>_Q,_0</sup> _,_ **V**<sup>_Q,_0</sup> _,_ **K**<sup>_Q,_0</sup> will be learned in the training process.",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "### **3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "In Theorem 3.1, for any **v** = _{vk,l}k,l ∈_ R<sup>_Nx×Ny_</sup> , we discretize _α_ ( **x** ) and _β_ ( **x** ) as",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nNy<br>αk ( v ) = 1 � vk,l, βk ( v ) = 1 �( vk,l − αk ( v )) 2 (38)<br>Ly l =1 Ly l<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "for _k_ = 1 _, ..., Nx_ . Then we compute the discrete solutions _u_<sup>2</sup><sup>_/M_</sup> and _u_<sup>1</sup> as",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nu 2 k,l /M =  σ 2 0 u 1 k /M ,l � β−k ( α u k 1 ( /M u 1 ) /M ) +  σ 1 0 , (39)<br>u 1 k,l =  σ 2 0 u (3+ k,l J ) /M − αk ( u (3+ J ) /M ) +  σ 1 0 , (40)<br>� βk ( u (3+ J ) /M )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "for _k_ = 1 _, ..., Nx_ and _l_ = 1 _, ..., Ny_ .",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "**3.4.3 Computing the Discrete Solutions** _u_<sup>(3+</sup><sup>_J_)</sup><sup>_/M_</sup> **in (20)** For _u_<sup>(3+</sup><sup>_J_)</sup><sup>_/M_</sup> , its discrete analogue is computed as",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.2 Computing the Discrete Solutions** _u_<sup>2</sup><sup>_/M_</sup> **and** _u_<sup>1</sup> **in (24)",
+        "page": 12,
+        "text": "<!-- Start of picture text -->\nu (3+ J ) /M = 1 2 ( u (2+ J ) /M +  u 2 /M ) . (41)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)",
+        "page": 13,
+        "text": "### **3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)",
+        "page": 13,
+        "text": "In (30), we first compute",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)",
+        "page": 13,
+        "text": "<!-- Start of picture text -->\nu ¯ (2+ j ) /M =  u (1+ j ) /M +  u (1+ j ) /M W j 0 +  b j 0 , (42)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)",
+        "page": 13,
+        "text": "and then update",
+        "kind": "text"
+      },
+      {
+        "section": "3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)",
+        "page": 13,
+        "text": "<!-- Start of picture text -->\nu (2+ j ) /M = ReLU(¯ u (2+ j ) /M ) . (43)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "3.4.4 Computing the Discrete Solutions** _u_<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> **in (30)",
+        "page": 13,
+        "text": "The structure of the discretized scheme (16)–(21) is illustrated in Figure 1(b), and it exactly recovers the well-known Transformer architecture introduced in [52], see the next section for detailed explanations.",
+        "kind": "text"
+      },
+      {
+        "section": "4 Mathematical Explanations of Transformers",
+        "page": 13,
+        "text": "# **4 Mathematical Explanations of Transformers**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "## **4.1 Connections to Transformer Encoder in [52]**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "Transformer architecture was first proposed in [52] for natural language processing. After time and spatial discretization, our splitting scheme recovers the well-known Transformer with singlehead attention in [52]. We supply the details of the explanations in the following. Let us first show that one iteration **u**<sup>0</sup> _→_ **u**<sup>1</sup> realizes one Transformer block:",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "- Input **u**<sup>0</sup> : With our discretization, **u**<sup>0</sup> _∈_ R<sup>_Nx×Ny_</sup> . It is an input with _Nx_ tokens. Each token is represented as a vector with _Ny_ numbers.",
+        "kind": "list-item"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "- Scaled dot-product attention: Equation (37) is a single head attention with a skip connection. The second term in the right-hand side of (37) is a single-head attention with query matrix **Q**<sup>0</sup> , key matrix **K**<sup>0</sup> and value matrix **V**<sup>0</sup> , whose weight matrices are **W**<sup>_Q,_0</sup> _,_ **W**<sup>_K,_0</sup> and **W**<sup>_V,_0</sup> , respectively. It recovers the single-head attention in [52]. The first term in the right-hand side is a skip connection, adding together the input and output of attention.",
+        "kind": "list-item"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "- Layer normalization: Equation (39)–(40) perform layer normalization. For each token, (39)–(40) normalize the input along the embedding direction to have mean _σ_ 1 and variance _σ_ 2<sup>2.</sup>",
+        "kind": "list-item"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "- Position-wise feedforward network: Equation (42)–(43) realizes a feedforward network with _J_ layers activated by ReLU. In particular, (42) can be rewritten as",
+        "kind": "list-item"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "**u** ¯<sup>(2+</sup><sup>_j_)</sup><sup>_/M_</sup> = **u**<sup>(1+</sup><sup>_j_)</sup><sup>_/M_</sup> ( **I** + **W** _j_<sup>0) +</sup><sup>**_b_**0</sup> _j_<sup>_,_</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "where **I** denotes the identity matrix. It is a linear layer with weight matrix ( **I** + **W** _j_<sup>0)and</sup> bias **_b_**<sup>0</sup> _j_<sup>.Set</sup><sup>_J_= 2.Equation(42)–(43)recoversthefeedforwardnetworkin[52].</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "- Skip connection: Equation (41) is a relaxation step in the splitting scheme. It realizes the skip connection by averaging the input and output of the feedforward network.",
+        "kind": "list-item"
+      },
+      {
+        "section": "4.1 Connections to Transformer Encoder in [52]",
+        "page": 13,
+        "text": "The discussion above shows that one time step of the splitting scheme supplied in Section 3.2 realizes the Transformer of [52]. In Section 3.2, the time domain is discretized into _Nt_ time steps. Thus, the whole operator-splitting scheme is equivalent to compositions of _Nt_ Transformer blocks. Since the learnable variables _θ_<sup>_n_</sup> = _{_ **W**<sup>_Q,n_</sup> _,_ **W**<sup>_K,n_</sup> _,_ **W**<sup>_V,n_</sup> _, {_ **W** _j_<sup>_n,_</sup><sup>**_b_**</sup><sup>_n_</sup> _j_<sup>_}J_</sup> _j_ =1<sup>_}_depends on time,</sup> they are different for different time steps. Setting _Nt_ = 6 recovers the architecture in [52]. Furthermore, solving (15) for the control variables is equivalent to training the network.",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "## **4.2 Connections to ViT in [10]**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "Based on the Transformer encoder in [52], vision Transformer (ViT) was proposed in [10] for image classification. In ViT, each image is cropped into patches, each of which is taken as a token. ViT has a similar architecture as the Transformer encoder in [52], except that it has an additional input embedding layer with learnable parameters, and a linear layer at the end for output.",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "In order to use (16)–(21) to provide a mathematical explanation of ViT, we need to incorporate the additional embedding layer and last linear layer with our algorithm. It can be easily done by introducing data-driven data pre-processing and post-processing steps. For the additional input embedding, we design a pre-processing step to generate the initial condition _f_ . Consider the discrete setting. Denote **R** _∈_ R<sup>(</sup><sup>_Nx−_1)</sup><sup>_×D_</sup> as the collection of ( _Nx −_ 1) patches of an image, where each row of **R** corresponds to one flattened patch of dimension _D_ . Let **E** _∈_ R<sup>_D×Ny_</sup> be an embedding matrix and **v** 0 _∈_ R<sup>1</sup><sup>_×Ny_</sup> be a vector where both are learnable. The vector **v** 0 represents the extra learnable embedding. We generate **u** 0 as",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "<!-- Start of picture text -->\nu 0 =  F ( R ) = . (44)<br>RE<br>� v 0 �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "The last linear layer in ViT can be taken as a data post-processing. For any **u** _∈_ R<sup>_Nx×Ny_</sup> and weight matrix **B** _∈_ R<sup>_Ny×d_</sup> , define",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "<!-- Start of picture text -->\nG ( B ;  u ) = �1 0 1 × ( Nx− 1)� uB , (45)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "where **0** 1 _×_ ( _Nx−_ 1) is a zero vector of size ( _Nx −_ 1). Let _θ,_<sup>¯</sup> _N_<sup>¯</sup> be defined as in Section 3.1. We denote",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "<!-- Start of picture text -->\nθ � =  {θ, ¯  v 0 ,  E ,  B }<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "as the collection of all learnable parameters. With the data pre- and post-processing, we define the whole operation",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "<!-- Start of picture text -->\nN ¯ θ � ViT =  G ◦ N ¯ ◦ F. (46)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "One can readily check that _N_<sup>¯</sup> _θ_ �<sup>ViT</sup> recovers the ViT in [10]. Given a dataset _{_ ( **u** _i,_ **v** _i_ ) _}_<sup>_B_</sup> _i_ =1<sup>,we</sup> learn all parameters by solving",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "<!-- Start of picture text -->\nB<br>1<br>min θ � B � ℓ ( N ¯ θ � ViT ( u i ) ,  v i ) , (47)<br>i =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.2 Connections to ViT in [10]",
+        "page": 14,
+        "text": "which is equivalent to training a ViT.",
+        "kind": "text"
+      },
+      {
+        "section": "5 Multi-Head Attention",
+        "page": 14,
+        "text": "# **5 Multi-Head Attention**",
+        "kind": "section-header"
+      },
+      {
+        "section": "5 Multi-Head Attention",
+        "page": 14,
+        "text": "As discussed in Section 4, the proposed splitting scheme for problem (10) is the Transformer architecture with one-head attention. In this section, we extend (10) and splitting scheme (16)– (21) so that it realizes multi-head attention.",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 14,
+        "text": "## **5.1 Control Problem with Continuous Head Dimension**",
+        "kind": "section-header"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 14,
+        "text": "We first consider a continuous-head setting. After discretizations, we will show that it recovers multi-head attention. In the continuous-head setting, we take head as an additional dimension. To accommodate the new dimension, we update the definition of _W_<sup>_Q_</sup> _, W_<sup>_K_</sup> _, W_<sup>_V_</sup> to",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "_W_<sup>_Q_</sup> ( **y** _,_ � **y** _, h, t_ ) _, W_<sup>_K_</sup> ( **y** _,_ � **y** _, h, t_ ) _, W_<sup>_V_</sup> ( **y** _,_ � **y** _, h, t_ ) on Ω _y ×_ Ω _y ×_ Ω _h ×_ [0 _,_ + _∞_ ), where _h_ is the variable for the head dimension with domain Ω _h_ . Similar to (3)–(5), we define",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "<!-- Start of picture text -->\nQ ( x ,  y , h, t ;  u ) = � W Q ( ·,  y , h, t ) , u ( x , ·, t )�Ω y ,<br>K ( x ,  y , h, t ;  u ) = � W K ( ·,  y , h, t ) , u ( x , ·, t )�Ω y ,<br>V  ( x ,  y , h, t ;  u ) = W V ( ·,  y , h, t ) , u ( x , ·, t ) (48)<br>� �Ω y .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "We update _γ_ ( **x** _,_ � **x** _, t_ ; _u_ ) in (6) to",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "<!-- Start of picture text -->\n1<br>γ ( x ,  � x , h, t ;  u ) = Softmax2 Q ( x , ·, h, t ;  u ) , K ( x � , ·, h, t ;  u ) . (49)<br>� � | Ω y| � �Ω y �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "The control problem (10) is updated to",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "<!-- Start of picture text -->\n<br> ut = ��Ω h � γ ( x , ·, h, t ;  u ) , �� V  ( ·,  y , h, t ;  u )�Ω x dh � + II: layer� ∂IS 1normalization( σ �1� ,σ 2)( u �)<br> I-a: attention<br> J<br> + � �� Wj ( ·,  y , t ) , u ( x , ·, t )�Ω y +  bj ( x , t ) � +  ∂IS 2( u ) for t ∈ (0 , T ] , (50)<br> � j =1 �� �<br><br><br> III: fully connected network<br><br> u ( x ,  y ,  0) =  f ( x ,  y ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "Compared to (10), problem (50) replaces I by I-a, which introduces an additional integral with respect to _h_ .",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "**5.2 Time Discretizations Through Operator-Splitting Method**",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "The time discretizations and operator-splitting scheme for problem (50) are the same as those for problem (10) except that we update Substep 1 to",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "<!-- Start of picture text -->\nu 1 /M − u 0 = γ 0 ( x , ·, h ;  u 0 ) , V 0 ( ·,  y , h ;  u 0 ) (51)<br>�Ω h � �Ω x dh,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "whose solution is given as",
+        "kind": "text"
+      },
+      {
+        "section": "5.1 Control Problem with Continuous Head Dimension",
+        "page": 15,
+        "text": "<!-- Start of picture text -->\nu 1 /M =<br>1<br>u 0 + Softmax2 Q 0 ( x , ·, h ;  u 0 ) , K 0 ( η, ·, h ;  u 0 ; ) V 0 ( η,  y , h ;  u 0 ) dηdh. (52)<br>�Ω h �Ω x � � | Ω y| � �Ω y �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 15,
+        "text": "## **5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)**",
+        "kind": "section-header"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 15,
+        "text": "Suppose Ω _h_ = [0 _, Lh_ ]. In addition to the spatial discretization discussed in Section 3.4, we discretize the head domain into _Nh_ grids. For simplicity, we suppose _Lh_ = _Nh_ . For function _W_<sup>_K,_0</sup> ( **y** _,_ � **y** _, h_ ), we denote _Wk,l,m_<sup>_Q,_0=</sup><sup>_W Q,_0(</sup><sup>_k, l, m_)</sup><sup>_,_</sup><sup>**W**</sup> _m_<sup>_Q,_0</sup> = _{Wk,l,m_<sup>_Q,_0</sup><sup>_}k,l∈_R</sup><sup>_Ny×Ny_</sup> and **W**<sup>_Q,_0</sup> = _{_ **W** _m_<sup>_Q,_0</sup><sup>_}_</sup> _m_<sup>_∈_R</sup><sup>_Ny×Ny×Nh_.Wedefine</sup><sup>**W**</sup><sup>_K,_0</sup><sup>_,_</sup><sup>**W**</sup><sup>_V,_0similarly.Wedenotethedis-</sup> cretized integral transformation in the updated attention score as",
+        "kind": "text"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 15,
+        "text": "<!-- Start of picture text -->\nQ 0 m ( u 0) =  u 0 W m Q, 0 , K 0 m ( u 0) =  u 0 W m K, 0 , V m n ( u 0) =  u 0 W m V, 0 ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 16,
+        "text": "and denote **Q**<sup>0</sup> ( **u** ) = _{_ **Q**<sup>0</sup> _m_<sup>(</sup><sup>**u**0)</sup><sup>_}m,_</sup><sup>**K**0(</sup><sup>**u**0) =</sup><sup>_{_</sup><sup>**K**0</sup> _m_<sup>(</sup><sup>**u**0)</sup><sup>_}m,_</sup><sup>**V**0(</sup><sup>**u**0) =</sup><sup>_{_</sup><sup>**V**</sup> _m_<sup>0(</sup><sup>**u**0)</sup><sup>_}m∈_R</sup><sup>_Nx×Ny×Nh_.</sup> The inner product _Q_<sup>0</sup> ( **x** _, ·, h_ ; _u_<sup>0</sup> ) _, K_<sup>0</sup> ( **x** � _, ·, h_ ; _u_<sup>0</sup> ) � �Ω _y_<sup>isdiscretizedas</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 16,
+        "text": "<!-- Start of picture text -->\n� Q 0 m ( u 0) ,  K m 0 ( u 0) �¯Ω y =  Q m 0 ( u 0)( K m 0 ( u 0)) ⊤. (53)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 16,
+        "text": "Then the updating formula (52) for _u_<sup>1</sup><sup>_/M_</sup> is discretized as",
+        "kind": "text"
+      },
+      {
+        "section": "5.3 Discrete Solutions of** _u_<sup>1</sup><sup>_/M_</sup> **in (52)",
+        "page": 16,
+        "text": "<!-- Start of picture text -->\nNh<br>1<br>u 1 /M =  u 0 + � Softmax2 , dis Q 0 m ( u 0)( K m 0 ( u 0)) ⊤ V m 0 ( u 0) . (54)<br>m =1 � √ Lx �<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "5.4 Connections to Transformers",
+        "page": 16,
+        "text": "## **5.4 Connections to Transformers**",
+        "kind": "section-header"
+      },
+      {
+        "section": "5.4 Connections to Transformers",
+        "page": 16,
+        "text": "Similar to the discussion in Section 4, with (54), the operator-splitting scheme for the control problem (50) realizes _Nt_ times encoder in [52] with multi-head attention. To show this, we only need to demonstrate the equivalence between (54) and the multi-head attention.",
+        "kind": "text"
+      },
+      {
+        "section": "5.4 Connections to Transformers",
+        "page": 16,
+        "text": "The second term in the right-hand side of (54) sums over the embedding dimension and head dimension. It is a multi-head attention with _Nh_ heads, query matrix **Q**<sup>0</sup> , key matrix **K**<sup>0</sup> and value matrix **V**<sup>0</sup> , whose weight matrices are **W**<sup>_Q,_0</sup> _,_ **W**<sup>_K,_0</sup> and **W**<sup>_V,_0</sup> , respectively.",
+        "kind": "text"
+      },
+      {
+        "section": "6 Convolution Transformers for Video and Image Problems",
+        "page": 16,
+        "text": "# **6 Convolution Transformers for Video and Image Problems**",
+        "kind": "section-header"
+      },
+      {
+        "section": "6 Convolution Transformers for Video and Image Problems",
+        "page": 16,
+        "text": "Image and video data inherently possess rich local spatial structures, which have been effectively exploited by convolutional neural networks (CNNs) [43]. Convolutions serve as a powerful mechanism for capturing spatially localized patterns, making them especially well-suited for data defined on Cartesian grids.",
+        "kind": "text"
+      },
+      {
+        "section": "6 Convolution Transformers for Video and Image Problems",
+        "page": 16,
+        "text": "In contrast, Transformer architectures were originally developed for language processing, where the data—represented by functions such as _u_ ( **x** _,_ **y** _, t_ )—often lack explicit spatial structure, as in the case of sentences or token sequences. For such unstructured data, attention-based mechanisms leveraging general integral transforms offer a flexible and effective modeling tool.",
+        "kind": "text"
+      },
+      {
+        "section": "6 Convolution Transformers for Video and Image Problems",
+        "page": 16,
+        "text": "However, when applying Transformers to structured data such as images, videos, or other signals on regular grids, it has been shown that convolutional operations are significantly more efficient for feature extraction. This is due to their locality, weight sharing, and computational efficiency. Notably, convolutions can be interpreted as a special class of integral transformations with translation-invariant kernels and localized support.",
+        "kind": "text"
+      },
+      {
+        "section": "6 Convolution Transformers for Video and Image Problems",
+        "page": 16,
+        "text": "Thanks to the integral formulation of the _Q_ , _K_ , and _V_ operators in our framework (Sections 2–3), it becomes straightforward to specialize these operators to convolutions. This allows our model to seamlessly incorporate convolutional structures, thereby leveraging domain-specific inductive biases and enhancing computational performance when applied to grid-structured data.",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 16,
+        "text": "## **6.1 Convolution Transformers**",
+        "kind": "section-header"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 16,
+        "text": "We discuss the case for grayscale images. The framework can be extended to color images and videos by introducing additional variables to _u_ .",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 16,
+        "text": "We consider functions of interest _u_ ( _x,_ **y** _, t_ ) where _x ∈_ Ω _x ⊂_ R is the index of tokens (image patches), **y** _∈_ Ω _y ⊂_ R<sup>2</sup> are variables for spatial domain (indices of pixel location), and _t_ is the time. For each token and any fixed time _t_ , _u_ is a two-dimensional image.",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 16,
+        "text": "In this setting, we define _W_<sup>_Q_</sup> ( **y** _, t_ ) _, W_<sup>_K_</sup> ( **y** _, t_ ) _, W_<sup>_V_</sup> ( **y** _, t_ ) _∈_ Ω _y×_ [0 _,_ + _∞_ ) as convolution kernels.",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 17,
+        "text": "Operations _Q, K, V_ are defined by covolution as",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 17,
+        "text": "<!-- Start of picture text -->\nQ ( x,  y , t ;  u ) =  W Q ( ·, t )  ∗ u ( x, ·, t ) = W Q ( ξ , t ) u ( x,  y  − ξ , t ) d ξ ,<br>�Ω y<br>K ( x,  y , t ;  u ) =  W K ( ·, t )  ∗ u ( x, ·, t ) = W K ( ξ , t ) u ( x,  y  − ξ , t ) d ξ ,<br>�Ω y<br>V  ( x,  y , t ;  u ) =  W V ( ·, t )  ∗ u ( x, ·, t ) = W V ( ξ , t ) u ( xb,  y  − ξ , t ) d ξ . (55)<br>�Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 17,
+        "text": "The score function is computed as",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 17,
+        "text": "<!-- Start of picture text -->\n1<br>γ ( x,  � x, t ;  u ) = Softmax2 Q ( x,  ξ , t ;  u ) K ( x, �  ξ , t ;  u ) d ξ , (56)<br>� � | Ω y| �Ω y �<br>of the attention layer is then given by: γ ( x, ·, t ;  u ) , V  ( ·,  y , t ;  u )<br>� �Ω x .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 17,
+        "text": "and the output of the attention layer is then given by:",
+        "kind": "text"
+      },
+      {
+        "section": "6.1 Convolution Transformers",
+        "page": 17,
+        "text": "With the modification above, scheme (16)–(18) gives rise to convolutional Transformer. Solvers discussed in Section 3.3 can still be used to solve subproblems in the new scheme.",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "## **6.2 Connections to CvT in [56]**",
+        "kind": "section-header"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "Convolutional vision Transformer (CvT) [56] incorporates Vit with convolutional neural networks (CNN), which utilizes both image local spatial structures (by CNN) and global contexture (by Transformer). CvT consists of two components, convolutional token embedding and convolutional Transformer block. The convolution Transformer discussed in Section 6.1 realizes a one-head CvT with one stage and without convolutional token embedding.",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "In fact, the convolutional token embedding is an additional convolution layer. Our operatorsplitting scheme can be easily revised to accomodate this layer. Let _W_<sup>_C_</sup> ( **x** _,_ **y** _, t_ ) be a convolution kernel and _b_<sup>_C_</sup> ( **x** _, t_ ) be a bias term. We consider the following control problem",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "<!-- Start of picture text -->\n<br> ut = �� γ ( x , ·, t ;  u ) , �� V  ( ·,  y , t ;  u )�Ω x � +  ∂I � S 1( σ 1(� t )� ,σ 2( t ))( u �) +  W � C ( ·, t )  ∗ u ( x � , �  ·, t ) +  b C ( x , t �)<br> I: attention II: layer norml. IV: conv. token embedding<br> J<br> + � j =1 �� Wj ( ·,  y , t ) , u ( x , ·, t )�Ω y +  bj ( x , t ) � +  ∂IS 2( u ) , t ∈ (0 , T ] ,<br> � �� �<br><br><br> III: fully connected network<br><br> u ( x ,  y ,  0) =  f ( x ,  y ) ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "<!-- Start of picture text -->\n(57)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "where the score function _γ_ is computed as discussed in Section 6.1. For the operator-splitting scheme (16)–(18), we add two additional substeps before (16). Given _u_<sup>0</sup> , we compute _u_<sup>1</sup> by _M_ = 6 + _J_ substeps: **Substep 1** : Solve _u_ �<sup>1</sup><sup>_/M_</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "<!-- Start of picture text -->\nu 1 /M − u 0 =  W C, 0 ( · )  ∗ u 0 ( x , · ) +  b C, 0 ( x ) . (58)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "**Substep 2** : Compute _u_<sup>2</sup><sup>_/M_</sup> from",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "<!-- Start of picture text -->\nu 2 /M − u 1 /M =  ∂IS 1( σ 10 ,σ 2 0)( u 2 /M ) . (59)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 17,
+        "text": "The remaining intermediate variables _u_<sup>3</sup><sup>_/M_</sup> _, ..., u_<sup>1</sup> can be computed via (16)–(18), respectively. In spatial discretization, _Nx_ corresponds to the number of tokens, i.e., the number of convolution",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 18,
+        "text": "channels in CvT. Equipped with data pre- and post-processing as discussed in Section 4.2, the discretized new operator-splitting scheme recovers a one-head one-stage CvT.",
+        "kind": "text"
+      },
+      {
+        "section": "6.2 Connections to CvT in [56]",
+        "page": 18,
+        "text": "For a _K_ -stage CvT, the number of tokens changes from stage to stage. This property can be realized by incorporating the new operator-splitting scheme with a hybrid splitting scheme [48]. Specifically, we need to define _K_ convolution kernels and a bias for convolutional token embedding. Based on the multigrid idea, these kernels are discretized at different scales, corresponding to various numbers of tokens.",
+        "kind": "text"
+      },
+      {
+        "section": "7 Conclusion",
+        "page": 18,
+        "text": "# **7 Conclusion**",
+        "kind": "section-header"
+      },
+      {
+        "section": "7 Conclusion",
+        "page": 18,
+        "text": "In this paper, we have introduced a novel operator-theoretic framework that interprets the Transformer architecture as a discretized operator-splitting scheme for a continuous integro-differential equation. Within this formulation, core components of the Transformer—such as self-attention, layer normalization, and feedforward networks—are rigorously derived as substeps in a structured variational process and operator-splitting techniques. This approach establishes a unified mathematical foundation that applies broadly to Transformer-based models, including the original Transformer [52], Vision Transformer (ViT) [10], and Convolutional vision Transformer (CvT) [56]. By bridging deep learning architectures with continuous mathematical modeling, our framework advances theoretical understanding and offers a principled pathway for the design, analysis, and control of future neural architectures.",
+        "kind": "text"
+      },
+      {
+        "section": "7 Conclusion",
+        "page": 18,
+        "text": "Our continuous formulation offers a principled basis for deriving new architectures through alternative numerical discretization schemes, potentially leading to models with improved stability. It also enables the use of PDE theory to analyze Transformer properties such as stability, approximation power, and convergence. Furthermore, framing the network as an optimal control problem links deep learning to control theory, which may inspire new optimization algorithms and insights into training dynamics.",
+        "kind": "text"
+      },
+      {
+        "section": "7 Conclusion",
+        "page": 18,
+        "text": "Our framework currently considers ReLU activation in the feedforward layer and only focuses on the transformer block of [52]. Following this work, possible future directions include generalizing this framework to incorporate general activation functions, incorporation of discrete inductive biases such as positional encodings into the continuous formulation, and a more rigorous analysis of the well-posedness and regularity of the underlying integro-differential equation.",
+        "kind": "text"
+      },
+      {
+        "section": "7 Conclusion",
+        "page": 18,
+        "text": "We believe the continuous operator perspective introduced here not only deepens the theoretical understanding of Transformers but also provides a flexible and principled foundation for the next generation of attention-based models. By continuing to explore the intersection of continuous dynamical systems, operator splitting, and deep learning, we hope to further bridge the gap between applied architecture design and rigorous mathematical analysis.",
+        "kind": "text"
+      },
+      {
+        "section": "Appendix",
+        "page": 18,
+        "text": "# **Appendix**",
+        "kind": "section-header"
+      },
+      {
+        "section": "A Explanation of the variables for Transformers",
+        "page": 18,
+        "text": "# **A Explanation of the variables for Transformers**",
+        "kind": "section-header"
+      },
+      {
+        "section": "A Explanation of the variables for Transformers",
+        "page": 18,
+        "text": "The input to the Transformer model is usually a sequence. In the context of language processing, the input is usually sentences. Transformers do not process raw text directly. Instead, they break sentences into tokens. A token can be a word (e.g., \"hello\"), a subword (e.g., \"multi\" + \"grid\" = \"multigrid\"), or even a single character. Then, each different token is transformed into unique embedding vectors through an embedding layer. The way text is tokenized affects how efficiently a model understands language.",
+        "kind": "text"
+      },
+      {
+        "section": "A Explanation of the variables for Transformers",
+        "page": 18,
+        "text": "For example, we have an input sentence \"Life is like a boat\", and we treat each word as a token. The embedding layer would transform each token into a 512-dimensional vector. Then,",
+        "kind": "text"
+      },
+      {
+        "section": "A Explanation of the variables for Transformers",
+        "page": 19,
+        "text": "the input sentence is represented by a matrix _U_ of size 5 _×_ 512:",
+        "kind": "text"
+      },
+      {
+        "section": "A Explanation of the variables for Transformers",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\n Embedding(\"Life\") <br>Embedding(\"is\")<br>Life� is like�� a boat� → �[\"Life\",\"is\",\"like\",\"a\",\"boat\"�� �] → U = Embedding(\"like\") .<br>Input sentence Tokens Embedding(\"a\")<br>Embedding(\"boat\")<br>� �� �<br>Embedded matrix<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "A Explanation of the variables for Transformers",
+        "page": 19,
+        "text": "In general, a sentence of _Nx_ tokens with _Ny_ -dimensional embedding would be transformed into a matrix _U_ of size _Nx × Ny_ . This matrix _U_ can be viewed as the discretization of a continuous function _u_ ( **x** _,_ **y** _, t_ ) : Ω _x ×_ Ω _y →_ R _×_ [0 _, T_ ), where Ω _x_ and Ω _y_ are continuous domains, on a structured grid of size _Nx × Ny_ . Here, the variable **x** indicates the position of tokens, **y** indicates the entry of token vectors, and _t_ indicates the time variable. The embedded matrix _U_ is fed into the Transformer model and updated by attention layers.",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "# **B Proof of Theorem 3.1**",
+        "kind": "section-header"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "_Proof of Theorem 3.1._ Problem (25) can be rewritten as",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\n 1<br> u ( x ,  y ) = argmin u ¯ 2 ∥u ¯  − v∥ 2 Ω y ,<br> | Ω1 y| �Ω y u ( x , ξ ) dξ =  σ 1 , (60)<br> 1<br> | Ω y| �Ω y ( u ( x , ξ )  − σ 1)2 dξ =  σ 2 2 .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "Introducing Lagrange multipliers _λ_ 1 _, λ_ 2, the minimizers for the above problem satisfy:",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\n λ 1<br>( u − v ) + | Ω y| + | 2 Ω λ y 2 | ( u − σ 1) = 0 ,<br> | Ω1 y| �Ω y u ( x ,  y ) d y  =  σ 1 , (61)<br> 1<br> | Ω y| �Ω y ( u ( x ,  y )  − σ 1)2 d y  =  σ 2 2 .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "Integrate the first equation over **y** gives rise to",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\n0 = u ( x , ξ ) dξ − v ( x , ξ ) dξ  +  λ 1 =  | Ω y|σ 1  − v ( x , ξ ) dξ  +  λ 1 , (62)<br>�Ω y �Ω y �Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "implying that",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\nλ 1 = v ( x , ξ ) dξ −| Ω y|σ 1 . (63)<br>�Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "Multiplying the first equation in (61) by ( _u − σ_ 1) and then integrating over **y** give rise to",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\n( u ( x , ξ )  − v ( x , ξ ))( u ( x , ξ )  − σ 1) dξ  + 2 λ 2 σ 2 2 = 0 , (64)<br>�Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "from which we deduce",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "<!-- Start of picture text -->\n( u 2 ( x , ξ )  − u ( x , ξ ) σ 1) dξ − v ( x , ξ )( u ( x , ξ )  − σ 1) dξ  + 2 λ 2 σ 2 2 = 0 . (65)<br>�Ω y �Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 19,
+        "text": "Note that",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "<!-- Start of picture text -->\n( u 2 ( x , ξ )  − u ( x , ξ ) σ 1) dξ = ( u 2 ( x , ξ )  − 2 u ( x , ξ ) σ 1 +  σ 1 2) dξ<br>�Ω y �Ω y<br>= ( u ( x , ξ )  − σ 1) 2 dξ =  | Ω y|σ 2 2 . (66)<br>�Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "Substituting (66) into (65) gives",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "<!-- Start of picture text -->\n�Ω y v ( x , ξ )( u ( x , ξ )  − σ 1) dξ<br>λ 2 =  − | Ω y| + . (67)<br>2 2 σ 2<br>2<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "Substituting (63) and (67) into the first equation of (61), we get",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "We have",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "<!-- Start of picture text -->\n0 =( u − v ) + | Ω λ 1 y| + | 2 Ω λ y 2 | ( u − σ 1)<br>1 �Ω y v ( x , ξ )( u ( x , ξ )  − σ 1) dξ<br>=( u − v ) + v ( x , ξ ) dξ − σ 1 + − 1 + u<br>| Ω y| �Ω y � | Ω y|σ 2 2 �<br>− �Ω y v ( x , ξ )( u ( x , ξ )  − σ 1) dξ<br>− 1 + σ 1<br>� | Ω y|σ 2 2 �<br>= �Ω y v ( x , ξ )( u ( x , ξ )  − σ 1) dξ 1<br>( u − σ 1)  − v  + v ( x , ξ ) dξ. (68)<br>| Ω y|σ 2 2 | Ω y| �Ω y<br>�Ω y v ( x , ξ )( u ( x , ξ )  − σ 1) dξ 1<br>( u − σ 1) =  v − v ( x , ξ ) dξ. (69)<br>| Ω y|σ 2 2 | Ω y| �Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "Define _α_ ( **x** ) _, β_ ( **x** ) as in Theorem 3.1. We claim that the solution to (69) is given as",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "<!-- Start of picture text -->\nu  = v √  − β α σ 2 +  σ 1 . (70)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "To verify it, note that (70) can be rewritten as",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "<!-- Start of picture text -->\nu − σ 1 = v − α (71)<br>σ 2 √ β .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "Utilizing (71), we deduce",
+        "kind": "text"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 20,
+        "text": "<!-- Start of picture text -->\n�Ω y v ( x , ξ )( u ( x , ξ )  − σ 1) dξ<br>( u − σ 1)<br>| Ω y|σ 2 2<br>= 1 v ( x , ξ ) ( u ( x , ξ )  − σ 1) dξ u − σ 1<br>| Ω y| ��Ω y σ 2 � σ 2<br>= 1 v ( x , ξ ) ( v ( x , ξ )  − σ 1) dξ v − σ 1<br>| Ω y| ��Ω y √ β � √ β<br>1<br>=<br>[ v 2 ( x , ξ )  − 2 σ 1 v ( x , ξ ) +  σ 1 2] dξ ( v − σ 1)<br>| Ω y|β ��Ω y �<br>1<br>=<br>( v ( x , ξ )  − σ 1) 2 dξ ( v − σ 1)<br>| Ω y|β ��Ω y �<br>1<br>=<br>| Ω y|β ( | Ω y|β )( v − σ 1)<br>1<br>= v − v ( x , ξ ) dξ, (72)<br>| Ω y| �Ω y<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "B Proof of Theorem 3.1",
+        "page": 21,
+        "text": "where the second equality follows from (71). The derivation above verifies that (70) is the solution to (69).",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "# **C An Introduction to Operator Splitting Schemes**",
+        "kind": "section-header"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "Operator-splitting methods decompose a complicated time-evolution problem into several substeps so that each substep can be solved efficiently. Consider the evolution equation",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "<!-- Start of picture text -->\nut  + � K k =1 Ak ( t ;  u ) = 0 in Ω ×  (0 , T ] ,<br>(73)<br>� u (0) =  u 0 ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "where _Ak_ ( _t_ ; _u_ )’s are operators applied on _u_ . Denote _t_<sup>_n_</sup> = _n_ ∆ _t_ . Given _u_<sup>_n_</sup> , there are three types of splitting strategies to compute _u_<sup>_n_+1</sup> .",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "Sequential Lie scheme [16, Sec. 2.2] decomposes this computation into _K_ sequential substeps. Given _u_<sup>_n_</sup> , one computes _u_<sup>_n_+1</sup> as follows: For _k_ = 1 _, ..., K_ , solve",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "<!-- Start of picture text -->\nut  +  Ak ( t ;  u ) = 0 in Ω ×  ( t n , t n +1 ] ,<br>(74)<br>� u ( t n ) =  u n +( k− 1) /K ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "and set _u_<sup>_n_+</sup><sup>_k/K_</sup> = _u_ ( _t_<sup>_n_+1</sup> ).",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "Parallel splitting [37] decomposes the computation into _K_ parallel substeps: For _k_ = 1 _, ..., K_ , compute",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "<!-- Start of picture text -->\nvt  +  KAk ( t ;  v ) = 0 in Ω ×  ( t n , t n +1 ] ,<br>(75)<br>� v ( t n ) =  u n ,<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "and set _vk_ = _u_ ( _t_<sup>_n_+1</sup> ). Then compute",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "<!-- Start of picture text -->\nK<br>u n +1 = 1 vk.<br>K �<br>k =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "Hybrid splitting [48] is a combination of sequential and parallel splitting, which decomposes the computation into sequential substeps, each of which contains several parallel substeps. Substep (74) and (75) can be solved by one-step explicit or implicit scheme. For example, (74) can be solved by",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "<!-- Start of picture text -->\nu n + k/K − u n +( k− 1) /K +  Ak ( u n + k/K ) = 0 or un + k/K − un +( k− 1) /K +  Ak ( u n +( k− 1) /K ) = 0 .<br>∆ t ∆ t<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "Our scheme in Section 3.2 is a sequential splitting scheme, in which (16) uses explicit scheme, and (17) and (21) use implicit scheme. Substep (18) is semi-implicit, which is slightly different from others. In fact, (18) is a composition of two substeps, as it is solved by another sequential splitting (30). In (30), the first substep is explicit and the second one is implicit.",
+        "kind": "text"
+      },
+      {
+        "section": "C An Introduction to Operator Splitting Schemes",
+        "page": 21,
+        "text": "It can be shown that with proper conditions, all three strategies are first-order accurate schemes for the evolution equation.",
+        "kind": "text"
+      }
+    ],
+    "pages": 25,
+    "bibliography_removed": true,
+    "removed_artifact_lines": 26
+  }
+}

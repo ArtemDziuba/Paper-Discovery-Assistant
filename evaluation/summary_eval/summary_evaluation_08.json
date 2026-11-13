@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_08",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_01.json",
+  "source_sha256": "642d172796a1acfa9da2088727ab43f111e35788e56ff46641219206f1bd7312",
+  "query_index": 1,
+  "paper_index": 2,
+  "query_id": "contrastive-self-supervised-learning",
+  "query": "Contrastive self-supervised learning for visual representation",
+  "paper": {
+    "arxiv_id": "1911.05722",
+    "title": "Momentum Contrast for Unsupervised Visual Representation Learning",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "49bb3878aef5f6b48dacd58f9ff11dacbb3c06636ff66a70b180ece17e0ea82c",
+  "summarization": {
+    "status": "completed",
+    "summary": "Momentum Contrast (MoCo) advances unsupervised visual representation learning by decoupling dictionary size from batch size through a momentum-updated \"slow\" encoder and a queue of 65,536 negatives. Its core methodology employs Shuffling Batch Normalization to prevent intra-batch leakage, as low momentum ($m=0.9$) causes catastrophic failure (55.2% vs 68.6% top-1 accuracy on ImageNet-1M). While MoCo significantly boosts transfer learning performance on tasks like PASCAL VOC and dense pose estimation, it underperforms supervised baselines in instance segmentation and semantic segmentation due to reliance on FastAutoAugment rather than explicit labels. Although pre-training on larger datasets (ImageNet-1B) yields superior results across detection and fine-grained classification compared to ImageNet-1M, the paper documents small performance deltas between scales and task-specific failures. A critical limitation remains the dependence on specific backbone architectures and identical fine-tuning schedules, with future improvements suggested via masked auto-encoding rather than simple instance discrimination.",
+    "metadata": {
+      "arxiv_id": "1911.05722v3",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "ad31ea26ed2d9ba3e2f767a2dcb0961a5b70ff505b1c3fb18d07201140e4e1fe",
+      "pages": 12,
+      "chunks": 25,
+      "model_calls": 34,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 161.40304870007094,
+    "generated_at": "2026-11-11T08:53:20.042525+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.5,
+        "reason": "The momentum encoder, FIFO queue of 65,536 negatives, and shuffling batch normalization accurately describe MoCo, but several comparisons and explanations are incorrect. The 55.2% result for momentum m=0.9 comes from a ResNet-50 ablation with K=4096, while 68.6% is from a much wider ResNet-50 model in a different experiment; they are not matched comparison figures. The paper finds MoCo competitive or better than supervised pretraining on most detection/segmentation benchmarks, with specific exceptions (e.g. VOC semantic segmentation), not a broad deficit caused by FastAutoAugment; FastAutoAugment is associated with a supervised baseline. The larger pretraining set is IG-1B (Instagram), not ImageNet-1B. Masked auto-encoding is mentioned as a possible pretext task but not demonstrated as an empirically established improvement. These are consequential factual distortions.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "MoCo is directly about contrastive unsupervised visual representation learning. The summary correctly foregrounds its momentum encoder, dictionary queue, contrastive representation objective, and downstream visual transfer, all strongly relevant to the query.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "The principal architecture and an important ablation are discussed, as is transfer learning. However, the summary does not clearly explain the positive/negative dictionary look-up formulation, the need for a consistent dictionary, the 60.6% ResNet-50 linear-protocol baseline, or the accurate overall balance of performance on detection and segmentation; misleading limitations reduce useful coverage.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The prose is structured, readable, and uses the right technical terms. The m=0.9 versus 68.6% contrast, however, combines incompatible setups, and the broad segmentation claim obscures the actual findings.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The explanation is reasonably compact, but disproportionate space is spent on dubious comparisons and speculative limitations rather than directly explaining the contrastive dictionary formulation and key findings.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      }
+    },
+    "weighted_score": 0.745,
+    "weighted_score_10": 7.45,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_html",
+      "source_url": "https://arxiv.org/html/1911.05722",
+      "verified_sections": [
+        "§3 MoCo Method",
+        "§4.1 Momentum Ablation and Table 1",
+        "§4.2.3 and Table 6 Downstream Tasks",
+        "§5 Discussion"
+      ]
+    },
+    "supplemental_judge": {
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "framework": "chatgpt_manual_llm_judge",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "method": "Model judgment of missing criteria against public arXiv HTML full text; not a DeepEval execution",
+      "source_url": "https://arxiv.org/html/1911.05722",
+      "verified_sections": [
+        "§3 MoCo Method",
+        "§4.1 Momentum Ablation and Table 1",
+        "§4.2.3 and Table 6 Downstream Tasks",
+        "§5 Discussion"
+      ],
+      "evaluated_at": "2026-11-11T10:00:35.689426+00:00"
+    }
+  }
+}

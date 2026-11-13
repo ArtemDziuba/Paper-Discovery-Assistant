@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_21",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_05.json",
+  "source_sha256": "9b3362876977281ca47fe30a2c7e533fc35479d56d317c7b42f180978ab73b90",
+  "query_index": 5,
+  "paper_index": 3,
+  "query_id": "knowledge-graph-completion",
+  "query": "Knowledge graph completion and link prediction",
+  "paper": {
+    "arxiv_id": "1902.00898",
+    "title": "A Relational Tucker Decomposition for Multi-Relational Link Prediction",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "d204c96eaba82423dea5bd2314a9c4cad2f5a1448842ac5580f0fffd241866aa",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper proposes Relational Tucker Decomposition (RT) for multi-relational link prediction, generalizing bilinear models by decoupling entity and relation embedding sizes. The authors introduce Sparse RT (SRT), which learns sparsity patterns via $l_0$ regularization rather than relying on fixed constraints. Experiments on FB15K-237 and WN18RR indicate that performance is highly dataset-dependent; while SRT matched or exceeded ComplEx on FB15K-237 with data-driven sparsity, it underperformed relative to ComplEx on the simpler WN18RR dataset. A critical limitation is the significantly higher computational cost of RT training compared to ComplEx (approximately six times longer). Furthermore, no single model consistently dominates across all conditions, and the optimal approach varies based on entity embedding size and relation complexity. The study confirms that hard-coded sparsity is not universally necessary but remains beneficial for specific data characteristics, highlighting the absence of a universally superior method in knowledge graph completion tasks.",
+    "metadata": {
+      "arxiv_id": "1902.00898v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "6efcfea2dfc2b4925ab2b9ed924fa6d3bf6adfdf8a485635b00ccb8d4111c33e",
+      "pages": 12,
+      "chunks": 20,
+      "model_calls": 25,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 107.44784629996866,
+    "generated_at": "2026-11-11T09:19:06.136919+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Faithfully states RT as a generalization of bilinear knowledge-graph embedding models using decoupled entity/relation embedding sizes; SRT indeed uses an L0 regularizer to learn core-tensor sparsity patterns. Comparisons on FB15K-237 and WN18RR, ComplEx’s strength on WN18RR, absence of a single universally superior model, and approximately sixfold relative training cost are all supported by §§3–4. The result wording appropriately acknowledges dataset dependence. No material contradiction was identified.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses relational link prediction and knowledge graph completion with a pertinent tensor-factorization model and dataset comparisons.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Includes the main model idea, sparse-core learning, comparison with ComplEx on two standard KGC benchmarks, dataset-dependent outcomes and computational drawback. Could more explicitly describe the shared core tensor and the key dense RT (DRT) result: competitive or better performance without enforced sparsity under equal-parameter budgets.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Clear and logically sequenced from model idea to comparisons, limitation and implications. Terminology is appropriate for a research-paper search result.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Concise and relevant throughout, without noticeable repetition or extraneous details.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.98,
+    "weighted_score_10": 9.8,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://arxiv.org/html/1902.00898",
+      "verified_sections": [
+        "Abstract and §1 Motivation",
+        "§3 Relational Tucker and Sparse RT (L0 penalty)",
+        "§4.2 Comparison on FB15K-237 and WN18RR",
+        "§4.4 Computational Cost",
+        "§5 Conclusion"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/1902.00898",
+      "verified_sections": [
+        "Abstract and §1 Motivation",
+        "§3 Relational Tucker and Sparse RT (L0 penalty)",
+        "§4.2 Comparison on FB15K-237 and WN18RR",
+        "§4.4 Computational Cost",
+        "§5 Conclusion"
+      ]
+    }
+  }
+}

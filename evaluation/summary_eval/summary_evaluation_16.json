@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_16",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_04.json",
+  "source_sha256": "fe945ba36831fc0721dd63aa09cbc9ab698eba0858a1fc896989ada8435c5a30",
+  "query_index": 4,
+  "paper_index": 1,
+  "query_id": "neural-radiance-fields",
+  "query": "Neural radiance fields for 3D scene reconstruction",
+  "paper": {
+    "arxiv_id": "2305.00375",
+    "title": "Neural Radiance Fields (NeRFs): A Review and Some Recent Developments",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "2b21d3806c5f62cac6086f064720244b8a8000c6d9b55a091882082d2f696bfc",
+  "summarization": {
+    "status": "completed",
+    "summary": "This review synthesizes Neural Radiance Fields (NeRFs) as a method for implicit 3D scene reconstruction using MLPs that map 5D inputs to color and density, avoiding voxel artifacts through relational encoding. Key developments include Fourier feature mapping to enhance geometric fitting and variants like PixelNeRF, RegNeRF, Mip-NeRF, Raw NeRF, and NeRF-W. While standard NeRFs achieve state-of-the-art photorealism for static scenes with consistent viewpoints, they fail on dynamic factors or unconstrained images due to floating artifacts and overfitting requirements. NeRF-W addresses transient structures by disentangling appearance from geometry via modulated reconstruction loss. Documented limitations include heavy reliance on diverse image sets (≥80), computational constraints necessitating discrete ray sampling, and the base model's inability to handle real-world dynamics without architectural modifications. Performance is often assessed visually rather than quantitatively, particularly for NeRF-W, which demonstrates capabilities primarily through video demonstrations of varied lighting and weather conditions.",
+    "metadata": {
+      "arxiv_id": "2305.00375v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "20310ffaa28c6b6f9f8909f4602639d5ac30edf8029df6daa884406678b6c43f",
+      "pages": 5,
+      "chunks": 11,
+      "model_calls": 15,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 52.743216400034726,
+    "generated_at": "2026-11-11T09:08:39.599873+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The review correctly describes NeRF as a 5D-input MLP mapping 3D coordinates and viewing direction to color and density, Fourier positional features, the surveyed variants, the need for many posed views in vanilla NeRF, and NeRF-W appearance/transient embeddings with uncertainty-weighted reconstruction. However, “avoiding voxel artifacts through relational encoding” is not a mechanism described by the paper: the central mechanism is differentiable volume rendering with positional encoding, while relational geometry is an observed representation property. The ≥80-image requirement is an approximate statement about conventional implementations, not a universal threshold. The assertion that performance is often assessed visually rather than quantitatively is an overgeneralization: this short review recommends video demonstrations but does not establish that quantitative evaluation is generally absent.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The entire review is about neural representations enabling 3D scene capture and novel-view synthesis, which is closely related to the 3D reconstruction query. The summary appropriately includes practical constraints and expansions.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Gives the base 5D representation, positional mapping, main variants, and static/dynamic limitations, but omits differentiable volumetric rendering, image/camera pose supervision, and the distinctive roles of PixelNeRF (few views), RegNeRF (sparse-view regularization), Mip-NeRF (anti-aliasing), and RawNeRF (low-light raw imagery). Those omissions limit coverage for a query about the reconstruction mechanism.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Clear progression from foundational NeRF to variants and challenges, though “relational encoding” is an ambiguous and inaccurate phrase for the architectural mechanism.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Efficient overview of a short review article, with minor excess space devoted to video-based assessment at the expense of more concrete variant distinctions.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.875,
+    "weighted_score_10": 8.75,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://ar5iv.labs.arxiv.org/html/2305.00375",
+      "verified_sections": [
+        "§I–II Original NeRF Representation and Neural Volume Rendering",
+        "§III PixelNeRF and RegNeRF",
+        "§IV Mip-NeRF, Raw NeRF, NeRF-W",
+        "§V Conclusion"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://ar5iv.labs.arxiv.org/html/2305.00375",
+      "verified_sections": [
+        "§I–II Original NeRF Representation and Neural Volume Rendering",
+        "§III PixelNeRF and RegNeRF",
+        "§IV Mip-NeRF, Raw NeRF, NeRF-W",
+        "§V Conclusion"
+      ]
+    }
+  }
+}

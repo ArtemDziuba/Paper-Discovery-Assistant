@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_15",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_03.json",
+  "source_sha256": "6c32e1c5ff9335f352a409dc3a8b5b095ca02c60ab9d3dda4db2b369773ee76a",
+  "query_index": 3,
+  "paper_index": 3,
+  "query_id": "learning-with-noisy-labels",
+  "query": "Learning with noisy labels for image classification",
+  "paper": {
+    "arxiv_id": "1412.6596",
+    "title": "Training Deep Neural Networks on Noisy Labels with Bootstrapping",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "44d774f0317f9386ecd96590d4646a3818970eb57d525fedd87a1ba473263c0e",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses learning with noisy labels in image classification by augmenting deep neural network training with a \"perceptual consistency\" constraint derived from bootstrapping objectives. The methodology employs convex combinations of observed noisy labels and model predictions, theoretically equivalent to minimum entropy regularization, while avoiding explicit noise distribution modeling or generative models. Key findings demonstrate robustness on MNIST under 40% label corruption and state-of-the-art performance on the Toronto Face Database for emotion recognition, where bootstrap methods improved accuracy from 85.3% to 86.8% despite severe data scarcity (only 4,178 labeled images out of 112k). In object detection tasks like ILSVRC 2014, the approach mitigated perverse learning caused by naive training on noisy structured outputs, achieving significant gains in Average Precision for single-shot person detection. However, limitations include reliance on specific feed-forward architectures for reconstruction objectives, untested temperature values beyond default settings, and documented performance gaps when applied to high-dimensional data like ImageNet compared to fully-generative approaches.",
+    "metadata": {
+      "arxiv_id": "1412.6596v3",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "d738aec224d84a920ccf5d6cc7cfb1a19dce8c024717a24e40f3d69644eff519",
+      "pages": 11,
+      "chunks": 17,
+      "model_calls": 22,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 91.77480869996361,
+    "generated_at": "2026-11-11T09:07:46.853983+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "The self-bootstrapping targets, their connection to minimum-entropy regularization, MNIST robustness, Toronto Face Database result (85.3% to 86.8%), and object-detection improvements are supported. The paper also explicitly experiments only with the soft/hard temperature endpoints, so that caveat is grounded. However, the text misleadingly suggests that the bootstrapping method itself depends on special feed-forward reconstruction architectures: reconstruction is a separate proposed variant, whereas hard/soft bootstrapping can be added to standard deep networks. The closing claim about a documented performance gap against fully generative approaches on high-dimensional ImageNet reverses the paper’s discussion: the authors cite poor performance of fully generative modeling on high-dimensional inputs as motivation to avoid that route. These are meaningful qualifications rather than errors in the main experimental results.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses learning from noisy/incomplete visual labels via a concrete deep-learning method; relevant classification and detection examples are used rather than unrelated background.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Explains perceptual consistency, soft/hard bootstrap targets, performance on MNIST and Toronto Faces, and the extension to ILSVRC detection. It could more explicitly distinguish bootstrapping from reconstruction and give the actual detection AP comparison (30.9 baseline versus 44.6 bootstrap-hard) to contextualize the gains.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "A coherent sequence from motivation to mechanism, experimental evidence and limitations. The research terminology is appropriately precise and the central method is easy to follow.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Fairly concise and focused. Less space on speculative cross-method comparisons would improve the information-to-length ratio.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.87,
+    "weighted_score_10": 8.7,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://arxiv.org/pdf/1412.6596",
+      "verified_sections": [
+        "§3.1 Reconstruction and §3.2 Bootstrapping",
+        "§4.1 MNIST",
+        "§4.2 Toronto Face Database, Table 1",
+        "§4.3–4.4 ILSVRC Detection, Table 2"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/pdf/1412.6596",
+      "verified_sections": [
+        "§3.1 Reconstruction and §3.2 Bootstrapping",
+        "§4.1 MNIST",
+        "§4.2 Toronto Face Database, Table 1",
+        "§4.3–4.4 ILSVRC Detection, Table 2"
+      ]
+    }
+  }
+}

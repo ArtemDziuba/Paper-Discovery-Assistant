@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_28",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_08.json",
+  "source_sha256": "1dcb2e60d629a522d2442974e430ac976e37482f0fd6c4ea5495685bd8555bba",
+  "query_index": 8,
+  "paper_index": 1,
+  "query_id": "multimodal-emotion-recognition",
+  "query": "Multimodal emotion recognition using audio and visual signals",
+  "paper": {
+    "arxiv_id": "2407.18552",
+    "title": "Multimodal Emotion Recognition using Audio-Video Transformer Fusion with Cross Attention",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "1b63859b6565388c72affaeef3c425a5fa89e7ea71efc7e893c8700eedce399c",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses multimodal emotion recognition by proposing the Audio-Video Transformer Fusion with Cross Attention (AVT-CA) model, which utilizes a dual-channel architecture to process spectral-temporal audio cues and micro-expressions via Conv2D. The methodology employs transformer-based cross-modal interaction with adaptive modality weighting to mitigate temporal misalignment across disparate sampling rates. Experiments on RAVDESS, CMU-MOSEI, and CREMA-D demonstrate state-of-the-art performance, achieving 96.11% accuracy and 93.78% F1-score on RAVDESS, 95.84% accuracy on CMU-MOSEI, and 94.13% accuracy on CREMA-D. Ablation studies confirm that increasing attention heads from one to four yields significant gains, with the full model providing approximately a 20% improvement over ablated components. However, the study acknowledges limitations including reliance on specific datasets, sensitivity to noisy inputs, and unreported generalization gaps. Furthermore, the scarcity of language-based transcriptions introduces uncertainty in real-world pipelines, and the lack of explicit quantification for some reviewed architectures suggests potential gaps in comparative analysis.",
+    "metadata": {
+      "arxiv_id": "2407.18552v4",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "5cde81ed716ebe172b27f88b7be6b42e841d2d908d087b8c5deeec5ef153d62b",
+      "pages": 14,
+      "chunks": 27,
+      "model_calls": 36,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 146.7260214999551,
+    "generated_at": "2026-11-11T09:29:49.902919+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The central AVT-CA architecture, cross-modal fusion approach, Conv2D-based visual processing, and all reported benchmark figures match the source: RAVDESS 96.11% accuracy and 93.78% F1, CMU-MOSEI 95.84% accuracy, and CREMA-D 94.13% accuracy. The study discusses an approximately 20% gain for the combined model, but the summary risks attributing this to increasing attention heads alone; the per-component ablation changes are smaller or mixed depending on dataset. Text-transcription scarcity appears as background motivation rather than an experimentally demonstrated deployment limitation.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The entire summary addresses fusion of audio and visual signals for emotion recognition, covering the architecture, experiments, and implications.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Includes the core problem, model, major datasets, strong performance numbers and ablation findings. It could more explicitly distinguish intermediate-transformer fusion from cross-self-attention, and avoid replacing concrete study limitations with broad claims about generalization.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Clear progression from task and method to benchmarking, ablations and caveats. Terminology is appropriate for a technical audience.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Communicates most important results efficiently, with minor excess emphasis on generic real-world transcription and comparison limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.9400000000000001,
+    "weighted_score_10": 9.4,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2407.18552",
+      "verified_sections": [
+        "Original arXiv HTML v4, proposed-model section, result Tables II-V, ablation study and discussion."
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2407.18552",
+      "verified_sections": [
+        "Original arXiv HTML v4, proposed-model section, result Tables II-V, ablation study and discussion."
+      ]
+    }
+  }
+}

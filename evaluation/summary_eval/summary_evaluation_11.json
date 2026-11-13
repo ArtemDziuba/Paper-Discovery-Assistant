@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_11",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_02.json",
+  "source_sha256": "3a2ec7b80b792bdab37bb8dcfd0f459eaf44995ac64d0e68426b29e8ad480e9d",
+  "query_index": 2,
+  "paper_index": 2,
+  "query_id": "differential-privacy-deep-learning",
+  "query": "Differential privacy in deep learning",
+  "paper": {
+    "arxiv_id": "2407.07737",
+    "title": "Fine-Tuning Large Language Models with User-Level Differential Privacy",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "e2368b8e4ac15d7c2a075e567142a5b85da9fe46dc4e19cca003931fcf371a54",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper investigates User-Level Differential Privacy (ULS) versus Example-Level Sampling (ELS) for fine-tuning Large Language Models, finding ULS generally outperforms ELS, particularly under small privacy budgets ($\\epsilon < 0.1$) and large cohorts. The authors introduce a novel Mixture-of-Gaussians accountant to provide tighter $(\\epsilon, \\delta)$ guarantees, avoiding exponential scaling errors common in generic reductions. Empirical results on Stack Overflow and CC-News datasets confirm that ULS reduces loss more effectively than ELS, especially when user collections are diverse or gradient variance is high; however, ELS demonstrates lower variance specifically in Lipschitz settings. A critical limitation noted is the reliance on median sampling rather than theoretical maximums for ULS estimation, alongside assumptions of power-of-two parameters. Furthermore, while personalization via local SGD improved loss reduction without altering privacy-loss trade-off curves, the study's analysis remains restricted to specific datasets and epoch configurations, with FedAvg personalization effects described as a priori plausible rather than empirically validated. The absence of direct accuracy metrics in favor of variance proxies ($v_{ULS}$) also limits the comprehensiveness of reported utility claims.",
+    "metadata": {
+      "arxiv_id": "2407.07737v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "e2d2a359616e891f9a21eec81bbd358fdc5044e6c1dbb276d9686128718b5ba4",
+      "pages": 29,
+      "chunks": 40,
+      "model_calls": 53,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 234.3995622000657,
+    "generated_at": "2026-11-11T09:02:08.495876+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "The core comparison of user-level sampling (ULS) with example-level sampling (ELS), the tight Mixture-of-Gaussians accountant for ELS, and the finding that ULS often wins under strong privacy or greater compute are supported. Personalization via local SGD and its limited effect on relative trade-offs is also supported. However, the specific epsilon<0.1 threshold is not established by the reported main experiments; the chosen powers-of-two group sizes are experimental settings, not a documented inherent limitation; and describing loss evaluation as an absence of utility metrics in favor of only variance proxies is misleading because the paper directly reports held-out language-model test loss. The median-vs-maximum heuristic is real but the framing of it as a fundamental limitation is overstated.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The work directly addresses how differential privacy can be implemented for fine-tuning deep language models, with user-level guarantees, private SGD variants, new accounting, and empirical privacy-utility trade-offs.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "It includes both training schemes, their privacy accountant, Stack Overflow/CC-News experiments, compute and privacy effects, and personalization. It should more explicitly describe per-example versus per-user clipping and the fixed-compute comparison, and distinguish practical heuristics from documented methodological limitations.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The summary is well organized and intelligible for a technical reader, though the shorthand 'ULS versus ELS' is not defined by their clipping/sampling mechanics and several specialized claims are insufficiently contextualized.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "It conveys the main comparison efficiently but devotes substantial space to fragile or extraneous limitations (powers-of-two settings and supposedly absent accuracy measures) that do not clarify the essential privacy-utility trade-off.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      }
+    },
+    "weighted_score": 0.835,
+    "weighted_score_10": 8.35,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_html",
+      "source_url": "https://arxiv.org/html/2407.07737",
+      "verified_sections": [
+        "§2 User-Level Accounting",
+        "§4 Synthetic Mean Estimation",
+        "§5–6 Language Model Experiments",
+        "Appendices E–G"
+      ]
+    },
+    "supplemental_judge": {
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "framework": "chatgpt_manual_llm_judge",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "method": "Model judgment of missing criteria against public arXiv HTML full text; not a DeepEval execution",
+      "source_url": "https://arxiv.org/html/2407.07737",
+      "verified_sections": [
+        "§2 User-Level Accounting",
+        "§4 Synthetic Mean Estimation",
+        "§5–6 Language Model Experiments",
+        "Appendices E–G"
+      ],
+      "evaluated_at": "2026-11-11T10:00:35.689426+00:00"
+    }
+  }
+}

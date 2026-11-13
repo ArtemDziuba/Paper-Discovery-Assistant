@@ -1,0 +1,686 @@
+{
+  "arxiv_id": "2304.10557v6",
+  "pdf_sha256": "ad6e0372551b5050e1dda8b30af5b5d9b5ee1e98b61e67f550eeea9e03a0fe6b",
+  "parser_version": "2.1",
+  "summary_parser_version": "2.1",
+  "text_sha256": "31e1f26ff0016fa21790e728b59d7ff2560ffacf5361676cac20c12383636831",
+  "document": {
+    "units": [
+      {
+        "section": "An Introduction to Transformers",
+        "page": 1,
+        "text": "# **An Introduction to Transformers**",
+        "kind": "section-header"
+      },
+      {
+        "section": "An Introduction to Transformers",
+        "page": 1,
+        "text": "Richard E. Turner Department of Engineering, University of Cambridge, UK Microsoft Research, Cambridge, UK `ret26@cam.ac.uk`",
+        "kind": "text"
+      },
+      {
+        "section": "An Introduction to Transformers",
+        "page": 1,
+        "text": "**Abstract.** The transformer is a neural network component that can be used to learn useful representations of sequences or sets of data-points [Vaswani et al., 2017]. The transformer has driven recent advances in natural language processing [Devlin et al., 2019], computer vision [Dosovitskiy et al., 2021], and spatio-temporal modelling [Bi et al., 2022]. There are many introductions to transformers, but most do not contain precise mathematical descriptions of the architecture and the intuitions behind the design choices are often also missing.<sup>1</sup> Moreover, as research takes a winding path, the explanations for the components of the transformer can be idiosyncratic. In this note we aim for a mathematically precise, intuitive, and clean description of the transformer architecture. We will not discuss training as this is rather standard. We assume that the reader is familiar with fundamental topics in machine learning including multi-layer perceptrons, linear transformations, softmax functions and basic probability.",
+        "kind": "text"
+      },
+      {
+        "section": "An Introduction to Transformers",
+        "page": 1,
+        "text": "> 1See Phuong and Hutter [2022] for an exception to this.",
+        "kind": "footnote"
+      },
+      {
+        "section": "1 Preliminaries",
+        "page": 2,
+        "text": "## **1 Preliminaries**",
+        "kind": "section-header"
+      },
+      {
+        "section": "1 Preliminaries",
+        "page": 2,
+        "text": "Let’s start by talking about the form of the data that is input into a transformer, the goal of the transformer, and the form of its output.",
+        "kind": "text"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "### **1.1 Input data format: sets or sequences of tokens**",
+        "kind": "section-header"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "In order to apply a transformer, data must be converted into a set or sequence<sup>1</sup> of _N_ tokens **_x_**<sup>(0)</sup> _n_ of dimension _D_ (see figure 1). The tokens can be collected into a matrix _X_<sup>(0)</sup> which is _D × N_ .<sup>2</sup> To give two concrete examples",
+        "kind": "text"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "1. a passage of text can be broken up into a sequence of words or sub-words, with each word being represented by a single unique vector,",
+        "kind": "list-item"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "2. an image can be broken up into a set of patches and each patch can be mapped into a vector.",
+        "kind": "list-item"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "The embeddings can be fixed or they can be learned with the rest of the parameters of the model e.g. the vectors representing words can be optimised or a learned linear transform can be used to embed image patches (see figure 2).",
+        "kind": "text"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "A sequence of tokens is a generic representation to use as an input – many different types of data can be “tokenised” and transformers are then immediately applicable rather than requiring a bespoke architectures for each modality as was previously the case (CNNs for images, RNNs for sequences, deepsets for sets etc.). Moreover, this means that you don’t need bespoke handcrafted architectures for mixing data of different modalities — you can just throw them all into a big set of tokens.",
+        "kind": "text"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "Figure 1: The input to a transformer is _N_ vectors **_x_**<sup>(0)</sup> _n_ which are each _D_ dimensional. These can be collected together into an array _X_<sup>(0)</sup> .",
+        "kind": "caption"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "1 Strictly speaking, the collection of tokens does not need to have an order and the transformer can handle them as a set (where order does not matter), rather than a sequence. See section 3.",
+        "kind": "text"
+      },
+      {
+        "section": "1.1 Input data format: sets or sequences of tokens",
+        "page": 2,
+        "text": "2 Note that much of the literature uses the transposed notation whereby the data matrix is _N ×D_ , but I want sequences to run across the page and features down it in the schematics (a convention I use in other lecture notes).",
+        "kind": "text"
+      },
+      {
+        "section": "1.2 Goal: representations of sequences",
+        "page": 2,
+        "text": "### **1.2 Goal: representations of sequences**",
+        "kind": "section-header"
+      },
+      {
+        "section": "1.2 Goal: representations of sequences",
+        "page": 2,
+        "text": "The transformer will ingest the input data _X_<sup>(0)</sup> and return a representation of the sequence in terms of another matrix _X_<sup>(</sup><sup>_M_)</sup> which is also of size _D × N_ . The slice **_x_** _n_ = _X_ :<sup>(</sup> _,n_<sup>_M_)</sup> will be a vector of features representing the sequence at the location of token _n_ . These representations can be used for auto-regressive prediction of the next (n+1)th token, global classification of the entire sequence (by pooling across the whole representation), sequence-to-sequence or imageto-image prediction problems, etc. Here _M_ denotes the number of layers in the transformer.",
+        "kind": "text"
+      },
+      {
+        "section": "2 The transformer block",
+        "page": 2,
+        "text": "## **2 The transformer block**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2 The transformer block",
+        "page": 2,
+        "text": "The representation of the input sequence will be produced by iteratively applying a transformer block",
+        "kind": "text"
+      },
+      {
+        "section": "2 The transformer block",
+        "page": 2,
+        "text": "_X_<sup>(</sup><sup>_m_)</sup> = transformer-block( _X_<sup>(</sup><sup>_m−_1)</sup> ) _._",
+        "kind": "text"
+      },
+      {
+        "section": "2 The transformer block",
+        "page": 2,
+        "text": "The block itself comprises two stages: one operating across the sequence and one operating across the features. The first stage refines each feature independently according to relationships between tokens across the sequence e.g. how much a word in a sequence at position _n_ depends on previous words at position _n_<sup>_′_</sup> , or how much two different patches from an image are related to one another. This stage acts horizontally across rows of _X_<sup>(</sup><sup>_m−_1)</sup> . The second stage refines the features representing each token. This stage acts vertically across a column of _X_<sup>(</sup><sup>_m−_1)</sup> . By repeatedly applying the transformer block the representation at token _n_ and feature _d_ can be shaped by information at token _n_<sup>_′_</sup> and feature _d_<sup>_′_</sup> .<sup>3</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2 The transformer block",
+        "page": 2,
+        "text": "Figure 2: Encoding an image: an example [Dosovitskiy et al., 2021]. An image is split into _N_ patches. Each patch is reshaped into a vector by the vec operator. This vector is acted upon by a matrix _W_ which maps the patch to a _D_ dimensional vector **_x_**<sup>(0)</sup> _n_<sup>.Thesevectorsarecollected</sup> together into the input _X_<sup>(0)</sup> . The matrix _W_ can be learned with the rest of the transformer’s parameters.",
+        "kind": "text"
+      },
+      {
+        "section": "2 The transformer block",
+        "page": 2,
+        "text": "3 The idea of interleaving processing across the sequence and across features is a common motif of many machine learning architectures including graph neural networks (interleaves processing across nodes and across features), Fourier neural operators (interleaves processing across space and across features), and bottleneck blocks in ResNets (interleaves processing across pixels and across features).",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "### **2.1 Stage 1: self-attention across the sequence**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "The output of the first stage of the transformer block is another _D × N_ array, _Y_<sup>(</sup><sup>_m_)</sup> . The output is produced by aggregating information across the sequence independently for each feature using an operation called _attention_ .",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "**Attention.** Specifically, the output vector at location _n_ , denoted **_y_** _n_<sup>(</sup><sup>_m_)</sup> , is produced by a simple weighted average of the input features at location _n_<sup>_′_</sup> = 1 _. . . N_ , denoted **_x_**<sup>(</sup> _n_<sup>_m′−_1)</sup> , that is<sup>4</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "<!-- Start of picture text -->\nN<br>y n ( m ) = � x ( n m′ − 1) A ( n m′ ,n ) . (1)<br>n ′ =1<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "Here the weighting is given by a so-called _attention matrix A_<sup>(</sup> _n_<sup>_m′_</sup> _,n_<sup>)whichisof</sup> size<sup>5</sup> _N × N_ and normalises over its columns<sup>�</sup><sup>_N_</sup> _n_<sup>_′_</sup> =1<sup>_A_(</sup> _n_<sup>_m′_</sup> _,n_<sup>)=1.Intuitively</sup> speaking _A_<sup>(</sup> _n_<sup>_m′_</sup> _,n_<sup>)willtakeahighvalueforlocationsinthesequence</sup><sup>_n′_whichare</sup> of high relevance for location _n_ . For irrelevant locations, it will take the value 0. For example, all patches of a visual scene coming from a single object might have high corresponding attention values.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "We can compactly write the relationship as a matrix multiplication,",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "<!-- Start of picture text -->\nY ( m ) =  X ( m− 1) A ( m ) , (2)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "and we illustrate it below in figure 3.<sup>6</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "4 **Relationship to Convolutional Neural Networks** (CNNs). The attention mechanism can recover convolutional filtering as a special case e.g. if **_x_** _n_<sup>(0)</sup> is a 1D regularly sampled time-series and _A_<sup>(</sup><sup>_m_)</sup> _n_<sup>_′_</sup> _,n_<sup>=</sup><sup>_A_</sup> _n_<sup>(</sup><sup>_m′_</sup> _−_<sup>)</sup> _n_<sup>thentheattentionmecha-</sup> nism in eq. 1 becomes a convolution. Unlike normal CNNs, these filters have full temporal support. Later we will see that the filters themselves dynamically depend on the input, another difference from standard CNNs. We will also see a similarity: transformers will use multiple attention maps in each layer in the same way that CNNs use multiple filters (though typically transformers have fewer attention maps than CNNs have channels).",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "5 The need for transformers to store and compute _N ×N_ attention arrays can be a major computational bottleneck, which makes processing of long sequences challenging.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "6 When training transformers to perform autoregressive prediction, e.g. predicting the next word in a sequence based on the previous ones, a clever modification to the model can be used to accelerate training and inference. This involves applying the transformer to the whole sequence, and using masking in the attention mechanism ( _A_<sup>(</sup><sup>_m_)</sup> becomes an upper triangular matrix) to prevent future tokens affecting the representation at earlier tokens. Causal predictions can then be made for the entire sequence in one forward pass through the transformer. See section 4 for more information.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "Figure 3: The output of an element of the attention mechanism, _Yd,n_<sup>(</sup><sup>_m_),is</sup> produced by the dot product of the input horizontally sliced through time _Xd,_<sup>(</sup><sup>_m_</sup> :<sup>)</sup> with a vertical slice from the attention matrix _A_<sup>(</sup> : _,n_<sup>_m_).Heretheshadinginthe</sup> attention matrix represent the elements with a high value in white and those with a low value, near to 0, in black.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "**Self-attention.** So far, so simple. But where does the attention matrix come from? The neat idea in the first stage of the transformer is that the attention matrix is generated from the input sequence itself – so-called _self-attention_ .",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "A simple way of generating the attention matrix from the input would be to measure the similarity between two locations by the dot product between the features at those two locations and then use a softmax function to handle the normalisation i.e.<sup>7</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "<!-- Start of picture text -->\nexp( x ⊤ n x n′ )<br>An,n′ = .<br>� Nn ′′ =1 exp( x n ⊤′′ x n′ )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 3,
+        "text": "> 7 We temporarily suppress the superscripts here to ease the notation so _A_<sup>(</sup><sup>_m_)</sup> _n,n_<sup>_′_becomes</sup><sup>_An,n′_</sup> and similarly **_x_** _n_<sup>(</sup><sup>_m_)</sup> becomes **_x_** _n_ .",
+        "kind": "footnote"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "However, this naïve approach entangles information about the similarity between locations in the sequence with the content of the sequence itself.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "An alternative is to perform the same operation on a linear transformation of the sequence, _U_ **_x_** _n_ , so that<sup>8</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nso that 8 8 Often you will see attention parameterised as<br>exp( x ⊤ n U ⊤U x n ′ / √ D )<br>exp( x ⊤ n U ⊤U x n′ ) An,n′ = .<br>An,n′ = � Nn ′′ =1 exp( x n ⊤′′ U ⊤U x n′ ) � Nn ′′ =1 exp( x n ⊤′′ U ⊤U x n′ / √ D )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "Dividing the exponents by the square-root of the dimensionality of the projected vector helps numerical stability, but in this presentation we absorb this term into _U_ to improve clarity.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "Typically, _U_ will project to a lower dimensional space i.e. _U_ is _K ×D_ dimensional with _K < D_ . In this way only some of the features in the input sequence need be used to compute the similarity, the others being projected out, thereby decoupling the attention computation from the content. However, the numerator in this construction is symmetric. This could be a disadvantage. For example, we might want the word ‘caulking iron’ to be strongly associated with the word ‘tool’ (as it is a type of tool), but have the word ‘tool’ more weakly associated with the word ‘caulking iron’ (because most of us rarely encounter it).<sup>9</sup> Fortunately, it is simple to generalise the attention mechanism above to be asymmetric by applying two different linear transformations to the original sequence,",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "9 Some of this effect could be handled by the normalisation in the denominator, but asymmetric similarity allows more flexibility. However, I do not know of experimental evidence to support using _U_ **_q_** _̸_ = _U_ **_k_** .",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nexp � x ⊤ n U k  ⊤U q x n′ �<br>An,n′ = (3)<br>� Nn ′′ =1 exp � x ⊤ n ′′ U k  ⊤U q x n′ � .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "10 **Relationship to Recurrent Neural Networks** (RNNs). It is illuminating to compare the temporal processing in the transformer to that of RNNs which recursively update a hidden state feature representation ( **_x_** _n_<sup>(1))based</sup> on the current observation ( **_x_**<sup>(0)</sup> _n_<sup>)andthepre-</sup> vious hidden state **_x_**<sup>(1)</sup> _n_ = _f_ ( **_x_**<sup>(1)</sup> _n−_ 1<sup>;</sup><sup>**_x_**</sup> _n_<sup>(0))=</sup> _f_ ( _f_ ( **_x_**<sup>(1)</sup> _n−_ 2<sup>;</sup><sup>**_x_**(0)</sup> _n−_ 1<sup>);</sup><sup>**_x_**</sup> _n_<sup>(0)).</sup> Here we’ve unrolled the RNN one step to show that observations which are nearby to the hidden state (e.g. **_x_**<sup>(0)</sup> _n_<sup>)</sup> are treated differently from observations that are further away (e.g. **_x_**<sup>(0)</sup> _n−_ 1<sup>),asinformationis</sup> propagated by recurrent application of the function _f_ ( _·_ ). In contrast, in the transformer, selfattention treats all observations at all time-points in an identical manner, no matter how far away they are. This is one reason why they find it simpler to learn long-range relationships.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "The two quantities that are dot-producted together here **_q_** _n_ = _U_ **_qx_** _n_ and **_k_** _n_ = _U_ **_kx_** _n_ are typically known as the _queries_ and the _keys_ , respectively. Together equations 2 and 3 define the self-attention mechanism. Notice that the _K × D_ matrices _U_ **_q_** and _U_ **_k_** are the only parameters of this mechanism.<sup>10</sup> **Multi-head self-attention (MHSA).** In the self-attention mechanisms described above, there is one attention matrix which describes the similarity of two locations within the sequence. This can act as a bottleneck in the architecture – it would be useful for pairs of points to be similar in some ‘dimensions’ and different in others.<sup>11</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "In order to increase capacity of the first self-attention stage, the transformer block applies _H_ sets of self-attention in parallel<sup>12</sup> (termed _H_ heads) and then linearly projects the results down to the _D × N_ array required for further processing. This slight generalisation is called _multi-head self-attention_ .",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "11 If attention matrices are viewed as a datadriven version of filters in a CNN, then the need for more filters / channels is clear. Typical choices for the number of heads _H_ is 8 or 16, lower than typical numbers of channels in a CNN. 12 The computational cost of multi-head selfattention is usually dominated by the matrix multiplication involving the attention matrix and is therefore _O_ ( _HDN_<sup>2</sup> ).",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "<!-- Start of picture text -->\nH<br>Y ( m ) = MHSA θ ( X ( m− 1) ) = � Vh ( m ) X ( m− 1) A ( h m ) , where (4)<br>h =1<br>exp �� k h,n ( m ) � ⊤ q h,n ( m ) ′ �<br>[ A ( h m ) ] n,n ′ = (5)<br>� Nn ′′ =1 exp �� k h,n ( m ) ′′ � ⊤ q h,n ( m ) ′ �<br>q h,n ( m ) =  U q  ( m ,h ) x n ( m− 1) and k h,n ( m ) =  U k  ( m ,h ) x n ( m− 1) . (6)<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "13 The product of the matrices _Vh_<sup>(</sup><sup>_m_)</sup> _X_<sup>(</sup><sup>_m−_1)</sup> is related to the so-called _values_ which are normally introduced in descriptions of self-attention along side queries and keys. In the usual presentation, there is a redundancy between the linear transform used to compute the values and the linear projection at the end of the multi-head selfattention, so we have not explicitly introduced them here. The standard presentation can be recovered by setting _Vh_ to be a low-rank matrix _Vh_ = _UhU_ **_v_** _,h_ where _Uh_ is _D_ x _K_ and _U_ **_v_** _,h_ is _K_ x _D_ . Typically _K_ is set to _K_ = _D/H_ so that changing the number of heads leads to models with similar numbers of parameters and computational demands.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "Here the _H_ matrices _Vh_<sup>(</sup><sup>_m_)</sup> which are _D × D_ project the _H_ self-attention stages down to the required output dimensionality _D_ .<sup>13</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 4,
+        "text": "The addition of the matrices _Vh_<sup>(</sup><sup>_m_)</sup> , and the fact that retaining just the diagonal elements of the attention matrix _A_<sup>(</sup><sup>_m_)</sup> will interact the signal instantaneously with itself, does mean there is some cross-feature processing in multi-head selfattention, as opposed to it containing purely cross-sequence processing. However, the stage has limited capacity for this type of processing and it is the job of the second stage to address this.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 5,
+        "text": "Figure 4 shows multi-head self-attention schematically. Multi-head attention comprises the following parameters _θ_ = _{U_ **_q_** _,h, U_ **_k_** _,h, Vh}_<sup>_H_</sup> _h_ =1<sup>i.e.3</sup><sup>_H_matrices</sup> of size _K × D_ , _K × D_ , and _D × D_ respectively.",
+        "kind": "text"
+      },
+      {
+        "section": "2.1 Stage 1: self-attention across the sequence",
+        "page": 5,
+        "text": "Figure 4: Multi-head self-attention applies _H_ selfattention operations in parallel and then linearly projects the _HD × N_ dimensional output down to _D × N_ by applying a linear transform, implemented here by the _H_ matrices _Vh_ .",
+        "kind": "caption"
+      },
+      {
+        "section": "2.2 Stage 2: multi-layer perceptron across features",
+        "page": 5,
+        "text": "### **2.2 Stage 2: multi-layer perceptron across features**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.2 Stage 2: multi-layer perceptron across features",
+        "page": 5,
+        "text": "The second stage of processing in the transformer block operates across features, refining the representation using a non-linear transform. To do this, we simply apply a multi-layer perceptron (MLP) to the vector of features at each location _n_ in the sequence,",
+        "kind": "text"
+      },
+      {
+        "section": "2.2 Stage 2: multi-layer perceptron across features",
+        "page": 5,
+        "text": "<!-- Start of picture text -->\nx ( n m ) = MLP θ ( y n ( m ) ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.2 Stage 2: multi-layer perceptron across features",
+        "page": 5,
+        "text": "Notice that the parameters of the MLP, _θ_ , are the same for each location _n_ .<sup>14</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.2 Stage 2: multi-layer perceptron across features",
+        "page": 5,
+        "text": "15",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "### **2.3 The transformer block: Putting it all together with residual connections and layer normalisation**",
+        "kind": "section-header"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "We can now stack MHSA and MLP layers to produce the transformer block. Rather than doing this directly, we make use of two ubiquitous transformations to produce a more stable model that trains more easily: residual connections and normalisation.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "**Residual connections.** The use of residual connections is widespread across machine learning as they make initialisation simple, have a sensible inductive bias towards simple functions, and stabilise learning [Szegedy et al., 2017]. Instead of directly specifying a function _x_<sup>(</sup><sup>_m_)</sup> = _fθ_ ( _x_<sup>(</sup><sup>_m−_1)</sup> ), the idea is to parameterise it in terms of an identity mapping and a residual term",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "<!-- Start of picture text -->\nx ( m ) =  x ( m− 1) + res θ ( x ( m− 1) ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "Equivalently, this can be viewed as modelling the differences between the representation _x_<sup>(</sup><sup>_m_)</sup> _− x_<sup>(</sup><sup>_m−_1)</sup> = res _θ_ ( _x_<sup>(</sup><sup>_m−_1)</sup> ) and will work well when the function that is being modelled is close to identity. This type of parameterisation is used for both the MHSA and MLP stages in the transformer, with the idea that each applies a mild non-linear transformation to the representation. Over many layers, these mild non-linear transformations compose to form large transformations.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "**Token normalisation.** The use of normalisation, such as LayerNorm and BatchNorm, is also widespread across the deep learning community as a means to stabilise learning. There are many potential choices for how to compute normalisation statistics (see figure 5 for a discussion), but the standard approach is to use LayerNorm [Ba et al., 2016] which normalises each token separately, removing the mean and dividing by the standard deviation,<sup>16</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "<!-- Start of picture text -->\n1<br>x ¯ d,n = ( xd,n − mean( x n ))  γd  +  βd = LayerNorm( X ) d,n<br>� var( x n )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "14 The MLPs used typically have one or two hidden-layers with dimension equal to the number of features _D_ (or larger). The computational cost of this step is therefore roughly _N ×D×D_ . If the feature embedding size approaches the length of the sequence _D ≈ N_ , the MLPs can start to dominate the computational complexity (e.g. this can be the case for vision transformers which embed large patches).",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "15 **Relationship to Graph Neural Networks (GNNs)** . At a high level, graph neural networks interleave two steps. First, a message passing step where each node receives messages from its neighbours which are then aggregated together. Second, a feature processing step where the incoming aggregated messages are used to update each node’s features. Through this lens, the transformer can be viewed as an unrolled GNN with each token corresponding to an edge of a fully connected graph. MHSA forms the message passing step, and the MLPs forming the feature update step. Each transformer block corresponds to one update of the GNN. Moreover, many methods for scaling transformers introduce sparse forms of attention where each token attends to only a restricted set of other tokens, that is they specify a sparse graph connectivity structure. Arguably, in this way transformers are more general as they can use different graphs at different layers in the transformer.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "16 This is also known as z-scoring in some fields and is related to whitening.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 5,
+        "text": "where mean( **_x_** _n_ ) = _D_<sup><u>1</u></sup> � _Dd_ =1<sup>_xd,n_andvar(</sup><sup>**_x_**</sup><sup>_n_) =</sup> _D_<sup><u>1</u></sup> � _Dd_ =1<sup>(</sup><sup>_xd,n −_mean(</sup><sup>**_x_**</sup><sup>_n_))2</sup><sup>_._</sup> The two parameters _γd_ and _βd_ are a learned scale and shift.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "Figure 5: Transformers perform layer normalisation (left hand schematic) which normalises the mean and standard deviation of each individual token in each sequence in the batch. Batch normalisation (right hand schematic), which normalises over the sequence _and_ batch dimension together, is found to be far less stable [Shen et al., 2020].",
+        "kind": "caption"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "As this transform normalises each token individually and as LayerNorm is sometimes applied differently in CNNs, see figure 6, I would prefer to call this normalisation TokenNorm.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "This transform stops feature representations blowing up in magnitude as nonlinearities are repeatedly applied through neural networks.<sup>17</sup> In transformers, LayerNorm is usually applied in the residual terms of both the MHSA and MLP stages.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "Putting this all together, we have the standard transformer block shown schematically in figure 7.<sup>18</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "Figure 7: The transformer block. Residual connections are added to the multihead self-attention (MHSA) stage and the multi-layer perceptron (MLP) stage. Layer normalisation is also applied to the inputs of both the MHSA and the MLP. They are then stacked. This block can then be repeated _M_ times.",
+        "kind": "caption"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "17 Whilst it is possible to control the nonlinearities and weights in neural networks to prevent explosion of the representation, the constraints this places on the activation functions can adversely affect learning. The LayerNorm approach is arguably simpler and simpler to train.",
+        "kind": "text"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "Figure 6: In CNNs LayerNorm is ambiguous applied sometimes referring to normalising across both the features _and_ the feature maps (i.e. across the height and width of the images) and sometimes just across the features (left hand schematic). As the height and width dimension in CNNs corresponds to the sequence dimension, 1 _. . . N_ of transformers, the term ’LayerNorm’ is arguably used inconsistently (compare to figure 5). I would prefer to call the normalisation used in transformers ’token normalisation’ instead to avoid confusion. Batch normalisation (right hand schematic) is consistently defined.",
+        "kind": "caption"
+      },
+      {
+        "section": "2.3 The transformer block: Putting it all together with residual connections and layer normalisation",
+        "page": 6,
+        "text": "18 The exact configuration of the normalisation and residual layers can differ, but here we show a standard setup [Xiong et al., 2020].",
+        "kind": "caption"
+      },
+      {
+        "section": "3 Position encoding",
+        "page": 6,
+        "text": "## **3 Position encoding**",
+        "kind": "section-header"
+      },
+      {
+        "section": "3 Position encoding",
+        "page": 6,
+        "text": "The transformer treats the data as a set — if you permute the columns of _X_<sup>(0)</sup> (i.e. re-order the tokens in the input sequence) you permute all the representations throughout the network _X_<sup>(</sup><sup>_m_)</sup> in the same way. This is key for many applications since there may not be a natural way to order the original data into a sequence of tokens. For example, there is no single ‘correct’ order to map",
+        "kind": "text"
+      },
+      {
+        "section": "3 Position encoding",
+        "page": 7,
+        "text": "image patches into a one dimensional sequence.",
+        "kind": "text"
+      },
+      {
+        "section": "3 Position encoding",
+        "page": 7,
+        "text": "However, this presents a problem since positional information is key in many problems and the transformer has thrown it out. The sequence ‘herbivores eat plants’ should not have the same representation (up to permutation) as ‘plants eat herbivores’. Nor should an image have the same representation as one comprising the same patches randomly permuted. Thankfully, there is a simple fix for this: the location of each token within the original dataset should be included in the token itself, or through the way it is processed. There are several options how to do this, one is to include this information directly into the embedding _X_<sup>(0)</sup> . E.g. by simply adding the position embedding (surprisingly this works<sup>19</sup> ) or concatenating. The position information can be fixed e.g. adding a vector of sinusoids of different frequencies and phases to encode position of a word in a sentence [Vaswani et al., 2017], or it can be a free parameter which is learned [Devlin et al., 2019], as it often done in image transformers. There are also approaches to include relative distance information between pairs of tokens by modifying the self-attention mechanism [Wu et al., 2021] which connects to equivariant transformers.",
+        "kind": "text"
+      },
+      {
+        "section": "4 Application specific transformer variants",
+        "page": 7,
+        "text": "## **4 Application specific transformer variants**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4 Application specific transformer variants",
+        "page": 7,
+        "text": "For completeness we will give some simple examples for how the standard transformer architecture above is used and modified for specific applications. This includes adding a head to the transformer blocks to carry out the desired prediction task, but also modifications to the standard construction of the body.",
+        "kind": "text"
+      },
+      {
+        "section": "4 Application specific transformer variants",
+        "page": 7,
+        "text": "19 Vision transformers [Dosovitskiy et al., 2021] use **_x_**<sup>(0)</sup> _n_ = _W_ **_p_** _n_ + **_e_** _n_ where **_p_** _n_ is the _n_ th vectorised patch, **_e_** _n_ is the learned position embedding, and _W_ is the patch embedding matrix. Arguably it would be more intuitive to append the position embedding to the patch embedding. However, if we use the concatenation approach and consider what happens after applying a linear transform,",
+        "kind": "text"
+      },
+      {
+        "section": "4 Application specific transformer variants",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\nV = V 12<br>� W ep nn � � VV 2111 V 22 �� W ep nn �<br>= � VV 2111 WW pp nn  + +  V V 2212 ee nn �<br>=  W ′ p n  +  e ′ n<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4 Application specific transformer variants",
+        "page": 7,
+        "text": "we recover the additive construction, which is one hint as to why the additive construction works.",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "### **4.1 Auto-regressive language modelling**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "In auto-regressive language modelling the goal is to predict the next word _wn_ in the sequence given the previous words _w_ 1: _n−_ 1, that is to return _p_ ( _wn_ = _w|w_ 1: _n−_ 1). Two modifications are required to use the transformer for this task — a change to the body to make the architecture efficient and the addition of a head to make the predictions for the next word.",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "**Modification to the body: auto-regressive masking.** Applying the version of the transformer we have covered so far to auto-regressive prediction is computationally expensive, both during training and testing. To see this, note that AR prediction requires making a sequence of predictions: you start by predicting the first word _p_ ( _w_ 1 = _w_ ), then you predict the second given the first _p_ ( _w_ 2 = _w|w_ 1), then the third word given the first two _p_ ( _w_ 2 = _w|w_ 1 _, w_ 2), and so on until you predict the last item in the sequence _p_ ( _wN_ = _w|w_ 1: _N −_ 1). This requires applying the transformer _N −_ 1 times with input sequences that grow by one word each time: _w_ 1 _, w_ 1:2 _, . . . , w_ 1: _N −_ 1. This is very costly at both training-time and test-time.",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "Fortunately, there is a neat way around this by enabling the transformer to support incremental updates whereby if you add a new token to an existing sequence, you do not change the representation for the old tokens. To make this property clear, I will define it mathematically: let the output of the incremental transformer applied to the first _n_ words be denoted<sup>20</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\nX ( n ) = transformer-incremental( w 1: n ) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "Then the output of the incremental transformer when applied to _n_ + 1 words is",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "20 Note that I’m overloading the notation here: previously superscripts denoted layers in the transformer, but here I’m using them to denote the number of items in the input sequence.",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "<!-- Start of picture text -->\nX ( n +1) = transformer-incremental( w 1: n +1) .<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 7,
+        "text": "In the incremental transformer _X_<sup>(</sup><sup>_n_)</sup> = _X_<sup>(</sup><sup>_n_+1)</sup> 1: _D,_ 1: _n_<sup>i.e.therepresentationofthe</sup> old tokens has not changed by adding the new one. If we have this property",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 8,
+        "text": "then 1. at test-time auto-regressive generation can use incremental updates to compute the new representation efficiently, 2. at training time we can make the _N_ auto-regressive predictions for the whole sequence _p_ ( _w_ 1 = _w_ ) _p_ ( _w_ 2 = _w|w_ 1) _p_ ( _w_ 2 = _w|w_ 1 _, w_ 2) _. . . p_ ( _wN_ = _w|w_ 1: _N −_ 1) in a single forwards pass. Unfortunately, the standard transformer introduced above does not have this property due to the form of the attention used. Every token attends to every other token, so if we add a new token to the sequence then the representation for every token changes throughout the transformer. However, if we mask the attention matrix so that it is upper-triangular _An,n′_ = 0 when _n > n_<sup>_′_</sup> then the representation of each word _only depends on the previous words_ .<sup>21</sup> This then gives us the incremental property as none of the other operations in the transformer operate across the sequence.<sup>22</sup>",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 8,
+        "text": "**Adding a head.** We’re now almost set to perform auto-regressive language modelling. We apply the masked transformer block _M_ times to the input sequence of words. We then take the representation at token _n −_ 1, that is **_x_**<sup>(</sup> _n_<sup>_M_</sup> _−_ 1<sup>)</sup> which captures causal information in the sequence at this point, and generate the probability of the next word through a softmax operation",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 8,
+        "text": "21 Notice that this masking operation also encodes position information since you can infer the order of the tokens from the mask.",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 8,
+        "text": "22 This restriction to the attention will cause a loss of representational power. It’s an open question as to how significant this is and whether increasing the capacity of the model can mitigate it e.g. by using higher dimensional tokens, i.e. increasing _D_ .",
+        "kind": "text"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 8,
+        "text": "<!-- Start of picture text -->\nexp( g w ⊤ x ( n M − 1 ) )<br>p ( wn =  w|w 1: n− 1) =  p ( wn =  w| x ( n M − 1 ) ) = .<br>� Ww =1 exp( g w ⊤ x ( n M − 1 ) )<br><!-- End of picture text -->",
+        "kind": "formula"
+      },
+      {
+        "section": "4.1 Auto-regressive language modelling",
+        "page": 8,
+        "text": "Here _W_ is the vocabulary size, the wth word is _w_ and _{_ **_g_** _w}_<sup>_W_</sup> _w_ =1<sup>aresoftmax</sup> weights that will be learned.",
+        "kind": "text"
+      },
+      {
+        "section": "4.2 Image classification",
+        "page": 8,
+        "text": "### **4.2 Image classification**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4.2 Image classification",
+        "page": 8,
+        "text": "For image classification the goal is to predict the label _y_ given the input image which has been tokenised into the sequence _X_<sup>(0)</sup> , that is _p_ ( _y|X_<sup>(0)</sup> ). One way of computing this distribution would be to apply the standard transformer body _M_ times to the tokenised image patches before aggregating the final layer of the transformer, _X_<sup>(</sup><sup>_M_)</sup> , across the sequence e.g. by spatial pooling **_h_** =<sup>�</sup><sup>_N_</sup> _n_ =1<sup>**_x_**</sup> _n_<sup>(</sup><sup>_M_)</sup> in order to form a feature representation for the entire image. The representation **_h_** could then be used to perform softmax classification. An alternative approach is found to perform better [Dosovitskiy et al., 2021]. Instead we introduce a new fixed (learned) token at the start _n_ = 0 of the input sequence **_x_**<sup>(0)</sup> 0<sup>.At</sup> the head we use the _n_ = 0 vector, **_x_**<sup>(</sup> 0<sup>_M_)</sup> , to perform the softmax classification. This approach has the advantage that the transformer maintains and refines a global representation of the sequence at each layer _m_ of the transformer that is appropriate for classification.",
+        "kind": "text"
+      },
+      {
+        "section": "4.3 More complex uses",
+        "page": 8,
+        "text": "### **4.3 More complex uses**",
+        "kind": "section-header"
+      },
+      {
+        "section": "4.3 More complex uses",
+        "page": 8,
+        "text": "The transformer block can also be used as part of more complicated systems e.g. in encoder-decoder architectures for sequence-to-sequence modelling for translation [Devlin et al., 2019, Vaswani et al., 2017] or in masked auto-encoders for self-supervised vision systems [He et al., 2021].",
+        "kind": "text"
+      },
+      {
+        "section": "5 Conclusion",
+        "page": 8,
+        "text": "## **5 Conclusion**",
+        "kind": "section-header"
+      },
+      {
+        "section": "5 Conclusion",
+        "page": 8,
+        "text": "This concludes this basic introduction to transformers which aspired to be mathematically precise and to provide intuitions behind the design decisions. We have not talked about loss functions or training in any detail, but this is because rather standard deep learning approaches are used for these. Briefly,",
+        "kind": "text"
+      },
+      {
+        "section": "5 Conclusion",
+        "page": 9,
+        "text": "transformers are typically trained using the Adam optimiser. They are often slow to train compared to other architectures and typically get more unstable as training progresses. Gradient clipping, decaying learning rate schedules, and increasing batch sizes through training help to mitigate these instabilities, but often they still persist.",
+        "kind": "text"
+      },
+      {
+        "section": "5 Conclusion",
+        "page": 9,
+        "text": "**Acknowledgements.** We thank Dr. Max Patacchiola, Sasha Shysheya, John Bronskill, Runa Eschenhagen and Jess Riedel for feedback on previous versions of this note. Richard E. Turner is supported by Microsoft, Google, Amazon, ARM, Improbable and EPSRC grant EP/T005386/1.",
+        "kind": "text"
+      }
+    ],
+    "pages": 10,
+    "bibliography_removed": true,
+    "removed_artifact_lines": 9
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_30",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_08.json",
+  "source_sha256": "1dcb2e60d629a522d2442974e430ac976e37482f0fd6c4ea5495685bd8555bba",
+  "query_index": 8,
+  "paper_index": 3,
+  "query_id": "multimodal-emotion-recognition",
+  "query": "Multimodal emotion recognition using audio and visual signals",
+  "paper": {
+    "arxiv_id": "2006.11871",
+    "title": "Human Emotion Detection from Audio and Video Signals",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "b8dbe7f7ba8e65708589e57408bef7af8ebb1cdf412bf0f568a00a6460a583d2",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses multimodal emotion recognition using audio and visual signals to assist users with autism, employing facial expression analysis via OpenCV/Haar-like features and speech feature extraction including pitch, entropy, and energy. While unimodal results show facial recognition at 84% accuracy on the JAFFE dataset and speech recognition at 78.94% on the Berlin Emo database, with SVM outperforming KNN in facial tasks, explicit performance metrics for combined audio-visual pipelines are absent in the provided text. Although other studies cited report multimodal fusion improving average accuracy to 77.33% compared to unimodal models, this specific paper lacks experimental validation of fusion strategies or conditions. Documented limitations include a focus exclusively on unimodal analysis within this excerpt, zero accuracy for Neutral emotions across modalities, and severe confusion regarding Anger detection. The text notes proposed applications for edge deployment but does not formally document limitations regarding data transfer or server dependency. Consequently, while the paper provides foundational unimodal capabilities relevant to the query, it fails to offer direct evidence supporting integrated multimodal systems.",
+    "metadata": {
+      "arxiv_id": "2006.11871v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "2d0442a9b1846e44f4e7fdc8574bf698834157b976ece882c4339b11b3ac5997",
+      "pages": 8,
+      "chunks": 10,
+      "model_calls": 13,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 48.17495790007524,
+    "generated_at": "2026-11-11T09:31:30.027265+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.4,
+        "reason": "The JAFFE facial accuracy of 84% and Berlin Emo speech accuracy of 78.94% are correctly reported, as are use of SVM and signal features. But the summary's central assertion is false: this paper actually implements a threshold-based audio-video decision-fusion system and reports its own 77.33% combined accuracy on Enterface'05, not a result from external cited studies. It also reports per-modality results on that same evaluation set (74.66% video and 69.33% audio) and a combined confusion matrix. The claimed zero-accuracy neutral class does not correspond to the six-emotion fusion experiment.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Covers the right task and two relevant modality pipelines, but misrepresents the defining audio-visual fusion finding, making it less useful for the original multimodal query.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.5,
+        "reason": "Omits the actual fusion rule, 77.33% fused accuracy on Enterface'05, unimodal comparisons within that experiment, and the combined confusion matrix. Those are among the most important results for this query.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The prose is readable and logically ordered, although its erroneous distinction between external multimodal work and the paper's own methods creates a misleading conclusion.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Relatively concise but spends substantial space arguing that multimodal validation is absent, when explaining the actual fusion experiment would be more informative.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.61,
+    "weighted_score_10": 6.1,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/pdf/2006.11871",
+      "verified_sections": [
+        "Original arXiv PDF v1, pages 1-2, 6-8, combining-stage methodology, Results section and Tables III-V; screenshot-verified page 7 (zero-index page 6)."
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:19:26.559926+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/pdf/2006.11871",
+      "verified_sections": [
+        "Original arXiv PDF v1, pages 1-2, 6-8, combining-stage methodology, Results section and Tables III-V; screenshot-verified page 7 (zero-index page 6)."
+      ]
+    }
+  }
+}

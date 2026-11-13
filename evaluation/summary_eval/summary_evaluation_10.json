@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_10",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_02.json",
+  "source_sha256": "3a2ec7b80b792bdab37bb8dcfd0f459eaf44995ac64d0e68426b29e8ad480e9d",
+  "query_index": 2,
+  "paper_index": 1,
+  "query_id": "differential-privacy-deep-learning",
+  "query": "Differential privacy in deep learning",
+  "paper": {
+    "arxiv_id": "2110.05679",
+    "title": "Large Language Models Can Be Strong Differentially Private Learners",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "0a95c755c2c9a29b73cf83e3a2a418ab36457284280969db4a9d7af7a88ee570",
+  "summarization": {
+    "status": "completed",
+    "summary": "This study challenges prior hypotheses that differential privacy (DP) performance degrades with model dimensionality, demonstrating that large pretrained language models function as strong differentially private learners. The authors introduce \"Ghost Clipping,\" a method reducing memory overhead by computing per-example gradient norms layer-by-layer without instantiating full matrices, thereby enabling the processing of large models previously constrained by GPU limits. Empirical results using budgets $\\epsilon \\in \\{3, 8\\}$ indicate that larger model sizes and increased batch sizes improve signal-to-noise ratios and final negative log-likelihood in a log-linear fashion, contradicting linear scaling heuristics suggesting small batches are optimal. While full fine-tuning often outperformed parameter-efficient methods like LoRA under DP constraints, significant utility degradation remains; for instance, BLEU scores dropped from 69.463 to 61.519 at $\\epsilon=3$. Documented limitations include reliance on moderately-sized datasets (<1M examples), sensitivity to hyperparameters tuned on small models, and the absence of explicit accuracy percentages in certain sections. Furthermore, performance is highly sensitive to privacy budget settings, with severe utility drops observed when $\\epsilon < 2$, and generalizability to larger scales remains unformalized.",
+    "metadata": {
+      "arxiv_id": "2110.05679v6",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "4c21c6d423a6fc600205aac00e4dbeb029149fe62c88f7a086b104485fa56c79",
+      "pages": 31,
+      "chunks": 47,
+      "model_calls": 61,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 266.642493500025,
+    "generated_at": "2026-11-11T08:58:14.093460+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "The paper does show that larger pretrained models, appropriate DP optimization settings, and Ghost Clipping can yield strong private NLP models; the cited 69.463 non-private versus 61.519 DP BLEU figures are present, and full DP fine-tuning can match or beat LoRA. However, the summary's claim of a quantified log-linear scaling law for model size, batch size, and final negative log-likelihood is unsupported by a paper that explicitly identifies private scaling laws as future work. Its assertion of severe utility degradation for epsilon below 2 is also not established by the paper's main epsilon=3 and epsilon=8 experiments. The main methodological findings are accurate but these additional generalizations are too strong.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The paper directly evaluates differential privacy for deep neural language models, including DP fine-tuning, noise/privacy budgets, memory-saving clipping, and privacy-utility comparisons, making the summary highly relevant to the general query.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The summary captures pretrained model scaling, Ghost Clipping, privacy budgets, comparisons with lower-dimensional fine-tuning, and a real performance result. It underemphasizes task-aligned fine-tuning objectives, the importance of hyperparameter choices for DP-Adam, and the substantive public-pretraining privacy limitation identified by the authors.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The summary is technically readable with a coherent contributions-results-limitations structure. The compressed 'log-linear' and signal-to-noise discussion is imprecise and risks implying a more formal law than was established.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Most content is relevant, but unsupported threshold claims and tangential observations about missing accuracy percentages occupy space better used for the actual task-alignment and public-pretraining qualifications.",
+        "judge_model": "gpt-6",
+        "framework": "chatgpt_manual_llm_judge",
+        "evaluated_at": "2026-11-11T10:00:35.689426+00:00",
+        "duration_seconds": null
+      }
+    },
+    "weighted_score": 0.835,
+    "weighted_score_10": 8.35,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_html",
+      "source_url": "https://arxiv.org/html/2110.05679",
+      "verified_sections": [
+        "§1 Contributions",
+        "§4 Ghost Clipping",
+        "§5 and Table 2 Fine-Tuning",
+        "§7 Scope and Limitations"
+      ]
+    },
+    "supplemental_judge": {
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "framework": "chatgpt_manual_llm_judge",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "method": "Model judgment of missing criteria against public arXiv HTML full text; not a DeepEval execution",
+      "source_url": "https://arxiv.org/html/2110.05679",
+      "verified_sections": [
+        "§1 Contributions",
+        "§4 Ghost Clipping",
+        "§5 and Table 2 Fine-Tuning",
+        "§7 Scope and Limitations"
+      ],
+      "evaluated_at": "2026-11-11T10:00:35.689426+00:00"
+    }
+  }
+}

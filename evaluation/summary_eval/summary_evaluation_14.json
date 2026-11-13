@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_14",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_03.json",
+  "source_sha256": "6c32e1c5ff9335f352a409dc3a8b5b095ca02c60ab9d3dda4db2b369773ee76a",
+  "query_index": 3,
+  "paper_index": 2,
+  "query_id": "learning-with-noisy-labels",
+  "query": "Learning with noisy labels for image classification",
+  "paper": {
+    "arxiv_id": "1406.2080",
+    "title": "Training Convolutional Networks with Noisy Labels",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "aafacddcdf0816ef7d761efc2457a04a1aac05a7a160f7fbb9f77c0291c7da73",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses learning with noisy labels in image classification by introducing a trainable noise layer ($Q$) that adapts convolutional network outputs to label flip and outlier distributions. The methodology minimizes cross-entropy loss while regularizing $Q$ via weight decay to approximate the true noise matrix without requiring clean labels or semi-supervised selection. Key findings demonstrate robust performance up to approximately 70% noise on SVHN and CIFAR-10, with learned $Q$ matching ground truth distributions at 50% noise levels; however, accuracy degrades significantly when incorrect labels dominate. On ImageNet, the approach achieved an 8.5% error reduction over standard training but remained inferior to models using perfect noise knowledge. A critical limitation is the method's reliance on strong assumptions regarding diagonal dominance of $Q$, which are not guaranteed in practice, and its inability to provide quantitative top-1 error metrics or generalize effectively to adversarial noise types. Furthermore, tuning hyperparameters like outlier fraction $\\alpha$ via cross-validation is computationally intractable without clean data, limiting practical deployment despite the method's low implementation overhead.",
+    "metadata": {
+      "arxiv_id": "1406.2080v4",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "4437ed4a7e76cedce91d9038ccba73b0608a63421d728e04ec7e150dc9adaace",
+      "pages": 11,
+      "chunks": 18,
+      "model_calls": 23,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 102.74575379991438,
+    "generated_at": "2026-11-11T09:48:07.334392+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.6,
+        "reason": "The trainable noise layer Q, its regularization, label-flip/outlier experiments, and ImageNet improvement are grounded in the paper. Table 1 specifically reports top-1 validation classification errors, so stating that the approach cannot provide quantitative top-1 metrics is false. The 8.5 gain is an 8.5-percentage-point error decrease (53.7% to 45.2%) for random label flips, not necessarily an 8.5% relative reduction. The summary also overstates inability to handle adversarial label noise: learned Q improves validation error from 50.5% to 46.7% in that setting. The diagonal-dominance assumptions apply to a sufficient-condition argument, not a blanket claim that the overall method always relies on them. The claim that alpha cannot be tuned due to computational intractability is stronger than the authors state; sensitivity is experimentally explored.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly describes convolutional classification under corrupted annotations, including the noise-transition layer and experimentally tested variants, so it is closely aligned with the user query.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Includes the principal method, noise types, experiments, and central ImageNet results, but omits the important distinction between random and adversarial label flips and the separate outlier-detection experiments. Several purported limitations contradict or exaggerate the reported evidence.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Technical language and organization are generally clear. The incorrect discussion of unavailable top-1 metrics and generalized failure under adversarial noise reduces interpretive precision, but not basic readability.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Communicates the method efficiently with little repetition. The final speculative limitations would be better replaced by verified distinctions from Table 1.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.805,
+    "weighted_score_10": 8.05,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://arxiv.org/pdf/1406.2080",
+      "verified_sections": [
+        "§3 Noise Model and Regularization",
+        "§4.2 ImageNet Label-Flip Experiments and Table 1",
+        "§4.3 Outlier Experiments"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/pdf/1406.2080",
+      "verified_sections": [
+        "§3 Noise Model and Regularization",
+        "§4.2 ImageNet Label-Flip Experiments and Table 1",
+        "§4.3 Outlier Experiments"
+      ]
+    }
+  }
+}

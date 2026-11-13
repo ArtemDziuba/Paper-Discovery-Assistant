@@ -4,7 +4,7 @@
   "judgments": [
     {
       "arxiv_id": "2208.00657",
-      "title": "SiamixFormer: A Siamese Transformer Network For Building Detection And Change Detection From Bi-Temporal Remote Sensing Images",
+      "title": "SiamixFormer: a fully-transformer Siamese network with temporal Fusion for accurate building detection and change detection in bi-temporal remote sensing images",
       "relevance": 3
     },
     {

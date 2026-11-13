@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_19",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_05.json",
+  "source_sha256": "9b3362876977281ca47fe30a2c7e533fc35479d56d317c7b42f180978ab73b90",
+  "query_index": 5,
+  "paper_index": 1,
+  "query_id": "knowledge-graph-completion",
+  "query": "Knowledge graph completion and link prediction",
+  "paper": {
+    "arxiv_id": "2007.12374",
+    "title": "A Survey on Graph Neural Networks for Knowledge Graph Completion",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "e9db68c39950276a91ef968a014691cc00d248eb686a99b15dcef5deca6b1af2",
+  "summarization": {
+    "status": "completed",
+    "summary": "This survey identifies Graph Neural Networks (GNNs) as state-of-the-art for Knowledge Graph Completion by capturing structural neighborhood information often missed by traditional triplet models. Key architectures include Message Passing, Graph Convolutional, and Graph Attention Networks, which utilize variable importance weights to address uniform weighting limitations. While frameworks like RotatEGCN achieve SOTA on FB15k-237 and WN18RR, performance degrades for low/high-degree nodes due to signal loss. Critical limitations persist across methods: Markov Logic Networks remain computationally intractable despite ExpressGNN's improvements via Expectation Maximization; scalability is severely constrained by horizon sampling costs; and a universal assumption exists that all test triplet entities reside in the training set. Furthermore, significant gaps exist regarding graph heterogeneity and hierarchical relations, as most approaches fail to weigh neighbor messages effectively using relation embeddings. Although hyperbolic space projection addresses hierarchy, it treats triplets independently rather than leveraging graph structure. Consequently, no single methodology currently integrates all benefits, including explainability features from DPMPN into ExpressGNN.",
+    "metadata": {
+      "arxiv_id": "2007.12374v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "faf05d317a141d4dc64b04a1ae074a8ea6301ec8d34310807f8e047364e6df4f",
+      "pages": 10,
+      "chunks": 16,
+      "model_calls": 23,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 93.98628660000395,
+    "generated_at": "2026-11-11T09:15:25.779728+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The survey indeed covers GNN approaches for knowledge graph completion, including GCN/GAT message passing, low- and high-degree nodes, MLN/ExpressGNN, DPMPN, neighborhood-sampling costs, and challenges with relational heterogeneity and hierarchy. It reports RotatE-GCN as SOTA in the standalone-GNN section but later identifies ExpressGNN as strongest on FB15k-237, so describing RotatE-GCN as SOTA on both benchmarks without that nuance is misleading. ExpressGNN is introduced precisely to make previously expensive MLN-style inference tractable, not simply to leave it intractable. The claimed universal assumption that every test entity exists in the training graph is not presented as a general documented limitation in the surveyed discussion. No serious invented method is apparent, but these overstatements require a deduction.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Direct match for knowledge graph completion and link prediction, addressing GNN architectures, link-prediction performance, and the survey’s identified challenges.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Captures major classes of GNN, notable representative methods, relation awareness, scalability and heterogeneity limitations. Underplays core link-prediction formulation and standard evaluation criteria (MRR, Hits@10), omits important quantitative benchmark comparison (including ExpressGNN), and blurs distinctions among methods in its aggregate conclusions.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Technically readable but very dense. Multiple architectures, logic learning, sampling, open-world assumptions, and hierarchy are packed together without sufficient distinction or transition.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Reasonably compact for a survey, but method-name accumulation and a speculative closing comparison decrease the amount of explanatory substance per sentence.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.86,
+    "weighted_score_10": 8.6,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://ar5iv.labs.arxiv.org/html/2007.12374",
+      "verified_sections": [
+        "§1–3 KGC and Benchmarks",
+        "§7 Standalone GNN for KBC",
+        "§8 ExpressGNN and Markov Logic Networks",
+        "§9–10 Benchmark Results and Discussion, Table 3",
+        "§11 Discussion of heterogeneity and hierarchy"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:09:55.346694+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://ar5iv.labs.arxiv.org/html/2007.12374",
+      "verified_sections": [
+        "§1–3 KGC and Benchmarks",
+        "§7 Standalone GNN for KBC",
+        "§8 ExpressGNN and Markov Logic Networks",
+        "§9–10 Benchmark Results and Discussion, Table 3",
+        "§11 Discussion of heterogeneity and hierarchy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_35",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_10.json",
+  "source_sha256": "accd03480acb42c68a899855b8c5bf5281e28ed24b04c2d47a6e6c31211fc4fe",
+  "query_index": 10,
+  "paper_index": 2,
+  "query_id": "deep-learning-image-inpainting",
+  "query": "Deep learning for image inpainting and missing-region reconstruction",
+  "paper": {
+    "arxiv_id": "2506.18437",
+    "title": "Frequency-Domain Fusion Transformer for Image Inpainting",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "ed06f375d516c4c34329c29ba6d658c54f9de264b6b992a05a55baf78ca833a8",
+  "summarization": {
+    "status": "completed",
+    "summary": "The Frequency-Domain Fusion Transformer (Dabformer/FADformer) addresses high-frequency detail preservation in image inpainting by integrating Discrete Wavelet Transform, Gabor filters, and a learnable FFT-based frequency filter within a four-level encoder-decoder architecture. By employing channel-wise attention to reduce computational complexity while maintaining multi-scale flexibility via adaptive wavelength optimization, the model achieves superior performance on datasets like Rain200L/H and Places2, reporting PSNR scores up to 32.34 dB and SSIM of 0.9364. A composite loss function with specific weighting parameters ($\\lambda_1=10, \\lambda_P=0.6, \\lambda_E=0.4, \\lambda_M=0.5$) further enhances perceptual coherence. However, the study documents significant limitations, including performance degradation on sparse rain datasets where Gabor filters struggle to discriminate scattered streaks from background textures, and a reliance on fixed Gabor parameters that cannot dynamically adapt to complex regional variations. Additionally, directional misalignment significantly degrades texture reconstruction, and the inability to handle challenging illumination scenarios remains a noted constraint despite the model's efficiency in training on standard hardware.",
+    "metadata": {
+      "arxiv_id": "2506.18437v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "48b571a3b6b9f287690f8b80300dc73738d8296f889d09ebe79f445c7b52fd6b",
+      "pages": 12,
+      "chunks": 24,
+      "model_calls": 33,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 140.79655549989548,
+    "generated_at": "2026-11-11T09:39:25.225293+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "The wavelet/Gabor/FFT architecture, four-level encoder-decoder, adaptive wavelength, loss weights, and PSNR 32.34 dB/SSIM 0.9364 are grounded in the paper. However, those headline values are from Rain200H image DERAINING, not the missing-region inpainting task. The summary conflates the two experimental regimes by presenting Rain200L/H alongside Places2 as if the numbers measure inpainting. Its claim that fixed Gabor parameters cannot dynamically adapt also conflicts with the proposed learnable adaptive wavelength mechanism, although orientation sensitivity is demonstrated.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The method is relevant to image inpainting and missing-region reconstruction, but the summary emphasizes deraining datasets and results more than the actual inpainting experiments on Places2 and CelebA.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.7,
+        "reason": "Covers the proposed frequency-domain modules and losses, but omits the quantitative missing-region restoration comparisons in Table II and the paper's mixed results under different mask ratios. The deraining emphasis obscures the most query-relevant evidence.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The architecture and limitations are readable and sequentially presented, but combining distinct tasks under one empirical result creates ambiguity.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Mostly compact, but the detailed loss coefficients and deraining-specific limitations occupy space better used for inpainting benchmark findings.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.755,
+    "weighted_score_10": 7.55,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 rubric-guided qualitative judgments in 0.1 increments normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_html_or_pdf",
+      "source_url": "https://arxiv.org/html/2506.18437",
+      "verified_sections": [
+        "ArXiv v1 method, deraining Table I and loss ablations, inpainting Table II, wavelength/orientation sensitivity Tables V-VI"
+      ],
+      "limitations": "No additional independent human-label calibration; GPT-6 judgment is not a DeepEval API execution."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:23:32.288828+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using the original arXiv paper; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2506.18437",
+      "verified_sections": [
+        "ArXiv v1 method, deraining Table I and loss ablations, inpainting Table II, wavelength/orientation sensitivity Tables V-VI"
+      ]
+    }
+  }
+}

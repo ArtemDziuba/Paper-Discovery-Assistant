@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_12",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_02.json",
+  "source_sha256": "3a2ec7b80b792bdab37bb8dcfd0f459eaf44995ac64d0e68426b29e8ad480e9d",
+  "query_index": 2,
+  "paper_index": 3,
+  "query_id": "differential-privacy-deep-learning",
+  "query": "Differential privacy in deep learning",
+  "paper": {
+    "arxiv_id": "2601.11113",
+    "title": "Differentially Private Subspace Fine-Tuning for Large Language Models",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "48b3ae62c948804a39d58bf15810754448fd88449f1f8ed7cd09ca8daee95be2",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper introduces DP-SFT, a differentially private fine-tuning framework for large language models that mitigates the curse of dimensionality inherent in standard DP-SGD. The methodology employs a two-stage process: first, constructing a low-dimensional task-specific subspace via Singular Value Decomposition on short training trajectories; second, projecting gradients onto this subspace, injecting calibrated Gaussian noise, and mapping results back to the full parameter space. Key findings demonstrate that restricting perturbation to this reduced space significantly lowers variance and accelerates convergence compared to high-dimensional baselines. Experiments on RoBERTa-base across NLU benchmarks confirm DP-SFT's superior utility under strict privacy constraints (e.g., $\\epsilon=1$), achieving over 86% accuracy on MNLI while competing methods drop below 73%. Notably, the method maintains formal $(\\epsilon, \\delta)$-DP guarantees through composition and post-processing invariance. However, limitations include reliance on pre-trained models for subspace initialization, inherent accuracy degradation during construction, and pronounced utility loss at extreme privacy budgets ($\\epsilon=1$) across all approaches.",
+    "metadata": {
+      "arxiv_id": "2601.11113v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "f1ae1c194a19f6de6d133bfb3b35408892ca29709a8940b8c9206ac161e40679",
+      "pages": 9,
+      "chunks": 19,
+      "model_calls": 24,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 100.46863739995752,
+    "generated_at": "2026-11-11T09:03:48.967743+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "The description of two-stage DP-SFT, SVD-derived task-specific gradient subspaces, noise injection in the reduced space, and formal DP guarantees matches the paper. The cited MNLI result is supported: Table 2 reports 86.52% for DP-SFT at epsilon=1, with competing private baselines below 73%. The summary is less precise in presenting pronounced degradation at epsilon=1 as applying equally to every approach: DP-SFT itself is comparatively stable (86.78% at epsilon=4 versus 86.52% at epsilon=1). The asserted construction-stage accuracy degradation is best framed as a subspace-quality tradeoff, not a universal failure.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "The query concerns differential privacy in deep learning. The summary directly discusses DP-SGD dimensionality problems, privacy-constrained gradient optimization, DP noise, formal guarantees, and measured privacy–utility outcomes in a deep NLP model.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Covers the main problem, subspace construction, private optimization, guarantee, representative MNLI result, and limits. It omits the important cross-task/public-data subspace transfer contribution, which allows the construction stage to avoid consuming private training data or privacy budget.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Clearly sequences motivation, two-stage mechanism, numerical result, and caveats. Technical terms (SVD, DP-SGD, epsilon-delta DP) are used understandably and coherently.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Compact, information-dense, and mostly focused on the question. The final limitations partly repeat the privacy-utility tradeoff and could be more discriminating.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.9400000000000001,
+    "weighted_score_10": 9.4,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 ratings 0–10 normalized to 0–1; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_full_paper_review",
+      "source_url": "https://arxiv.org/html/2601.11113",
+      "verified_sections": [
+        "Methods: Stage 1 and Stage 2",
+        "Theorem 3 Privacy Guarantee",
+        "Experiments: Tables 1–2",
+        "Subspace Transferability: Tables 4–5"
+      ]
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:05:35.035871+00:00",
+      "method": "Manual rubric-aligned LLM judgment against original arXiv paper full text; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/html/2601.11113",
+      "verified_sections": [
+        "Methods: Stage 1 and Stage 2",
+        "Theorem 3 Privacy Guarantee",
+        "Experiments: Tables 1–2",
+        "Subspace Transferability: Tables 4–5"
+      ]
+    }
+  }
+}

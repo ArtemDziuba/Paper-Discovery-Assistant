@@ -2,6 +2,11 @@
 
 Requirements: Python 3.12 or later and uv. Run from the repository root:
 
+The standalone [summary evaluation workflow](summary-evaluation.md) adds the optional
+`evaluation` dependency group, DeepEval's native Gemini judge, an ignored `.env` API key,
+and permanent per-summary records. Run `scripts/evaluate_summaries.py --smoke` with that
+group before a full evaluation. The application still summarizes locally using Qwen.
+
 For the final human/synthetic ranking comparison and the commands to reproduce it, see
 ranking-evaluation.md. Run `uv run --extra cuda python scripts/evaluate_annotations.py`
 to evaluate available methods on the fixed two human and ten synthetic batches. V2 is included

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "evaluation_id": "summary_evaluation_26",
+  "dataset_source": "synthetic_eval",
+  "source_file": "synthetic_evaluation_batch_07.json",
+  "source_sha256": "dcd6bf26baba5b8c78b5c23cf9c063810935fa4ece05d27405d98a57ba05c9aa",
+  "query_index": 7,
+  "paper_index": 2,
+  "query_id": "reinforcement-learning-navigation",
+  "query": "Reinforcement learning for autonomous navigation",
+  "paper": {
+    "arxiv_id": "2501.02902",
+    "title": "Sim-to-Real Transfer for Mobile Robots with Reinforcement Learning: from NVIDIA Isaac Sim to Gazebo and Real ROS 2 Robots",
+    "relevance_label": 3
+  },
+  "dataset_errors": [],
+  "selection_fingerprint": "0b83974cf13def43a0aca5954d620f7e80a514bc1960077926a5291855949312",
+  "summarization": {
+    "status": "completed",
+    "summary": "This paper addresses reinforcement learning for autonomous navigation by developing a sim-to-real transfer framework using NVIDIA Isaac Sim, Gazebo, and ROS 2 robots. The methodology employs Actor-Critic RL with MLP or LSTM architectures, utilizing curriculum learning to transition from static to dynamic obstacle scenarios before exporting ONNX policies for real-world execution on differential drive platforms like the TurtleBot 4 Lite. Key findings indicate that while MLPs struggled with dynamic tasks in simulation, LSTM models achieved superior performance in both Gazebo and physical environments, successfully navigating targets up to 5 meters away with average velocities of 0.13–0.15 m/s. Success rates ranged from 70% to 100%, demonstrating robustness comparable to simulation despite generalization gaps in complex scenarios where success dropped to approximately 80%. Documented limitations include the absence of standardized quantitative benchmarks, reliance on pre-trained simulation priors, and significant performance degradation when encountering unpredictable dynamic obstacles or environmental complexities exceeding training distributions.",
+    "metadata": {
+      "arxiv_id": "2501.02902v1",
+      "model": "qwen3.5:4b",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "pipeline_version": "full-paper-qwen-v5",
+      "parser_version": "2.1",
+      "pdf_sha256": "6fdfbfa7ef028bc252a12c4404dd636bd8e0a22f328baaf7d58b96f87875bed8",
+      "pages": 13,
+      "chunks": 18,
+      "model_calls": 23,
+      "cache_hit": false,
+      "bibliography_removed": true
+    },
+    "duration_seconds": 90.7647988999961,
+    "generated_at": "2026-11-11T09:26:11.816150+00:00",
+    "errors": []
+  },
+  "evaluation": {
+    "status": "completed",
+    "framework": "chatgpt_manual_llm_judge",
+    "judge_model": "gpt-6",
+    "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+    "metrics": {
+      "factual_consistency": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "The paper's abstract and available supporting descriptions confirm the Isaac Sim-to-Gazebo-to-ROS2 workflow, actor-critic/PPO policies with MLP and LSTM variants, curriculum learning for moving obstacles, ONNX export, TurtleBot 4 Lite validation, and 70%-100% success across reported real-world conditions. The exact 0.13-0.15 m/s averages and 5 m target distance could not be independently checked from the primary full-text tables here, so they remain unverified rather than considered false. Its phrase 'robustness comparable to simulation' overlooks important caveats concerning post-training adaptation in dynamic scenes.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "query_relevance": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Directly addresses RL for autonomous navigation through goal-reaching, obstacle avoidance, recurrent control, and sim-to-real robotics deployment.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "key_information_coverage": {
+        "status": "completed",
+        "score": 0.8,
+        "reason": "Covers the workflow and practical success outcomes, but omits a central contribution: explicit benchmarking of the learned policies against the ROS2 Nav2 navigation stack, including differing dynamic-obstacle results. It also does not explain the observation inputs, reward design, or uncertainty surrounding zero-shot real-world transfer.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "clarity": {
+        "status": "completed",
+        "score": 1.0,
+        "reason": "Clear chronological structure covering training environment, models, transfer pipeline, results, and limitations.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      },
+      "conciseness": {
+        "status": "completed",
+        "score": 0.9,
+        "reason": "Efficient overview with little repetition, but some precise results without experimental context are less informative than the omitted Nav2 comparison.",
+        "duration_seconds": null,
+        "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+        "framework": "chatgpt_manual_llm_judge",
+        "judge_model": "gpt-6"
+      }
+    },
+    "weighted_score": 0.885,
+    "weighted_score_10": 8.85,
+    "duration_seconds": null,
+    "errors": [],
+    "configuration": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "scoring": "GPT-6 qualitative judgments in 0.1 increments, normalized to [0,1]; not run through DeepEval"
+    },
+    "cache_key": null,
+    "evidence": {
+      "strategy": "public_arxiv_abstract_plus_secondary_explanation",
+      "source_url": "https://arxiv.org/abs/2501.02902",
+      "verified_sections": [
+        "Original abstract; secondary arXiv-based overview on alphaXiv; critical peer-review notes from Pith (AI review)"
+      ],
+      "limitations": "Full original paper tables were not accessible in the web reader; exact velocity and distance figures not independently verified."
+    },
+    "supplemental_judge": {
+      "framework": "chatgpt_manual_llm_judge",
+      "provider": "OpenAI ChatGPT",
+      "judge_model": "gpt-6",
+      "evaluated_at": "2026-11-11T10:14:49.534896+00:00",
+      "method": "Rubric-aligned conversational LLM judgment using available paper evidence; not a DeepEval execution",
+      "rubric_version": "query-paper-geval-v1",
+      "weights": {
+        "factual_consistency": 0.35,
+        "query_relevance": 0.3,
+        "key_information_coverage": 0.2,
+        "clarity": 0.1,
+        "conciseness": 0.05
+      },
+      "source_url": "https://arxiv.org/abs/2501.02902",
+      "verified_sections": [
+        "Original abstract; secondary arXiv-based overview on alphaXiv; critical peer-review notes from Pith (AI review)"
+      ],
+      "evidence_limitation": "Full original paper tables were not accessible in the web reader; exact velocity and distance figures not independently verified."
+    }
+  }
+}
